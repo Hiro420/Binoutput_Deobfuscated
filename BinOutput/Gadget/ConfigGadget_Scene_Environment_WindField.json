@@ -526,15 +526,15 @@
             "INKADPFABPA": "",
             "AAHHPDHLLLH": ""
         },
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "targetType": "All"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Environment_WindField_PushForce_01"
                 }
             ],
@@ -575,15 +575,15 @@
             "INKADPFABPA": "",
             "AAHHPDHLLLH": ""
         },
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "targetType": "All"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Environment_WindField_PushForce_02"
                 }
             ],
@@ -624,15 +624,15 @@
             "INKADPFABPA": "",
             "AAHHPDHLLLH": ""
         },
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "targetType": "All"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Environment_WindField_PushForce_03"
                 }
             ],
@@ -682,15 +682,15 @@
             "EBBHBMFMOGD": "",
             "EMLMHGJEPIO": true
         },
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "targetType": "All"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Environment_WindField_PushForce_03_Follow"
                 }
             ],
@@ -731,15 +731,15 @@
             "INKADPFABPA": "",
             "AAHHPDHLLLH": ""
         },
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "targetType": "All"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Environment_WindField_PushForce_04"
                 }
             ],
@@ -847,15 +847,15 @@
                 "abilityOverride": ""
             }
         ],
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "targetType": "All"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Environment_WindField_DragonNest_Barrier_Attack"
                 }
             ],
@@ -999,7 +999,7 @@
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG"
+                "$type": "ConfigEffectAttachBox"
             },
             "disableTickDistance": 450.0
         },
@@ -1041,8 +1041,8 @@
             }
         ],
         "move": {
-            "$type": "AKBINJDCBPI",
-            "EINCMKOBBEG": {
+            "$type": "ConfigLinerBulletMove",
+            "velocityForce": {
                 "excludeForces": [
                     "WindZoneType",
                     "AirflowType",
@@ -1051,21 +1051,21 @@
                     "AirflowAccType"
                 ]
             },
-            "IAEPDEOMGCO": 1.0,
-            "MPJAHBIPABI": 1.0,
-            "EJLPNJNLKJO": {
-                "CNCFDGHPDMM": 1.0,
-                "LKGPGNFBLGO": 45.0,
-                "JJOMEBOHIGM": 0.10000000149011612,
-                "MMFLMIJMPHO": 0.5,
-                "IJIIEFJIHOM": true,
-                "KBDCGLHEGLP": "Keep",
-                "EFMHGACIJIK": "Keep"
+            "speed": 1.0,
+            "delay": 1.0,
+            "stickToGround": {
+                "maxStepHeight": 1.0,
+                "maxSlopeAngle": 45.0,
+                "heightToGround": 0.10000000149011612,
+                "flexibleRange": 0.5,
+                "isStickToWater": true,
+                "unstickWhenDownSlide": "Keep",
+                "unstickWhenUpSlide": "Keep"
             },
             "JOFFKAKINLN": true
         },
-        "PCIDMPEJLOO": {
-            "$type": "CLCBNALEMAM",
+        "gadget": {
+            "$type": "ConfigBulletPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "triggerCD": 0.5,
@@ -1398,7 +1398,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 55.0
         },
         "misc": {
@@ -1675,7 +1675,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 30.0
         },
         "move": {

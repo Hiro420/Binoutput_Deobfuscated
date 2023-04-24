@@ -25,7 +25,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 10.0
         }
     },
@@ -33,7 +33,7 @@
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "DCFPMPDFALL",
+                "$type": "ConfigEffectAttachMesh",
                 "FFDBDMMNINI": "EffectMesh"
             },
             "viewSize": 2.5,
@@ -90,19 +90,19 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 10.0
         },
-        "PCIDMPEJLOO": {
-            "$type": "JBOEGDAAMLN",
+        "gadget": {
+            "$type": "ConfigGadgetCollidedPattern",
             "collision": {
                 "triggerType": "TriggerAlways",
                 "triggerCD": 0.30000001192092896,
                 "targetType": "Enemy"
             },
-            "IGCMINPBBNM": [
+            "collisionActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "Shaman_GrassWall_Attack"
                 }
             ],
@@ -141,12 +141,12 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 15.0
         },
         "move": {
-            "$type": "EHAJEBEFFPM",
-            "EINCMKOBBEG": {
+            "$type": "ConfigPinballBulletMove",
+            "velocityForce": {
                 "excludeForces": [
                     "WindZoneType",
                     "AirflowType",
@@ -155,21 +155,21 @@
                     "AirflowAccType"
                 ]
             },
-            "IAEPDEOMGCO": 3.25,
-            "PPJLOLLIHMJ": true,
-            "MPJAHBIPABI": 0.25,
-            "EJLPNJNLKJO": {
-                "CNCFDGHPDMM": 1.0,
-                "LKGPGNFBLGO": 60.0,
-                "JJOMEBOHIGM": 0.5,
-                "MMFLMIJMPHO": 0.5,
-                "IJIIEFJIHOM": true,
-                "KBDCGLHEGLP": "Keep",
-                "EFMHGACIJIK": "Stay"
+            "speed": 3.25,
+            "canBornInWater": true,
+            "delay": 0.25,
+            "stickToGround": {
+                "maxStepHeight": 1.0,
+                "maxSlopeAngle": 60.0,
+                "heightToGround": 0.5,
+                "flexibleRange": 0.5,
+                "isStickToWater": true,
+                "unstickWhenDownSlide": "Keep",
+                "unstickWhenUpSlide": "Stay"
             },
             "radius": 3.5,
-            "NHIGHAGJEAI": true,
-            "KEMIOFGFCGB": 60.0,
+            "traceOnYAxis": true,
+            "maxSlopeAngle": 60.0,
             "DHDCFJFKLIJ": 0.20000000298023224,
             "IPIMIJMPEDE": 0.5
         }
@@ -205,17 +205,17 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 15.0
         },
         "move": {
-            "$type": "CCONGDOMIGK",
-            "IAEPDEOMGCO": 4.800000190734863,
-            "PPJLOLLIHMJ": true,
-            "FIOFLBIMFEI": {
-                "$type": "JDDOBDIFAFG"
+            "$type": "ConfigTrackBulletMove",
+            "speed": 4.800000190734863,
+            "canBornInWater": true,
+            "updateAngle": {
+                "$type": "ConfigBulletMoveAngleByVelocity"
             },
-            "MPJAHBIPABI": 0.25
+            "delay": 0.25
         }
     },
     "Shaman_Tornado_Position": {
@@ -242,7 +242,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 15.0
         }
     },
@@ -276,7 +276,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 25.0
         }
     },
@@ -284,7 +284,7 @@
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG"
+                "$type": "ConfigEffectAttachBox"
             }
         },
         "combat": {
@@ -317,7 +317,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 5.0
         }
     },
@@ -347,7 +347,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 7.5
         }
     },
@@ -376,7 +376,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 10.0
         }
     },
@@ -413,12 +413,12 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeInfinite": true,
             "lifeTime": 999.0
         },
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "BillboardAttach",
             "offset": {
                 "y": 2.0
@@ -475,12 +475,12 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeInfinite": true,
             "lifeTime": 999.0
         },
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "BillboardAttach",
             "offset": {
                 "y": 2.0
@@ -518,7 +518,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 5.0
         }
     },
@@ -556,7 +556,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 36.0
         }
     }

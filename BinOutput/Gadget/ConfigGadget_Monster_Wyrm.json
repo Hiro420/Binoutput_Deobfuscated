@@ -29,7 +29,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 10.0
         }
     },
@@ -37,10 +37,10 @@
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG",
+                "$type": "ConfigEffectAttachBox",
                 "KOGEDBHFAPA": 1.2000000476837158,
                 "HALBIGPPELA": 1.2000000476837158,
-                "ONOKPILBMMP": 1.2000000476837158
+                "scaleZ": 1.2000000476837158
             },
             "scale": 1.2000000476837158
         },
@@ -70,7 +70,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 8.0
         },
         "move": {
@@ -78,30 +78,30 @@
             "target": "TargetEntity",
             "EBBHBMFMOGD": "RootNode"
         },
-        "PCIDMPEJLOO": {
-            "$type": "CLCBNALEMAM",
+        "gadget": {
+            "$type": "ConfigBulletPattern",
             "collision": {
                 "triggerType": "TriggerNoRepeat",
                 "targetType": "Enemy",
                 "ignoreScene": true
             },
-            "JOGFONCFBNH": [
+            "triggerActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "Monster_Wyrm_Rock_FollowHitBox_Roll"
                 }
             ],
-            "KEFFAOHIMHB": true
+            "killByOther": true
         }
     },
     "Wyrm_Rock_FollowHitBox_CrushAtk": {
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG",
+                "$type": "ConfigEffectAttachBox",
                 "KOGEDBHFAPA": 1.2000000476837158,
                 "HALBIGPPELA": 1.2000000476837158,
-                "ONOKPILBMMP": 1.2000000476837158
+                "scaleZ": 1.2000000476837158
             },
             "scale": 1.2000000476837158
         },
@@ -131,7 +131,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 8.0
         },
         "move": {
@@ -140,28 +140,28 @@
             "EBBHBMFMOGD": "RootNode",
             "EMLMHGJEPIO": true
         },
-        "PCIDMPEJLOO": {
-            "$type": "CLCBNALEMAM",
+        "gadget": {
+            "$type": "ConfigBulletPattern",
             "collision": {
                 "triggerType": "TriggerNoRepeat",
                 "targetType": "Enemy",
                 "ignoreScene": true
             },
-            "JOGFONCFBNH": [
+            "triggerActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "Monster_Wyrm_Rock_FollowHitBox_CrushAtk"
                 }
             ],
-            "KEFFAOHIMHB": true
+            "killByOther": true
         }
     },
     "Wyrm_Rock_CrystalSeed_Trigger": {
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG",
-                "ONOKPILBMMP": 0.4000000059604645
+                "$type": "ConfigEffectAttachBox",
+                "scaleZ": 0.4000000059604645
             },
             "mass": 5.0,
             "affectedByWorld": true,
@@ -182,18 +182,18 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 5.0
         },
         "move": {
             "$type": "MEABJEKONDM",
-            "IAEPDEOMGCO": 12.0,
-            "DNOPKNCAPAI": -10.0,
-            "FIOFLBIMFEI": {
-                "$type": "JDDOBDIFAFG"
+            "speed": 12.0,
+            "acceleration": -10.0,
+            "updateAngle": {
+                "$type": "ConfigBulletMoveAngleByVelocity"
             },
             "GPKNGEPMLOE": 70.0,
-            "PFHEOCOMCDL": 70.0,
+            "gravityOfAcceleration": 70.0,
             "GECAHEKMHAL": {
                 "$type": "HMLLPEMOFIP",
                 "KIKEAFHNHJG": 2.0,
@@ -201,14 +201,14 @@
                 "maxSpeed": 12.0
             }
         },
-        "PCIDMPEJLOO": {
-            "$type": "CLCBNALEMAM",
+        "gadget": {
+            "$type": "ConfigBulletPattern",
             "collision": {
                 "targetType": "All"
             },
-            "JOGFONCFBNH": [
+            "triggerActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "Monster_Wyrm_Rock_CrystalSeed_Trigger"
                 }
             ]

@@ -311,7 +311,7 @@
             }
         ],
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "RootNode",
             "offset": {
                 "y": 2.5
@@ -789,7 +789,7 @@
             ]
         },
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "RootNode",
             "offset": {
                 "y": 2.0
@@ -1148,7 +1148,7 @@
             ]
         },
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "RootNode",
             "offset": {
                 "y": 2.0
@@ -1508,7 +1508,7 @@
             ]
         },
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "RootNode",
             "offset": {
                 "y": 2.0
@@ -1732,7 +1732,7 @@
             ]
         },
         "billboard": {
-            "$type": "NCBABGPMMPL",
+            "$type": "ConfigCombatBillboard",
             "EBBHBMFMOGD": "RootNode",
             "offset": {
                 "y": 2.0
@@ -1772,7 +1772,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeInfinite": true
         },
         "move": {
@@ -1786,8 +1786,8 @@
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG",
-                "ONOKPILBMMP": 0.4000000059604645
+                "$type": "ConfigEffectAttachBox",
+                "scaleZ": 0.4000000059604645
             }
         },
         "combat": {
@@ -1819,30 +1819,30 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 5.0
         },
         "move": {
             "$type": "KNONMECDFJC"
         },
-        "PCIDMPEJLOO": {
+        "gadget": {
             "$type": "DGAPLFNDHHH",
             "collision": {
                 "targetType": "Enemy"
             },
-            "JOGFONCFBNH": [
+            "triggerActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Area_Xm_Property_Ani_Prop_AbilitySandWorm_Sand_01_ShootAttack_Attack"
                 }
             ],
-            "HOCNBGDGGPK": [
+            "triggerLifeOverActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Area_Xm_Property_Ani_Prop_AbilitySandWorm_Sand_01_ShootAttack_Attack"
                 }
             ],
-            "KEFFAOHIMHB": true,
+            "killByOther": true,
             "NKGFPHPMEDJ": {
                 "$type": "JJIALLMLPKP",
                 "LEKPIAMIMDG": "Loop",
@@ -1854,8 +1854,8 @@
         "$type": "ConfigGadget",
         "common": {
             "effectAttachShape": {
-                "$type": "IENJKOCCEEG",
-                "ONOKPILBMMP": 0.4000000059604645
+                "$type": "ConfigEffectAttachBox",
+                "scaleZ": 0.4000000059604645
             }
         },
         "combat": {
@@ -1891,48 +1891,48 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 10.0
         },
         "move": {
-            "$type": "MBCCJOEDLDO",
-            "IAEPDEOMGCO": 12.0,
+            "$type": "ConfigItanoCircusBulletMove",
+            "speed": 12.0,
             "maxSpeed": 60.0,
             "minSpeed": 12.0,
-            "BKIIIOFDNJM": 0.0,
-            "DNOPKNCAPAI": -10.0,
-            "PPJLOLLIHMJ": true,
-            "FIOFLBIMFEI": {
-                "$type": "JDDOBDIFAFG"
+            "anglerVelocity": 0.0,
+            "acceleration": -10.0,
+            "canBornInWater": true,
+            "updateAngle": {
+                "$type": "ConfigBulletMoveAngleByVelocity"
             },
-            "EJLPNJNLKJO": {
-                "CNCFDGHPDMM": 20.0,
-                "LKGPGNFBLGO": 90.0,
-                "JJOMEBOHIGM": 0.75,
-                "MMFLMIJMPHO": 0.5,
-                "IJIIEFJIHOM": true,
-                "KBDCGLHEGLP": "Keep",
-                "EFMHGACIJIK": "Keep"
+            "stickToGround": {
+                "maxStepHeight": 20.0,
+                "maxSlopeAngle": 90.0,
+                "heightToGround": 0.75,
+                "flexibleRange": 0.5,
+                "isStickToWater": true,
+                "unstickWhenDownSlide": "Keep",
+                "unstickWhenUpSlide": "Keep"
             },
-            "DNGMGMEICNJ": false,
-            "MJBBAAKCDCP": 0.0
+            "guidanceSpeedChange": false,
+            "guidanceDuration": 0.0
         },
-        "PCIDMPEJLOO": {
-            "$type": "CLCBNALEMAM",
+        "gadget": {
+            "$type": "ConfigBulletPattern",
             "collision": {
                 "triggerType": "TriggerNoRepeat",
                 "targetType": "Enemy",
                 "ignoreScene": true
             },
-            "JOGFONCFBNH": [
+            "triggerActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Area_Xm_Property_Ani_Prop_AbilitySandWorm_Sand_02_ShootAttack_Bullet_Explode"
                 }
             ],
-            "HOCNBGDGGPK": [
+            "triggerLifeOverActions": [
                 {
-                    "$type": "DBGFNGNAOKE",
+                    "$type": "ConfigGadgetTriggerAbility",
                     "abilityName": "SceneObj_Area_Xm_Property_Ani_Prop_AbilitySandWorm_Sand_02_ShootAttack_Bullet_Explode"
                 }
             ]
@@ -1964,7 +1964,7 @@
                 "abilityOverride": ""
             }
         ],
-        "OJNFHJMMDMA": {
+        "timer": {
             "lifeTime": 5.0
         }
     }
