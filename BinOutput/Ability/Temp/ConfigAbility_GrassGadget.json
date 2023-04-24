@@ -1,0 +1,231 @@
+[
+    {
+        "Default": {
+            "$type": "ConfigAbility",
+            "abilityName": "Oil_Interact",
+            "modifiers": {
+                "NormalModifier": {
+                    "modifierName": "",
+                    "elementType": "Wood",
+                    "bonusCriticalHurt": 5.0,
+                    "isElementDurabilityMutable": false,
+                    "onBeingHit": [
+                        {
+                            "$type": "ApplyModifier",
+                            "predicates": [
+                                {
+                                    "$type": "OIEGBANNLOG",
+                                    "CIMNBKFMPGD": "Fire"
+                                },
+                                {
+                                    "$type": "DDBJEPBNOGF",
+                                    "predicates": [
+                                        {
+                                            "$type": "KDJFMOGPKCP",
+                                            "CIMNBKFMPGD": "Fire"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "modifierName": "Burning"
+                        },
+                        {
+                            "$type": "ApplyModifier",
+                            "predicates": [
+                                {
+                                    "$type": "OIEGBANNLOG",
+                                    "CIMNBKFMPGD": "Fire"
+                                },
+                                {
+                                    "$type": "DDBJEPBNOGF",
+                                    "predicates": [
+                                        {
+                                            "$type": "KDJFMOGPKCP",
+                                            "CIMNBKFMPGD": "Fire"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "modifierName": "On_Burning"
+                        }
+                    ]
+                },
+                "On_Burning": {
+                    "modifierName": "",
+                    "bonusCriticalHurt": 100.0,
+                    "onRemoved": [
+                        {
+                            "$type": "ApplyModifier",
+                            "modifierName": "Delay"
+                        },
+                        {
+                            "$type": "FireEffect",
+                            "healLimitedByCasterMaxHPRatio": "Eff_FireBasin_Smoke",
+                            "born": {
+                                "$type": "LMEODGDBOCI",
+                                "offset": {
+                                    "JJJFPBPALGO": 0.0,
+                                    "EAOEAJIDBGD": 0.0,
+                                    "INAIAJMIKEK": 0.0
+                                },
+                                "attachPointName": "attachPoint"
+                            },
+                            "FGMDINMEPHL": -1.0
+                        }
+                    ],
+                    "onBeingHit": [
+                        {
+                            "$type": "ApplyModifier",
+                            "predicates": [
+                                {
+                                    "$type": "OIEGBANNLOG",
+                                    "CIMNBKFMPGD": "Water"
+                                }
+                            ],
+                            "modifierName": "Check_Fire"
+                        },
+                        {
+                            "$type": "ApplyModifier",
+                            "predicates": [
+                                {
+                                    "$type": "OIEGBANNLOG",
+                                    "CIMNBKFMPGD": "Ice"
+                                }
+                            ],
+                            "modifierName": "Check_Fire"
+                        }
+                    ]
+                },
+                "Check_Fire": {
+                    "modifierName": "",
+                    "duration": 0.20000000298023224,
+                    "bonusCriticalHurt": 100.0,
+                    "onRemoved": [
+                        {
+                            "$type": "RemoveModifier",
+                            "predicates": [
+                                {
+                                    "$type": "DDBJEPBNOGF",
+                                    "predicates": [
+                                        {
+                                            "$type": "KDJFMOGPKCP",
+                                            "CIMNBKFMPGD": "Fire"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "modifierName": "On_Burning"
+                        }
+                    ]
+                },
+                "Check_Around": {
+                    "modifierName": "",
+                    "duration": 0.20000000298023224,
+                    "bonusCriticalHurt": 100.0,
+                    "onAdded": [
+                        {
+                            "$type": "Predicated",
+                            "targetPredicates": [
+                                {
+                                    "$type": "KDJFMOGPKCP",
+                                    "CIMNBKFMPGD": "Fire"
+                                }
+                            ],
+                            "successActions": [
+                                {
+                                    "$type": "DamageByAttackValue",
+                                    "target": "Caster",
+                                    "attackInfo": {
+                                        "attackTag": "",
+                                        "attenuationTag": "",
+                                        "attenuationGroup": "default",
+                                        "attackProperty": {
+                                            "MFOOCADHKLC": 0.10000000149011612,
+                                            "MKLAMNDEDGB": 0.0,
+                                            "elementType": "Fire",
+                                            "bonusCriticalHurt": 40.0,
+                                            "strikeType": "Default"
+                                        },
+                                        "hitPattern": {
+                                            "onHitEffectName": "default",
+                                            "hitImpulseType": "",
+                                            "overrideHitImpulse": {
+                                                "hitLevel": "Air",
+                                                "IPHCEFBMJAJ": 0.0,
+                                                "hitImpulseY": 420.0
+                                            },
+                                            "hitHaltTimeScale": 0.009999999776482582
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "Delay": {
+                    "modifierName": "",
+                    "duration": 4.5,
+                    "bonusCriticalHurt": 100.0,
+                    "thinkInterval": 3.0,
+                    "onThinkInterval": [
+                        {
+                            "$type": "ApplyModifier",
+                            "otherTargets": {
+                                "$type": "BMJIBLBEECK",
+                                "shapeName": "CircleR5",
+                                "campTargetType": "SelfCamp",
+                                "OBHNBNDMPFN": 1.0
+                            },
+                            "modifierName": "Check_Around"
+                        }
+                    ]
+                },
+                "Burning": {
+                    "modifierName": "",
+                    "duration": 1.2000000476837158,
+                    "bonusCriticalHurt": 100.0,
+                    "thinkInterval": 1.0,
+                    "onThinkInterval": [
+                        {
+                            "$type": "DamageByAttackValue",
+                            "otherTargets": {
+                                "$type": "BMJIBLBEECK",
+                                "shapeName": "CircleR5",
+                                "campTargetType": "SelfCamp",
+                                "OBHNBNDMPFN": 1.0
+                            },
+                            "attackInfo": {
+                                "attackTag": "",
+                                "attenuationTag": "",
+                                "attenuationGroup": "default",
+                                "attackProperty": {
+                                    "MFOOCADHKLC": 0.10000000149011612,
+                                    "MKLAMNDEDGB": 0.0,
+                                    "elementType": "Fire",
+                                    "bonusCriticalHurt": 40.0,
+                                    "strikeType": "Default"
+                                },
+                                "hitPattern": {
+                                    "onHitEffectName": "default",
+                                    "hitImpulseType": "",
+                                    "overrideHitImpulse": {
+                                        "hitLevel": "Air",
+                                        "IPHCEFBMJAJ": 0.0,
+                                        "hitImpulseY": 420.0
+                                    },
+                                    "hitHaltTimeScale": 0.009999999776482582
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "onAdded": [
+                {
+                    "$type": "AttachModifier",
+                    "modifierName": "NormalModifier"
+                }
+            ]
+        }
+    }
+]

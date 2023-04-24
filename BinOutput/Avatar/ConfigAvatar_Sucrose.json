@@ -1,0 +1,2249 @@
+{
+    "common": {
+        "effectAttachShape": {
+            "$type": "GJKHOELECFL",
+            "FFDBDMMNINI": "EffectMesh"
+        },
+        "mass": 10.0,
+        "height": 1.5800000429153442,
+        "modelHeight": 1.5800000429153442,
+        "affectedByWorld": true,
+        "checkInSurface": true
+    },
+    "headControl": {
+        "$type": "GAAIKCFIJMM",
+        "useHeadControl": true,
+        "FCDMCPDGFCL": [
+            "NormalStandby",
+            "NormalMove/WalkToRun",
+            "NormalMove/Walk",
+            "NormalMove/RunToWalk",
+            "NormalMove/Run",
+            "NormalMove/RunToIdle",
+            "NormalMove/WalkToIdle",
+            "NormalMove/RunningTurn",
+            "NormalMove/SprintToRun",
+            "NormalMove/SprintToIdle",
+            "Sprint",
+            "Climb/ClimbIdle",
+            "Ladder/LadderIdle",
+            "Swim/SwimIdle",
+            "NormalStandbyWeapon",
+            "NormalMoveWeapon/WalkToRunWeapon",
+            "NormalMoveWeapon/WalkWeapon",
+            "NormalMoveWeapon/RunToWalkWeapon",
+            "NormalMoveWeapon/RunWeapon",
+            "NormalMoveWeapon/RunToIdleWeapon",
+            "NormalMoveWeapon/WalkToIdleWeapon",
+            "NormalMoveWeapon/RunningTurnWeapon"
+        ]
+    },
+    "specialPoint": {
+        "elementAbsorb": "PRIVATE_Pendant",
+        "elementPendant": "PRIVATE_Pendant",
+        "elementDrop": "RootNode",
+        "bulletAim": "RootNode"
+    },
+    "combat": {
+        "property": {
+            "endureType": "Avatar_Catalyst",
+            "weight": 75.0
+        },
+        "beHit": {
+            "hitBloodEffect": ""
+        },
+        "die": {
+            "hasAnimatorDie": true,
+            "dieEndTime": 1.5,
+            "dieForceDisappearTime": 2.5,
+            "dieDisappearEffect": "Eff_Death_Avatar_Common",
+            "dieShaderData": "AvatarDie",
+            "useRagDoll": true,
+            "ragDollDieEndTimeDelay": 0.4000000059604645
+        },
+        "animEvents": {
+            "ExtraAttack": {
+                "attackPattern": {
+                    "$type": "NAMPOMPBMHC",
+                    "triggerType": "TriggerNoRepeat",
+                    "born": {
+                        "$type": "ODKAAGHNCIP",
+                        "offset": {
+                            "JJJFPBPALGO": 0.0,
+                            "EAOEAJIDBGD": 1.5,
+                            "INAIAJMIKEK": -0.20000000298023224
+                        }
+                    },
+                    "size": {
+                        "JJJFPBPALGO": 3.200000047683716,
+                        "EAOEAJIDBGD": 3.0,
+                        "INAIAJMIKEK": 7.5
+                    }
+                },
+                "attackInfo": {
+                    "attackTag": "ExtraAttack",
+                    "attenuationTag": "",
+                    "attenuationGroup": "default",
+                    "attackProperty": {
+                        "MFOOCADHKLC": 0.0,
+                        "MKLAMNDEDGB": 0.0,
+                        "elementType": "Wind",
+                        "bonusCriticalHurt": 25.0,
+                        "strikeType": "Default",
+                        "enBreak": 120.0,
+                        "attackType": "Range"
+                    },
+                    "hitPattern": {
+                        "onHitEffectName": "default",
+                        "hitImpulseType": "LV5",
+                        "hitHaltTimeScale": 0.009999999776482582
+                    },
+                    "forceCameraShake": true,
+                    "cameraShake": {
+                        "shakeType": "CustomVector",
+                        "shakeRange": 0.11999999731779099,
+                        "shakeTime": 0.11999999731779099,
+                        "shakeDistance": 30.0,
+                        "shakeDir": {
+                            "z": 1.0
+                        },
+                        "extension": {
+                            "baseCycle": 0.23999999463558197,
+                            "rangeAttenuation": 0.10000000149011612
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "equipController": {
+        "sheathPoint": "WeaponBackPut",
+        "dissolveSheathFadeDelay": 0.07500000298023224,
+        "dissolveSheathFadeTime": 2.0,
+        "dissolveTakeFadeTime": 0.699999988079071,
+        "triggerToStates": [
+            {
+                "trigger": "Close",
+                "floatID": "PlaySpeed",
+                "floatValue": 0.5
+            },
+            {
+                "trigger": "Open",
+                "states": [
+                    "NormalStandbyWeapon",
+                    "BeHit",
+                    "BeHitAir",
+                    "Die"
+                ],
+                "floatID": "PlaySpeed",
+                "floatValue": 1.0
+            },
+            {
+                "trigger": "Close",
+                "states": [
+                    "NormalMoveWeaponPutaway/StandbyPutaway"
+                ],
+                "floatID": "PlaySpeed",
+                "floatValue": 1.0
+            },
+            {
+                "trigger": "PlayDone",
+                "states": [
+                    "NormalMoveWeaponOver/StandbyPutawayOver"
+                ],
+                "floatID": "PlaySpeed",
+                "floatValue": 0.5
+            },
+            {
+                "trigger": "Attack",
+                "playTime": 0.800000011920929,
+                "states": [
+                    "Attack01/Attack01",
+                    "ExtraAttack_BS/ExtraAttack_BS",
+                    "ExtraAttack_Charge/ExtraAttack_Charge",
+                    "ExtraAttack/ExtraAttack",
+                    "ExtraAttack_AS/ExtraAttack_AS"
+                ],
+                "floatID": "PlaySpeed",
+                "floatValue": 2.0
+            },
+            {
+                "trigger": "Attack",
+                "playTime": 1.2000000476837158,
+                "states": [
+                    "Attack02/Attack02",
+                    "Attack03/Attack03",
+                    "Attack04/Attack04"
+                ],
+                "floatID": "PlaySpeed",
+                "floatValue": 2.0
+            },
+            {
+                "trigger": "Attack",
+                "states": [
+                    "Sucrose_WindBlackHole/Sucrose_WindBlackHole",
+                    "Sucrose_WindBlackHole_AS/Sucrose_WindBlackHole_AS",
+                    "FallingAnthem_AS_2/FallingAnthem_AS_2"
+                ],
+                "floatID": "PlaySpeed",
+                "floatValue": 2.0
+            }
+        ],
+        "attachPoints": {
+            "equip01": "WeaponR",
+            "equip02": "WeaponL",
+            "equip03": "WeaponL"
+        }
+    },
+    "abilities": [
+        {
+            "abilityID": "Attack01",
+            "abilityName": "Avatar_Sucrose_Attack01",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "Attack02",
+            "abilityName": "Avatar_Sucrose_Attack02",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "Attack03",
+            "abilityName": "Avatar_Sucrose_Attack03",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "Attack04_Pre",
+            "abilityName": "Avatar_Sucrose_Attack04_Pre",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "Attack04",
+            "abilityName": "Avatar_Sucrose_Attack04",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "ExtraAttack",
+            "abilityName": "Avatar_Sucrose_ExtraAttack",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "WindBlackHole",
+            "abilityName": "Avatar_Sucrose_WindBlackHole",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "DemiHurricane",
+            "abilityName": "Avatar_Sucrose_DemiHurricane",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "Girl_Catalyst_HitFallToGround",
+            "abilityName": "Avatar_Girl_Catalyst_HitFallToGround_Hide",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "Avatar_Sucrose_FallingAnthem",
+            "abilityName": "Avatar_Sucrose_FallingAnthem",
+            "abilityOverride": ""
+        },
+        {
+            "abilityID": "NormalAttack_DamageHandler",
+            "abilityName": "Avatar_Sucrose_NormalAttack_DamageHandler",
+            "abilityOverride": ""
+        }
+    ],
+    "stateLayers": {
+        "defaultLayer": {
+            "$type": "JOPKKFFECKJ",
+            "FNPGDAEJAPJ": "",
+            "stateIDs": {
+                "NormalStandby": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Standby": [
+                            "Avatar_ResetFreeStyle"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "NormalMove": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ShowUp": [
+                            "Audio_Girl_Showup"
+                        ],
+                        "WalkToRun": [
+                            "Audio_Girl_WalkToRun",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "Walk": [
+                            "Ani_WalkSprint01",
+                            "Audio_Girl_Walk",
+                            "WalkStepOnWater",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunToWalk": [
+                            "Audio_Girl_RunToWalk",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "Run": [
+                            "Ani_Run01",
+                            "Audio_Girl_Run",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunToIdle": [
+                            "Audio_Girl_RunToIdle",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "WalkToIdle": [
+                            "Audio_Girl_WalkToIdle"
+                        ],
+                        "RunningTurn": [],
+                        "SprintToRun": [
+                            "Audio_Girl_SprintToRun",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "SprintToIdle": [
+                            "Audio_Girl_SprintToIdle",
+                            "Emo_Girl_Sprint_AS",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "FallOnGround": [
+                            "Audio_Girl_FallOnGround",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "FallOnGroundLit": [
+                            "Audio_Girl_FallOnGroundLit",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "FallToGroundRun": [
+                            "Audio_Girl_FallToGroundRun",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "FallToGroundRunHard": [
+                            "Audio_Girl_FallToGroundRunHard",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "FallToGroundSprint": [
+                            "Audio_Girl_FallToGroundSprint",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 1.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "SprintBS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "SprintBS": [
+                            "Audio_Girl_RunToSprint",
+                            "SprintBS_Invincible",
+                            "Emo_Girl_Sprint_BS",
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "EOPFMICKIKG": [
+                        "DoSkill",
+                        "AimEnd"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill",
+                            "normalizeStart": 0.25999999046325684
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {
+                            "normalizeStart": 0.25999999046325684
+                        }
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Sprint": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Sprint": [
+                            "Ani_WalkSprint01",
+                            "Audio_Girl_Sprint",
+                            "Emo_Girl_Sprint_Loop",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 1.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Crouch": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "CrouchIdle": [],
+                        "CrouchMove": [
+                            "Audio_Girl_CrouchMove"
+                        ],
+                        "CrouchRoll": [
+                            "Audio_Girl_CrouchRoll",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 1.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "MBCNNLAJOHK": "Squat",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "CrouchToStandby": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "CrouchToStandby": [
+                            "Audio_Girl_CrouchToStandby",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "SkiffNormal": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "SkiffNormal": []
+                    },
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Climb": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ClimbMove0": [
+                            "ClimbStep",
+                            "Audio_Girl_Climb",
+                            "Audio_Girl_Foley_Climb_Sucrose"
+                        ],
+                        "ClimbMove1": [
+                            "ClimbStep",
+                            "Audio_Girl_Climb",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "ClimbIdle": [],
+                        "ClimbJump": [
+                            "Audio_Girl_ClimbDash",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "JumpUpWallForStandby": [
+                            "Audio_Girl_JumpUpWallStandby",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "Standby2ClimbB": [
+                            "Audio_Girl_Standby2ClimbB",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "MBCNNLAJOHK": "Climb",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "ClimbTransient": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "JumpWallReady": [],
+                        "Standby2ClimbA": [
+                            "Audio_Girl_Standby2ClimbA",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Upstairs": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Upstairs": [
+                            "Audio_Girl_Upstairs",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Slip": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "SlipFaceWall": [
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ],
+                        "SlipBackWall": [
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ]
+                    },
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Swim": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "SwimIdle": [
+                            "Audio_Girl_SwimIdle"
+                        ],
+                        "SwimMove": [
+                            "SwimStep",
+                            "Audio_Girl_SwimMove"
+                        ],
+                        "SwimDash": [
+                            "Audio_Girl_SwimDash",
+                            "Avatar_Girl_SwimDash_Hand_Effect"
+                        ],
+                        "SwimJumpToWater": [
+                            "Audio_Girl_SwimJumpToWater"
+                        ]
+                    },
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "MBCNNLAJOHK": "Swim",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Fly": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Fly": [
+                            "Audio_Girl_Fly",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "FlyStart": [
+                            "Audio_Girl_FlyStart",
+                            "FlyStart_Weapon",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseAirSkill"
+                        }
+                    ],
+                    "MBCNNLAJOHK": "Fly",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Jump": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Jump": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "JumpForRun": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "JumpForWalk": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "JumpForSprint": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "EOPFMICKIKG": [
+                        "DoSkill",
+                        "AimEnd"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseAirSkill"
+                        }
+                    ],
+                    "MBCNNLAJOHK": "Jump",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Fall": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "JumpOffWall": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "SwimJump": [
+                            "Audio_Girl_SwimJump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "SwimJumpDrop": [
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ],
+                        "DropDown": [
+                            "Audio_Girl_DropDown",
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ],
+                        "DropDownLit": [],
+                        "WalkDropDownLit": []
+                    },
+                    "CJCIFIEDHHM": true,
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseAirSkill"
+                        }
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "NormalStandbyWeapon": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "StandbyWeapon": []
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "NormalMoveWeapon": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "WalkToRunWeapon": [
+                            "Audio_Girl_WalkToRun"
+                        ],
+                        "WalkWeapon": [
+                            "Audio_Girl_Walk",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunToWalkWeapon": [
+                            "Audio_Girl_RunToWalk"
+                        ],
+                        "RunWeapon": [
+                            "Audio_Girl_Run",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunToIdleWeapon": [
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "WalkToIdleWeapon": [
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunningTurnWeapon": [],
+                        "FallOnGroundWeapon": [
+                            "Audio_Girl_FallOnGround"
+                        ],
+                        "FallOnGroundLitWeapon": [
+                            "Audio_Girl_FallOnGroundLit"
+                        ],
+                        "FallOnGroundMiddleWeapon": [
+                            "Audio_Girl_FallOnGroundMiddle"
+                        ],
+                        "FallToGroundRunWeapon": [
+                            "Audio_Girl_FallToGroundRun"
+                        ],
+                        "FallToGroundRunHardWeapon": [
+                            "Audio_Girl_FallToGroundRunHard"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 2.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "NormalMoveWeaponPutaway": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "StandbyPutaway": [
+                            "Girl_Catalyst_Putaway_Standby",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "WalkPutaway": [
+                            "Girl_Catalyst_Putaway_Walk",
+                            "Audio_Girl_Sword_WalkPutAway",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunPutaway": [
+                            "Girl_Catalyst_Putaway_Run",
+                            "Audio_Girl_Sword_RunPutAway",
+                            "Audio_Girl_Foley_Twice_Sucrose"
+                        ],
+                        "RunToSprintWeapon": [
+                            "Girl_Catalyst_Putaway_Sprint",
+                            "Audio_Girl_Sword_RunToSprintWeapon"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 2.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "NormalMoveWeaponOver": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "StandbyPutawayOver": [],
+                        "WalkPutawayOver": [
+                            "Audio_Girl_Sword_WalkPutAwayOver"
+                        ],
+                        "RunPutawayOver": [
+                            "Audio_Girl_Sword_RunPutAwayOver"
+                        ],
+                        "RunToSprintWeaponOver": [
+                            "Audio_Girl_Sword_RunToSprintWeaponOver"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 2.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "JumpWeapon": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "JumpWeapon": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "JumpForRunWeapon": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "JumpForWalkWeapon": [
+                            "Audio_Girl_Jump",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "CJCIFIEDHHM": true,
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseAirSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "MBCNNLAJOHK": "Jump",
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "FallWeapon": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "DropDownWeapon": [
+                            "Audio_Girl_DropDown",
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ],
+                        "DropDownLitWeapon": [],
+                        "WalkDropDownLitWeapon": []
+                    },
+                    "CJCIFIEDHHM": true,
+                    "EOPFMICKIKG": [
+                        "DoSkill"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseAirSkill"
+                        }
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "BeHit": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Hit_L": [
+                            "Audio_Girl_Hit_L",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "Hit_H": [
+                            "Audio_Girl_Hit_H",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "EOPFMICKIKG": [
+                        "BeHit",
+                        "HitAir2HitDrop"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "DoSkill"
+                    ],
+                    "CAOJDOAEDAK": "combatBeHit",
+                    "OCKBIIIIFDC": 0.0,
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "HitThrow": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Hit_Throw_Ground": [
+                            "BeHitAir_Weapon",
+                            "Audio_Girl_Hit_Throw_Ground_Ambor"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "EOPFMICKIKG": [
+                        "BeHit",
+                        "HitAir2HitDrop"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "DoSkill"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseLiquid"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatBeHit",
+                    "OCKBIIIIFDC": 0.0,
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "BeHitAir": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Hit_Throw": [
+                            "Audio_Girl_Hit_Throw",
+                            "BeHitAir_Weapon",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "Hit_ThrowAir": [
+                            "Audio_Girl_Hit_ThrowAir",
+                            "BeHitAir_Weapon"
+                        ],
+                        "Struggle": [
+                            "BeHitAir_Weapon",
+                            "Audio_Girl_Foley_ThreeTimes_Sucrose"
+                        ]
+                    },
+                    "moveType": "combatAir",
+                    "EOPFMICKIKG": [
+                        "BeHit"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "DoSkill"
+                    ],
+                    "CAOJDOAEDAK": "combatBeHit",
+                    "MBCNNLAJOHK": "CombatAir",
+                    "OCKBIIIIFDC": 0.0,
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Die": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "FallDie": [
+                            "Audio_Girl_Death"
+                        ],
+                        "NormalDie": [
+                            "Die",
+                            "Audio_Girl_Death",
+                            "Audio_Girl_Foley_Once_Sucrose"
+                        ],
+                        "SwimDie": [
+                            "Swim_Die",
+                            "Audio_Girl_SwimDie"
+                        ],
+                        "HitGroundDie": [
+                            "Die",
+                            "Audio_Girl_Death"
+                        ]
+                    },
+                    "HPDHJBCMFPB": ""
+                },
+                "Die_RagDoll": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "FallDie_AS": []
+                    },
+                    "HCCMMNBMCMA": true,
+                    "HPDHJBCMFPB": ""
+                },
+                "Attack01": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Attack01": [
+                            "Sucrose_Attack01",
+                            "SetComboCount1",
+                            "Interaction_Bad",
+                            "Audio_Girl_NormalAtk_01_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_NormalAttack01"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseExtra"
+                        },
+                        {
+                            "name": "&CanCancelSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Attack02": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Attack02": [
+                            "Sucrose_Attack02",
+                            "SetComboCount2",
+                            "Interaction_Bad",
+                            "Audio_Girl_NormalAtk_02_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_NormalAttack02"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseExtra"
+                        },
+                        {
+                            "name": "&CanCancelSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Attack03": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Attack03": [
+                            "Sucrose_Attack03",
+                            "SetComboCount3",
+                            "Interaction_Bad",
+                            "Audio_Girl_NormalAtk_03_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_NormalAttack03"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseExtra"
+                        },
+                        {
+                            "name": "&CanCancelSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Attack04": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Attack04": [
+                            "Sucrose_Attack04",
+                            "SetComboCount4",
+                            "Interaction_Bad",
+                            "Audio_Girl_NormalAtk_04_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_NormalAttack04"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseExtra"
+                        },
+                        {
+                            "name": "&CanCancelSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "ExtraAttack_BS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ExtraAttack_BS": [
+                            "Audio_Girl_ExtraAtk_BS_Sucrose"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanCancelSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "ExtraAttack": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ExtraAttack": [
+                            "Sucrose_ExtraAttack_Charge",
+                            "Sucrose_ExtraAttack",
+                            "Interaction_Bad",
+                            "Audio_Girl_ExtraAtk_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_ExtraAttack"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanCancelSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {
+                            "normalizeStart": 0.800000011920929
+                        }
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "ExtraAttack_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ExtraAttack_AS": [
+                            "Audio_Girl_ExtraAtk_AS_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_ExtraAttack_AS"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanCancelSkill"
+                        },
+                        {
+                            "name": "&CanUseSkill",
+                            "normalizeStart": 0.15000000596046448
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Sucrose_WindBlackHole": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Sucrose_WindBlackHole": [
+                            "Sucrose_WindBlackHole",
+                            "Interaction_Bad",
+                            "Audio_Girl_WindBlackHole_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_WindBlackHole"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "BFDKJHMDDML": 0.6000000238418579,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "KCMPNHIMGGJ": 0.15000000596046448,
+                    "GFIHGPDGNCA": 0.15000000596046448,
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Sucrose_WindBlackHole_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Sucrose_WindBlackHole_AS": [
+                            "Audio_Girl_WindBlackHole_AS_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_WindBlackHole_AS"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Sucrose_DemiHurricane": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Sucrose_DemiHurricane": [
+                            "Sucrose_DemiHurricane",
+                            "Interaction_Bad",
+                            "Audio_Girl_DemiHurricane_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_DemiHurricane"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "BFDKJHMDDML": 0.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "OCKBIIIIFDC": -1.0,
+                    "MGJNLAENKNK": -1.0,
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Sucrose_DemiHurricane_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Sucrose_DemiHurricane_AS": [
+                            "Audio_Girl_DemiHurricane_AS_Sucrose",
+                            "Emo_Girl_Catalyst_Sucrose_DemiHurricane_AS"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "OFLEPMLGPGJ": true
+                },
+                "FallingAnthem_BS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "FallingAnthem_BS_1": [
+                            "Audio_Girl_Catalyst_Sucrose_FallingAnthem_BS_1",
+                            "Emo_Girl_Catalyst_FallingAttack_BS_01"
+                        ],
+                        "FallingAnthem_BS_2": [
+                            "Emo_Girl_Catalyst_FallingAttack_BS_02"
+                        ]
+                    },
+                    "moveType": "combatAir",
+                    "BFDKJHMDDML": 0.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CAOJDOAEDAK": "combatNormal",
+                    "MBCNNLAJOHK": "Fly",
+                    "EJFKGPFJADD": [
+                        {
+                            "equip": "equip01",
+                            "DLMMAEKKPKA": "WeaponR2"
+                        }
+                    ],
+                    "OCKBIIIIFDC": -1.0,
+                    "HPDHJBCMFPB": "HitAir2HitDrop",
+                    "AFLGOLACEJP": true
+                },
+                "FallingAnthem_Loop": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "FallingAnthem_Loop": [],
+                        "FallingAnthem_Loop_Low": []
+                    },
+                    "moveType": "combatAir",
+                    "BFDKJHMDDML": 0.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "MBCNNLAJOHK": "Fly",
+                    "EJFKGPFJADD": [
+                        {
+                            "equip": "equip01",
+                            "DLMMAEKKPKA": "WeaponR2"
+                        }
+                    ],
+                    "HPDHJBCMFPB": "HitAir2HitDrop",
+                    "AFLGOLACEJP": true
+                },
+                "FallingAnthem_AS_1": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "FallingAnthem_AS_1": [
+                            "Sucrose_FallingAnthem_Strike",
+                            "Interaction_Bad",
+                            "Audio_Girl_Catalyst_Sucrose_FallingAnthem_AS_1",
+                            "Emo_Girl_Catalyst_FallingAttack_AS_01"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "EJFKGPFJADD": [
+                        {
+                            "equip": "equip01",
+                            "DLMMAEKKPKA": "WeaponR2"
+                        }
+                    ],
+                    "OCKBIIIIFDC": -1.0,
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "FallingAnthem_AS_2": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "FallingAnthem_AS_2": [
+                            "Audio_Girl_Catalyst_Sucrose_FallingAnthem_AS_2",
+                            "Emo_Girl_Catalyst_FallingAttack_AS_02"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill",
+                            "normalizeStart": 0.05000000074505806
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "EJFKGPFJADD": [
+                        {
+                            "equip": "equip01",
+                            "DLMMAEKKPKA": "WeaponR2"
+                        }
+                    ],
+                    "KCMPNHIMGGJ": 0.10000000149011612,
+                    "HPDHJBCMFPB": "",
+                    "CJIGPPKBCII": true
+                },
+                "Sit": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "SitDown": [
+                            "Audio_Girl_SitDown",
+                            "Audio_Girl_Sit_Sucrose"
+                        ],
+                        "SitLoop": [],
+                        "SitUp": [
+                            "Audio_Girl_SitDown",
+                            "Audio_Girl_Sit_Sucrose"
+                        ]
+                    },
+                    "moveType": "performMove",
+                    "BDFLEJHPFBG": 100.0,
+                    "MBCNNLAJOHK": "Perform",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "SitB": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "SitBDown": [
+                            "Audio_Girl_SitDown",
+                            "Audio_Girl_Sit_Sucrose"
+                        ],
+                        "SitBLoop": [],
+                        "SitBUp": [
+                            "Audio_Girl_SitDown",
+                            "Audio_Girl_Sit_Sucrose"
+                        ]
+                    },
+                    "moveType": "performMove",
+                    "BDFLEJHPFBG": 100.0,
+                    "MBCNNLAJOHK": "Perform",
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "StandbyShow": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "StandbyVoice": [
+                            "Audio_Girl_StandbyVoice"
+                        ],
+                        "StandbyShow_01": [
+                            "Manekin_Sucrose_Show01",
+                            "Audio_Girl_StandbyShow_01_Sucrose"
+                        ],
+                        "StandbyShow_02": [
+                            "Manekin_Sucrose_Show02",
+                            "Audio_Girl_StandbyShow_02_Sucrose"
+                        ]
+                    },
+                    "moveType": "performMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "TakePhotos": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "Think01BS": [],
+                        "Akimbo02BS": [],
+                        "Think01Loop": [],
+                        "Akimbo02Loop": [],
+                        "Think01AS": [],
+                        "Akimbo02AS": []
+                    },
+                    "HPDHJBCMFPB": ""
+                },
+                "Channel_BS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ChannelBS": [
+                            "Emo_Avatar_Common_Manekin_Default"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Channel_Loop": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ChannelLoop": []
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "Channel_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ChannelAS": []
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "PlayMusic_Lyre": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "PlayMusic_Lyre_BS": [
+                            "PlayMusic_Lyre_Girl"
+                        ],
+                        "PlayMusic_Lyre_Loop": []
+                    },
+                    "moveType": "combatMove",
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "PlayMusic_Lyre_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "PlayMusic_Lyre_AS": [
+                            "PlayMusic_Lyre_Girl_AS"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "PlayMusic_Qin": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "PlayMusic_Qin_BS": [
+                            "PlayMusic_Qin_Girl"
+                        ],
+                        "PlayMusic_Qin_Loop": []
+                    },
+                    "moveType": "combatMove",
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "PlayMusic_Qin_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "PlayMusic_Qin_AS": [
+                            "PlayMusic_Qin_Girl_AS"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "PlayMusic_Drum": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "PlayMusic_Drum_BS": [
+                            "PlayMusic_Drum_Girl"
+                        ],
+                        "PlayMusic_Drum_Loop": []
+                    },
+                    "moveType": "combatMove",
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "PlayMusic_Drum_AS": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "PlayMusic_Drum_AS": [
+                            "PlayMusic_Drum_Girl_AS"
+                        ]
+                    },
+                    "moveType": "combatMove",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump"
+                    ],
+                    "CIFLOMFPGND": [
+                        {
+                            "name": "&CanUseSkill"
+                        }
+                    ],
+                    "BCGEGECAGLE": [
+                        {}
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "ActivitySkill_ElectricCoreFly": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ActivitySkill_ElectricCoreFly": []
+                    },
+                    "moveType": "combatAir",
+                    "BDFLEJHPFBG": 100.0,
+                    "EOPFMICKIKG": [
+                        "ElectricCoreFly_End"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump",
+                        "ElectricCoreFly_End"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "ActivitySkill_GrapplingHook": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ActivitySkill_GrapplingHook": []
+                    },
+                    "moveType": "combatAir",
+                    "BDFLEJHPFBG": 100.0,
+                    "EOPFMICKIKG": [
+                        "GrapplingHook_Drop"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump",
+                        "GrapplingHook_Drop"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "ActivitySkill_CustomSkill01": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ActivitySkill_CustomSkill01": []
+                    },
+                    "moveType": "combatAir",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "EOPFMICKIKG": [
+                        "CustomSkill_End_Fly",
+                        "CustomSkill_End_Drop"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump",
+                        "CustomSkill_End_Fly",
+                        "CustomSkill_End_Drop"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                },
+                "ActivitySkill_CustomSkill02": {
+                    "$type": "KIEKFPIFIKI",
+                    "ELJMIBJPBCH": {
+                        "ActivitySkill_CustomSkill02": []
+                    },
+                    "moveType": "combatAir",
+                    "CJCIFIEDHHM": true,
+                    "BDFLEJHPFBG": 100.0,
+                    "EOPFMICKIKG": [
+                        "CustomSkill_End_Fly",
+                        "CustomSkill_End_Drop"
+                    ],
+                    "LLAMHOPNFJG": [
+                        "BeHit",
+                        "DoSkill",
+                        "Jump",
+                        "CustomSkill_End_Fly",
+                        "CustomSkill_End_Drop"
+                    ],
+                    "HPDHJBCMFPB": "",
+                    "AFLGOLACEJP": true
+                }
+            }
+        }
+    },
+    "audio": {
+        "NCOGLLMIJGO": "",
+        "animAudio": {
+            "onTransitionIn": [
+                {
+                    "currentStateName": "SlipBackWall",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_slipWall"
+                    }
+                },
+                {
+                    "currentStateName": "SlipFaceWall",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_slipWall"
+                    }
+                },
+                {
+                    "currentStateName": "NormalDie",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land"
+                    },
+                    "otherStateNames": [
+                        "FallOnGround"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "SwimJumpToWater",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_swim_dive"
+                    }
+                },
+                {
+                    "currentStateName": "SwimDash",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_swim_dash"
+                    }
+                },
+                {
+                    "currentStateName": "Standby",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_fly"
+                    }
+                }
+            ],
+            "onTransitionOut": [
+                {
+                    "currentStateName": "FallingAnthem_AS_2",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_catalyst_fallingAnthem_wind_AS"
+                    }
+                },
+                {
+                    "currentStateName": "StandbyShow_01",
+                    "audioEvent": {
+                        "text": "Stop_sfx_standbyShow_sucrose_bomb"
+                    }
+                },
+                {
+                    "currentStateName": "StandbyShow_02",
+                    "audioEvent": {
+                        "text": "Stop_sfx_standbyShow_sucrose_cloth"
+                    }
+                },
+                {
+                    "currentStateName": "StandbyPutaway",
+                    "audioEvent": {
+                        "text": "Stop_sfx_weapon_1HSword_lady_putAwayStandby"
+                    }
+                },
+                {
+                    "currentStateName": "WalkPutaway",
+                    "audioEvent": {
+                        "text": "Stop_sfx_weapon_1HSword_lady_putAwayStandby"
+                    }
+                },
+                {
+                    "currentStateName": "RunPutaway",
+                    "audioEvent": {
+                        "text": "Stop_sfx_weapon_1HSword_lady_putAwayStandby"
+                    }
+                },
+                {
+                    "currentStateName": "SwimJumpDrop",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_swim_drop"
+                    }
+                },
+                {
+                    "currentStateName": "SwimJump",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_swim_drop"
+                    },
+                    "otherStateNames": [
+                        "SwimJumpDrop"
+                    ],
+                    "usage": "Except"
+                },
+                {
+                    "currentStateName": "Fly",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "FlyStart",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "Fly",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_fly"
+                    }
+                },
+                {
+                    "currentStateName": "DropDownLit",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "DropDown",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "WalkDropDownLit",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "Jump",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "JumpForWalk",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "JumpForRun",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "JumpForSprint",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "JumpWeapon",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "JumpForWalkWeapon",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "JumpForRunWeapon",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "DropDownWeapon",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "DropDownLitWeapon",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_land_climb"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove0",
+                        "ClimbMove1",
+                        "ClimbJump"
+                    ],
+                    "usage": "InSet"
+                },
+                {
+                    "currentStateName": "ClimbMove0",
+                    "audioEvent": {
+                        "text": "Stop_vo_external_1P_3D"
+                    },
+                    "otherStateNames": [
+                        "ClimbIdle",
+                        "ClimbMove1"
+                    ],
+                    "usage": "Except"
+                },
+                {
+                    "currentStateName": "SlipBackWall",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_slipWall"
+                    }
+                },
+                {
+                    "currentStateName": "SlipFaceWall",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_slipWall"
+                    }
+                },
+                {
+                    "currentStateName": "SwimMove",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_swim"
+                    }
+                }
+            ],
+            "recurrentSpeeches": {
+                "Standby": {
+                    "start": {
+                        "upper": 28.0,
+                        "lower": 23.0
+                    },
+                    "interval": {
+                        "upper": 40.0,
+                        "lower": 34.0
+                    },
+                    "eventName": {
+                        "text": "Play_vo_char_explore_idle"
+                    }
+                },
+                "Walk": {
+                    "start": {
+                        "upper": 16.0,
+                        "lower": 13.0
+                    },
+                    "interval": {
+                        "upper": 14.0,
+                        "lower": 10.0
+                    },
+                    "eventName": {
+                        "text": ""
+                    }
+                },
+                "Run": {
+                    "start": {
+                        "upper": 13.0,
+                        "lower": 9.0
+                    },
+                    "interval": {
+                        "upper": 11.0,
+                        "lower": 8.0
+                    },
+                    "eventName": {
+                        "text": ""
+                    }
+                },
+                "Sprint": {
+                    "start": {
+                        "upper": 12.0,
+                        "lower": 7.0
+                    },
+                    "interval": {
+                        "upper": 9.0,
+                        "lower": 6.0
+                    },
+                    "eventName": {
+                        "text": ""
+                    }
+                }
+            }
+        },
+        "moveStateAudio": {
+            "onStateBegin": [
+                {
+                    "currentStateName": "Fly",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_fly"
+                    }
+                },
+                {
+                    "currentStateName": "Air",
+                    "audioEvent": {
+                        "text": "Play_sfx_char_drop"
+                    },
+                    "otherStateNames": [
+                        "Fly"
+                    ],
+                    "usage": "InSet"
+                }
+            ],
+            "onStateEnd": [
+                {
+                    "currentStateName": "Fly",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_fly"
+                    }
+                },
+                {
+                    "currentStateName": "Air",
+                    "audioEvent": {
+                        "text": "Stop_sfx_char_drop"
+                    }
+                }
+            ]
+        },
+        "voiceSwitch": {
+            "text": "Switch_Sucrose"
+        },
+        "bodyTypeSwitch": {
+            "text": "Switch_Girl"
+        },
+        "listenerLiftup": 1.5,
+        "surfaceProberLiftup": 1.5
+    },
+    "moveStateEffect": {
+        "footprint": {
+            "defaultEffectPatternName": "",
+            "specialSurfaces": {
+                "Snow": {
+                    "all": {
+                        "effect": "Eff_Character_Snow_Footprint",
+                        "deformation": ""
+                    },
+                    "PCNoTessellation": {
+                        "effect": "Eff_Character_Snow_Footprint",
+                        "deformation": ""
+                    },
+                    "pc": {
+                        "effect": "Eff_Character_Snow_Footprint_PCPS4",
+                        "deformation": "Snow_Footprint"
+                    },
+                    "ps4": {
+                        "effect": "Eff_Character_Snow_Footprint_PCPS4",
+                        "deformation": "Snow_Footprint"
+                    }
+                },
+                "SnowRock": {
+                    "all": {
+                        "effect": "Eff_Character_Snow_Footprint",
+                        "deformation": ""
+                    },
+                    "PCNoTessellation": {
+                        "effect": "Eff_Character_Snow_Footprint",
+                        "deformation": ""
+                    },
+                    "pc": {
+                        "effect": "Eff_Character_Snow_Footprint_PCPS4",
+                        "deformation": "Snow_Footprint"
+                    },
+                    "ps4": {
+                        "effect": "Eff_Character_Snow_Footprint_PCPS4",
+                        "deformation": "Snow_Footprint"
+                    }
+                },
+                "Dirt": {
+                    "all": {
+                        "effect": "Eff_Chacter_Footprint",
+                        "deformation": ""
+                    }
+                },
+                "Sand": {
+                    "all": {
+                        "effect": "Eff_Chacter_Footprint",
+                        "deformation": ""
+                    }
+                },
+                "Desert": {
+                    "android": {
+                        "effect": "Eff_Character_Desert_Footprint",
+                        "deformation": ""
+                    },
+                    "ios": {
+                        "effect": "Eff_Character_Desert_Footprint",
+                        "deformation": ""
+                    }
+                },
+                "Cloud": {
+                    "all": {
+                        "effect": "Eff_FootGround_Cloud_01",
+                        "deformation": ""
+                    }
+                },
+                "TransparentBrick": {
+                    "all": {
+                        "effect": "Eff_SceneObj_InvisibleWall_01",
+                        "deformation": ""
+                    }
+                }
+            }
+        }
+    },
+    "perform": {
+        "standby": {
+            "minTime": 10.0,
+            "maxTime": 20.0,
+            "performIDs": [
+                201,
+                202,
+                200,
+                200
+            ]
+        }
+    }
+}

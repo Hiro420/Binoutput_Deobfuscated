@@ -1,0 +1,100 @@
+{
+    "HEMGEJIMGMA": "",
+    "isSimpleTalk": true,
+    "entityBan": "",
+    "actors": [
+        {
+            "alias": "Avatar",
+            "visible": true,
+            "bornPointName": "",
+            "relativePosType": "AVATAR_NEW",
+            "relativePosNpcAlias": ""
+        },
+        {
+            "configID": 1,
+            "alias": "MainIntee",
+            "visible": true,
+            "bornPointName": "",
+            "relativePosType": "AVATAR_NEW",
+            "relativePosNpcAlias": ""
+        }
+    ],
+    "group": [
+        [
+            {
+                "$type": "MoleMole.Config.ConfigSteerInterAction",
+                "type": "STEER_TO",
+                "delayTime": 0.30000001192092896,
+                "duration": 0.699999988079071,
+                "aliasList": [
+                    "Avatar"
+                ],
+                "steerType": "TO_TARGET_ADVANCED",
+                "useSteerAnim": true,
+                "targetNpcAlias": "MainIntee",
+                "fixInterNull": true
+            },
+            {
+                "$type": "MoleMole.Config.ConfigSteerInterAction",
+                "type": "STEER_TO",
+                "delayTime": 0.30000001192092896,
+                "duration": 0.699999988079071,
+                "aliasList": [
+                    "MainIntee"
+                ],
+                "steerType": "TO_TARGET",
+                "useSteerAnim": true,
+                "targetNpcAlias": "Avatar",
+                "fixInterNull": true
+            },
+            {
+                "$type": "MoleMole.Config.ConfigLookAtInterAction",
+                "type": "LOOK_AT",
+                "delayTime": 0.30000001192092896,
+                "aliasList": [
+                    "Avatar"
+                ],
+                "enableHead": true,
+                "headTurnTime": 0.5,
+                "targetNpcAlias": "MainIntee",
+                "openBackProtect": true,
+                "targetNpcLookAtPoint": ""
+            },
+            {
+                "$type": "MoleMole.Config.ConfigLookAtInterAction",
+                "type": "LOOK_AT",
+                "aliasList": [
+                    "MainIntee"
+                ],
+                "enableHead": true,
+                "headTurnTime": 0.5,
+                "targetNpcAlias": "Avatar",
+                "openBackProtect": true,
+                "targetNpcLookAtPoint": ""
+            },
+            {
+                "$type": "MoleMole.Config.ConfigCameraMoveInterAction",
+                "type": "CAMERA_FOCUS",
+                "duration": 1.0,
+                "cameraPosType": "RELATIVE_TO_INTER",
+                "camPosOffset": {
+                    "y": 0.5
+                },
+                "nearLength": 2.0,
+                "camTargetType": "TO_INTEE",
+                "camForwardTargetOffset": {
+                    "y": 0.5
+                },
+                "lerpRatio": 5.0,
+                "lerpPattern": 6,
+                "targetNpcAlias": ""
+            },
+            {
+                "$type": "MoleMole.Config.ConfigRequestMsgAction",
+                "type": "REQUEST_MSG",
+                "msgName": "ClearWorldChallengeTalk",
+                "param": ""
+            }
+        ]
+    ]
+}
