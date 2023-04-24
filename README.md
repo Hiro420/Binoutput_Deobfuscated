@@ -1,2 +1,2 @@
 # Binoutput_Deobfuscated
-dim's repo but with less obfuscation
+dim's binoutput but with less obfuscation
