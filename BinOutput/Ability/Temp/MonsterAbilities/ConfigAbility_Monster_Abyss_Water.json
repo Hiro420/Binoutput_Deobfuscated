@@ -15,7 +15,7 @@
                             "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_ABYSS_WATER_ELEMENTSHIELD",
                             "ratio": 1.0,
-                            "FHNBDHANFCJ": true
+                            "setTarget": true
                         }
                     ],
                     "exitPredicates": [
@@ -23,7 +23,7 @@
                             "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_ABYSS_WATER_ELEMENTSHIELD",
                             "ratio": 0.0,
-                            "FHNBDHANFCJ": true
+                            "setTarget": true
                         }
                     ],
                     "enterActions": [
@@ -116,7 +116,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onKill": [
@@ -151,7 +151,7 @@
                 "Abyss_Water_ElementShield_RecoverHandler": {
                     "modifierName": "",
                     "bonusCriticalHurt": 100.0,
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "ApplyModifier",
                             "modifierName": "UNIQUE_Abyss_Water_ElementShield"
@@ -187,7 +187,7 @@
                             "elementType": "Water",
                             "showDamageText": "",
                             "PNHPNGLLDJN": 360.0,
-                            "OIMMEDBLDPJ": 1.0,
+                            "shieldHPRatio": 1.0,
                             "damageRatio": 0.20000000298023224,
                             "onShieldSuccess": [
                                 {
@@ -241,7 +241,7 @@
                                             "directionKey": "_ABILITY_ABYSS_WATER_ELEMENTSHIELD_HIT"
                                         }
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "SendEffectTrigger",
@@ -302,7 +302,7 @@
                                             "directionKey": "_ABILITY_ABYSS_WATER_ELEMENTSHIELD_HIT"
                                         }
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "SendEffectTrigger",
@@ -322,7 +322,7 @@
                                 }
                             ],
                             "useMutiPlayerFixData": true,
-                            "shieldHPRatio": true
+                            "updateShieldByMaxHp": true
                         },
                         {
                             "$type": "VelocityForceMixin",
@@ -395,7 +395,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ELITEAFFIX_DEFENCE_ENHANCE",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true
+                                    "setTarget": true
                                 },
                                 {
                                     "$type": "ByEntityTypes",
@@ -417,7 +417,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Water",
                                     "bonusCriticalHurt": 25.0,
                                     "enBreak": 0.0
@@ -437,7 +437,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ELITEAFFIX_DEFENCE_ENHANCE",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true
+                                    "setTarget": true
                                 },
                                 {
                                     "$type": "ByEntityTypes",
@@ -459,7 +459,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Water",
                                     "bonusCriticalHurt": 25.0,
                                     "enBreak": 0.0
@@ -550,7 +550,7 @@
                 "Abyss_Water_ElementShield_Effect_RecoverHandler": {
                     "modifierName": "",
                     "bonusCriticalHurt": 100.0,
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "ApplyModifier",
                             "modifierName": "UNIQUE_Abyss_Water_ElementShield_Effect"
@@ -587,7 +587,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_ElementShield_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -668,7 +668,7 @@
                             "modifierName": "UNIQUE_Abyss_Water_DizzyTimer"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "ApplyModifier",
                             "modifierName": "UNIQUE_Abyss_Water_DizzyTimer"
@@ -836,12 +836,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Gather",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -855,10 +855,10 @@
                             "key": "Gather_BallPos",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 1.0,
-                                    "CPOKKADJBFH": 7.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 1.0,
+                                    "maxRandomRange": 7.0
                                 }
                             }
                         },
@@ -889,10 +889,10 @@
                             "key": "Gather_BubblePos",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 2.0,
-                                    "CPOKKADJBFH": 6.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 2.0,
+                                    "maxRandomRange": 6.0
                                 }
                             }
                         },
@@ -937,7 +937,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Gather_Alert",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -964,13 +964,13 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -988,7 +988,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 2.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1014,7 +1014,7 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -1042,7 +1042,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 2.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1173,7 +1173,7 @@
                                     "z": 0.0
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAbility",
@@ -1276,7 +1276,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Blink_BS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "ClearLockTarget",
@@ -1303,7 +1303,7 @@
                     "born": {
                         "$type": "IOHLPEPEKAP"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1335,7 +1335,7 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "RemoveUniqueModifier",
@@ -1353,7 +1353,7 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -1372,7 +1372,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1574,7 +1574,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Blink_BS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1591,10 +1591,10 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Blink_AS",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "RootNode"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1664,7 +1664,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Blink_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1839,7 +1839,7 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "RemoveUniqueModifier",
@@ -1893,12 +1893,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Normal_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1964,7 +1964,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1998,7 +1998,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bullet_AS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -2022,7 +2022,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -2056,7 +2056,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_BulletFloat",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2088,7 +2088,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble_Missle_Float",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2126,7 +2126,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble_Missle_BS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "SetAnimatorInt",
@@ -2176,12 +2176,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Special_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -2231,7 +2231,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble_Missle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2289,10 +2289,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble_Missle_Float_AS",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "failActions": [
@@ -2300,10 +2300,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble_Missle_AS",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -2368,7 +2368,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 1.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Default",
@@ -2432,7 +2432,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2440,10 +2440,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Water_Bubble_AS",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onBeingHit": [

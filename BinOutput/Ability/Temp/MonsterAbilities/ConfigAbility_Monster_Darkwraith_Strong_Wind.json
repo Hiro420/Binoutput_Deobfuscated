@@ -165,7 +165,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_WindElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -417,7 +417,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_Dodge_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "RemoveUniqueModifier",
@@ -463,7 +463,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_Dodge_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
@@ -622,10 +622,10 @@
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
                                         "$type": "ConfigBornByTarget",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 4.0,
-                                            "CPOKKADJBFH": 6.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 4.0,
+                                            "maxRandomRange": 6.0
                                         },
                                         "onGround": true
                                     },
@@ -669,10 +669,10 @@
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
                                         "$type": "ConfigBornByTarget",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 4.0,
-                                            "CPOKKADJBFH": 6.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 4.0,
+                                            "maxRandomRange": 6.0
                                         },
                                         "onGround": true
                                     },
@@ -941,7 +941,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208008,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "ChainAtk02_01"
                     },
                     "trackTarget": "Self"
@@ -950,7 +950,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208008,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "ChainAtk02_02"
                     },
                     "trackTarget": "Self"
@@ -959,7 +959,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208008,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "ChainAtk02_03"
                     },
                     "trackTarget": "Self"
@@ -968,7 +968,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208008,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "ChainAtk02_04"
                     },
                     "trackTarget": "Self"
@@ -977,7 +977,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208008,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "ChainAtk02_05"
                     },
                     "trackTarget": "Self"
@@ -986,7 +986,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208008,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "ChainAtk02_06"
                     },
                     "trackTarget": "Self"
@@ -1055,7 +1055,7 @@
                             "attenuationGroup": "Monster_Darkwraith_Strong_Wind_ChainAtk02",
                             "attackProperty": {
                                 "damagePercentage": 0.4000000059604645,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Wind",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Default",
@@ -1103,7 +1103,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "FunnelAtk_01"
                             },
                             "GKJDJDACPMC": true,
@@ -1193,7 +1193,7 @@
                 "Darkwraith_Strong_Wind_FunnelAtk_StaticGadget_Reconnect": {
                     "modifierName": "",
                     "bonusCriticalHurt": 100.0,
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "SetGlobalValue",
                             "ratio": 1.0,
@@ -1247,7 +1247,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "FunnelAtk_02"
                             },
                             "GKJDJDACPMC": true,
@@ -1279,7 +1279,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "FunnelAtk_03"
                             },
                             "GKJDJDACPMC": true,
@@ -1311,7 +1311,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "FunnelAtk_04"
                             },
                             "GKJDJDACPMC": true,
@@ -1343,7 +1343,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "FunnelAtk_05"
                             },
                             "GKJDJDACPMC": true,
@@ -1375,7 +1375,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "FunnelAtk_06"
                             },
                             "GKJDJDACPMC": true,
@@ -1417,7 +1417,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_FunnelAtk_Loop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SetGlobalValue",
@@ -1640,12 +1640,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_FunnelAtk_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_FunnelAtk_Bullet_Trail",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1678,7 +1678,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
                         "campTargetType": "Enemy",
@@ -1729,12 +1729,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_FunnelAtk_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_FunnelAtk_Bullet_Trail",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1767,7 +1767,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.30000001192092896,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Wind",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1793,7 +1793,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_FunnelAtk_Damage",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1835,7 +1835,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Darkwraith_Strong_Flammard_Eye",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1876,7 +1876,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR15",
                                 "campTargetType": "Alliance",
@@ -1925,7 +1925,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR15",

@@ -34,7 +34,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ],
                             "modifierName": "MonsterAffix_ElementRecovery_Ice"
@@ -44,7 +44,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ],
                             "modifierName": "Count"
@@ -679,7 +679,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Electric"
+                                    "element": "Electric"
                                 }
                             ],
                             "modifierName": "AddDefence"
@@ -689,7 +689,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Electric"
+                                    "element": "Electric"
                                 }
                             ],
                             "modifierName": "Count"
@@ -706,7 +706,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_WindCrystal_Monster",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -886,10 +886,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Qin_DandelionWind_Heal",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -970,7 +970,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_WindCrystal_Monster",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1964,7 +1964,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR50",
                                 "campTargetType": "Alliance",
                                 "OBHNBNDMPFN": 1.0
@@ -2014,7 +2014,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR50",
                         "campTargetType": "Alliance",
                         "OBHNBNDMPFN": 1.0
@@ -2283,7 +2283,7 @@
                         {
                             "$type": "ModifyDamageMixin",
                             "ignoreEventInfo": true,
-                            "MKLAMNDEDGB": 2.0,
+                            "damagePercentageRatio": 2.0,
                             "predicates": [
                                 {
                                     "$type": "ByTargetGlobalValue",
@@ -2350,7 +2350,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Quest_Monster_Demonize_01",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2710,7 +2710,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_Mark_01_NoElementView",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2770,7 +2770,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_UI_BillBoard_FixedMark_Hint_ForHunting_02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2790,7 +2790,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR10H10",
                                 "campTargetType": "AllExceptSelf",
                                 "OBHNBNDMPFN": 1.0
@@ -2849,7 +2849,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_UI_BillBoard_FixedMark_Hint_ForHunting_02_DistanceMark",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -3138,10 +3138,10 @@
                             "key": "RockPos1",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 7.0,
-                                    "CPOKKADJBFH": 25.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 7.0,
+                                    "maxRandomRange": 25.0
                                 }
                             }
                         },
@@ -3150,10 +3150,10 @@
                             "key": "RockPos2",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 6.0,
-                                    "CPOKKADJBFH": 18.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 6.0,
+                                    "maxRandomRange": 18.0
                                 }
                             }
                         },
@@ -3162,10 +3162,10 @@
                             "key": "RockPos3",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 8.0,
-                                    "CPOKKADJBFH": 25.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 8.0,
+                                    "maxRandomRange": 25.0
                                 }
                             }
                         },
@@ -3174,10 +3174,10 @@
                             "key": "RockPos4",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 5.0,
-                                    "CPOKKADJBFH": 29.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 5.0,
+                                    "maxRandomRange": 29.0
                                 }
                             }
                         },
@@ -3186,10 +3186,10 @@
                             "key": "RockPos5",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 9.0,
-                                    "CPOKKADJBFH": 13.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 9.0,
+                                    "maxRandomRange": 13.0
                                 }
                             }
                         },
@@ -3198,10 +3198,10 @@
                             "key": "RockPos6",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 7.0,
-                                    "CPOKKADJBFH": 25.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 7.0,
+                                    "maxRandomRange": 25.0
                                 }
                             }
                         },
@@ -3233,10 +3233,10 @@
                             "key": "RockPos1",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 7.0,
-                                    "CPOKKADJBFH": 25.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 7.0,
+                                    "maxRandomRange": 25.0
                                 }
                             }
                         },
@@ -3245,10 +3245,10 @@
                             "key": "RockPos2",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 6.0,
-                                    "CPOKKADJBFH": 18.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 6.0,
+                                    "maxRandomRange": 18.0
                                 }
                             }
                         },
@@ -3257,10 +3257,10 @@
                             "key": "RockPos3",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 8.0,
-                                    "CPOKKADJBFH": 25.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 8.0,
+                                    "maxRandomRange": 25.0
                                 }
                             }
                         },
@@ -3269,10 +3269,10 @@
                             "key": "RockPos4",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 5.0,
-                                    "CPOKKADJBFH": 29.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 5.0,
+                                    "maxRandomRange": 29.0
                                 }
                             }
                         },
@@ -3281,10 +3281,10 @@
                             "key": "RockPos5",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 9.0,
-                                    "CPOKKADJBFH": 13.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 9.0,
+                                    "maxRandomRange": 13.0
                                 }
                             }
                         },
@@ -3293,10 +3293,10 @@
                             "key": "RockPos6",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 7.0,
-                                    "CPOKKADJBFH": 25.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 7.0,
+                                    "maxRandomRange": 25.0
                                 }
                             }
                         },
@@ -3322,8 +3322,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 90.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -3345,8 +3345,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 90.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -3368,8 +3368,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 90.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -3391,8 +3391,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 90.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -3414,8 +3414,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 90.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -3437,8 +3437,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 90.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -3468,7 +3468,7 @@
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Drop_Rock",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "SetGlobalPos",
@@ -3498,7 +3498,7 @@
                         },
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ],
             "onAbilityStart": [
@@ -3525,16 +3525,16 @@
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Drop_Rock_Hit",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "onGround": true,
                         "attachPointName": "attachPoint"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "DamageByAttackValue",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR6H3",
                         "campTargetType": "Enemy",
                         "OBHNBNDMPFN": 1.0
@@ -3545,7 +3545,7 @@
                         "attenuationGroup": "default",
                         "attackProperty": {
                             "damagePercentage": 1.0,
-                            "MKLAMNDEDGB": 0.0,
+                            "damagePercentageRatio": 0.0,
                             "elementType": "Rock",
                             "bonusCriticalHurt": 20.0,
                             "strikeType": "Blunt",
@@ -3566,7 +3566,7 @@
                 {
                     "$type": "DamageByAttackValue",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR6H3",
                         "campTargetType": "Alliance",
                         "OBHNBNDMPFN": 1.0
@@ -3577,7 +3577,7 @@
                         "attenuationGroup": "default",
                         "attackProperty": {
                             "damagePercentage": 0.699999988079071,
-                            "MKLAMNDEDGB": 0.0,
+                            "damagePercentageRatio": 0.0,
                             "elementType": "Rock",
                             "bonusCriticalHurt": 20.0,
                             "strikeType": "Blunt",
@@ -3724,7 +3724,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Pollution_Enhanced",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }

@@ -119,7 +119,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Activity_ChannellerSlab_DangerArea_Alert",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
@@ -131,7 +131,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Activity_ChannellerSlab_DangerArea_Alert_Enhanced",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
@@ -139,9 +139,9 @@
                             "$type": "CreateGadget",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "target": "Self",
-                                    "KONBGFMBNDO": 0.0
+                                    "HPRatio": 0.0
                                 }
                             ],
                             "lifeByOwnerIsAlive": true,
@@ -245,7 +245,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Activity_ChannellerSlab_DangerArea_Active",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -256,7 +256,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Activity_ChannellerSlab_DangerArea_Active_Enhanced",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -329,7 +329,7 @@
                                 },
                                 "BJCIHELGKLP": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "FireEffect",
@@ -360,7 +360,7 @@
                                 },
                                 "BJCIHELGKLP": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
@@ -379,7 +379,7 @@
                             ],
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -398,7 +398,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "ignoreAttackerProperty": true,
                                         "strikeType": "Default",
@@ -444,7 +444,7 @@
                             ],
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -463,7 +463,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "ignoreAttackerProperty": true,
                                         "strikeType": "Default",
@@ -883,7 +883,7 @@
                             "$type": "AttachEffect",
                             "RotationDampTime": true,
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Properties_Attack_Down",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "isLimitedProperties": true
@@ -924,8 +924,8 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "$type": "ByTargetHPRatio",
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_Del_EnergyDisk_AtkDownLowHP_Sub"
@@ -935,9 +935,9 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_AtkDownLowHP_Sub"
@@ -948,9 +948,9 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_AtkDownLowHP_Sub"
@@ -979,7 +979,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Properties_Attack_Down",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1018,9 +1018,9 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "GreaterOrEqual",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_Del_EnergyDisk_SpeedDownLowHP_Sub"
@@ -1030,9 +1030,9 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_SpeedDownLowHP_Sub"
@@ -1043,9 +1043,9 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "LesserOrEqual",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_SpeedDownLowHP_Sub"
@@ -1074,7 +1074,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Properties_Attack_Down",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1322,7 +1322,7 @@
                                     "modifierName": "Reset_CountDown"
                                 }
                             ],
-                            "NIONKAPLABO": 0.20000000298023224
+                            "clearSkillIdDelay": 0.20000000298023224
                         }
                     ],
                     "onAdded": [
@@ -1410,14 +1410,14 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 },
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "GreaterOrEqual",
-                                    "KONBGFMBNDO": "HpRate_P2"
+                                    "HPRatio": "HpRate_P2"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_AtkDownLowHP_Sub1"
@@ -1427,9 +1427,9 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P2"
+                                    "HPRatio": "HpRate_P2"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_AtkDownLowHP_Sub2"
@@ -1439,9 +1439,9 @@
                             "onEvent": "HP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "GreaterOrEqual",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 }
                             ],
                             "modifierName": "UNIQUE_Del_EnergyDisk_AtkDownLowHP_Sub"
@@ -1452,14 +1452,14 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P1"
+                                    "HPRatio": "HpRate_P1"
                                 },
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "GreaterOrEqual",
-                                    "KONBGFMBNDO": "HpRate_P2"
+                                    "HPRatio": "HpRate_P2"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_AtkDownLowHP_Sub1"
@@ -1468,9 +1468,9 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "Lesser",
-                                    "KONBGFMBNDO": "HpRate_P2"
+                                    "HPRatio": "HpRate_P2"
                                 }
                             ],
                             "modifierName": "UNIQUE_EnergyDisk_AtkDownLowHP_Sub2"
@@ -1507,7 +1507,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Properties_Attack_Down",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1526,7 +1526,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Properties_Attack_Down",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1631,7 +1631,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_SelfHeal_FootCircle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1643,8 +1643,8 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
-                                    "KONBGFMBNDO": 0.0
+                                    "$type": "ByTargetHPRatio",
+                                    "HPRatio": 0.0
                                 }
                             ],
                             "modifierName": "GeneralSkill_WaterEnhance_SelfHeal_Latency"
@@ -1668,7 +1668,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_SelfHeal_Alert",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1689,7 +1689,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_SelfHeal_HealEffect",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }

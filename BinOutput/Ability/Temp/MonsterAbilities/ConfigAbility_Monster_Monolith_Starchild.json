@@ -43,7 +43,7 @@
                             "born": {
                                 "$type": "ConfigBornBySelf"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SetAnimatorTrigger",
@@ -307,7 +307,7 @@
                             "modifierName": "Monster_Monolith_Starchild_Alert_ShowPartDelay"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "SetGlobalValue",
                             "ratio": 0.0,
@@ -945,7 +945,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_HideToShow",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "RemoveUniqueModifier",
@@ -1119,7 +1119,7 @@
                             "modifierName": "Monster_Monolith_Starchild_PowerState_Timer"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "SetAnimatorTrigger",
                             "triggerID": "AuthWeakShow"
@@ -2246,10 +2246,10 @@
                                     "key": "_GOTO_POS",
                                     "born": {
                                         "$type": "ConfigBornByGlobalValue",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 5.0,
-                                            "CPOKKADJBFH": 15.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 5.0,
+                                            "maxRandomRange": 15.0
                                         },
                                         "positionKey": "_INITIAL_POS",
                                         "directionKey": ""
@@ -2319,7 +2319,7 @@
                             "born": {
                                 "$type": "ConfigBornBySelf"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2329,13 +2329,13 @@
                             "born": {
                                 "$type": "ConfigBornBySelf"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -2354,7 +2354,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
                                         "enBreak": 101.0
@@ -2607,7 +2607,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Lance_SingleAttack_Loop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -2680,7 +2680,7 @@
                             "born": {
                                 "$type": "ConfigBornBySelf"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2720,7 +2720,7 @@
                                     "born": {
                                         "$type": "ConfigBornBySelf"
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "ApplyModifier",
@@ -2730,7 +2730,7 @@
                                     "$type": "TriggerAttackEvent",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "CHEAOJDOBEB",
+                                            "$type": "ConfigAttackCircle",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
                                                 "$type": "ConfigBornBySelf",
@@ -2749,7 +2749,7 @@
                                             "attenuationGroup": "default",
                                             "attackProperty": {
                                                 "damagePercentage": 0.5,
-                                                "MKLAMNDEDGB": 0.0,
+                                                "damagePercentageRatio": 0.0,
                                                 "bonusCriticalHurt": 100.0,
                                                 "strikeType": "Blunt",
                                                 "enBreak": 101.0
@@ -2776,10 +2776,10 @@
                             "$type": "ElementShieldMixin",
                             "showDamageText": "",
                             "PNHPNGLLDJN": 360.0,
-                            "OIMMEDBLDPJ": 0.10000000149011612,
+                            "shieldHPRatio": 0.10000000149011612,
                             "damageRatio": 1.0,
                             "useMutiPlayerFixData": true,
-                            "shieldHPRatio": true
+                            "updateShieldByMaxHp": true
                         }
                     ],
                     "onRemoved": [
@@ -2793,10 +2793,10 @@
                                     "y": 0.0,
                                     "z": -1.0
                                 },
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 0.0,
-                                    "CPOKKADJBFH": 0.5
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 0.0,
+                                    "maxRandomRange": 0.5
                                 }
                             },
                             "value": 1.0,
@@ -2846,9 +2846,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Part_BeHit",
                             "born": {
-                                "$type": "FLIPADNBJJF"
+                                "$type": "ConfigBornByHitPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SendEffectTrigger",
@@ -2869,7 +2869,7 @@
                             "born": {
                                 "$type": "ConfigBornBySelf"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SendEffectTrigger",
@@ -2936,7 +2936,7 @@
                         {
                             "$type": "AttachModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR20",
                                 "campTargetType": "Alliance",
                                 "OBHNBNDMPFN": 1.0
@@ -2965,17 +2965,17 @@
                             "target": "Applier",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Lance_LinkAtk",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "BulletAimPoint"
                             },
-                            "FGMDINMEPHL": -1.0,
+                            "effectTempleteID": -1.0,
                             "KIGIKJMMKEJ": true
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42405026,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "BulletAimPoint"
                             },
                             "trackTarget": "Applier",
@@ -3022,7 +3022,7 @@
                                 {
                                     "$type": "ApplyModifier",
                                     "otherTargets": {
-                                        "$type": "BMJIBLBEECK",
+                                        "$type": "SelectTargetsByShape",
                                         "shapeName": "CircleR200",
                                         "campTargetType": "Alliance",
                                         "OBHNBNDMPFN": 1.0
@@ -3074,7 +3074,7 @@
                         {
                             "$type": "SetGlobalPos",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Enemy",
@@ -3091,10 +3091,10 @@
                             "key": "_LANCE_ATK_POS",
                             "born": {
                                 "$type": "PPIKALLAEKG",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 1.0,
-                                    "CPOKKADJBFH": 3.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 1.0,
+                                    "maxRandomRange": 3.0
                                 },
                                 "onGround": true
                             },
@@ -3108,7 +3108,7 @@
                                 "positionKey": "_LANCE_ATK_POS",
                                 "directionKey": ""
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -3142,13 +3142,13 @@
                                         "positionKey": "_LANCE_ATK_POS",
                                         "directionKey": ""
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "TriggerAttackEvent",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "CHEAOJDOBEB",
+                                            "$type": "ConfigAttackCircle",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
                                                 "$type": "ConfigBornByGlobalValue",
@@ -3169,7 +3169,7 @@
                                             "attenuationGroup": "default",
                                             "attackProperty": {
                                                 "damagePercentage": 0.5,
-                                                "MKLAMNDEDGB": 0.0,
+                                                "damagePercentageRatio": 0.0,
                                                 "bonusCriticalHurt": 100.0,
                                                 "strikeType": "Blunt",
                                                 "enBreak": 101.0
@@ -3314,7 +3314,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR200",
                         "campTargetType": "AllExceptSelf",
                         "OBHNBNDMPFN": 1.0
@@ -3385,7 +3385,7 @@
                     "born": {
                         "$type": "ConfigBornBySelf"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -3469,10 +3469,10 @@
                                             "y": 0.0,
                                             "z": -1.0
                                         },
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 0.0,
-                                            "CPOKKADJBFH": 0.5
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 0.0,
+                                            "maxRandomRange": 0.5
                                         }
                                     },
                                     "value": 1.0,
@@ -3559,7 +3559,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Alliance",
                                 "OBHNBNDMPFN": 1.0
@@ -3748,7 +3748,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Enemy",
@@ -3795,7 +3795,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Shield_Seperate_Loop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -3808,10 +3808,10 @@
                             "$type": "ElementShieldMixin",
                             "showDamageText": "",
                             "PNHPNGLLDJN": 360.0,
-                            "OIMMEDBLDPJ": 0.10000000149011612,
+                            "shieldHPRatio": 0.10000000149011612,
                             "damageRatio": 1.0,
                             "useMutiPlayerFixData": true,
-                            "shieldHPRatio": true
+                            "updateShieldByMaxHp": true
                         }
                     ],
                     "onRemoved": [
@@ -3825,10 +3825,10 @@
                                     "y": 0.0,
                                     "z": -1.0
                                 },
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 0.0,
-                                    "CPOKKADJBFH": 0.5
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 0.0,
+                                    "maxRandomRange": 0.5
                                 }
                             },
                             "value": 1.0,
@@ -3855,9 +3855,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Part_BeHit",
                             "born": {
-                                "$type": "FLIPADNBJJF"
+                                "$type": "ConfigBornByHitPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -3951,7 +3951,7 @@
                         {
                             "$type": "SetGlobalPos",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Enemy",
@@ -4095,7 +4095,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Part_CommonDie",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -4242,7 +4242,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Enemy",
@@ -4322,7 +4322,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Drone_Appear",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -4345,10 +4345,10 @@
                             "$type": "ElementShieldMixin",
                             "showDamageText": "",
                             "PNHPNGLLDJN": 360.0,
-                            "OIMMEDBLDPJ": 0.10000000149011612,
+                            "shieldHPRatio": 0.10000000149011612,
                             "damageRatio": 1.0,
                             "useMutiPlayerFixData": true,
-                            "shieldHPRatio": true
+                            "updateShieldByMaxHp": true
                         }
                     ],
                     "onRemoved": [
@@ -4362,10 +4362,10 @@
                                     "y": 0.0,
                                     "z": -1.0
                                 },
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 0.0,
-                                    "CPOKKADJBFH": 0.5
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 0.0,
+                                    "maxRandomRange": 0.5
                                 }
                             },
                             "value": 1.0,
@@ -4383,13 +4383,13 @@
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Part_BeHit",
                             "born": {
                                 "$type": "ConfigBornBySelf",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 0.0,
-                                    "CPOKKADJBFH": 1.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 0.0,
+                                    "maxRandomRange": 1.0
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -4484,14 +4484,14 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Drone_SingleAttack_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Drone_SingleAttack_Attack",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
@@ -4519,7 +4519,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Pierce",
                                         "enBreak": 70.0
@@ -4560,7 +4560,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
@@ -4618,7 +4618,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
@@ -4717,7 +4717,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Drone_Hide",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -4950,7 +4950,7 @@
                             "boolID": "BornShader"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "SetAnimatorBool",
                             "predicates": [
@@ -5195,7 +5195,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR200",
                         "campTargetType": "Alliance",
                         "OBHNBNDMPFN": 1.0
@@ -5242,7 +5242,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR200",
                         "campTargetType": "Alliance",
                         "OBHNBNDMPFN": 1.0
@@ -5322,7 +5322,7 @@
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Alliance",
                                 "OBHNBNDMPFN": 1.0
@@ -5389,10 +5389,10 @@
                             "key": "_MONOLITH_STARCHILD_LANCEATK_POS",
                             "born": {
                                 "$type": "ConfigBornByTarget",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 2.0,
-                                    "CPOKKADJBFH": 4.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 2.0,
+                                    "maxRandomRange": 4.0
                                 },
                                 "onGround": true,
                                 "direction": {
@@ -5433,10 +5433,10 @@
                     "key": "_MONOLITH_STARCHILD_LANCEATK_POS",
                     "born": {
                         "$type": "ConfigBornByTarget",
-                        "IGAGDFFFGAO": {
-                            "$type": "FHDJJGOONEI",
-                            "OKDPGGJGGCJ": 1.0,
-                            "CPOKKADJBFH": 3.0
+                        "bornRandom": {
+                            "$type": "BornRandomFromCenter",
+                            "minRandomRange": 1.0,
+                            "maxRandomRange": 3.0
                         },
                         "onGround": true
                     },
@@ -5475,7 +5475,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42405004,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
@@ -5492,7 +5492,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42405004,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
@@ -5525,7 +5525,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Shield_Seperate_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -5601,7 +5601,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -5620,7 +5620,7 @@
                                     "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Slash"
                                     },
@@ -5664,7 +5664,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Shield_Seperate_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
@@ -5751,7 +5751,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -5770,7 +5770,7 @@
                                     "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Slash"
                                     },
@@ -6413,7 +6413,7 @@
                             "targetPredicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Electric"
+                                    "element": "Electric"
                                 }
                             ],
                             "successActions": [
@@ -6684,7 +6684,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Lance_SingleAttack_Loop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6771,7 +6771,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_Lance",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6811,7 +6811,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_05",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6823,7 +6823,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_06",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6880,7 +6880,7 @@
                         {
                             "$type": "SetGlobalPos",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Enemy",
@@ -6889,10 +6889,10 @@
                             "key": "_LANCE_ATK_POS",
                             "born": {
                                 "$type": "PPIKALLAEKG",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 0.0,
-                                    "CPOKKADJBFH": 3.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 0.0,
+                                    "maxRandomRange": 3.0
                                 }
                             },
                             "setTarget": false
@@ -6937,7 +6937,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR30",
                         "campTargetType": "AllExceptSelf",
                         "OBHNBNDMPFN": 1.0
@@ -7118,7 +7118,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Shield_Charge_Loop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SendEffectTrigger",
@@ -7203,7 +7203,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_Shield",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7243,7 +7243,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_01",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7255,7 +7255,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7284,7 +7284,7 @@
                                 {
                                     "$type": "SetGlobalPos",
                                     "otherTargets": {
-                                        "$type": "BMJIBLBEECK",
+                                        "$type": "SelectTargetsByShape",
                                         "sortType": "Nearest",
                                         "shapeName": "CircleR200",
                                         "campTargetType": "Enemy",
@@ -7402,7 +7402,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR30",
                         "campTargetType": "AllExceptSelf",
                         "OBHNBNDMPFN": 1.0
@@ -7655,7 +7655,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_Drone",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7695,7 +7695,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_03",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7707,7 +7707,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_ChargeBuddy_04",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7790,10 +7790,10 @@
                             "key": "_DRONE_ATK_POS",
                             "born": {
                                 "$type": "ConfigBornBySelf",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 10.0,
-                                    "CPOKKADJBFH": 15.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 10.0,
+                                    "maxRandomRange": 15.0
                                 },
                                 "onGround": true
                             }
@@ -7833,7 +7833,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR30",
                         "campTargetType": "AllExceptSelf",
                         "OBHNBNDMPFN": 1.0
@@ -7924,7 +7924,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
                                 "enBreak": 5000.0
@@ -7992,7 +7992,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_OverChargeAttack_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -8050,7 +8050,7 @@
                                 "positionKey": "_MONOLITH_STARCHILD_OVERCHARGE_POS1",
                                 "directionKey": ""
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
@@ -8060,7 +8060,7 @@
                                 "positionKey": "_MONOLITH_STARCHILD_OVERCHARGE_POS2",
                                 "directionKey": ""
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
@@ -8070,7 +8070,7 @@
                                 "positionKey": "_MONOLITH_STARCHILD_OVERCHARGE_POS2",
                                 "directionKey": ""
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
@@ -8080,7 +8080,7 @@
                             "born": {
                                 "$type": "ConfigBornBySelf"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -8092,7 +8092,7 @@
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR200",
                                 "campTargetType": "Alliance",
                                 "OBHNBNDMPFN": 1.0
@@ -8443,7 +8443,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.20000000298023224,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Pierce",
                                         "enBreak": 50.0
@@ -8523,7 +8523,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_Weak",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -8638,12 +8638,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearShieldAttack_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearShieldAttack_BS_Rotate",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -8655,7 +8655,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearShieldAttack_Laser",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -8672,7 +8672,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42405019,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "LanceRAttach"
                             },
                             "GKJDJDACPMC": true
@@ -8687,7 +8687,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearShieldAttack_Warning",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -8699,7 +8699,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR200",
@@ -8802,7 +8802,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearShieldAttack_Explode",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
@@ -8823,7 +8823,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Pierce",
                                         "enBreak": 10.0
@@ -8912,7 +8912,7 @@
                                     "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                                     "attackProperty": {
                                         "damagePercentage": 0.699999988079071,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Pierce",
                                         "enBreak": 10.0
@@ -8958,7 +8958,7 @@
                             "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Pierce",
                                 "enBreak": 10.0
@@ -9065,7 +9065,7 @@
                                 "$type": "ConfigBornByCollisionPoint",
                                 "PEIHJEFCPKJ": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
@@ -9085,7 +9085,7 @@
                                     "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                                     "attackProperty": {
                                         "damagePercentage": 0.20000000298023224,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Pierce",
                                         "enBreak": 10.0
@@ -9121,7 +9121,7 @@
                         "$type": "ConfigBornByCollisionPoint",
                         "PEIHJEFCPKJ": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -9141,7 +9141,7 @@
                             "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Pierce",
                                 "enBreak": 10.0
@@ -9170,12 +9170,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearLaserAttack_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearLaserAttack_Bullet_Trail",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -9204,7 +9204,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
                                 "enBreak": 101.0
@@ -9224,7 +9224,7 @@
                     "born": {
                         "$type": "ConfigBornByCollisionPoint"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "KillSelf"
@@ -9251,7 +9251,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Monolith_Starchild_SpearAttack_Attack",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -9281,7 +9281,7 @@
                             "doAfterDie": false,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
@@ -9295,7 +9295,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
                                         "enBreak": 101.0
@@ -9325,7 +9325,7 @@
                             "doAfterDie": false,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
@@ -9339,7 +9339,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.699999988079071,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
                                         "enBreak": 101.0
@@ -9447,7 +9447,7 @@
                         "positionKey": "_ANGRY_LANCE_POS",
                         "directionKey": ""
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "ApplyModifier",
@@ -9555,7 +9555,7 @@
                                     "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                                     "attackProperty": {
                                         "damagePercentage": 0.4000000059604645,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
                                         "enBreak": 101.0
@@ -9641,7 +9641,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR10",
                                 "campTargetType": "AllExceptSelf",
@@ -9689,7 +9689,7 @@
                         "$type": "ConfigBornByCollisionPoint",
                         "PEIHJEFCPKJ": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -9710,7 +9710,7 @@
                             "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Pierce",
                                 "enBreak": 10.0
@@ -9769,7 +9769,7 @@
                             "attenuationGroup": "DendroTornado_Atk",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Pierce",
                                 "enBreak": 10.0
@@ -9810,7 +9810,7 @@
                             "attenuationGroup": "DendroTornado_Atk",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Pierce",
                                 "enBreak": 10.0

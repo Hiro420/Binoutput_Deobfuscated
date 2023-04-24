@@ -13,10 +13,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_SporePile_Destroy_Fire",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "AttachPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf"
@@ -28,7 +28,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Wind"
+                                    "element": "Wind"
                                 }
                             ],
                             "modifierName": "ElementWindModifier"
@@ -43,10 +43,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_SporePile_Destroy_Wind",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "AttachPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf",
@@ -123,7 +123,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_FungusSporePile_Idle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnableSceneTransformByName",
@@ -141,7 +141,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_FungusSporePile_Dis",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnableGadgetInteeMp"
@@ -189,7 +189,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_AranaraPillarSpore_01_Idle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnableSceneTransformByName",
@@ -208,7 +208,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_AranaraPillarSpore_01_Dis",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -292,7 +292,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR20",
                         "campTargetType": "All",
                         "OBHNBNDMPFN": 1.0
@@ -322,7 +322,7 @@
                             "target": "Target",
                             "key": "_AranaraStrike_Pos",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -340,7 +340,7 @@
                                 "positionKey": "_AranaraStrike_Pos",
                                 "directionKey": ""
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
@@ -361,7 +361,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
                                         "ignoreAttackerProperty": true,
@@ -541,8 +541,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0
                         }
                     ]
@@ -555,8 +555,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 3.0,
                             "HLDHDOKLCHI": true,
                             "NKFPDCCIPCN": 1,
@@ -587,8 +587,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 3.0
                         }
                     ]
@@ -873,7 +873,7 @@
                             ]
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "Predicated",
                             "targetPredicates": [
@@ -986,7 +986,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaValve_Light",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1041,8 +1041,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0
                         }
                     ]
@@ -1055,8 +1055,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 3.0,
                             "HLDHDOKLCHI": true,
                             "NKFPDCCIPCN": 1,
@@ -1087,8 +1087,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 3.0
                         }
                     ]
@@ -1339,10 +1339,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_SmallFlare_Default",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "Point1"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1354,10 +1354,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_SmallFlare_Default",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "Point2"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1369,10 +1369,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_SmallFlare_Default",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "Point3"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1384,10 +1384,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_SmallFlare_Active",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "Point1"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1399,10 +1399,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_SmallFlare_Active",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "Point2"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1414,10 +1414,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_SmallFlare_Active",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "Point3"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1428,8 +1428,8 @@
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0
                         }
                     ]
@@ -1463,7 +1463,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaStone_BigFlare_Active",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
@@ -1481,15 +1481,15 @@
                     "onAdded": [
                         {
                             "$type": "SetMaterialParamFloatByTransform",
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0
                         },
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 4.0,
                             "HLDHDOKLCHI": true,
                             "FBGLLFJHKJJ": 2.0
@@ -1509,15 +1509,15 @@
                     "onAdded": [
                         {
                             "$type": "SetMaterialParamFloatByTransform",
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 4.0
                         },
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0,
                             "HLDHDOKLCHI": true,
                             "FBGLLFJHKJJ": 2.0
@@ -1532,15 +1532,15 @@
                     "onAdded": [
                         {
                             "$type": "SetMaterialParamFloatByTransform",
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0
                         },
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 8.0,
                             "HLDHDOKLCHI": true,
                             "FBGLLFJHKJJ": 3.0
@@ -1560,15 +1560,15 @@
                     "onAdded": [
                         {
                             "$type": "SetMaterialParamFloatByTransform",
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 8.0
                         },
                         {
                             "$type": "SetMaterialParamFloatByTransform",
                             "canBeHandledOnRecover": true,
-                            "DNGGDHKKOPB": "Light",
-                            "AFPKDNNKMAG": "_EmissionStrength",
+                            "matName": "Light",
+                            "patternName": "_EmissionStrength",
                             "ratio": 0.0,
                             "HLDHDOKLCHI": true,
                             "FBGLLFJHKJJ": 3.0
@@ -1638,12 +1638,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Switch",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_AraraPlayMusicNote_Idle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1669,7 +1669,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Sunny",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1680,7 +1680,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Rainy",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1691,7 +1691,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Switch",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1749,15 +1749,15 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Switch",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "EffPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_AraraPlayMusicNote_Idle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1784,10 +1784,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Sunny",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "EffPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1799,10 +1799,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Rainy",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "EffPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1814,10 +1814,10 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_VarunaDevice_Switch",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "EffPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1950,7 +1950,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_POI_Xm_HYZS_WaterColumn_01",
-                            "FGMDINMEPHL": -1.0,
+                            "effectTempleteID": -1.0,
                             "JCOBFDHJPHO": true
                         }
                     ]
@@ -2014,14 +2014,14 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_VarunaCover_01",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_VarunaCover_01_Disappear",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -2072,7 +2072,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_SumeruBubble_BornIdle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnableSceneTransformByName",
@@ -2113,7 +2113,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_SumeruBubble_Disappear",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnableSceneTransformByName",
@@ -2219,7 +2219,7 @@
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_ScenObj_RootPotWater_01",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
@@ -2227,7 +2227,7 @@
                         },
                         "attachPointName": "AttachPoint"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }

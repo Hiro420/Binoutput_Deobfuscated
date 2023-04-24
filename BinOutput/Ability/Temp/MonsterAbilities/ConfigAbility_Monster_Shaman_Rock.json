@@ -37,7 +37,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Rock",
                                         "bonusCriticalHurt": 50.0,
                                         "strikeType": "Default",
@@ -87,7 +87,7 @@
                         "positionKey": "_MONSTER_SHAMAN_ROCK_SPIKE_POS",
                         "directionKey": ""
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "ApplyModifier",
@@ -179,7 +179,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR10",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -236,7 +236,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_CreateBS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -255,7 +255,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR15",
                         "campTargetType": "SelfCamp",
                         "OBHNBNDMPFN": 1.0
@@ -340,7 +340,7 @@
                             "elementType": "Rock",
                             "showDamageText": "",
                             "PNHPNGLLDJN": 360.0,
-                            "OIMMEDBLDPJ": 1.0,
+                            "shieldHPRatio": 1.0,
                             "damageRatio": 0.0,
                             "onShieldSuccess": [
                                 {
@@ -393,7 +393,7 @@
                                             "directionKey": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT"
                                         }
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ],
                             "onShieldFailed": [
@@ -447,7 +447,7 @@
                                             "directionKey": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT"
                                         }
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ]
                         },
@@ -468,7 +468,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_Create",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SetPoseBool",
@@ -492,28 +492,28 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "KDJFMOGPKCP",
-                                    "CIMNBKFMPGD": "Rock"
+                                    "$type": "ByHasElement",
+                                    "element": "Rock"
                                 }
                             ],
                             "successActions": [
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_Disappear",
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ],
                             "failActions": [
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_Explosion",
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "TriggerAttackEvent",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "CHEAOJDOBEB",
+                                            "$type": "ConfigAttackCircle",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
                                                 "$type": "ConfigBornBySelf",
@@ -531,7 +531,7 @@
                                             "attenuationGroup": "default",
                                             "attackProperty": {
                                                 "damagePercentage": 0.0,
-                                                "MKLAMNDEDGB": 0.0,
+                                                "damagePercentageRatio": 0.0,
                                                 "bonusCriticalHurt": 100.0,
                                                 "strikeType": "Blunt",
                                                 "enBreak": 200.0,
@@ -583,7 +583,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_Damaged",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SendEffectTrigger",
@@ -764,12 +764,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_WeaponElement_Resonance",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_SupportAttack_Gather",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -789,12 +789,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_Impulse",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR5",
                                 "campTargetType": "Enemy",
                                 "OBHNBNDMPFN": 1.0
@@ -815,7 +815,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_Resonance",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -833,7 +833,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 1.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Rock",
                                     "bonusCriticalHurt": 50.0,
                                     "strikeType": "Default",

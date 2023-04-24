@@ -170,8 +170,8 @@
                             "attackTags": [
                                 "ExtraAttack"
                             ],
-                            "MKLAMNDEDGB": 0.0,
-                            "OAKBBLBNNOF": "CritRate"
+                            "damagePercentageRatio": 0.0,
+                            "bonusCritical": "CritRate"
                         }
                     ]
                 }
@@ -202,7 +202,7 @@
                         {
                             "$type": "ModifyDamageMixin",
                             "ignoreEventInfo": true,
-                            "MKLAMNDEDGB": "Rate",
+                            "damagePercentageRatio": "Rate",
                             "predicates": [
                                 {
                                     "$type": "ByEntityTypes",
@@ -211,9 +211,9 @@
                                     ]
                                 },
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "GreaterOrEqual",
-                                    "KONBGFMBNDO": "HPRatio"
+                                    "HPRatio": "HPRatio"
                                 }
                             ]
                         }
@@ -537,7 +537,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Fire"
+                                            "element": "Fire"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementFireDefUp"
@@ -547,7 +547,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Water"
+                                            "element": "Water"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementWaterDefUp"
@@ -557,7 +557,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Grass"
+                                            "element": "Grass"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementGrassDefUp"
@@ -567,7 +567,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Electric"
+                                            "element": "Electric"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementElecDefUp"
@@ -577,7 +577,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Ice"
+                                            "element": "Ice"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementIceDefUp"
@@ -587,7 +587,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Wind"
+                                            "element": "Wind"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementWindDefUp"
@@ -597,7 +597,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Rock"
+                                            "element": "Rock"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_ElementRockDefUp"
@@ -813,9 +813,9 @@
                     "$type": "AttachModifierToPredicateMixin",
                     "predicates": [
                         {
-                            "$type": "GMGEIHHLMCO",
+                            "$type": "ByTargetHPRatio",
                             "logic": "LesserOrEqual",
-                            "KONBGFMBNDO": "HPRatio"
+                            "HPRatio": "HPRatio"
                         }
                     ],
                     "modifierName": "UNIQUE_Relic_LowHPGainExtraCritRate"
@@ -864,7 +864,7 @@
                                 "NormalAttack_06",
                                 "ExtraAttack"
                             ],
-                            "MKLAMNDEDGB": "DmgRate"
+                            "damagePercentageRatio": "DmgRate"
                         }
                     ]
                 }
@@ -901,7 +901,7 @@
                                     "modifierName": "UNIQUE_Relic_SkillEnhanceNormalAtkAndExtraAtk"
                                 }
                             ],
-                            "NIONKAPLABO": 0.20000000298023224
+                            "clearSkillIdDelay": 0.20000000298023224
                         }
                     ]
                 },
@@ -927,7 +927,7 @@
                                 "NormalAttack_06",
                                 "ExtraAttack"
                             ],
-                            "MKLAMNDEDGB": "DmgRate"
+                            "damagePercentageRatio": "DmgRate"
                         }
                     ],
                     "state": "AttackUp"
@@ -1054,7 +1054,7 @@
                                 "Elemental_Art_Hold",
                                 "Elemental_Art_Extra"
                             ],
-                            "MKLAMNDEDGB": "DamagePer"
+                            "damagePercentageRatio": "DamagePer"
                         }
                     ]
                 }
@@ -1230,7 +1230,7 @@
                                     "maxValue": 100.0
                                 }
                             ],
-                            "NIONKAPLABO": 0.20000000298023224
+                            "clearSkillIdDelay": 0.20000000298023224
                         }
                     ]
                 },
@@ -1454,7 +1454,7 @@
                                     "modifierName": "UNIQUE_Relic_UltHealSelf"
                                 }
                             ],
-                            "NIONKAPLABO": 0.20000000298023224
+                            "clearSkillIdDelay": 0.20000000298023224
                         }
                     ]
                 },
@@ -1498,8 +1498,8 @@
                         {
                             "$type": "ModifyDamageMixin",
                             "ignoreEventInfo": true,
-                            "MKLAMNDEDGB": 0.0,
-                            "OAKBBLBNNOF": "Rate1",
+                            "damagePercentageRatio": 0.0,
+                            "bonusCritical": "Rate1",
                             "predicates": [
                                 {
                                     "$type": "ByEntityTypes",
@@ -1511,12 +1511,12 @@
                                     "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Ice"
+                                            "$type": "ByHasElement",
+                                            "element": "Ice"
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Frozen"
+                                            "$type": "ByHasElement",
+                                            "element": "Frozen"
                                         }
                                     ]
                                 }
@@ -1525,8 +1525,8 @@
                         {
                             "$type": "ModifyDamageMixin",
                             "ignoreEventInfo": true,
-                            "MKLAMNDEDGB": 0.0,
-                            "OAKBBLBNNOF": "Rate2",
+                            "damagePercentageRatio": 0.0,
+                            "bonusCritical": "Rate2",
                             "predicates": [
                                 {
                                     "$type": "ByEntityTypes",
@@ -1567,7 +1567,7 @@
                         {
                             "$type": "ModifyDamageMixin",
                             "ignoreEventInfo": true,
-                            "MKLAMNDEDGB": "Rate",
+                            "damagePercentageRatio": "Rate",
                             "predicates": [
                                 {
                                     "$type": "ByEntityTypes",
@@ -1579,8 +1579,8 @@
                                     "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Electric"
+                                            "$type": "ByHasElement",
+                                            "element": "Electric"
                                         }
                                     ]
                                 }
@@ -1614,7 +1614,7 @@
                         {
                             "$type": "ModifyDamageMixin",
                             "ignoreEventInfo": true,
-                            "MKLAMNDEDGB": "Rate",
+                            "damagePercentageRatio": "Rate",
                             "predicates": [
                                 {
                                     "$type": "ByEntityTypes",
@@ -1626,8 +1626,8 @@
                                     "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Fire"
+                                            "$type": "ByHasElement",
+                                            "element": "Fire"
                                         },
                                         {
                                             "$type": "KPIBLFBHELB",
@@ -1708,7 +1708,7 @@
                             "modifierName": "UNIQUE_Relic_SkillEnhanceCured"
                         }
                     ],
-                    "NIONKAPLABO": 0.20000000298023224
+                    "clearSkillIdDelay": 0.20000000298023224
                 }
             ],
             "abilitySpecials": {
@@ -1753,7 +1753,7 @@
                                 "NormalAttack_05",
                                 "NormalAttack_06"
                             ],
-                            "MKLAMNDEDGB": "DmgRate"
+                            "damagePercentageRatio": "DmgRate"
                         }
                     ]
                 }
@@ -1890,7 +1890,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Fire"
+                                            "element": "Fire"
                                         },
                                         {
                                             "$type": "ByEntityTypes",
@@ -1907,7 +1907,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Water"
+                                            "element": "Water"
                                         },
                                         {
                                             "$type": "ByEntityTypes",
@@ -1924,7 +1924,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Electric"
+                                            "element": "Electric"
                                         },
                                         {
                                             "$type": "ByEntityTypes",
@@ -1941,7 +1941,7 @@
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
-                                            "CIMNBKFMPGD": "Ice"
+                                            "element": "Ice"
                                         },
                                         {
                                             "$type": "ByEntityTypes",
@@ -2045,7 +2045,7 @@
                             "attackTags": [
                                 "ExtraAttack"
                             ],
-                            "MKLAMNDEDGB": "DmgRate"
+                            "damagePercentageRatio": "DmgRate"
                         }
                     ]
                 }
@@ -2081,7 +2081,7 @@
                             "modifierName": "UNIQUE_Relic_ReactionIceEnhance_Stack"
                         }
                     ],
-                    "NIONKAPLABO": 0.20000000298023224
+                    "clearSkillIdDelay": 0.20000000298023224
                 }
             ],
             "abilitySpecials": {
@@ -2257,7 +2257,7 @@
                             "modifierName": "UNIQUE_Relic_ReactionFireEnhance_Stack"
                         }
                     ],
-                    "NIONKAPLABO": 0.20000000298023224
+                    "clearSkillIdDelay": 0.20000000298023224
                 }
             ],
             "abilitySpecials": {
@@ -2320,7 +2320,7 @@
                     "attackTags": [
                         "Elemental_Burst"
                     ],
-                    "MKLAMNDEDGB": "Rate",
+                    "damagePercentageRatio": "Rate",
                     "predicates": [
                         {
                             "$type": "ByEntityTypes",
@@ -2370,7 +2370,7 @@
                             "modifierName": "UNIQUE_Relic_TeamAtkupAfterElementalBurst"
                         }
                     ],
-                    "NIONKAPLABO": 0.20000000298023224
+                    "clearSkillIdDelay": 0.20000000298023224
                 }
             ],
             "abilitySpecials": {
@@ -2471,7 +2471,7 @@
                             "attackTags": [
                                 "ExtraAttack"
                             ],
-                            "MKLAMNDEDGB": "Rate",
+                            "damagePercentageRatio": "Rate",
                             "predicates": [
                                 {
                                     "$type": "ByEntityTypes",
@@ -3532,7 +3532,7 @@
                         "NormalAttack_06",
                         "ExtraAttack"
                     ],
-                    "MKLAMNDEDGB": "Rate",
+                    "damagePercentageRatio": "Rate",
                     "predicates": [
                         {
                             "$type": "ByEntityTypes",
@@ -3639,7 +3639,7 @@
                                     "modifierName": "UNIQUE_Relic_WaterSkillEnhanceNormalAtkAndExtraAtk"
                                 }
                             ],
-                            "NIONKAPLABO": 0.20000000298023224
+                            "clearSkillIdDelay": 0.20000000298023224
                         }
                     ]
                 },
@@ -3665,7 +3665,7 @@
                                 "NormalAttack_06",
                                 "ExtraAttack"
                             ],
-                            "MKLAMNDEDGB": "DmgRate"
+                            "damagePercentageRatio": "DmgRate"
                         }
                     ],
                     "state": "AttackUp"
@@ -3999,7 +3999,7 @@
                                     ]
                                 }
                             ],
-                            "NIONKAPLABO": 0.20000000298023224
+                            "clearSkillIdDelay": 0.20000000298023224
                         }
                     ]
                 },
@@ -4021,7 +4021,7 @@
                                 "ExtraAttack",
                                 "FallingAttack"
                             ],
-                            "MKLAMNDEDGB": "DamageUp"
+                            "damagePercentageRatio": "DamageUp"
                         }
                     ],
                     "state": "AttackUp",
@@ -4067,7 +4067,7 @@
                     "attackTags": [
                         "Elemental_Burst"
                     ],
-                    "MKLAMNDEDGB": [
+                    "damagePercentageRatio": [
                         "Ratio",
                         "FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY",
                         "MUL"
@@ -4102,7 +4102,7 @@
                     "attackTags": [
                         "Elemental_Burst"
                     ],
-                    "MKLAMNDEDGB": "MaxDamageUp",
+                    "damagePercentageRatio": "MaxDamageUp",
                     "predicates": [
                         {
                             "$type": "ByTargetGlobalValue",
@@ -4208,7 +4208,7 @@
                             "$type": "FireEffect",
                             "RotationDampTime": true,
                             "healLimitedByCasterMaxHPRatio": "Eff_Weapon_TriggerGreen",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ReviveElemEnergy",
@@ -4307,7 +4307,7 @@
                                 },
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Rock"
+                                    "element": "Rock"
                                 }
                             ],
                             "successActions": [
@@ -4337,7 +4337,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_NumberFlash",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -4377,7 +4377,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_NumberBehit",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -4398,7 +4398,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_Number0",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -4414,7 +4414,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_Number1",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "isLimitedProperties": true
@@ -4439,7 +4439,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_Number2",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "isLimitedProperties": true
@@ -4464,7 +4464,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_Number3",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "isLimitedProperties": true
@@ -4489,7 +4489,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Relic_Rock_Number4",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "isLimitedProperties": true
@@ -4826,7 +4826,7 @@
                                     "directionKey": "_ABILITY_Relic_HealAndHolyNova_Dir"
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -4941,7 +4941,7 @@
                             "RotationDampTime": true,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "JGCLJPCGHMC": true,
                                     "born": {
@@ -4957,7 +4957,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "ignoreAttackerProperty": true,
                                         "strikeType": "Default",
@@ -5136,7 +5136,7 @@
                             "modifierName": "UNIQUE_Relic_AttackUp_BurstBuff"
                         }
                     ],
-                    "NIONKAPLABO": 0.20000000298023224
+                    "clearSkillIdDelay": 0.20000000298023224
                 }
             ],
             "abilitySpecials": {
@@ -5498,7 +5498,7 @@
                                 "NormalAttack_05",
                                 "NormalAttack_06"
                             ],
-                            "MKLAMNDEDGB": 0.0,
+                            "damagePercentageRatio": 0.0,
                             "damageExtra": [
                                 "FIGHT_PROP_CUR_ATTACK",
                                 "AttackPercentage",
@@ -6044,7 +6044,7 @@
                                 "ExtraAttack",
                                 "FallingAttack"
                             ],
-                            "MKLAMNDEDGB": "Rate2"
+                            "damagePercentageRatio": "Rate2"
                         }
                     ],
                     "properties": {
@@ -6588,7 +6588,7 @@
                                 "Elemental_Art_Extra",
                                 "Elemental_Burst"
                             ],
-                            "MKLAMNDEDGB": "DamageUp_Base_Ratio"
+                            "damagePercentageRatio": "DamageUp_Base_Ratio"
                         }
                     ],
                     "onBeingHit": [
@@ -6624,7 +6624,7 @@
                                 "Elemental_Art_Extra",
                                 "Elemental_Burst"
                             ],
-                            "MKLAMNDEDGB": [
+                            "damagePercentageRatio": [
                                 "DamageUp_Base_Ratio",
                                 "DamageUp_Sub_Ratio",
                                 "MUL"

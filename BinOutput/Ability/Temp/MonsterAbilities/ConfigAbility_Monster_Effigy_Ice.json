@@ -44,7 +44,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_CoreStandby",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SetGlobalValue",
@@ -74,7 +74,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_EnergyCore",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -86,12 +86,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_CoreStandbyFree",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_StandbyFree_ColdAura",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "SetAnimatorTrigger",
@@ -107,19 +107,19 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_CoreAttackBS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_CoreAttackLoop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_CoreAttackAS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -328,13 +328,13 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_BeHit_Shield",
                             "born": {
-                                "$type": "FLIPADNBJJF",
+                                "$type": "ConfigBornByHitPoint",
                                 "direction": {
                                     "$type": "NFGKOJBHMLL"
                                 },
                                 "BJCIHELGKLP": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -438,12 +438,12 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_BeHit_Core",
                             "born": {
-                                "$type": "FLIPADNBJJF",
+                                "$type": "ConfigBornByHitPoint",
                                 "direction": {
                                     "$type": "NFGKOJBHMLL"
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -830,7 +830,7 @@
                                             "attenuationGroup": "default",
                                             "attackProperty": {
                                                 "damagePercentage": 0.0,
-                                                "MKLAMNDEDGB": 0.0,
+                                                "damagePercentageRatio": 0.0,
                                                 "bonusCriticalHurt": 100.0
                                             },
                                             "hitPattern": {
@@ -887,9 +887,9 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "LesserOrEqual",
-                                    "KONBGFMBNDO": "Effigy_Ice_ReviveMaxHPRatio"
+                                    "HPRatio": "Effigy_Ice_ReviveMaxHPRatio"
                                 }
                             ],
                             "successActions": [
@@ -904,7 +904,7 @@
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_RecoverHP",
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ]
                         },
@@ -959,23 +959,23 @@
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_Shield_BeHit_Effective",
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_BeHit_Effective",
                                     "born": {
-                                        "$type": "FLIPADNBJJF"
+                                        "$type": "ConfigBornByHitPoint"
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_BeHit_SuperEffective",
                                     "born": {
-                                        "$type": "FLIPADNBJJF"
+                                        "$type": "ConfigBornByHitPoint"
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ],
                             "failActions": [
@@ -987,23 +987,23 @@
                                             "predicates": [
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Fire"
+                                                    "element": "Fire"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Electric"
+                                                    "element": "Electric"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Water"
+                                                    "element": "Water"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Wind"
+                                                    "element": "Wind"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Rock"
+                                                    "element": "Rock"
                                                 },
                                                 {
                                                     "$type": "LMLEGIECOAO",
@@ -1016,34 +1016,34 @@
                                         {
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_Shield_BeHit_Effective",
-                                            "FGMDINMEPHL": -1.0
+                                            "effectTempleteID": -1.0
                                         },
                                         {
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_BeHit_Effective",
                                             "born": {
-                                                "$type": "FLIPADNBJJF"
+                                                "$type": "ConfigBornByHitPoint"
                                             },
-                                            "FGMDINMEPHL": -1.0
+                                            "effectTempleteID": -1.0
                                         }
                                     ],
                                     "failActions": [
                                         {
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_Shield_BeHit_NoEffect",
-                                            "FGMDINMEPHL": -1.0
+                                            "effectTempleteID": -1.0
                                         },
                                         {
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_BeHit_Shield",
                                             "born": {
-                                                "$type": "FLIPADNBJJF",
+                                                "$type": "ConfigBornByHitPoint",
                                                 "direction": {
                                                     "$type": "NFGKOJBHMLL"
                                                 },
                                                 "BJCIHELGKLP": true
                                             },
-                                            "FGMDINMEPHL": -1.0
+                                            "effectTempleteID": -1.0
                                         }
                                     ]
                                 }
@@ -1055,9 +1055,9 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "LesserOrEqual",
-                                    "KONBGFMBNDO": "Effigy_Ice_ReviveMaxHPRatio"
+                                    "HPRatio": "Effigy_Ice_ReviveMaxHPRatio"
                                 }
                             ],
                             "successActions": [
@@ -1072,7 +1072,7 @@
                                 {
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_RecoverHP",
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ]
                         }
@@ -1086,9 +1086,9 @@
                             "$type": "HealHP",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "logic": "LesserOrEqual",
-                                    "KONBGFMBNDO": 0.05000000074505806
+                                    "HPRatio": 0.05000000074505806
                                 }
                             ],
                             "amountByCasterMaxHPRatio": "Effigy_Ice_ReviveMaxHPRatio"
@@ -1142,7 +1142,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_Stunning_Loop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1748,10 +1748,10 @@
                             "$type": "CreateGadget",
                             "born": {
                                 "$type": "ConfigBornByGlobalValue",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 2.5,
-                                    "CPOKKADJBFH": 10.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 2.5,
+                                    "maxRandomRange": 10.0
                                 },
                                 "onGround": true,
                                 "positionKey": "InitialPos",
@@ -1770,10 +1770,10 @@
                             "$type": "CreateGadget",
                             "born": {
                                 "$type": "ConfigBornByGlobalValue",
-                                "IGAGDFFFGAO": {
-                                    "$type": "FHDJJGOONEI",
-                                    "OKDPGGJGGCJ": 10.0,
-                                    "CPOKKADJBFH": 18.0
+                                "bornRandom": {
+                                    "$type": "BornRandomFromCenter",
+                                    "minRandomRange": 10.0,
+                                    "maxRandomRange": 18.0
                                 },
                                 "onGround": true,
                                 "positionKey": "InitialPos",
@@ -1870,10 +1870,10 @@
                                     },
                                     "born": {
                                         "$type": "MGDGOLHGFAP",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 0.0,
-                                            "CPOKKADJBFH": 4.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 0.0,
+                                            "maxRandomRange": 4.0
                                         },
                                         "onGround": true,
                                         "GKAPKIFBACA": 6.0,
@@ -1917,10 +1917,10 @@
                                             "target": "SelfAttackTarget",
                                             "born": {
                                                 "$type": "MGDGOLHGFAP",
-                                                "IGAGDFFFGAO": {
-                                                    "$type": "FHDJJGOONEI",
-                                                    "OKDPGGJGGCJ": 0.0,
-                                                    "CPOKKADJBFH": 2.5
+                                                "bornRandom": {
+                                                    "$type": "BornRandomFromCenter",
+                                                    "minRandomRange": 0.0,
+                                                    "maxRandomRange": 2.5
                                                 },
                                                 "onGround": true,
                                                 "GKAPKIFBACA": -12.5,
@@ -1965,10 +1965,10 @@
                                                     "target": "SelfAttackTarget",
                                                     "born": {
                                                         "$type": "MGDGOLHGFAP",
-                                                        "IGAGDFFFGAO": {
-                                                            "$type": "FHDJJGOONEI",
-                                                            "OKDPGGJGGCJ": 0.0,
-                                                            "CPOKKADJBFH": 2.5
+                                                        "bornRandom": {
+                                                            "$type": "BornRandomFromCenter",
+                                                            "minRandomRange": 0.0,
+                                                            "maxRandomRange": 2.5
                                                         },
                                                         "onGround": true,
                                                         "GKAPKIFBACA": 20.0,
@@ -2069,7 +2069,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_MoveLoop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -2308,12 +2308,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_ReviveLoop",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_ReviveLoop_OnGround",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2366,7 +2366,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerSetRenderersEnable",
@@ -2387,7 +2387,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_AS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerSetRenderersEnable",
@@ -2413,21 +2413,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": -60.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -2462,21 +2462,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": -45.0,
                                         "y": -60.0,
                                         "z": 0.0
@@ -2511,21 +2511,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": -60.0,
                                         "z": 0.0
@@ -2560,21 +2560,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 15.0,
                                         "y": -60.0,
                                         "z": 0.0
@@ -2605,21 +2605,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -2644,21 +2644,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 15.0,
                                         "y": 60.0,
                                         "z": 0.0
@@ -2683,21 +2683,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 60.0,
                                         "z": 0.0
@@ -2722,21 +2722,21 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42004402,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": -45.0,
                                         "y": 60.0,
                                         "z": 0.0
@@ -2774,12 +2774,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Bullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Trail",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2794,7 +2794,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Hit",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -2813,7 +2813,7 @@
                             "attenuationGroup": "Effigy_Ice_RangeAtk",
                             "attackProperty": {
                                 "damagePercentage": 0.25,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Pierce",
@@ -2848,12 +2848,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Bullet02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Trail02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2868,7 +2868,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Hit02",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -2887,7 +2887,7 @@
                             "attenuationGroup": "Effigy_Ice_Attenuation_2",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Blunt",
@@ -2967,24 +2967,24 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleWheelCharge",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleWheelCharge_LoopOnGround",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleWheelCharge_LoopTrail",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleWheelCharge_AS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -3020,7 +3020,7 @@
                                     "attenuationGroup": "Effigy_Ice_Attenuation_1",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 50.0,
                                         "strikeType": "Slash",
@@ -3095,7 +3095,7 @@
                                     "attenuationGroup": "Effigy_Ice_Attenuation_1",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 50.0,
                                         "strikeType": "Slash",
@@ -3147,7 +3147,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleSpinningShoot_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -3204,12 +3204,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleSpinningShoot_01",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_NeedleSpinningShoot_02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -3253,7 +3253,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42004418,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "NeedleSpinningShoot_MultibulletPoint"
                             },
                             "lifeByOwnerIsAlive": true
@@ -3284,7 +3284,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -3303,7 +3303,7 @@
                                     "attenuationGroup": "Effigy_Ice_Attenuation_1",
                                     "attackProperty": {
                                         "damagePercentage": 0.30000001192092896,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "enBreak": 0.0
@@ -3344,7 +3344,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_SpikeStrike_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -3403,10 +3403,10 @@
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
                                         "$type": "PPIKALLAEKG",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 0.0,
-                                            "CPOKKADJBFH": 1.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 0.0,
+                                            "maxRandomRange": 1.0
                                         },
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
@@ -3435,10 +3435,10 @@
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
                                         "$type": "PPIKALLAEKG",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 0.0,
-                                            "CPOKKADJBFH": 1.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 0.0,
+                                            "maxRandomRange": 1.0
                                         },
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
@@ -3465,10 +3465,10 @@
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
                                         "$type": "ConfigBornBySelf",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 6.0,
-                                            "CPOKKADJBFH": 6.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 6.0,
+                                            "maxRandomRange": 6.0
                                         },
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224
@@ -3489,10 +3489,10 @@
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
                                         "$type": "ConfigBornBySelf",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 6.0,
-                                            "CPOKKADJBFH": 6.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 6.0,
+                                            "maxRandomRange": 6.0
                                         },
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224
@@ -3525,10 +3525,10 @@
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
                                         "$type": "PPIKALLAEKG",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 0.0,
-                                            "CPOKKADJBFH": 1.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 0.0,
+                                            "maxRandomRange": 1.0
                                         },
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
@@ -3557,10 +3557,10 @@
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
                                         "$type": "PPIKALLAEKG",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 0.0,
-                                            "CPOKKADJBFH": 1.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 0.0,
+                                            "maxRandomRange": 1.0
                                         },
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
@@ -3592,7 +3592,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint1"
@@ -3604,7 +3604,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint7"
@@ -3616,7 +3616,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint13"
@@ -3640,7 +3640,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint2"
@@ -3652,7 +3652,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint8"
@@ -3664,7 +3664,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint14"
@@ -3688,7 +3688,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint3"
@@ -3700,7 +3700,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint9"
@@ -3712,7 +3712,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint15"
@@ -3736,7 +3736,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint4"
@@ -3748,7 +3748,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint10"
@@ -3760,7 +3760,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint16"
@@ -3784,7 +3784,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint5"
@@ -3796,7 +3796,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint11"
@@ -3808,7 +3808,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint17"
@@ -3832,7 +3832,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint6"
@@ -3844,7 +3844,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint12"
@@ -3856,7 +3856,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint18"
@@ -3911,7 +3911,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint1"
@@ -3923,7 +3923,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint7"
@@ -3935,7 +3935,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint13"
@@ -3959,7 +3959,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint2"
@@ -3971,7 +3971,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint8"
@@ -3983,7 +3983,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint14"
@@ -4007,7 +4007,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint3"
@@ -4019,7 +4019,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint9"
@@ -4031,7 +4031,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint15"
@@ -4055,7 +4055,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint4"
@@ -4067,7 +4067,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint10"
@@ -4079,7 +4079,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint16"
@@ -4103,7 +4103,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint5"
@@ -4115,7 +4115,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint11"
@@ -4127,7 +4127,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint17"
@@ -4151,7 +4151,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint6"
@@ -4163,7 +4163,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint12"
@@ -4175,7 +4175,7 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "LMEODGDBOCI",
+                                        "$type": "ConfigBornByAttachPoint",
                                         "onGround": true,
                                         "onGroundRaycastUpDist": 0.20000000298023224,
                                         "attachPointName": "SpikePoint18"
@@ -4262,7 +4262,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -4283,7 +4283,7 @@
                                     "attenuationGroup": "Effigy_Ice_Attenuation_2",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 50.0,
                                         "strikeType": "Default",
@@ -4414,7 +4414,7 @@
                             ],
                             "bulletID": 42004419,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4440,7 +4440,7 @@
                             ],
                             "bulletID": 42004419,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4466,7 +4466,7 @@
                             ],
                             "bulletID": 42004419,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4492,7 +4492,7 @@
                             ],
                             "bulletID": 42004419,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4518,7 +4518,7 @@
                             ],
                             "bulletID": 42004419,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4562,7 +4562,7 @@
                             ],
                             "bulletID": 42004404,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4590,7 +4590,7 @@
                             ],
                             "bulletID": 42004404,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4618,7 +4618,7 @@
                             ],
                             "bulletID": 42004404,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
@@ -4668,7 +4668,7 @@
                         {
                             "$type": "SetSelfAttackTarget",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR50",
@@ -4695,8 +4695,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -4716,15 +4716,15 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
                                     }
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
@@ -4737,8 +4737,8 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": -90.0,
                                         "z": 0.0
@@ -4758,15 +4758,15 @@
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": -90.0,
                                         "z": 0.0
                                     }
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -4775,12 +4775,12 @@
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_IceBarrage_Bullet",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_IceBarrage_Trail",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ],
             "onAbilityStart": [
@@ -4796,7 +4796,7 @@
                         },
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -4815,7 +4815,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.25,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Blunt",
@@ -4905,7 +4905,7 @@
                                 },
                                 "onGround": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onBeingHit": [
@@ -4974,7 +4974,7 @@
                                                             "attenuationGroup": "default",
                                                             "attackProperty": {
                                                                 "damagePercentage": 0.0,
-                                                                "MKLAMNDEDGB": 0.0,
+                                                                "damagePercentageRatio": 0.0,
                                                                 "bonusCriticalHurt": 100.0
                                                             },
                                                             "hitPattern": {
@@ -5121,7 +5121,7 @@
                                                             "attenuationGroup": "default",
                                                             "attackProperty": {
                                                                 "damagePercentage": 0.0,
-                                                                "MKLAMNDEDGB": 0.0,
+                                                                "damagePercentageRatio": 0.0,
                                                                 "bonusCriticalHurt": 100.0
                                                             },
                                                             "hitPattern": {
@@ -5293,7 +5293,7 @@
                                                             "attenuationGroup": "default",
                                                             "attackProperty": {
                                                                 "damagePercentage": 0.0,
-                                                                "MKLAMNDEDGB": 0.0,
+                                                                "damagePercentageRatio": 0.0,
                                                                 "bonusCriticalHurt": 100.0
                                                             },
                                                             "hitPattern": {
@@ -5440,7 +5440,7 @@
                                                             "attenuationGroup": "default",
                                                             "attackProperty": {
                                                                 "damagePercentage": 0.0,
-                                                                "MKLAMNDEDGB": 0.0,
+                                                                "damagePercentageRatio": 0.0,
                                                                 "bonusCriticalHurt": 100.0
                                                             },
                                                             "hitPattern": {
@@ -5631,7 +5631,7 @@
                 {
                     "$type": "SetSelfAttackTarget",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 1,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -5672,7 +5672,7 @@
                         },
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -5723,7 +5723,7 @@
                                             "attenuationGroup": "default",
                                             "attackProperty": {
                                                 "damagePercentage": 0.0,
-                                                "MKLAMNDEDGB": 0.0,
+                                                "damagePercentageRatio": 0.0,
                                                 "bonusCriticalHurt": 100.0
                                             },
                                             "hitPattern": {
@@ -5828,7 +5828,7 @@
                                             "attenuationGroup": "default",
                                             "attackProperty": {
                                                 "damagePercentage": 0.0,
-                                                "MKLAMNDEDGB": 0.0,
+                                                "damagePercentageRatio": 0.0,
                                                 "bonusCriticalHurt": 100.0
                                             },
                                             "hitPattern": {
@@ -5913,12 +5913,12 @@
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_IceBarrage_BulletKicked",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_IceBarrage_Trail",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "SetGlobalValue",
@@ -6017,7 +6017,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 50.0,
                                         "strikeType": "Blunt",
@@ -6046,7 +6046,7 @@
                         },
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -6068,7 +6068,7 @@
                         },
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "KillSelf"
@@ -6130,7 +6130,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 99,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -6173,7 +6173,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 99,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -6216,7 +6216,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 99,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -6259,7 +6259,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 99,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -6302,7 +6302,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 99,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -6345,7 +6345,7 @@
                 {
                     "$type": "ApplyModifier",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 99,
                         "sortType": "Nearest",
                         "shapeName": "CircleR50",
@@ -6530,7 +6530,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource01"
                             }
                         },
@@ -6546,7 +6546,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource02"
                             }
                         },
@@ -6562,7 +6562,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource03"
                             }
                         },
@@ -6578,7 +6578,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource04"
                             }
                         },
@@ -6594,7 +6594,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource05"
                             }
                         },
@@ -6610,7 +6610,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource06"
                             }
                         },
@@ -6626,7 +6626,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource07"
                             }
                         },
@@ -6652,7 +6652,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource01"
                             }
                         },
@@ -6668,7 +6668,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource02"
                             }
                         },
@@ -6684,7 +6684,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource03"
                             }
                         },
@@ -6700,7 +6700,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource04"
                             }
                         },
@@ -6716,7 +6716,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource05"
                             }
                         },
@@ -6732,7 +6732,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource06"
                             }
                         },
@@ -6748,7 +6748,7 @@
                             ],
                             "bulletID": 42004406,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "attachPointName": "ReviveBulletSource07"
                             }
                         },
@@ -6776,7 +6776,7 @@
                                     "directionKey": "_ABILITY_Effigy_Ice_Revive_SkillDirection"
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6794,7 +6794,7 @@
                                     "directionKey": "_ABILITY_Effigy_Ice_Revive_SkillDirection"
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6812,7 +6812,7 @@
                                     "directionKey": "_ABILITY_Effigy_Ice_Revive_SkillDirection"
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -6841,7 +6841,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_NeedleAttack_NeedleBullet_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -6858,12 +6858,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_NeedleAttack_NeedleBullet",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Trail02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -6892,7 +6892,7 @@
                             "attenuationGroup": "Effigy_Ice_Attenuation_2",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Blunt",
@@ -6915,7 +6915,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Hit02",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "KillSelf"
@@ -6936,7 +6936,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_SpikeAttack_RingShaped03_Alert",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -6947,7 +6947,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_Revive_SpikeAttack_RingShaped_Attack",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -6960,7 +6960,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
                                     },
@@ -6974,7 +6974,7 @@
                                     "attenuationGroup": "Regisvine_Common",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Blunt",
@@ -7007,7 +7007,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
                                     },
@@ -7021,7 +7021,7 @@
                                     "attenuationGroup": "Regisvine_Common",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Blunt",
@@ -7054,7 +7054,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
                                     },
@@ -7068,7 +7068,7 @@
                                     "attenuationGroup": "Regisvine_Common",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Blunt",
@@ -7099,7 +7099,7 @@
                                 "onGround": true,
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -7128,7 +7128,7 @@
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 15.0,
                                         "z": 0.0
@@ -7157,7 +7157,7 @@
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 30.0,
                                         "z": 0.0
@@ -7186,7 +7186,7 @@
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 45.0,
                                         "z": 0.0
@@ -7215,7 +7215,7 @@
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 60.0,
                                         "z": 0.0
@@ -7244,7 +7244,7 @@
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 75.0,
                                         "z": 0.0
@@ -7273,7 +7273,7 @@
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
                                     "$type": "ConfigDirectionByGlobalValue",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -7316,8 +7316,8 @@
                     "born": {
                         "$type": "ConfigBornBySelf",
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": -45.0,
                                 "z": 0.0
@@ -7331,8 +7331,8 @@
                     "born": {
                         "$type": "ConfigBornBySelf",
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 0.0,
                                 "z": 0.0
@@ -7346,8 +7346,8 @@
                     "born": {
                         "$type": "ConfigBornBySelf",
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 45.0,
                                 "z": 0.0
@@ -7361,8 +7361,8 @@
                     "born": {
                         "$type": "ConfigBornBySelf",
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 135.0,
                                 "z": 0.0
@@ -7376,8 +7376,8 @@
                     "born": {
                         "$type": "ConfigBornBySelf",
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 180.0,
                                 "z": 0.0
@@ -7391,8 +7391,8 @@
                     "born": {
                         "$type": "ConfigBornBySelf",
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 225.0,
                                 "z": 0.0
@@ -7429,7 +7429,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
                                     },
@@ -7442,7 +7442,7 @@
                                     "attenuationGroup": "Regisvine_Common",
                                     "attackProperty": {
                                         "damagePercentage": 0.5,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Blunt",
@@ -7470,7 +7470,7 @@
                         "$type": "ConfigBornBySelf",
                         "direction": {
                             "$type": "ConfigDirectionByGlobalValue",
-                            "NHGDOBINMBK": {
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 135.0,
                                 "z": 0.0
@@ -7478,7 +7478,7 @@
                             "directionKey": "_ABILITY_Effigy_Ice_Revive_SkillDirection"
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "AttachModifier",
@@ -7499,12 +7499,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Bullet02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Trail02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -7516,7 +7516,7 @@
                         {
                             "$type": "SetSelfAttackTarget",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR50",
@@ -7538,8 +7538,8 @@
                             "born": {
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 45.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -7554,8 +7554,8 @@
                             "born": {
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -7570,8 +7570,8 @@
                             "born": {
                                 "$type": "ConfigBornBySelf",
                                 "direction": {
-                                    "$type": "IOPNFLFHGID",
-                                    "NHGDOBINMBK": {
+                                    "$type": "ConfigDirectionByEntity",
+                                    "angleOffset": {
                                         "x": -45.0,
                                         "y": 0.0,
                                         "z": 0.0
@@ -7583,7 +7583,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Fire02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf"
@@ -7605,7 +7605,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_RangeAtk_Hit02",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -7624,7 +7624,7 @@
                             "attenuationGroup": "Effigy_Ice_Attenuation_2",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Blunt",
@@ -7663,7 +7663,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
@@ -7742,7 +7742,7 @@
                                 },
                                 "onGround": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnablePushColliderName",
@@ -7771,9 +7771,9 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_BeHit",
                                     "born": {
-                                        "$type": "FLIPADNBJJF"
+                                        "$type": "ConfigBornByHitPoint"
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ],
                             "failActions": [
@@ -7785,23 +7785,23 @@
                                             "predicates": [
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Fire"
+                                                    "element": "Fire"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Electric"
+                                                    "element": "Electric"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Water"
+                                                    "element": "Water"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Wind"
+                                                    "element": "Wind"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Rock"
+                                                    "element": "Rock"
                                                 },
                                                 {
                                                     "$type": "LMLEGIECOAO",
@@ -7815,9 +7815,9 @@
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_BeHit",
                                             "born": {
-                                                "$type": "FLIPADNBJJF"
+                                                "$type": "ConfigBornByHitPoint"
                                             },
-                                            "FGMDINMEPHL": -1.0
+                                            "effectTempleteID": -1.0
                                         }
                                     ]
                                 }
@@ -7868,7 +7868,7 @@
                                 },
                                 "onGround": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -7911,7 +7911,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_AS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "KillSelf"
@@ -7935,7 +7935,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_BS_Reverse",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
@@ -8014,7 +8014,7 @@
                                 },
                                 "onGround": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "EnablePushColliderName",
@@ -8043,9 +8043,9 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_BeHit",
                                     "born": {
-                                        "$type": "FLIPADNBJJF"
+                                        "$type": "ConfigBornByHitPoint"
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 }
                             ],
                             "failActions": [
@@ -8057,23 +8057,23 @@
                                             "predicates": [
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Fire"
+                                                    "element": "Fire"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Electric"
+                                                    "element": "Electric"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Water"
+                                                    "element": "Water"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Wind"
+                                                    "element": "Wind"
                                                 },
                                                 {
                                                     "$type": "OIEGBANNLOG",
-                                                    "CIMNBKFMPGD": "Rock"
+                                                    "element": "Rock"
                                                 },
                                                 {
                                                     "$type": "LMLEGIECOAO",
@@ -8087,9 +8087,9 @@
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_BeHit",
                                             "born": {
-                                                "$type": "FLIPADNBJJF"
+                                                "$type": "ConfigBornByHitPoint"
                                             },
-                                            "FGMDINMEPHL": -1.0
+                                            "effectTempleteID": -1.0
                                         }
                                     ]
                                 }
@@ -8140,7 +8140,7 @@
                                 },
                                 "onGround": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -8183,7 +8183,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Effigy_Ice_IceWall_Activity_AS_Reverse",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "KillSelf"
@@ -8202,7 +8202,7 @@
                     "born": {
                         "$type": "ConfigBornByCollisionPoint"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -8221,7 +8221,7 @@
                             "attenuationGroup": "Effigy_Ice_RangeAtk",
                             "attackProperty": {
                                 "damagePercentage": 0.25,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Default",

@@ -15,7 +15,7 @@
                             "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_ABYSS_ICE_ELEMENTSHIELD",
                             "ratio": 1.0,
-                            "FHNBDHANFCJ": true
+                            "setTarget": true
                         }
                     ],
                     "exitPredicates": [
@@ -23,7 +23,7 @@
                             "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_ABYSS_ICE_ELEMENTSHIELD",
                             "ratio": 0.0,
-                            "FHNBDHANFCJ": true
+                            "setTarget": true
                         }
                     ],
                     "enterActions": [
@@ -116,7 +116,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onKill": [
@@ -161,7 +161,7 @@
                 "Abyss_Ice_ElementShield_RecoverHandler": {
                     "modifierName": "",
                     "bonusCriticalHurt": 100.0,
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "ApplyModifier",
                             "modifierName": "UNIQUE_Abyss_Ice_ElementShield"
@@ -203,7 +203,7 @@
                             "elementType": "Frozen",
                             "showDamageText": "",
                             "PNHPNGLLDJN": 360.0,
-                            "OIMMEDBLDPJ": 1.0,
+                            "shieldHPRatio": 1.0,
                             "damageRatio": 0.20000000298023224,
                             "onShieldSuccess": [
                                 {
@@ -257,7 +257,7 @@
                                             "directionKey": "_ABILITY_ABYSS_ICE_ELEMENTSHIELD_HIT"
                                         }
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "SendEffectTrigger",
@@ -318,7 +318,7 @@
                                             "directionKey": "_ABILITY_ABYSS_ICE_ELEMENTSHIELD_HIT"
                                         }
                                     },
-                                    "FGMDINMEPHL": -1.0
+                                    "effectTempleteID": -1.0
                                 },
                                 {
                                     "$type": "SendEffectTrigger",
@@ -328,7 +328,7 @@
                                 }
                             ],
                             "useMutiPlayerFixData": true,
-                            "shieldHPRatio": true
+                            "updateShieldByMaxHp": true
                         },
                         {
                             "$type": "VelocityForceMixin",
@@ -415,7 +415,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ELITEAFFIX_DEFENCE_ENHANCE",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true
+                                    "setTarget": true
                                 },
                                 {
                                     "$type": "ByEntityTypes",
@@ -437,7 +437,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
                                     "enBreak": 0.0
@@ -457,7 +457,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ELITEAFFIX_DEFENCE_ENHANCE",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true
+                                    "setTarget": true
                                 },
                                 {
                                     "$type": "ByEntityTypes",
@@ -479,7 +479,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
                                     "enBreak": 0.0
@@ -570,7 +570,7 @@
                 "Abyss_Ice_ElementShield_Effect_RecoverHandler": {
                     "modifierName": "",
                     "bonusCriticalHurt": 100.0,
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "ApplyModifier",
                             "modifierName": "UNIQUE_Abyss_Ice_ElementShield_Effect"
@@ -607,7 +607,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_ElementShield_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -688,7 +688,7 @@
                             "modifierName": "UNIQUE_Abyss_Ice_DizzyTimer"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "ApplyModifier",
                             "modifierName": "UNIQUE_Abyss_Ice_DizzyTimer"
@@ -850,12 +850,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Gather",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -881,7 +881,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SURROUNDCONE_02",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true,
+                                    "setTarget": true,
                                     "compareType": "LessAndEqual"
                                 }
                             ],
@@ -895,7 +895,7 @@
                                 },
                                 "direction": {
                                     "$type": "IHINHODOMIN",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -911,7 +911,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SURROUNDCONE_02",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true,
+                                    "setTarget": true,
                                     "compareType": "LessAndEqual"
                                 }
                             ],
@@ -925,7 +925,7 @@
                                 },
                                 "direction": {
                                     "$type": "IHINHODOMIN",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -941,7 +941,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SURROUNDCONE_02",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true,
+                                    "setTarget": true,
                                     "compareType": "LessAndEqual"
                                 }
                             ],
@@ -955,7 +955,7 @@
                                 },
                                 "direction": {
                                     "$type": "IHINHODOMIN",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -965,7 +965,7 @@
                             "trackTarget": "Self"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "AddGlobalValue",
                             "ratio": -10.0,
@@ -998,7 +998,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SURROUNDCONE_04",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true,
+                                    "setTarget": true,
                                     "compareType": "LessAndEqual"
                                 }
                             ],
@@ -1012,7 +1012,7 @@
                                 },
                                 "direction": {
                                     "$type": "IHINHODOMIN",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -1028,7 +1028,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SURROUNDCONE_04",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true,
+                                    "setTarget": true,
                                     "compareType": "LessAndEqual"
                                 }
                             ],
@@ -1042,7 +1042,7 @@
                                 },
                                 "direction": {
                                     "$type": "IHINHODOMIN",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -1058,7 +1058,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SURROUNDCONE_04",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true,
+                                    "setTarget": true,
                                     "compareType": "LessAndEqual"
                                 }
                             ],
@@ -1072,7 +1072,7 @@
                                 },
                                 "direction": {
                                     "$type": "IHINHODOMIN",
-                                    "NHGDOBINMBK": {
+                                    "angleOffset": {
                                         "x": 0.0,
                                         "y": 90.0,
                                         "z": 0.0
@@ -1082,7 +1082,7 @@
                             "trackTarget": "Self"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "AddGlobalValue",
                             "ratio": -10.0,
@@ -1117,7 +1117,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Gather_Alert",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1144,13 +1144,13 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -1168,7 +1168,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1194,7 +1194,7 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -1222,7 +1222,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 2.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1353,7 +1353,7 @@
                                     "z": 0.0
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAbility",
@@ -1456,7 +1456,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Blink_BS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "ClearLockTarget",
@@ -1483,7 +1483,7 @@
                     "born": {
                         "$type": "IOHLPEPEKAP"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1515,7 +1515,7 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "RemoveUniqueModifier",
@@ -1533,7 +1533,7 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -1552,7 +1552,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -1754,7 +1754,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Blink_BS",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1771,10 +1771,10 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Blink_AS",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "RootNode"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1844,7 +1844,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Blink_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2019,7 +2019,7 @@
                             "z": 0.0
                         }
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "RemoveUniqueModifier",
@@ -2073,12 +2073,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Normal_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2119,7 +2119,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Cone_Small",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2146,7 +2146,7 @@
                     "born": {
                         "$type": "ConfigBornByCollisionPoint"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -2165,7 +2165,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -2211,12 +2211,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Special_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_WeaponElement",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -2368,7 +2368,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Cone_Alert",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -2386,7 +2386,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Cone_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -2414,7 +2414,7 @@
                         "$type": "ConfigBornBySelfOwner",
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAbility",
@@ -2451,7 +2451,7 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -2470,7 +2470,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -2512,7 +2512,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Ice_Fog",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
@@ -2520,7 +2520,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -2538,7 +2538,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.30000001192092896,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "enBreak": 0.0
@@ -2578,7 +2578,7 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Cone_Gather",
                             "scale": 0.7200000286102295,
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -2628,7 +2628,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Cone_Gather",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -2687,7 +2687,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.699999988079071,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -2727,7 +2727,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Abyss_Ice_Cone_AS_Large",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
@@ -2751,7 +2751,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.699999988079071,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",

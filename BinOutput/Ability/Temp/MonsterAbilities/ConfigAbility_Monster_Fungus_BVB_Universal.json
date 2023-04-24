@@ -35,7 +35,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_FungusFight_UnionBurstGlitter",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -135,7 +135,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_FungusFight_Trois_RotateIdle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1104,19 +1104,19 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_CommonSkill_FootCircle_Fire",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_FungusFight_Affix_BurningArea",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "Enemy",
                                 "OBHNBNDMPFN": 1.0
@@ -1135,7 +1135,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_FungusFight_Affix_BurningImpulse",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1154,7 +1154,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Fire",
                                     "bonusCriticalHurt": 0.0,
                                     "ignoreAttackerProperty": true,
@@ -1214,7 +1214,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_FungusFight_Affix_LowImpulse_FootCircle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onKill": [
@@ -1243,12 +1243,12 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_LowImpulse_Ice_Alert",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_LowImpulse_Ice_Area",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1256,26 +1256,26 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "target": "Self",
-                                    "KONBGFMBNDO": 0.0
+                                    "HPRatio": 0.0
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_LowImpulse_Ice_DamageWave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
                             "predicates": [
                                 {
-                                    "$type": "GMGEIHHLMCO",
+                                    "$type": "ByTargetHPRatio",
                                     "target": "Self",
-                                    "KONBGFMBNDO": 0.0
+                                    "HPRatio": 0.0
                                 }
                             ],
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf"
@@ -1289,7 +1289,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
                                         "ignoreAttackerProperty": true,
@@ -1357,12 +1357,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_MonsterPowerUp_Wave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1401,8 +1401,8 @@
                                             ]
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Fire"
+                                            "$type": "ByHasElement",
+                                            "element": "Fire"
                                         }
                                     ]
                                 }
@@ -1412,7 +1412,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1457,12 +1457,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_MonsterPowerUp_Wave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1501,8 +1501,8 @@
                                             ]
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Fire"
+                                            "$type": "ByHasElement",
+                                            "element": "Fire"
                                         }
                                     ]
                                 }
@@ -1512,7 +1512,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1609,7 +1609,7 @@
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_TowerDefense_SpecialAbility",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ],
             "isDynamicAbility": true
@@ -1645,12 +1645,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_MonsterPowerUp_Wave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1689,12 +1689,12 @@
                                             ]
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Frozen"
+                                            "$type": "ByHasElement",
+                                            "element": "Frozen"
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Ice"
+                                            "$type": "ByHasElement",
+                                            "element": "Ice"
                                         }
                                     ]
                                 }
@@ -1704,7 +1704,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1749,12 +1749,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_MonsterPowerUp_Wave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1793,12 +1793,12 @@
                                             ]
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Frozen"
+                                            "$type": "ByHasElement",
+                                            "element": "Frozen"
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Ice"
+                                            "$type": "ByHasElement",
+                                            "element": "Ice"
                                         }
                                     ]
                                 }
@@ -1808,7 +1808,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1905,7 +1905,7 @@
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_TowerDefense_SpecialAbility",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ],
             "isDynamicAbility": true
@@ -1940,12 +1940,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_MonsterPowerUp_Wave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -1984,8 +1984,8 @@
                                             ]
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Electric"
+                                            "$type": "ByHasElement",
+                                            "element": "Electric"
                                         }
                                     ]
                                 }
@@ -1995,7 +1995,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -2040,12 +2040,12 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_MonsterPowerUp_Wave",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "ApplyModifier",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -2084,8 +2084,8 @@
                                             ]
                                         },
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Electric"
+                                            "$type": "ByHasElement",
+                                            "element": "Electric"
                                         }
                                     ]
                                 }
@@ -2095,7 +2095,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR12",
                                 "campTargetType": "SelfCamp",
                                 "OBHNBNDMPFN": 1.0
@@ -2199,7 +2199,7 @@
                 {
                     "$type": "AttachEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_TowerDefense_SpecialAbility",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ],
             "isDynamicAbility": true
@@ -2231,19 +2231,19 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_GeneralSkill_ElecDamage_ThunderArea_FootCircle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_FungusFight_Affix_ThunderArea_InnerCircle",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR20H6",
                                 "campTargetType": "Enemy",
                                 "OBHNBNDMPFN": 1.0
@@ -2271,7 +2271,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR6H5",
                                 "campTargetType": "Enemy",
                                 "OBHNBNDMPFN": 1.0
@@ -2304,7 +2304,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_ThunderStorm_Gathering",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
@@ -2315,7 +2315,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 25.0,
                                     "ignoreAttackerProperty": true,
@@ -2334,7 +2334,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_ThunderStorm_Blast",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "RemoveModifier",
@@ -2416,7 +2416,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Fire",
                                     "bonusCriticalHurt": 0.0,
                                     "ignoreAttackerProperty": true,

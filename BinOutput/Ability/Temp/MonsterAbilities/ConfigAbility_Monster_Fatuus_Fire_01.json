@@ -225,7 +225,7 @@
                             "attenuationGroup": "Monster_Gadget_Attenuation_01",
                             "attackProperty": {
                                 "damagePercentage": 0.75,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Slash",
@@ -282,7 +282,7 @@
                             "attenuationGroup": "Monster_Gadget_Attenuation_01",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Slash",
@@ -344,7 +344,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_BulletTrace",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -369,7 +369,7 @@
                                 {
                                     "$type": "IDHCAKGEMOF",
                                     "attackPattern": {
-                                        "$type": "CHEAOJDOBEB",
+                                        "$type": "ConfigAttackCircle",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
                                             "$type": "ConfigBornBySelf",
@@ -410,7 +410,7 @@
                             "attenuationGroup": "Monster_Gadget_Attenuation_01",
                             "attackProperty": {
                                 "damagePercentage": 0.75,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 50.0,
                                 "strikeType": "Default",
@@ -548,7 +548,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorBorn",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -559,8 +559,8 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "KDJFMOGPKCP",
-                                            "CIMNBKFMPGD": "Fire"
+                                            "$type": "ByHasElement",
+                                            "element": "Fire"
                                         }
                                     ]
                                 },
@@ -600,7 +600,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorDestroyed",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf"
@@ -615,7 +615,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorDestroyed",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AddGlobalValue",
@@ -638,7 +638,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorBreakHit_L",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "FireEffect",
@@ -651,7 +651,7 @@
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorBreakHit_H",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "DamageByAttackValue",
@@ -669,7 +669,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "bonusCriticalHurt": 100.0,
                                     "strikeType": "Default",
                                     "enBreak": 500.0
@@ -789,7 +789,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorDestroyed",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf"
@@ -804,7 +804,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorDestroyed",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf"
@@ -831,7 +831,7 @@
                 {
                     "$type": "SetSelfAttackTarget",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 1,
                         "sortType": "Random",
                         "shapeName": "CircleR15",
@@ -885,20 +885,20 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_NormalAtkBS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_NormalAtk",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -916,7 +916,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.6000000238418579,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Slash",
                                         "enBreak": 100.0,
@@ -1237,7 +1237,7 @@
                         {
                             "$type": "Predicated",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "sortType": "Random",
                                 "shapeName": "CircleR15",
                                 "campTargetType": "Alliance",
@@ -1327,7 +1327,7 @@
                                 {
                                     "$type": "IDHCAKGEMOF",
                                     "attackPattern": {
-                                        "$type": "CHEAOJDOBEB",
+                                        "$type": "ConfigAttackCircle",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
                                             "$type": "ConfigBornBySelf",
@@ -1394,7 +1394,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_MirrorBurst",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1413,7 +1413,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 1,
                         "sortType": "Random",
                         "shapeName": "CircleR25",
@@ -1485,7 +1485,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "topLimit": 1,
                         "sortType": "Random",
                         "shapeName": "CircleR50",
@@ -1511,18 +1511,18 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_BlinkAS",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID"
+                                    "$type": "ConfigDirectionByEntity"
                                 },
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TryFindBlinkPoint",
@@ -1542,18 +1542,18 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_BlinkBS",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID"
+                                    "$type": "ConfigDirectionByEntity"
                                 },
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAbility",
@@ -1599,8 +1599,8 @@
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -1625,24 +1625,24 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_BlinkBS",
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "offset": {
                                     "x": 0.0,
                                     "y": 0.0,
                                     "z": 0.0
                                 },
                                 "direction": {
-                                    "$type": "IOPNFLFHGID"
+                                    "$type": "ConfigDirectionByEntity"
                                 },
                                 "attachPointName": "RootNode"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -1724,7 +1724,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_FlashStrike_LastAS",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
@@ -1732,7 +1732,7 @@
                         },
                         "attachPointName": "WeaponR"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1758,8 +1758,8 @@
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -1770,8 +1770,8 @@
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -1876,7 +1876,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR4",
                         "campTargetType": "Enemy",
                         "OBHNBNDMPFN": 1.0
@@ -1900,7 +1900,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.25,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Fire",
                                     "bonusCriticalHurt": 50.0,
                                     "strikeType": "Default",
@@ -1976,7 +1976,7 @@
                 {
                     "$type": "Predicated",
                     "otherTargets": {
-                        "$type": "BMJIBLBEECK",
+                        "$type": "SelectTargetsByShape",
                         "shapeName": "CircleR4",
                         "campTargetType": "Enemy",
                         "OBHNBNDMPFN": 1.0
@@ -2012,7 +2012,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.25,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Fire",
                                     "bonusCriticalHurt": 50.0,
                                     "strikeType": "Default",
@@ -2057,7 +2057,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_SurroundingWeapon",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onAttackLanded": [
@@ -2128,7 +2128,7 @@
                             "attenuationGroup": "Monster_Gadget_Attenuation_01",
                             "attackProperty": {
                                 "damagePercentage": 0.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Default",
                                 "attackType": "Melee"
@@ -2171,7 +2171,7 @@
                                     "z": 0.0
                                 }
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2301,8 +2301,8 @@
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -2333,13 +2333,13 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_OutOfShadowQuick",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -2501,8 +2501,8 @@
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -2526,8 +2526,8 @@
                         {
                             "$type": "TriggerAbility",
                             "otherTargets": {
-                                "$type": "FHPHBMBDJAJ",
-                                "KNBIINCIAMG": [
+                                "$type": "SelectTargetsByEquipParts",
+                                "equipPartNames": [
                                     "equip01"
                                 ]
                             },
@@ -2850,7 +2850,7 @@
                                     "$type": "ByTargetGlobalValue",
                                     "key": "_ELITEAFFIX_ATTACK_ENHANCE",
                                     "ratio": 1.0,
-                                    "FHNBDHANFCJ": true
+                                    "setTarget": true
                                 }
                             ],
                             "abilityName": "Monster_Fatuus_Fire_01_Stage1Mirror_FollowAtk"
@@ -2914,7 +2914,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_IntoShadowTrace",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -2923,7 +2923,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fatuus_Fire_01_IntoShadowQuick",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "SetPoseBool",
@@ -2950,21 +2950,21 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "KDJFMOGPKCP",
-                            "CIMNBKFMPGD": "Water"
+                            "$type": "ByHasElement",
+                            "element": "Water"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Chacter_Footprint",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
                             "z": 0.0
                         },
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 0.0,
                                 "z": 0.0
@@ -2972,7 +2972,7 @@
                         },
                         "attachPointName": "FootRight"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "FireEffect",
@@ -2986,15 +2986,15 @@
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_AvatarSwimming_RunShoal",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
                             "z": 0.0
                         },
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 0.0,
                                 "z": 0.0
@@ -3002,7 +3002,7 @@
                         },
                         "attachPointName": "FootRight"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -3016,21 +3016,21 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "KDJFMOGPKCP",
-                            "CIMNBKFMPGD": "Water"
+                            "$type": "ByHasElement",
+                            "element": "Water"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Chacter_Footprint",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
                             "z": 0.0
                         },
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 0.0,
                                 "z": 0.0
@@ -3038,7 +3038,7 @@
                         },
                         "attachPointName": "FootLeft"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "FireEffect",
@@ -3052,15 +3052,15 @@
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_AvatarSwimming_RunShoal",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "offset": {
                             "x": 0.0,
                             "y": 0.0,
                             "z": 0.0
                         },
                         "direction": {
-                            "$type": "IOPNFLFHGID",
-                            "NHGDOBINMBK": {
+                            "$type": "ConfigDirectionByEntity",
+                            "angleOffset": {
                                 "x": 0.0,
                                 "y": 0.0,
                                 "z": 0.0
@@ -3068,7 +3068,7 @@
                         },
                         "attachPointName": "FootLeft"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }

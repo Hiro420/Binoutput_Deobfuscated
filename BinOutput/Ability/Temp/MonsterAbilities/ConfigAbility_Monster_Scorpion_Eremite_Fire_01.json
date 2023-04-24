@@ -78,7 +78,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Properties_Defense_Down",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -252,7 +252,7 @@
                             "ratio": true
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "SetPoseBool",
                             "boolID": "IsAppear",
@@ -307,7 +307,7 @@
                             "BPKOFFOCMNG": "Default"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "TriggerSetVisible",
                             "visible": true
@@ -524,13 +524,13 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_NormalAttack01_01_Damage",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42570007,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "RootNode"
                             },
@@ -555,7 +555,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_NormalAttack01_01_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -587,7 +587,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_NormalAttack01_02_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -598,7 +598,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_NormalAttack01_02_BS02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -620,13 +620,13 @@
                                 "onGround": true,
                                 "IABNJPGBAOH": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -637,7 +637,7 @@
                                         },
                                         "onGround": true,
                                         "direction": {
-                                            "$type": "IOPNFLFHGID"
+                                            "$type": "ConfigDirectionByEntity"
                                         },
                                         "IABNJPGBAOH": true
                                     },
@@ -650,7 +650,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.800000011920929,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Blunt",
@@ -724,7 +724,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_MeleeAttack01_01_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -758,7 +758,7 @@
                             ]
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "EnablePushColliderName",
                             "pushColliderNames": [
@@ -830,7 +830,7 @@
                             "modifierName": "SetVisible_Ture"
                         }
                     ],
-                    "LGJBJJBCBEH": [
+                    "onReconnect": [
                         {
                             "$type": "TriggerSetVisible",
                             "canBeHandledOnRecover": true,
@@ -860,13 +860,13 @@
                         "onGround": true,
                         "IABNJPGBAOH": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -887,7 +887,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Blunt",
@@ -954,10 +954,10 @@
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
                                         "$type": "ConfigBornByTarget",
-                                        "IGAGDFFFGAO": {
-                                            "$type": "FHDJJGOONEI",
-                                            "OKDPGGJGGCJ": 4.0,
-                                            "CPOKKADJBFH": 5.0
+                                        "bornRandom": {
+                                            "$type": "BornRandomFromCenter",
+                                            "minRandomRange": 4.0,
+                                            "maxRandomRange": 5.0
                                         },
                                         "onGround": true
                                     },
@@ -1001,7 +1001,7 @@
                         "onGround": true,
                         "IABNJPGBAOH": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1019,7 +1019,7 @@
                         "onGround": true,
                         "IABNJPGBAOH": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1067,13 +1067,13 @@
                                 "onGround": true,
                                 "IABNJPGBAOH": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42570007,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "RootNode"
                             },
@@ -1099,7 +1099,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_MeleeAttack01_01_Damage",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1119,7 +1119,7 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -1130,7 +1130,7 @@
                                 },
                                 "onGround": true,
                                 "direction": {
-                                    "$type": "IOPNFLFHGID"
+                                    "$type": "ConfigDirectionByEntity"
                                 },
                                 "IABNJPGBAOH": true
                             },
@@ -1143,7 +1143,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.6000000238418579,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Blunt",
@@ -1183,7 +1183,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.800000011920929,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Blunt",
@@ -1215,13 +1215,13 @@
                         "onGround": true,
                         "IABNJPGBAOH": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 },
                 {
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -1242,7 +1242,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.5,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Blunt",
@@ -1324,7 +1324,7 @@
                                 "onGround": true,
                                 "IABNJPGBAOH": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1361,13 +1361,13 @@
                                 "onGround": true,
                                 "IABNJPGBAOH": true
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -1389,7 +1389,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 1.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Blunt",
@@ -1436,7 +1436,7 @@
                         {
                             "$type": "TryFindBlinkPoint",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "topLimit": 1,
                                 "sortType": "Nearest",
                                 "shapeName": "CircleR50",
@@ -1499,13 +1499,13 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_RangeAttack01_Fire",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerBullet",
                             "bulletID": 42570006,
                             "born": {
-                                "$type": "LMEODGDBOCI",
+                                "$type": "ConfigBornByAttachPoint",
                                 "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
@@ -1522,7 +1522,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Scorpion_Eremite_Fire_RangeAttack01_BS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 }
@@ -1569,7 +1569,7 @@
                             "born": {
                                 "$type": "ConfigBornByCollisionPoint"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1590,7 +1590,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 0.800000011920929,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
                                 "strikeType": "Default",

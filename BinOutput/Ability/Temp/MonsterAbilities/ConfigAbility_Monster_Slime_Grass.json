@@ -204,7 +204,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Move_UnderGround",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -349,7 +349,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ],
                             "triggerID": "ToGround"
@@ -448,7 +448,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Move_UnderGround",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -583,7 +583,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ],
                             "triggerID": "ToGround"
@@ -732,7 +732,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "bonusCriticalHurt": 100.0,
                                     "enBreak": 1000.0
                                 },
@@ -747,7 +747,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Burning_02",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -830,7 +830,7 @@
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_PutOutFire",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerSetRenderersEnable",
@@ -875,7 +875,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.0,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "bonusCriticalHurt": 100.0,
                                     "enBreak": 1000.0
                                 },
@@ -890,7 +890,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Burning_03",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -935,7 +935,7 @@
                 {
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_PutOutFire",
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1116,19 +1116,19 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Spread",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Spread_Area",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onThinkInterval": [
                         {
                             "$type": "HealHP",
                             "otherTargets": {
-                                "$type": "BMJIBLBEECK",
+                                "$type": "SelectTargetsByShape",
                                 "shapeName": "CircleR5",
                                 "campTargetType": "Alliance",
                                 "OBHNBNDMPFN": 1.0
@@ -1147,7 +1147,7 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "CHEAOJDOBEB",
+                                    "$type": "ConfigAttackCircle",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "ConfigBornBySelf",
@@ -1166,7 +1166,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 0.10000000149011612,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
                                         "strikeType": "Default",
@@ -1204,7 +1204,7 @@
                     ],
                     "bulletID": 42001012,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "FlowerBud"
                     }
                 },
@@ -1220,7 +1220,7 @@
                     ],
                     "bulletID": 42001013,
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "attachPointName": "FlowerBud"
                     }
                 }
@@ -1240,7 +1240,7 @@
                             "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_SUMMON_LIFETIME",
                             "ratio": 1.0,
-                            "FHNBDHANFCJ": true
+                            "setTarget": true
                         }
                     ],
                     "monsterID": 20010101,
@@ -1263,7 +1263,7 @@
                             "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_SUMMON_LIFETIME",
                             "ratio": 0.0,
-                            "FHNBDHANFCJ": true,
+                            "setTarget": true,
                             "compareType": "NoneOrEqual"
                         }
                     ],
@@ -1294,7 +1294,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Missile",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1320,7 +1320,7 @@
                     "target": "Owner",
                     "ownerIs": "Other",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "onGround": true,
                         "direction": {
                             "$type": "HFKFLHCBMLB"
@@ -1337,7 +1337,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Missile_AS",
                     "born": {
-                        "$type": "LMEODGDBOCI",
+                        "$type": "ConfigBornByAttachPoint",
                         "onGround": true,
                         "direction": {
                             "$type": "HFKFLHCBMLB"
@@ -1346,7 +1346,7 @@
                         "attachPointName": "RootNode",
                         "ABIMPICHJNC": "Caster"
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1366,14 +1366,14 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Grow",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
                         {
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Grow_AS",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "KillSelf"
@@ -1409,7 +1409,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Poison_Missile",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1451,7 +1451,7 @@
                             "z": 0.0
                         },
                         "direction": {
-                            "$type": "IOPNFLFHGID",
+                            "$type": "ConfigDirectionByEntity",
                             "JPOJHLOIKLG": 360.0
                         },
                         "positionKey": "_ABILITY_SLIME_GRASS_SEED_POS",
@@ -1466,7 +1466,7 @@
                         "$type": "ConfigBornByCollisionPoint",
                         "onGround": true
                     },
-                    "FGMDINMEPHL": -1.0
+                    "effectTempleteID": -1.0
                 }
             ]
         }
@@ -1484,7 +1484,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Float",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ],
                     "onRemoved": [
@@ -1498,18 +1498,18 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Explosion",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "TriggerAttackEvent",
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ],
                             "attackEvent": {
@@ -1527,7 +1527,7 @@
                                     "attenuationGroup": "default",
                                     "attackProperty": {
                                         "damagePercentage": 1.0,
-                                        "MKLAMNDEDGB": 0.0,
+                                        "damagePercentageRatio": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
                                         "enBreak": 200.0
@@ -1547,7 +1547,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Fire"
+                                    "element": "Fire"
                                 }
                             ]
                         },
@@ -1556,7 +1556,7 @@
                             "predicates": [
                                 {
                                     "$type": "OIEGBANNLOG",
-                                    "CIMNBKFMPGD": "Wind"
+                                    "element": "Wind"
                                 }
                             ]
                         }
@@ -1593,7 +1593,7 @@
                         {
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Poison_Dot",
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         },
                         {
                             "$type": "DamageByAttackValue",
@@ -1603,7 +1603,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.10000000149011612,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Grass",
                                     "bonusCriticalHurt": 25.0,
                                     "strikeType": "Default",
@@ -1625,7 +1625,7 @@
                                 "attenuationGroup": "default",
                                 "attackProperty": {
                                     "damagePercentage": 0.10000000149011612,
-                                    "MKLAMNDEDGB": 0.0,
+                                    "damagePercentageRatio": 0.0,
                                     "elementType": "Grass",
                                     "bonusCriticalHurt": 25.0,
                                     "strikeType": "Default",
@@ -1701,7 +1701,7 @@
                             "born": {
                                 "$type": "FLLCINGJBPD"
                             },
-                            "FGMDINMEPHL": -1.0
+                            "effectTempleteID": -1.0
                         }
                     ]
                 },
@@ -1756,7 +1756,7 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "CHEAOJDOBEB",
+                            "$type": "ConfigAttackCircle",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
                                 "$type": "ConfigBornBySelf",
@@ -1775,7 +1775,7 @@
                             "attenuationGroup": "default",
                             "attackProperty": {
                                 "damagePercentage": 1.0,
-                                "MKLAMNDEDGB": 0.0,
+                                "damagePercentageRatio": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
                                 "enBreak": 200.0
