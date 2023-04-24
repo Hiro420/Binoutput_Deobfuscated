@@ -575,7 +575,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "needEff",
                                     "ratio": 1.0
@@ -710,16 +710,16 @@
                             },
                             "predicatesForeach": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "HAS_ELECTRIC_FAIRY_BUFF",
                                     "ratio": 1.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "successActions": [
@@ -1237,7 +1237,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1258,7 +1258,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1581,7 +1581,7 @@
                             "target": "Self"
                         },
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1604,7 +1604,7 @@
                             "gadgetState": 201
                         },
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1854,7 +1854,7 @@
                             "$type": "ServerLuaCall",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
@@ -1885,7 +1885,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -2007,11 +2007,11 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Avatar_Enter_Field",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -2675,7 +2675,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -2686,13 +2686,13 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42906001,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 1.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 2.0
+                                    "x": 1.0,
+                                    "y": 1.0,
+                                    "z": 2.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 }
                             }
@@ -2730,7 +2730,7 @@
                             "target": "Applier",
                             "key": "Skill_02_Pos",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         }
                     ]
@@ -2744,9 +2744,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Quest_Shougun_Gear_AlertCircle_R4",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "Skill_02_Pos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "Skill_02_Pos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2756,9 +2756,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Pole_NormalAtk05_NoOffSet",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "Skill_02_Pos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "Skill_02_Pos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -2777,26 +2777,26 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 1.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 1.0,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "Skill_02_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "Skill_02_Pos",
+                                        "directionKey": ""
                                     },
-                                    "BMCPFKAEOJB": 4.0
+                                    "radius": 4.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.375,
+                                        "damagePercentage": 0.375,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -2877,7 +2877,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 2.0,
+                                    "damagePercentage": 2.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 50.0,
@@ -2909,13 +2909,13 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.25,
-                                    "INAIAJMIKEK": 13.5
+                                    "x": 0.0,
+                                    "y": 1.25,
+                                    "z": 13.5
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "gadgetID": 42906004,
                             "campID": 4001,
@@ -2924,13 +2924,13 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -10.5,
-                                    "EAOEAJIDBGD": 1.25,
-                                    "INAIAJMIKEK": -6.5
+                                    "x": -10.5,
+                                    "y": 1.25,
+                                    "z": -6.5
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "gadgetID": 42906004,
                             "campID": 4001,
@@ -2939,13 +2939,13 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 10.5,
-                                    "EAOEAJIDBGD": 1.25,
-                                    "INAIAJMIKEK": -6.5
+                                    "x": 10.5,
+                                    "y": 1.25,
+                                    "z": -6.5
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "gadgetID": 42906004,
                             "campID": 4001,
@@ -3239,17 +3239,17 @@
                             "target": "Team",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_TatariRegionLoseHp",
                                     "ratio": 3.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "successActions": [
                                 {
                                     "$type": "CreateGadget",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "gadgetID": 70330117,
                                     "campID": 5001,
@@ -3299,9 +3299,9 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
-                                    "BMCPFKAEOJB": 2.5
+                                    "radius": 2.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",

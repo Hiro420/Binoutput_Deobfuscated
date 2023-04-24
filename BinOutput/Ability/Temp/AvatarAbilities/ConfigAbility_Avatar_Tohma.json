@@ -39,16 +39,16 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 0,
                                             "parameter": "ComboCount"
                                         },
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 4,
                                             "parameter": "ComboCount"
@@ -166,11 +166,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Male_Pole_Tohma_ExtraAttack_Sprint",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -185,11 +185,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Male_Pole_Tohma_ExtraAttack",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -259,7 +259,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "MonsterEquip"
                             ]
@@ -274,7 +274,7 @@
                                 "attenuationTag": "ExtraAttack",
                                 "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "ExtraAttack",
+                                    "damagePercentage": "ExtraAttack",
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 25.0,
                                     "overrideByWeapon": true,
@@ -306,24 +306,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 0.800000011920929
+                                    "radius": 0.800000011920929
                                 },
                                 "attackInfo": {
                                     "attackTag": "ExtraAttack",
                                     "attenuationTag": "ExtraAttack",
                                     "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "ExtraAttack",
+                                        "damagePercentage": "ExtraAttack",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 25.0,
                                         "overrideByWeapon": true,
@@ -475,7 +475,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Avatar_Tohma_Has_ELementalBurstBuff",
                                     "ratio": 1.0
                                 }
@@ -532,7 +532,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "BKKNINKONEL",
@@ -683,10 +683,10 @@
                     "RotationDampTime": true,
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Avatar_Tohma_HasTeamShield",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -830,7 +830,7 @@
                     "RotationDampTime": true,
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Avatar_Tohma_Has_ELementalBurstBuff",
                             "ratio": 1.0
                         }
@@ -944,16 +944,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -983,11 +983,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2017,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1011,11 +1011,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2017,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1058,23 +1058,23 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.5,
                             "BAPAHIOBNCL": 270.0,
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalArt_Damage",
+                                "damagePercentage": "ElementalArt_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -1228,21 +1228,21 @@
                             "triggerType": "TriggerNoRepeat",
                             "JGCLJPCGHMC": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 4.0
+                            "radius": 4.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Burst",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalBurst_Damage",
+                                "damagePercentage": "ElementalBurst_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 50.0,
@@ -1408,11 +1408,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_Avatar_Tohma_ElementalBurstPos",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -1.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -1.0
                                 }
                             },
                             "setTarget": false
@@ -1460,7 +1460,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Tohma_ElementalBurst_AttackMark",
                                     "ratio": 1.0
                                 }
@@ -1472,7 +1472,7 @@
                                     "RotationDampTime": true,
                                     "targetPredicates": [
                                         {
-                                            "$type": "NPILMJKANHO",
+                                            "$type": "ByAny",
                                             "predicates": [
                                                 {
                                                     "$type": "KPIBLFBHELB",
@@ -1589,13 +1589,13 @@
                     "RotationDampTime": true,
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Male_Pole_Tohma_SupportHit",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "HOPPHMEKHLG": {
+                        "$type": "ConfigBornByGlobalValue",
+                        "direction": {
                             "$type": "HDLOKIPPKFH",
                             "range": 3
                         },
-                        "FNMFBPGNEKD": "_ABILITY_Avatar_Tohma_ElementalBurstPos",
-                        "GPPNNKAOHCG": "_ABILITY_Avatar_Tohma_ElementalBurstDir"
+                        "positionKey": "_ABILITY_Avatar_Tohma_ElementalBurstPos",
+                        "directionKey": "_ABILITY_Avatar_Tohma_ElementalBurstDir"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -1609,17 +1609,17 @@
                             "triggerType": "TriggerNoRepeat",
                             "EDLHKEAJOOL": 0.4000000059604645,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "EAOEAJIDBGD": 1.0
+                                    "y": 1.0
                                 },
-                                "FNMFBPGNEKD": "_ABILITY_Avatar_Tohma_ElementalBurstPos",
-                                "GPPNNKAOHCG": "_ABILITY_Avatar_Tohma_ElementalBurstDir"
+                                "positionKey": "_ABILITY_Avatar_Tohma_ElementalBurstPos",
+                                "directionKey": "_ABILITY_Avatar_Tohma_ElementalBurstDir"
                             },
                             "size": {
-                                "JJJFPBPALGO": 4.5,
-                                "EAOEAJIDBGD": 2.0,
-                                "INAIAJMIKEK": 8.0
+                                "x": 4.5,
+                                "y": 2.0,
+                                "z": 8.0
                             }
                         },
                         "attackInfo": {
@@ -1627,7 +1627,7 @@
                             "attenuationTag": "Elemental_Burst",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalBurst_TriggerDamage",
+                                "damagePercentage": "ElementalBurst_TriggerDamage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -1660,7 +1660,7 @@
                     "animEventNames": [
                         "ATK01"
                     ],
-                    "MFOOCADHKLC": "Attack01",
+                    "damagePercentage": "Attack01",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -1668,7 +1668,7 @@
                     "animEventNames": [
                         "ATK02"
                     ],
-                    "MFOOCADHKLC": "Attack02",
+                    "damagePercentage": "Attack02",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -1676,7 +1676,7 @@
                     "animEventNames": [
                         "ATK03_01"
                     ],
-                    "MFOOCADHKLC": "Attack03_01",
+                    "damagePercentage": "Attack03_01",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -1684,7 +1684,7 @@
                     "animEventNames": [
                         "ATK03_02"
                     ],
-                    "MFOOCADHKLC": "Attack03_02",
+                    "damagePercentage": "Attack03_02",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -1692,7 +1692,7 @@
                     "animEventNames": [
                         "ATK04"
                     ],
-                    "MFOOCADHKLC": "Attack04",
+                    "damagePercentage": "Attack04",
                     "MKLAMNDEDGB": 0.0
                 }
             ],
@@ -1852,24 +1852,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "overrideByWeapon": true,
@@ -1892,24 +1892,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "overrideByWeapon": true,
@@ -2249,11 +2249,11 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "attackEvent": {
@@ -2261,22 +2261,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_1_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 25.0,
                                 "overrideByWeapon": true,
@@ -2312,7 +2312,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -2323,22 +2323,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 5.0
+                            "radius": 5.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_2_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 25.0,
                                 "overrideByWeapon": true,
@@ -2375,11 +2375,11 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Pole_FallingAnthem_Strike_01_Normal",
@@ -2389,7 +2389,7 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true

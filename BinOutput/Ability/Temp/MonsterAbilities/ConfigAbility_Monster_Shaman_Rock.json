@@ -16,19 +16,19 @@
                                     "$type": "NAMPOMPBMHC",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 1.25,
-                                            "INAIAJMIKEK": -0.75
+                                            "x": 0.0,
+                                            "y": 1.25,
+                                            "z": -0.75
                                         },
-                                        "FNMFBPGNEKD": "_MONSTER_SHAMAN_ROCK_SPIKE_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_MONSTER_SHAMAN_ROCK_SPIKE_POS",
+                                        "directionKey": ""
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 1.25,
-                                        "EAOEAJIDBGD": 2.5,
-                                        "INAIAJMIKEK": 1.25
+                                        "x": 1.25,
+                                        "y": 2.5,
+                                        "z": 1.25
                                     }
                                 },
                                 "attackInfo": {
@@ -36,7 +36,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.5,
+                                        "damagePercentage": 0.5,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Rock",
                                         "bonusCriticalHurt": 50.0,
@@ -73,7 +73,7 @@
                     "key": "_MONSTER_SHAMAN_ROCK_SPIKE_POS",
                     "born": {
                         "$type": "PPIKALLAEKG",
-                        "DAPKLNIFPID": true,
+                        "onGround": true,
                         "BJCIHELGKLP": true,
                         "KGKDFLMGEOL": 0.75
                     },
@@ -83,9 +83,9 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_NormalAttack_Spike",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_SHAMAN_ROCK_SPIKE_POS",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_SHAMAN_ROCK_SPIKE_POS",
+                        "directionKey": ""
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -105,7 +105,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_SHAMAN_ROCK_SPIKE",
                             "ratio": 3.0
                         }
@@ -186,13 +186,13 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "EDBIOHJOCJE",
@@ -262,13 +262,13 @@
                     },
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Monster"
                             ]
                         },
                         {
-                            "$type": "NPILMJKANHO",
+                            "$type": "ByAny",
                             "predicates": [
                                 {
                                     "$type": "EDBIOHJOCJE",
@@ -287,7 +287,7 @@
                             ]
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_SHAMAN_ROCK_CREATEPILLAR",
                             "ratio": 1.0
                         }
@@ -298,8 +298,8 @@
                             "target": "Target",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "DAPKLNIFPID": true
+                                "$type": "ConfigBornByTarget",
+                                "onGround": true
                             },
                             "gadgetID": 42103011,
                             "byServer": true
@@ -348,7 +348,7 @@
                                     "target": "Target",
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -360,8 +360,8 @@
                                             "target": "Target",
                                             "key": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
-                                                "HOPPHMEKHLG": {
+                                                "$type": "ConfigBornBySelf",
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 }
                                             },
@@ -374,8 +374,8 @@
                                             "target": "TargetOriginOwner",
                                             "key": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
-                                                "HOPPHMEKHLG": {
+                                                "$type": "ConfigBornBySelf",
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 }
                                             },
@@ -387,10 +387,10 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_BeHitFailed",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
-                                        "HOPPHMEKHLG": {
-                                            "$type": "BIMJJILMODA",
-                                            "GPPNNKAOHCG": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT"
+                                        "$type": "ConfigBornByTarget",
+                                        "direction": {
+                                            "$type": "ConfigDirectionByGlobalValue",
+                                            "directionKey": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT"
                                         }
                                     },
                                     "FGMDINMEPHL": -1.0
@@ -402,7 +402,7 @@
                                     "target": "Target",
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -414,8 +414,8 @@
                                             "target": "Target",
                                             "key": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
-                                                "HOPPHMEKHLG": {
+                                                "$type": "ConfigBornBySelf",
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 }
                                             },
@@ -428,8 +428,8 @@
                                             "target": "TargetOriginOwner",
                                             "key": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
-                                                "HOPPHMEKHLG": {
+                                                "$type": "ConfigBornBySelf",
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 }
                                             },
@@ -441,10 +441,10 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Rock_Pillar_BeHitSuccess",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
-                                        "HOPPHMEKHLG": {
-                                            "$type": "BIMJJILMODA",
-                                            "GPPNNKAOHCG": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT"
+                                        "$type": "ConfigBornByTarget",
+                                        "direction": {
+                                            "$type": "ConfigDirectionByGlobalValue",
+                                            "directionKey": "_MONSTER_SHAMAN_ROCK_ELEMENTSHIELD_HIT"
                                         }
                                     },
                                     "FGMDINMEPHL": -1.0
@@ -516,21 +516,21 @@
                                             "$type": "CHEAOJDOBEB",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
+                                                "$type": "ConfigBornBySelf",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 2.5,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 2.5,
+                                                    "z": 0.0
                                                 }
                                             },
-                                            "BMCPFKAEOJB": 1.0
+                                            "radius": 1.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": 0.0,
+                                                "damagePercentage": 0.0,
                                                 "MKLAMNDEDGB": 0.0,
                                                 "bonusCriticalHurt": 100.0,
                                                 "strikeType": "Blunt",
@@ -734,7 +734,7 @@
                                 {
                                     "$type": "HPJOHDHEPCG",
                                     "logic": "Lesser",
-                                    "HDJELDCCOCG": "XYZ",
+                                    "compareType": "XYZ",
                                     "ratio": 10.0
                                 }
                             ],
@@ -832,7 +832,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 1.0,
+                                    "damagePercentage": 1.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Rock",
                                     "bonusCriticalHurt": 50.0,

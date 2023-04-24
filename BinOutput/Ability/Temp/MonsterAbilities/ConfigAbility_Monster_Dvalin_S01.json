@@ -103,7 +103,7 @@
                             "gadgetID": 42901002,
                             "campTargetType": "All",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         }
                     ],
@@ -178,7 +178,7 @@
                         "z": 2.0
                     },
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     },
                     "attracForceStrength": 50.0,
                     "maxStrengthRange": 2.0
@@ -455,7 +455,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "STAGE_ALREADY_BEGIN",
                                     "ratio": 1.0
                                 }
@@ -526,10 +526,10 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_CHANGESTAGE1_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "ratio": 2.0,
@@ -557,10 +557,10 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_CHANGESTAGE2_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "ratio": 2.0,
@@ -749,7 +749,7 @@
                                     "$type": "Predicated",
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "SPEEDUP_ALREADY",
                                             "ratio": 1.0
                                         }
@@ -1162,7 +1162,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_REMINDER_WINDRING_FIRSTTIME_",
                                     "ratio": 1.0
                                 }
@@ -1252,7 +1252,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "PURSUE_STAGE",
                                     "ratio": 6.0
                                 }
@@ -1445,13 +1445,13 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901012,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "DOCDLGLJKND",
                                     "JPOJHLOIKLG": 1.0,
                                     "MPNLAACKHNA": 1.0,
@@ -1465,13 +1465,13 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901012,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "DOCDLGLJKND",
                                     "JPOJHLOIKLG": 1.0,
                                     "MPNLAACKHNA": 1.0,
@@ -1527,7 +1527,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_AirGun_Explode",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -1536,10 +1536,10 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "STAGE_STATE",
                             "ratio": 1.0,
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ],
                     "abilityName": "Dvalin_S01_BeHit"
@@ -1548,12 +1548,12 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
@@ -1643,7 +1643,7 @@
                             "target": "CurLocalAvatar",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_AirFlow",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -1658,7 +1658,7 @@
                             "target": "CurLocalAvatar",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_AirFlow02",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -1712,18 +1712,18 @@
                             "target": "CurLocalAvatar",
                             "bulletID": 42901050,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 20.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 20.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 75.0,
                                     "MPNLAACKHNA": 75.0
@@ -1738,18 +1738,18 @@
                             "target": "CurLocalAvatar",
                             "bulletID": 42901050,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": -20.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": -20.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 75.0,
                                     "MPNLAACKHNA": 75.0
@@ -1801,24 +1801,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "Dvalin_S01_ElementBall_Wind",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0
                             }
@@ -1942,7 +1942,7 @@
                             "target": "CurLocalAvatar",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_SpeedLine",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -1952,7 +1952,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_REMINDER_PURSUE_",
                                     "ratio": 1.0
                                 }
@@ -2011,18 +2011,18 @@
                         "configID": 42901008
                     },
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 50.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 50.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -2060,12 +2060,12 @@
                                                     "OKDPGGJGGCJ": 0.0,
                                                     "CPOKKADJBFH": 2.0
                                                 },
-                                                "HOPPHMEKHLG": {
+                                                "direction": {
                                                     "$type": "IOPNFLFHGID",
                                                     "NHGDOBINMBK": {
-                                                        "JJJFPBPALGO": 0.0,
-                                                        "EAOEAJIDBGD": 0.0,
-                                                        "INAIAJMIKEK": 0.0
+                                                        "x": 0.0,
+                                                        "y": 0.0,
+                                                        "z": 0.0
                                                     }
                                                 },
                                                 "attachPointName": "BarrageAttach3",
@@ -2084,12 +2084,12 @@
                                                     "OKDPGGJGGCJ": 0.0,
                                                     "CPOKKADJBFH": 2.0
                                                 },
-                                                "HOPPHMEKHLG": {
+                                                "direction": {
                                                     "$type": "IOPNFLFHGID",
                                                     "NHGDOBINMBK": {
-                                                        "JJJFPBPALGO": 0.0,
-                                                        "EAOEAJIDBGD": 0.0,
-                                                        "INAIAJMIKEK": 0.0
+                                                        "x": 0.0,
+                                                        "y": 0.0,
+                                                        "z": 0.0
                                                     }
                                                 },
                                                 "attachPointName": "BarrageAttach4",
@@ -2110,12 +2110,12 @@
                                             "OKDPGGJGGCJ": 0.0,
                                             "CPOKKADJBFH": 2.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "IOPNFLFHGID",
                                             "NHGDOBINMBK": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             }
                                         },
                                         "attachPointName": "BarrageAttach5",
@@ -2140,12 +2140,12 @@
                                             "OKDPGGJGGCJ": 0.0,
                                             "CPOKKADJBFH": 2.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "IOPNFLFHGID",
                                             "NHGDOBINMBK": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             }
                                         },
                                         "attachPointName": "BarrageAttach6",
@@ -2164,12 +2164,12 @@
                                             "OKDPGGJGGCJ": 0.0,
                                             "CPOKKADJBFH": 2.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "IOPNFLFHGID",
                                             "NHGDOBINMBK": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             }
                                         },
                                         "attachPointName": "BarrageAttach7",
@@ -2212,11 +2212,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901056,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             }
                         },
@@ -2323,18 +2323,18 @@
                         "configID": 42901008
                     },
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 50.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 50.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -2364,9 +2364,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_TrackBarrageBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2397,9 +2397,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_TrackBarrageBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2424,9 +2424,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_TrackBarrageBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2441,19 +2441,19 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901054,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 30.0,
-                                        "EAOEAJIDBGD": -90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 30.0,
+                                        "y": -90.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 15.0,
                                     "MPNLAACKHNA": 15.0
                                 },
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "trackTarget": "CurLocalAvatar"
                         }
@@ -2468,19 +2468,19 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901054,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 30.0,
-                                        "EAOEAJIDBGD": 90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 30.0,
+                                        "y": 90.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 15.0,
                                     "MPNLAACKHNA": 15.0
                                 },
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "trackTarget": "CurLocalAvatar"
                         }
@@ -2495,19 +2495,19 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901054,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": -90.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": -90.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 15.0,
                                     "MPNLAACKHNA": 15.0
                                 },
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "trackTarget": "CurLocalAvatar"
                         }
@@ -2525,16 +2525,16 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 5.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 5.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID"
                                 },
                                 "attachPointName": "BarrageAttach1",
@@ -2549,16 +2549,16 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 5.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 5.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID"
                                 },
                                 "attachPointName": "BarrageAttach2",
@@ -2633,11 +2633,11 @@
                         "configID": 42901008
                     },
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": [
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": [
                                 60.0,
                                 "TempCount",
                                 "MUL",
@@ -2645,12 +2645,12 @@
                                 "ADD"
                             ]
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -2680,9 +2680,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_TrackBarrageBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2713,9 +2713,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_TrackBarrageBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2740,9 +2740,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Dvalin_S01_TrackBarrageBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2757,19 +2757,19 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901058,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 30.0,
-                                        "EAOEAJIDBGD": -90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 30.0,
+                                        "y": -90.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 15.0,
                                     "MPNLAACKHNA": 15.0
                                 },
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "trackTarget": "CurLocalAvatar"
                         }
@@ -2784,19 +2784,19 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901058,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 30.0,
-                                        "EAOEAJIDBGD": 90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 30.0,
+                                        "y": 90.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 15.0,
                                     "MPNLAACKHNA": 15.0
                                 },
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "trackTarget": "CurLocalAvatar"
                         }
@@ -2811,19 +2811,19 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901058,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": -90.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": -90.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 15.0,
                                     "MPNLAACKHNA": 15.0
                                 },
-                                "FNMFBPGNEKD": "TriggerBulletPos",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "TriggerBulletPos",
+                                "directionKey": ""
                             },
                             "trackTarget": "CurLocalAvatar"
                         }
@@ -2841,16 +2841,16 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 5.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 5.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID"
                                 },
                                 "attachPointName": "BarrageAttach1",
@@ -2865,16 +2865,16 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 5.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 5.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID"
                                 },
                                 "attachPointName": "BarrageAttach2",
@@ -2926,18 +2926,18 @@
                         "configID": 42901008
                     },
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 60.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 60.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -2966,12 +2966,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach1",
@@ -2989,12 +2989,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach2",
@@ -3012,12 +3012,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach3",
@@ -3035,12 +3035,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach5",
@@ -3058,12 +3058,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach6",
@@ -3081,12 +3081,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach8",
@@ -3104,12 +3104,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach9",
@@ -3127,12 +3127,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach10",
@@ -3150,12 +3150,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach11",
@@ -3173,12 +3173,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach12",
@@ -3196,12 +3196,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach13",
@@ -3219,12 +3219,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach14",
@@ -3242,12 +3242,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach15",
@@ -3265,12 +3265,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach16",
@@ -3288,12 +3288,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach17",
@@ -3311,12 +3311,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach18",
@@ -3334,12 +3334,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach19",
@@ -3394,11 +3394,11 @@
                         "configID": 42901008
                     },
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": [
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": [
                                 40.0,
                                 "TempCount",
                                 "MUL",
@@ -3406,12 +3406,12 @@
                                 "ADD"
                             ]
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -3440,12 +3440,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach3",
@@ -3463,12 +3463,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach5",
@@ -3486,12 +3486,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach6",
@@ -3509,12 +3509,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach8",
@@ -3532,12 +3532,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach9",
@@ -3555,12 +3555,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach10",
@@ -3578,12 +3578,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach11",
@@ -3601,12 +3601,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach12",
@@ -3624,12 +3624,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach13",
@@ -3647,12 +3647,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach14",
@@ -3670,12 +3670,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach15",
@@ -3693,12 +3693,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach16",
@@ -3716,12 +3716,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach17",
@@ -3739,12 +3739,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach18",
@@ -3762,12 +3762,12 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 3.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "attachPointName": "BarrageAttach19",
@@ -3804,7 +3804,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901053,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         },
                         {
@@ -3845,7 +3845,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42901057,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         },
                         {

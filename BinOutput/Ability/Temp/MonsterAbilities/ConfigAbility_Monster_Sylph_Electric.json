@@ -311,10 +311,10 @@
                             "$type": "EnableHitBoxByName",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "hitBoxNames": [
@@ -326,7 +326,7 @@
                             "$type": "EnableHitBoxByName",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -413,10 +413,10 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "boolID": "DeathTag",
@@ -426,7 +426,7 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -444,10 +444,10 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "boolID": "DeathTag"
@@ -456,7 +456,7 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -612,7 +612,7 @@
                             "$type": "SetAnimatorTrigger",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -663,13 +663,13 @@
                     "target": "SelfAttackTarget",
                     "key": "ThunderPos1",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "setTarget": false
                 },
@@ -678,18 +678,18 @@
                     "target": "SelfAttackTarget",
                     "key": "ThunderPos2",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 1.5,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 1.5
+                            "x": 1.5,
+                            "y": 0.0,
+                            "z": 1.5
                         },
                         "IGAGDFFFGAO": {
                             "$type": "FHDJJGOONEI",
                             "OKDPGGJGGCJ": 0.0,
                             "CPOKKADJBFH": 0.5
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "setTarget": false
                 },
@@ -698,18 +698,18 @@
                     "target": "SelfAttackTarget",
                     "key": "ThunderPos3",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": -1.5,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 1.5
+                            "x": -1.5,
+                            "y": 0.0,
+                            "z": 1.5
                         },
                         "IGAGDFFFGAO": {
                             "$type": "FHDJJGOONEI",
                             "OKDPGGJGGCJ": 0.0,
                             "CPOKKADJBFH": 0.5
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "setTarget": false
                 },
@@ -717,9 +717,9 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Electric_ElectricBullet_Hit_Alert",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "ThunderPos1",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "ThunderPos1",
+                        "directionKey": ""
                     }
                 }
             ]
@@ -734,9 +734,9 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Electric_ElectricBullet_Hit",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "ThunderPos1",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "ThunderPos1",
+                        "directionKey": ""
                     }
                 },
                 {
@@ -746,19 +746,19 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "ThunderPos1",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "ThunderPos1",
+                                "directionKey": ""
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 0.6499999761581421
+                            "radius": 0.6499999761581421
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 30.0,
@@ -787,9 +787,9 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Electric_ElectricBullet_Hit_Alert",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "ThunderPos2",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "ThunderPos2",
+                        "directionKey": ""
                     }
                 }
             ]
@@ -804,9 +804,9 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Electric_ElectricBullet_Hit",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "ThunderPos2",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "ThunderPos2",
+                        "directionKey": ""
                     }
                 },
                 {
@@ -816,19 +816,19 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "ThunderPos2",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "ThunderPos2",
+                                "directionKey": ""
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 0.6499999761581421
+                            "radius": 0.6499999761581421
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 30.0,
@@ -857,9 +857,9 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Electric_ElectricBullet_Hit_Alert",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "ThunderPos3",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "ThunderPos3",
+                        "directionKey": ""
                     }
                 }
             ]
@@ -874,9 +874,9 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Electric_ElectricBullet_Hit",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "ThunderPos3",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "ThunderPos3",
+                        "directionKey": ""
                     }
                 },
                 {
@@ -886,19 +886,19 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "ThunderPos3",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "ThunderPos3",
+                                "directionKey": ""
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 0.6499999761581421
+                            "radius": 0.6499999761581421
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 30.0,
@@ -940,7 +940,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42006501,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "trackTarget": "Self",
                             "GKJDJDACPMC": true
@@ -1033,7 +1033,7 @@
                             "$type": "TurnDirectionToPos",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
@@ -1041,7 +1041,7 @@
                             "target": "SelfAttackTarget",
                             "born": {
                                 "$type": "MGDGOLHGFAP",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "GKAPKIFBACA": 3.5,
                                 "DCKBDJJECJH": 0.0,
                                 "JPJIEDIHGFF": 10.0
@@ -1071,17 +1071,17 @@
                             "$type": "TurnDirectionToPos",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
                             "$type": "TryFindBlinkPointByBorn",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 8.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 8.0
                                 }
                             },
                             "hitSceneType": "BlinkHitSceneTestByThreeSegments",
@@ -1121,19 +1121,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.625,
+                                "damagePercentage": 0.625,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 50.0,
@@ -1179,9 +1179,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -1235,25 +1235,25 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "attachPointName": "RootNode"
                                     },
-                                    "BMCPFKAEOJB": 2.5
+                                    "radius": 2.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.625,
+                                        "damagePercentage": 0.625,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -1389,9 +1389,9 @@
                     "born": {
                         "$type": "MGDGOLHGFAP",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 2.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 2.5,
+                            "z": 0.0
                         },
                         "GKAPKIFBACA": 0.0,
                         "DCKBDJJECJH": 0.0,
@@ -1514,9 +1514,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -1570,25 +1570,25 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "attachPointName": "RootNode"
                                     },
-                                    "BMCPFKAEOJB": 6.0
+                                    "radius": 6.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.75,
+                                        "damagePercentage": 0.75,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,

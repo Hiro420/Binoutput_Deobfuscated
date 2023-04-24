@@ -18,16 +18,16 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 0,
                                             "parameter": "ComboCount"
                                         },
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 4,
                                             "parameter": "ComboCount"
@@ -74,7 +74,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -248,11 +248,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Cyno_ExtraAttack_Sprint",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -267,11 +267,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Cyno_ExtraAttack",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -336,16 +336,16 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -394,10 +394,10 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Cyno_BurstMode_NormalAttack_03_Hit",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
-                                        "HOPPHMEKHLG": {
-                                            "$type": "BIMJJILMODA",
-                                            "GPPNNKAOHCG": "_Avatar_Cyno_Attack03_Hit"
+                                        "$type": "ConfigBornBySelf",
+                                        "direction": {
+                                            "$type": "ConfigDirectionByGlobalValue",
+                                            "directionKey": "_Avatar_Cyno_Attack03_Hit"
                                         }
                                     },
                                     "FGMDINMEPHL": -1.0
@@ -434,7 +434,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "MonsterEquip"
                             ]
@@ -449,7 +449,7 @@
                                 "attenuationTag": "ExtraAttack",
                                 "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "ExtraAttack_Normal",
+                                    "damagePercentage": "ExtraAttack_Normal",
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 25.0,
                                     "overrideByWeapon": true,
@@ -481,24 +481,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 0.800000011920929
+                                    "radius": 0.800000011920929
                                 },
                                 "attackInfo": {
                                     "attackTag": "ExtraAttack",
                                     "attenuationTag": "ExtraAttack",
                                     "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "ExtraAttack_Normal",
+                                        "damagePercentage": "ExtraAttack_Normal",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 25.0,
                                         "overrideByWeapon": true,
@@ -580,7 +580,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_IsInWindow",
                                     "ratio": 1.0
                                 }
@@ -616,7 +616,7 @@
                                     "RotationDampTime": true,
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_Cyno_BurstMode_Muya_Success",
                                             "ratio": 1.0
                                         }
@@ -719,16 +719,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -753,7 +753,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -768,7 +768,7 @@
                                             "RotationDampTime": true,
                                             "configID": 2020,
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
+                                                "$type": "ConfigBornBySelf",
                                                 "IGAGDFFFGAO": {
                                                     "$type": "FHDJJGOONEI",
                                                     "OKDPGGJGGCJ": 0.4000000059604645,
@@ -785,7 +785,7 @@
                                     "RotationDampTime": true,
                                     "configID": 2020,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 0.4000000059604645,
@@ -802,7 +802,7 @@
                                     "RotationDampTime": true,
                                     "configID": 2020,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 0.4000000059604645,
@@ -868,9 +868,9 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "attachPointName": "RootNode"
                     }
@@ -891,7 +891,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "MonsterEquip"
                             ]
@@ -906,7 +906,7 @@
                                 "attenuationTag": "Cyno_ElementalArt_Bullet",
                                 "attenuationGroup": "Cyno_ElementalArt_Bullet",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "Elemental_Art_Bullet_Damage",
+                                    "damagePercentage": "Elemental_Art_Bullet_Damage",
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 25.0,
@@ -929,25 +929,25 @@
                             "target": "OriginOwner",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "LHECOGDLBCO": true,
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Art",
                                     "attenuationTag": "Cyno_ElementalArt_Bullet",
                                     "attenuationGroup": "Cyno_ElementalArt_Bullet",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Elemental_Art_Bullet_Damage",
+                                        "damagePercentage": "Elemental_Art_Bullet_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -990,7 +990,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Muya_Success",
                                     "ratio": 1.0
                                 },
@@ -1010,7 +1010,7 @@
                                     "GFIOLOJIDMG": "Avatar_Cyno_Constellation_6"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Muya_Success",
                                     "ratio": 1.0
                                 }
@@ -1128,11 +1128,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 41071001,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.30000001192092896,
-                                    "INAIAJMIKEK": 0.30000001192092896
+                                    "x": 0.0,
+                                    "y": 0.30000001192092896,
+                                    "z": 0.30000001192092896
                                 }
                             }
                         },
@@ -1140,18 +1140,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 41071001,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.30000001192092896,
-                                    "INAIAJMIKEK": 0.30000001192092896
+                                    "x": 0.0,
+                                    "y": 0.30000001192092896,
+                                    "z": 0.30000001192092896
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 25.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 25.0,
+                                        "z": 0.0
                                     }
                                 }
                             }
@@ -1160,18 +1160,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 41071001,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.30000001192092896,
-                                    "INAIAJMIKEK": 0.30000001192092896
+                                    "x": 0.0,
+                                    "y": 0.30000001192092896,
+                                    "z": 0.30000001192092896
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -25.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -25.0,
+                                        "z": 0.0
                                     }
                                 }
                             }
@@ -1181,7 +1181,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Muya_Success",
                                     "ratio": 1.0
                                 }
@@ -1241,7 +1241,7 @@
                             "GFIOLOJIDMG": "Cyno_PermanentSkill_1"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Cyno_BurstMode_Muya_Success",
                             "ratio": 1.0
                         }
@@ -1251,11 +1251,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Cyno_ElementalArt_BurstMode_Explode",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 1.5
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 1.5
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -1267,22 +1267,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -0.5,
-                                            "INAIAJMIKEK": 1.5
+                                            "x": 0.0,
+                                            "y": -0.5,
+                                            "z": 1.5
                                         }
                                     },
                                     "height": 3.5,
-                                    "BMCPFKAEOJB": 6.0
+                                    "radius": 6.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Art_Extra",
                                     "attenuationTag": "Elemental_Art",
                                     "attenuationGroup": "Cyno_ElementalArt",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "ElementalArt_BurstMode_Damage",
+                                        "damagePercentage": "ElementalArt_BurstMode_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "elementRank": 1.5,
@@ -1296,7 +1296,7 @@
                                         "hitImpulseType": "LV5",
                                         "overrideHitImpulse": {
                                             "hitLevel": "Air",
-                                            "IPHCEFBMJAJ": 0.0,
+                                            "hitImpulseX": 0.0,
                                             "hitImpulseY": 600.0
                                         },
                                         "hitHaltTime": 0.029999999329447746,
@@ -1322,11 +1322,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Cyno_ElementalArt_BurstMode_Explode_Fail",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 1.5
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 1.5
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -1338,22 +1338,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -0.5,
-                                            "INAIAJMIKEK": 1.5
+                                            "x": 0.0,
+                                            "y": -0.5,
+                                            "z": 1.5
                                         }
                                     },
                                     "height": 3.5,
-                                    "BMCPFKAEOJB": 6.0
+                                    "radius": 6.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Art",
                                     "attenuationTag": "Elemental_Art",
                                     "attenuationGroup": "Cyno_ElementalArt",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "ElementalArt_BurstMode_Damage",
+                                        "damagePercentage": "ElementalArt_BurstMode_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "elementRank": 1.5,
@@ -1367,7 +1367,7 @@
                                         "hitImpulseType": "LV5",
                                         "overrideHitImpulse": {
                                             "hitLevel": "Air",
-                                            "IPHCEFBMJAJ": 0.0,
+                                            "hitImpulseX": 0.0,
                                             "hitImpulseY": 600.0
                                         },
                                         "hitHaltTime": 0.029999999329447746,
@@ -1394,7 +1394,7 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Cyno_BurstMode_Muya_Success",
                             "ratio": 1.0
                         },
@@ -1476,7 +1476,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Cyno_BurstCamera_Mark",
                                     "ratio": 1.0
                                 }
@@ -1492,7 +1492,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Cyno_BurstCamera_Mark",
                                     "ratio": 1.0
                                 }
@@ -1513,7 +1513,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Cyno_BurstCamera_Mark",
                                     "ratio": 1.0
                                 }
@@ -1529,7 +1529,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Cyno_BurstCamera_Mark",
                                     "ratio": 1.0
                                 }
@@ -1559,21 +1559,21 @@
                                         "$type": "CHEAOJDOBEB",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.5,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.5,
+                                                "z": 0.0
                                             }
                                         },
                                         "height": 2.0,
-                                        "BMCPFKAEOJB": 1.0
+                                        "radius": 1.0
                                     },
                                     "PHFBEPGCKAA": true
                                 },
                                 {
                                     "$type": "JAJHLALOAOP",
-                                    "HDJELDCCOCG": "LessAndEqual",
+                                    "compareType": "LessAndEqual",
                                     "CNIHOGLOABE": 0.5
                                 }
                             ],
@@ -1786,30 +1786,30 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -2.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -2.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 }
                             },
                             "height": 4.0,
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "enBreak": 400.0
@@ -1819,7 +1819,7 @@
                                 "hitImpulseType": "",
                                 "overrideHitImpulse": {
                                     "hitLevel": "Heavy",
-                                    "IPHCEFBMJAJ": 600.0,
+                                    "hitImpulseX": 600.0,
                                     "hitImpulseY": 0.0
                                 },
                                 "retreatType": "ByHitDirection"
@@ -2459,7 +2459,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -2471,7 +2471,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 0.0
                                 }
@@ -2593,7 +2593,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Cyno_ElementalBurst_IsInBattleState",
                                     "ratio": 0.0
                                 }
@@ -2805,7 +2805,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Cyno_ElementalBurst_IsInBattleState",
                                     "ratio": 0.0
                                 }
@@ -2994,7 +2994,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -3035,7 +3035,7 @@
                             "$type": "AddElementDurability",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Cyno_ElementalBurst_SprintAddMuya",
                                     "ratio": 0.0
@@ -3186,7 +3186,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Cyno_ElementalBurst_IsInBattleState",
                             "ratio": 0.0
                         }
@@ -3250,19 +3250,19 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "Cyno_Element_MasterY_Cache",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "MoreThan"
+                            "compareType": "MoreThan"
                         }
                     ],
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "attackInfo": {
@@ -3270,7 +3270,7 @@
                         "attenuationTag": "Elemental_Art",
                         "attenuationGroup": "Cyno_ElementalArt_Blade",
                         "attackProperty": {
-                            "MFOOCADHKLC": "Cyno_ElementalArt_Blade",
+                            "damagePercentage": "Cyno_ElementalArt_Blade",
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Electric",
                             "bonusCriticalHurt": 25.0,
@@ -3297,19 +3297,19 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "Cyno_Element_MasterY_Cache",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ],
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "attackInfo": {
@@ -3317,7 +3317,7 @@
                         "attenuationTag": "Elemental_Art",
                         "attenuationGroup": "Cyno_ElementalArt_Blade",
                         "attackProperty": {
-                            "MFOOCADHKLC": "Cyno_ElementalArt_Blade",
+                            "damagePercentage": "Cyno_ElementalArt_Blade",
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Electric",
                             "bonusCriticalHurt": 25.0,
@@ -3376,19 +3376,19 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "Cyno_Element_MasterY_Cache",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "MoreThan"
+                            "compareType": "MoreThan"
                         }
                     ],
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "attackInfo": {
@@ -3396,7 +3396,7 @@
                         "attenuationTag": "Elemental_Art",
                         "attenuationGroup": "Cyno_Constellation_6",
                         "attackProperty": {
-                            "MFOOCADHKLC": "Cyno_ElementalArt_Blade",
+                            "damagePercentage": "Cyno_ElementalArt_Blade",
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Electric",
                             "bonusCriticalHurt": 25.0,
@@ -3423,19 +3423,19 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "Cyno_Element_MasterY_Cache",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ],
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "attackInfo": {
@@ -3443,7 +3443,7 @@
                         "attenuationTag": "Elemental_Art",
                         "attenuationGroup": "Cyno_Constellation_6",
                         "attackProperty": {
-                            "MFOOCADHKLC": "Cyno_ElementalArt_Blade",
+                            "damagePercentage": "Cyno_ElementalArt_Blade",
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Electric",
                             "bonusCriticalHurt": 25.0,
@@ -3614,7 +3614,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -3624,24 +3624,24 @@
                                     "$type": "TriggerAttackEvent",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "MHDMMPENLGB",
+                                            "$type": "ConfigAttackSphere",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
+                                                "$type": "ConfigBornBySelf",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 1.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 1.0
                                                 }
                                             },
-                                            "BMCPFKAEOJB": 1.0
+                                            "radius": 1.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "FallingAttack",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": "FallingAnthem_Normal_Loop_BurstMode_Damage",
+                                                "damagePercentage": "FallingAnthem_Normal_Loop_BurstMode_Damage",
                                                 "MKLAMNDEDGB": 0.0,
                                                 "elementType": "Electric",
                                                 "bonusCriticalHurt": 0.0,
@@ -3664,24 +3664,24 @@
                                     "$type": "TriggerAttackEvent",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "MHDMMPENLGB",
+                                            "$type": "ConfigAttackSphere",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
+                                                "$type": "ConfigBornBySelf",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 1.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 1.0
                                                 }
                                             },
-                                            "BMCPFKAEOJB": 1.0
+                                            "radius": 1.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "FallingAttack",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                                "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                                 "MKLAMNDEDGB": 0.0,
                                                 "bonusCriticalHurt": 0.0,
                                                 "overrideByWeapon": true,
@@ -3852,7 +3852,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -3882,7 +3882,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -4061,7 +4061,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Cyno_BurstMode_Flag",
                             "ratio": 1.0
                         }
@@ -4071,10 +4071,10 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_FallingAnthem_UseCamera",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -4090,22 +4090,22 @@
                                             "$type": "CHEAOJDOBEB",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "GJGFFJAGIDF",
+                                                "$type": "ConfigBornByTarget",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": -0.5,
-                                                    "INAIAJMIKEK": 1.0
+                                                    "x": 0.0,
+                                                    "y": -0.5,
+                                                    "z": 1.0
                                                 }
                                             },
                                             "height": 2.0,
-                                            "BMCPFKAEOJB": 4.0
+                                            "radius": 4.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "FallingAttack",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_BurstMode_Damage",
+                                                "damagePercentage": "FallingAnthem_Normal_Rank_1_BurstMode_Damage",
                                                 "MKLAMNDEDGB": 0.0,
                                                 "elementType": "Electric",
                                                 "bonusCriticalHurt": 25.0,
@@ -4151,22 +4151,22 @@
                                             "$type": "CHEAOJDOBEB",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "GJGFFJAGIDF",
+                                                "$type": "ConfigBornByTarget",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": -0.5,
-                                                    "INAIAJMIKEK": 1.0
+                                                    "x": 0.0,
+                                                    "y": -0.5,
+                                                    "z": 1.0
                                                 }
                                             },
                                             "height": 2.0,
-                                            "BMCPFKAEOJB": 6.0
+                                            "radius": 6.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "FallingAttack",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_BurstMode_Damage",
+                                                "damagePercentage": "FallingAnthem_Normal_Rank_2_BurstMode_Damage",
                                                 "MKLAMNDEDGB": 0.0,
                                                 "elementType": "Electric",
                                                 "bonusCriticalHurt": 25.0,
@@ -4207,10 +4207,10 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_FallingAnthem_UseCamera",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -4226,22 +4226,22 @@
                                             "$type": "CHEAOJDOBEB",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "GJGFFJAGIDF",
+                                                "$type": "ConfigBornByTarget",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": -0.5,
-                                                    "INAIAJMIKEK": 1.0
+                                                    "x": 0.0,
+                                                    "y": -0.5,
+                                                    "z": 1.0
                                                 }
                                             },
                                             "height": 2.0,
-                                            "BMCPFKAEOJB": 3.0
+                                            "radius": 3.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "FallingAttack",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_Damage",
+                                                "damagePercentage": "FallingAnthem_Normal_Rank_1_Damage",
                                                 "MKLAMNDEDGB": 0.0,
                                                 "bonusCriticalHurt": 25.0,
                                                 "overrideByWeapon": true,
@@ -4287,22 +4287,22 @@
                                             "$type": "CHEAOJDOBEB",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "GJGFFJAGIDF",
+                                                "$type": "ConfigBornByTarget",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": -0.5,
-                                                    "INAIAJMIKEK": 1.0
+                                                    "x": 0.0,
+                                                    "y": -0.5,
+                                                    "z": 1.0
                                                 }
                                             },
                                             "height": 2.0,
-                                            "BMCPFKAEOJB": 5.0
+                                            "radius": 5.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "FallingAttack",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_Damage",
+                                                "damagePercentage": "FallingAnthem_Normal_Rank_2_Damage",
                                                 "MKLAMNDEDGB": 0.0,
                                                 "bonusCriticalHurt": 25.0,
                                                 "overrideByWeapon": true,
@@ -4426,7 +4426,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 1.0
                                 }
@@ -4561,7 +4561,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "MonsterEquip"
                             ]
@@ -4576,7 +4576,7 @@
                                 "attenuationTag": "ExtraAttack",
                                 "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "Cyno_BurstMode_ExtraAttack_Damage",
+                                    "damagePercentage": "Cyno_BurstMode_ExtraAttack_Damage",
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 25.0,
@@ -4608,24 +4608,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 0.800000011920929
+                                    "radius": 0.800000011920929
                                 },
                                 "attackInfo": {
                                     "attackTag": "ExtraAttack",
                                     "attenuationTag": "ExtraAttack",
                                     "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Cyno_BurstMode_ExtraAttack_Damage",
+                                        "damagePercentage": "Cyno_BurstMode_ExtraAttack_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -4668,7 +4668,7 @@
                     "animEventNames": [
                         "ATK01"
                     ],
-                    "MFOOCADHKLC": "Attack_01_Normal",
+                    "damagePercentage": "Attack_01_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4676,7 +4676,7 @@
                     "animEventNames": [
                         "ATK02"
                     ],
-                    "MFOOCADHKLC": "Attack_02_Normal",
+                    "damagePercentage": "Attack_02_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4684,7 +4684,7 @@
                     "animEventNames": [
                         "ATK03A"
                     ],
-                    "MFOOCADHKLC": "Attack_03A_Normal",
+                    "damagePercentage": "Attack_03A_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4692,7 +4692,7 @@
                     "animEventNames": [
                         "ATK03B"
                     ],
-                    "MFOOCADHKLC": "Attack_03B_Normal",
+                    "damagePercentage": "Attack_03B_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4700,7 +4700,7 @@
                     "animEventNames": [
                         "ATK04"
                     ],
-                    "MFOOCADHKLC": "Attack_04_Normal",
+                    "damagePercentage": "Attack_04_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4708,7 +4708,7 @@
                     "animEventNames": [
                         "ATK01_BurstMode"
                     ],
-                    "MFOOCADHKLC": "Attack_01_BurstMode",
+                    "damagePercentage": "Attack_01_BurstMode",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4726,11 +4726,11 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "Cyno_Element_Mastery_Lower_Limit",
                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ]
                 },
@@ -4739,7 +4739,7 @@
                     "animEventNames": [
                         "ATK02_BurstMode"
                     ],
-                    "MFOOCADHKLC": "Attack_02_BurstMode",
+                    "damagePercentage": "Attack_02_BurstMode",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4757,11 +4757,11 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "Cyno_Element_Mastery_Lower_Limit",
                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ]
                 },
@@ -4770,7 +4770,7 @@
                     "animEventNames": [
                         "ATK03_BurstMode"
                     ],
-                    "MFOOCADHKLC": "Attack_03_BurstMode",
+                    "damagePercentage": "Attack_03_BurstMode",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4788,11 +4788,11 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "Cyno_Element_Mastery_Lower_Limit",
                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ]
                 },
@@ -4801,7 +4801,7 @@
                     "animEventNames": [
                         "ATK04A_BurstMode"
                     ],
-                    "MFOOCADHKLC": "Attack_04A_BurstMode",
+                    "damagePercentage": "Attack_04A_BurstMode",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4819,11 +4819,11 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "Cyno_Element_Mastery_Lower_Limit",
                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ]
                 },
@@ -4832,7 +4832,7 @@
                     "animEventNames": [
                         "ATK04B_BurstMode"
                     ],
-                    "MFOOCADHKLC": "Attack_04B_BurstMode",
+                    "damagePercentage": "Attack_04B_BurstMode",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4850,11 +4850,11 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "Cyno_Element_Mastery_Lower_Limit",
                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ]
                 },
@@ -4863,7 +4863,7 @@
                     "animEventNames": [
                         "ATK05_BurstMode"
                     ],
-                    "MFOOCADHKLC": "Attack_05_BurstMode",
+                    "damagePercentage": "Attack_05_BurstMode",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4881,11 +4881,11 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "Cyno_Element_Mastery_Lower_Limit",
                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                            "HDJELDCCOCG": "LessAndEqual"
+                            "compareType": "LessAndEqual"
                         }
                     ]
                 }
@@ -4927,7 +4927,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "Cyno_Element_MasterY_Cache",
                                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY"
                                         }
@@ -4963,7 +4963,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Cyno_BurstMode_Flag",
                                     "ratio": 0.0
                                 }
@@ -5077,7 +5077,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -5094,11 +5094,11 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Cyno_Constellation_2_CD",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -5248,11 +5248,11 @@
                                     "target": "Caster",
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Caster",
                                             "key": "_Cyno_BurstMode_Constellation_4_Count",
                                             "ratio": "Cyno_Constellation_4_MaxCount",
-                                            "HDJELDCCOCG": "LessAndEqual"
+                                            "compareType": "LessAndEqual"
                                         }
                                     ],
                                     "successActions": [
@@ -5394,20 +5394,20 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_Cyno_Constellation_6_Layer",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_Cyno_Constellation_6_CD",
                                     "ratio": 0.0
@@ -5418,11 +5418,11 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41071005,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.30000001192092896,
-                                            "INAIAJMIKEK": 0.30000001192092896
+                                            "x": 0.0,
+                                            "y": 0.30000001192092896,
+                                            "z": 0.30000001192092896
                                         }
                                     },
                                     "OECPINBLLGB": true

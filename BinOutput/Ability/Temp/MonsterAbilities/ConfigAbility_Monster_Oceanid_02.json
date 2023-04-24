@@ -206,7 +206,7 @@
                             "MKLAMNDEDGB": 5.0,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_OCEANID_CRAB_FEARFALLATK",
                                     "ratio": 1.0
                                 }
@@ -260,7 +260,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_SecondSummonBS",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -280,7 +280,7 @@
                             },
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_Summon_BulletAS",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -293,7 +293,7 @@
                             },
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_Summon_BulletAS",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -306,7 +306,7 @@
                             },
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_Summon_BulletAS",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -319,7 +319,7 @@
                             },
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_Summon_BulletAS",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -489,8 +489,8 @@
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_WaterLaserAOE",
                             "born": {
                                 "$type": "LMEODGDBOCI",
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "KAOJMJDCNNB"
                                 },
                                 "attachPointName": "RootNode"
@@ -506,22 +506,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -2.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -2.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 5.0,
-                                    "BMCPFKAEOJB": 6.0
+                                    "radius": 6.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.3330000042915344,
+                                        "damagePercentage": 0.3330000042915344,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 50.0,
@@ -847,11 +847,11 @@
                     "$type": "SetGlobalPos",
                     "key": "_LOCKTARGET_LASERBORN",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.5
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.5
                         }
                     },
                     "setTarget": false
@@ -867,11 +867,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42005013,
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "DAPKLNIFPID": true,
+                        "$type": "ConfigBornByGlobalValue",
+                        "onGround": true,
                         "BJCIHELGKLP": true,
-                        "FNMFBPGNEKD": "_LOCKTARGET_LASERBORN",
-                        "GPPNNKAOHCG": ""
+                        "positionKey": "_LOCKTARGET_LASERBORN",
+                        "directionKey": ""
                     },
                     "ownerIs": "Owner",
                     "trackTarget": "Self",
@@ -917,7 +917,7 @@
                             "target": "SelfAttackTarget",
                             "key": "_OCEANID_LASERBORN",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -925,7 +925,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_OCEANID_02_BLINKPOS_CHECKNUM",
                                     "ratio": 1.0
                                 }
@@ -940,7 +940,7 @@
                                     },
                                     "key": "_OCEANID_ELEVATOR_CREATE_POS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "setTarget": false
                                 },
@@ -948,14 +948,14 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_OCEANID_ELEVATOR_CREATE_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_OCEANID_ELEVATOR_CREATE_POS",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 42005014,
                                     "campID": 1001,
@@ -976,7 +976,7 @@
                                     },
                                     "key": "_OCEANID_ELEVATOR_CREATE_POS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "setTarget": false
                                 },
@@ -984,14 +984,14 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_OCEANID_ELEVATOR_CREATE_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_OCEANID_ELEVATOR_CREATE_POS",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 42005014,
                                     "campID": 1001,
@@ -1007,7 +1007,7 @@
                             "$type": "SetGlobalPos",
                             "key": "_MONSTER_OCEANID_02_CHASINGTARGET_LOCKY",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         }
                     ]
@@ -1045,7 +1045,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_ElevatorMaskDisappear",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -1060,7 +1060,7 @@
                             "$type": "RemoveModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_OCEANID_02_TRIGGERELEVATOR",
                                     "ratio": 0.0
                                 }
@@ -1071,7 +1071,7 @@
                             "$type": "KillSelf",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_OCEANID_02_TRIGGERELEVATOR",
                                     "ratio": 0.0
                                 }
@@ -1088,7 +1088,7 @@
                         {
                             "$type": "CreateMovingPlatform",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "gadgetID": 42005015,
                             "campID": 1001,
@@ -1113,7 +1113,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_ElevatorDie",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1136,7 +1136,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_OCEANID_02_TRIGGERELEVATOR",
                                             "ratio": 1.0
                                         }
@@ -1152,7 +1152,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_OCEANID_02_TRIGGERELEVATOR",
                                             "ratio": 1.0
                                         }
@@ -1168,7 +1168,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_OCEANID_02_TRIGGERELEVATOR",
                                             "ratio": 1.0
                                         }
@@ -1177,11 +1177,11 @@
                             ],
                             "monsterID": 20050402,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 5.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 5.0
                                 }
                             },
                             "summonTag": 20050402,
@@ -1223,7 +1223,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_02_ANIMAL_DEATHEXPLODE",
                                     "ratio": 1.0
                                 }
@@ -1239,7 +1239,7 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -1264,7 +1264,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_02_ANIMALHEAL_UP",
                                     "ratio": 1.0
                                 }
@@ -1280,7 +1280,7 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -1305,17 +1305,17 @@
                             "triggerType": "TriggerNoRepeat",
                             "MJLCPIAKNCP": "OnlyHitScene",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "size": {
-                                "JJJFPBPALGO": 4.0,
-                                "EAOEAJIDBGD": 4.0,
-                                "INAIAJMIKEK": 4.0
+                                "x": 4.0,
+                                "y": 4.0,
+                                "z": 4.0
                             }
                         },
                         "attackInfo": {
@@ -1323,7 +1323,7 @@
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
@@ -1364,7 +1364,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1494,7 +1494,7 @@
                             "$type": "KillSelf",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_OCEANID_02_ELEVATOLIFETRIGGER",
                                     "ratio": 0.0
                                 }
@@ -1540,7 +1540,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -1552,8 +1552,8 @@
                                     "target": "Target",
                                     "key": "_OCEANID_BEINGHIT_DIR_",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
-                                        "HOPPHMEKHLG": {
+                                        "$type": "ConfigBornBySelf",
+                                        "direction": {
                                             "$type": "IHINHODOMIN"
                                         }
                                     },
@@ -1566,8 +1566,8 @@
                                     "target": "TargetOriginOwner",
                                     "key": "_OCEANID_BEINGHIT_DIR_",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
-                                        "HOPPHMEKHLG": {
+                                        "$type": "ConfigBornBySelf",
+                                        "direction": {
                                             "$type": "IHINHODOMIN"
                                         }
                                     },
@@ -1580,9 +1580,9 @@
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_02_BeHit",
                             "born": {
                                 "$type": "FLIPADNBJJF",
-                                "HOPPHMEKHLG": {
-                                    "$type": "BIMJJILMODA",
-                                    "GPPNNKAOHCG": "_OCEANID_BEINGHIT_DIR_"
+                                "direction": {
+                                    "$type": "ConfigDirectionByGlobalValue",
+                                    "directionKey": "_OCEANID_BEINGHIT_DIR_"
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -1629,17 +1629,17 @@
                                     "$type": "NAMPOMPBMHC",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -0.5,
-                                            "INAIAJMIKEK": 0.5
+                                            "x": 0.0,
+                                            "y": -0.5,
+                                            "z": 0.5
                                         }
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 3.0,
-                                        "EAOEAJIDBGD": 3.0,
-                                        "INAIAJMIKEK": 5.0
+                                        "x": 3.0,
+                                        "y": 3.0,
+                                        "z": 5.0
                                     }
                                 },
                                 "attackInfo": {
@@ -1647,7 +1647,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "Regisvine_Common",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.3330000042915344,
+                                        "damagePercentage": 0.3330000042915344,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 50.0,
@@ -1678,11 +1678,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": -1.2000000476837158,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": -1.2000000476837158,
+                            "y": 0.0,
+                            "z": 4.0
                         }
                     },
                     "gadgetID": 42005016,
@@ -1699,11 +1699,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 1.2000000476837158,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 1.2000000476837158,
+                            "y": 0.0,
+                            "z": 4.0
                         }
                     },
                     "gadgetID": 42005016,
@@ -1726,7 +1726,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_SmashAddAttack",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1737,22 +1737,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -2.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -2.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 5.0,
-                                    "BMCPFKAEOJB": 1.2999999523162842
+                                    "radius": 1.2999999523162842
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.6660000085830688,
+                                        "damagePercentage": 0.6660000085830688,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 50.0,
@@ -1778,7 +1778,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_SmashAddAttackWarning",
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -1802,11 +1802,11 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 15.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 15.0
                                 }
                             },
                             "gadgetID": 42005016,
@@ -1815,11 +1815,11 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 7.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 12.0
+                                    "x": 7.0,
+                                    "y": 0.0,
+                                    "z": 12.0
                                 }
                             },
                             "gadgetID": 42005016,
@@ -1828,11 +1828,11 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -7.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 12.0
+                                    "x": -7.0,
+                                    "y": 0.0,
+                                    "z": 12.0
                                 }
                             },
                             "gadgetID": 42005016,
@@ -1845,11 +1845,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 9.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 9.0
                         }
                     },
                     "gadgetID": 42005016,
@@ -1858,11 +1858,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 3.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 8.0
+                            "x": 3.0,
+                            "y": 0.0,
+                            "z": 8.0
                         }
                     },
                     "gadgetID": 42005016,
@@ -1871,11 +1871,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": -3.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 8.0
+                            "x": -3.0,
+                            "y": 0.0,
+                            "z": 8.0
                         }
                     },
                     "gadgetID": 42005016,
@@ -1885,10 +1885,10 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_OCEANID_02_SKILLUP",
                             "ratio": 1.0,
-                            "HDJELDCCOCG": "MoreThanAndEqual"
+                            "compareType": "MoreThanAndEqual"
                         }
                     ],
                     "successActions": [
@@ -2015,10 +2015,10 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_02_SKILLUP",
                                     "ratio": 3.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "successActions": [
@@ -2104,10 +2104,10 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_OCEANID_02_SKILLUP",
                             "ratio": 3.0,
-                            "HDJELDCCOCG": "MoreThanAndEqual"
+                            "compareType": "MoreThanAndEqual"
                         }
                     ],
                     "successActions": [
@@ -2151,7 +2151,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_TraceWaterBallExplode",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "BJCIHELGKLP": true
                             },
                             "FGMDINMEPHL": -1.0
@@ -2192,19 +2192,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "SnowBallAttack",
                             "attenuationTag": "SnowBall_Damage",
                             "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.800000011920929,
+                                "damagePercentage": 0.800000011920929,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
@@ -2226,7 +2226,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_TraceWaterBallExplode",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "BJCIHELGKLP": true
                     },
                     "FGMDINMEPHL": -1.0
@@ -2259,7 +2259,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_DelayWaterBallExplode",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "BJCIHELGKLP": true
                             },
                             "FGMDINMEPHL": -1.0
@@ -2300,19 +2300,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
-                            "BMCPFKAEOJB": 1.7999999523162842
+                            "radius": 1.7999999523162842
                         },
                         "attackInfo": {
                             "attackTag": "SnowBallAttack",
                             "attenuationTag": "SnowBall_Damage",
                             "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.6660000085830688,
+                                "damagePercentage": 0.6660000085830688,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
@@ -2334,7 +2334,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_DelayWaterBallExplode",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "BJCIHELGKLP": true
                     },
                     "FGMDINMEPHL": -1.0
@@ -2468,7 +2468,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_OCEANID_02_SPDODGE",
                                     "ratio": 1.0
                                 }
@@ -2477,9 +2477,9 @@
                                 {
                                     "$type": "FixedMonsterRushMove",
                                     "toPos": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_MONSTER_OCEANID_02_BLINKPOS",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_MONSTER_OCEANID_02_BLINKPOS",
+                                        "directionKey": ""
                                     },
                                     "timeRange": 1.0,
                                     "maxRange": 100.0,
@@ -2496,7 +2496,7 @@
                                     "$type": "Predicated",
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_OCEANID_02_SPDODGE",
                                             "ratio": 2.0
                                         }
@@ -2505,9 +2505,9 @@
                                         {
                                             "$type": "FixedMonsterRushMove",
                                             "toPos": {
-                                                "$type": "FNJGDOEMIIB",
-                                                "FNMFBPGNEKD": "_MONSTER_OCEANID_02_BLINKPOS",
-                                                "GPPNNKAOHCG": ""
+                                                "$type": "ConfigBornByGlobalValue",
+                                                "positionKey": "_MONSTER_OCEANID_02_BLINKPOS",
+                                                "directionKey": ""
                                             },
                                             "timeRange": 1.0,
                                             "maxRange": 100.0,
@@ -2522,11 +2522,11 @@
                                         {
                                             "$type": "FixedMonsterRushMove",
                                             "toPos": {
-                                                "$type": "ODKAAGHNCIP",
+                                                "$type": "ConfigBornBySelf",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": -15.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": -15.0
                                                 }
                                             },
                                             "timeRange": 1.0,
@@ -2580,7 +2580,7 @@
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_DodgeLoop",
                             "born": {
                                 "$type": "LMEODGDBOCI",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "attachPointName": "RootNode"
                             },
                             "FGMDINMEPHL": -1.0
@@ -2620,7 +2620,7 @@
                                     },
                                     "key": "_MONSTER_OCEANID_02_BLINKPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "setTarget": false
                                 },
@@ -2643,7 +2643,7 @@
                                     },
                                     "key": "_MONSTER_OCEANID_02_BLINKPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "setTarget": false
                                 }
@@ -2672,7 +2672,7 @@
                             },
                             "key": "_MONSTER_OCEANID_02_BLINKPOS",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         }
@@ -2719,18 +2719,18 @@
                             "$type": "TriggerBullet",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_DELAYWATERBALL_TRIGGERDIE",
                                     "ratio": 0.0
                                 }
                             ],
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.2999999523162842,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.2999999523162842,
+                                    "z": 0.0
                                 }
                             }
                         }
@@ -2757,7 +2757,7 @@
                     },
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -2789,11 +2789,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 2.559999942779541,
-                                    "EAOEAJIDBGD": 3.1700000762939453,
-                                    "INAIAJMIKEK": 1.6100000143051147
+                                    "x": 2.559999942779541,
+                                    "y": 3.1700000762939453,
+                                    "z": 1.6100000143051147
                                 }
                             }
                         },
@@ -2801,11 +2801,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -4.610000133514404,
-                                    "EAOEAJIDBGD": 5.460000038146973,
-                                    "INAIAJMIKEK": -1.1399999856948853
+                                    "x": -4.610000133514404,
+                                    "y": 5.460000038146973,
+                                    "z": -1.1399999856948853
                                 }
                             }
                         }
@@ -2839,11 +2839,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 2.559999942779541,
-                                    "EAOEAJIDBGD": 3.1700000762939453,
-                                    "INAIAJMIKEK": 1.6100000143051147
+                                    "x": 2.559999942779541,
+                                    "y": 3.1700000762939453,
+                                    "z": 1.6100000143051147
                                 }
                             }
                         },
@@ -2862,11 +2862,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.36000001430511475,
-                                    "EAOEAJIDBGD": 6.920000076293945,
-                                    "INAIAJMIKEK": 3.6700000762939453
+                                    "x": 0.36000001430511475,
+                                    "y": 6.920000076293945,
+                                    "z": 3.6700000762939453
                                 }
                             }
                         },
@@ -2885,11 +2885,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -0.9200000166893005,
-                                    "EAOEAJIDBGD": 6.659999847412109,
-                                    "INAIAJMIKEK": -1.3200000524520874
+                                    "x": -0.9200000166893005,
+                                    "y": 6.659999847412109,
+                                    "z": -1.3200000524520874
                                 }
                             }
                         },
@@ -2908,11 +2908,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -4.610000133514404,
-                                    "EAOEAJIDBGD": 5.460000038146973,
-                                    "INAIAJMIKEK": -1.1399999856948853
+                                    "x": -4.610000133514404,
+                                    "y": 5.460000038146973,
+                                    "z": -1.1399999856948853
                                 }
                             }
                         }
@@ -2941,11 +2941,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42005018,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 2.0,
-                            "INAIAJMIKEK": 2.0
+                            "x": 0.0,
+                            "y": 2.0,
+                            "z": 2.0
                         }
                     }
                 }
@@ -2966,11 +2966,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42005018,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 2.0,
-                                    "INAIAJMIKEK": 2.0
+                                    "x": 0.0,
+                                    "y": 2.0,
+                                    "z": 2.0
                                 }
                             }
                         }
@@ -2980,10 +2980,10 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_02_SKILLUP",
                                     "ratio": 2.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "successActions": [
@@ -2991,11 +2991,11 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 42005018,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 3.0,
-                                            "EAOEAJIDBGD": 2.0,
-                                            "INAIAJMIKEK": 2.0
+                                            "x": 3.0,
+                                            "y": 2.0,
+                                            "z": 2.0
                                         }
                                     }
                                 },
@@ -3003,11 +3003,11 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 42005018,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": -3.0,
-                                            "EAOEAJIDBGD": 2.0,
-                                            "INAIAJMIKEK": 2.0
+                                            "x": -3.0,
+                                            "y": 2.0,
+                                            "z": 2.0
                                         }
                                     }
                                 }
@@ -3017,11 +3017,11 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 42005018,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 2.0,
-                                            "INAIAJMIKEK": 2.0
+                                            "x": 0.0,
+                                            "y": 2.0,
+                                            "z": 2.0
                                         }
                                     }
                                 }
@@ -3080,7 +3080,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_02_MUSTKILL_ELEVATOR",
                                     "ratio": 1.0
                                 }
@@ -3094,9 +3094,9 @@
                                             "$type": "CreateGadget",
                                             "lifeByOwnerIsAlive": true,
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
-                                                "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSONE",
-                                                "GPPNNKAOHCG": ""
+                                                "$type": "ConfigBornByGlobalValue",
+                                                "positionKey": "_OCEANID_MUSTKILL_POSONE",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42005014,
                                             "campID": 1001,
@@ -3106,9 +3106,9 @@
                                             "$type": "CreateGadget",
                                             "lifeByOwnerIsAlive": true,
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
-                                                "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSTHREE",
-                                                "GPPNNKAOHCG": ""
+                                                "$type": "ConfigBornByGlobalValue",
+                                                "positionKey": "_OCEANID_MUSTKILL_POSTHREE",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42005014,
                                             "campID": 1001,
@@ -3124,9 +3124,9 @@
                                                     "$type": "CreateGadget",
                                                     "lifeByOwnerIsAlive": true,
                                                     "born": {
-                                                        "$type": "FNJGDOEMIIB",
-                                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSTWO",
-                                                        "GPPNNKAOHCG": ""
+                                                        "$type": "ConfigBornByGlobalValue",
+                                                        "positionKey": "_OCEANID_MUSTKILL_POSTWO",
+                                                        "directionKey": ""
                                                     },
                                                     "gadgetID": 42005014,
                                                     "campID": 1001,
@@ -3136,9 +3136,9 @@
                                                     "$type": "CreateGadget",
                                                     "lifeByOwnerIsAlive": true,
                                                     "born": {
-                                                        "$type": "FNJGDOEMIIB",
-                                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSFOUR",
-                                                        "GPPNNKAOHCG": ""
+                                                        "$type": "ConfigBornByGlobalValue",
+                                                        "positionKey": "_OCEANID_MUSTKILL_POSFOUR",
+                                                        "directionKey": ""
                                                     },
                                                     "gadgetID": 42005014,
                                                     "campID": 1001,
@@ -3150,9 +3150,9 @@
                                                     "$type": "CreateGadget",
                                                     "lifeByOwnerIsAlive": true,
                                                     "born": {
-                                                        "$type": "FNJGDOEMIIB",
-                                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSONE",
-                                                        "GPPNNKAOHCG": ""
+                                                        "$type": "ConfigBornByGlobalValue",
+                                                        "positionKey": "_OCEANID_MUSTKILL_POSONE",
+                                                        "directionKey": ""
                                                     },
                                                     "gadgetID": 42005014,
                                                     "campID": 1001,
@@ -3162,9 +3162,9 @@
                                                     "$type": "CreateGadget",
                                                     "lifeByOwnerIsAlive": true,
                                                     "born": {
-                                                        "$type": "FNJGDOEMIIB",
-                                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSFOUR",
-                                                        "GPPNNKAOHCG": ""
+                                                        "$type": "ConfigBornByGlobalValue",
+                                                        "positionKey": "_OCEANID_MUSTKILL_POSFOUR",
+                                                        "directionKey": ""
                                                     },
                                                     "gadgetID": 42005014,
                                                     "campID": 1001,
@@ -3180,9 +3180,9 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSONE",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_OCEANID_MUSTKILL_POSONE",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 42005014,
                                     "campID": 1001,
@@ -3192,9 +3192,9 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSTWO",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_OCEANID_MUSTKILL_POSTWO",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 42005014,
                                     "campID": 1001,
@@ -3204,9 +3204,9 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSTHREE",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_OCEANID_MUSTKILL_POSTHREE",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 42005014,
                                     "campID": 1001,
@@ -3216,9 +3216,9 @@
                                     "$type": "CreateGadget",
                                     "lifeByOwnerIsAlive": true,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_OCEANID_MUSTKILL_POSFOUR",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_OCEANID_MUSTKILL_POSFOUR",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 42005014,
                                     "campID": 1001,
@@ -3269,7 +3269,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 1.3329999446868896,
+                                    "damagePercentage": 1.3329999446868896,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Water",
                                     "bonusCriticalHurt": 100.0,
@@ -3298,7 +3298,7 @@
                             },
                             "key": "_OCEANID_MUSTKILL_POSONE",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -3311,7 +3311,7 @@
                             },
                             "key": "_OCEANID_MUSTKILL_POSTWO",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -3324,7 +3324,7 @@
                             },
                             "key": "_OCEANID_MUSTKILL_POSTHREE",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -3337,7 +3337,7 @@
                             },
                             "key": "_OCEANID_MUSTKILL_POSFOUR",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         }
@@ -3362,9 +3362,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_MustKillAtkCoreLoop",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_OCEANID_MUSTKILL_EFFECTPOS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_OCEANID_MUSTKILL_EFFECTPOS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -3372,9 +3372,9 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_MustKillAtkCoreEarthLoop",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_OCEANID_MUSTKILL_EFFECTPOS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_OCEANID_MUSTKILL_EFFECTPOS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -3430,9 +3430,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Oceanid_MustKillAtkCoreAS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_OCEANID_MUSTKILL_EFFECTPOS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_OCEANID_MUSTKILL_EFFECTPOS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -3454,7 +3454,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3499,7 +3499,7 @@
                     },
                     "key": "_OCEANID_MUSTKILL_EFFECTPOS",
                     "born": {
-                        "$type": "GJGFFJAGIDF"
+                        "$type": "ConfigBornByTarget"
                     },
                     "setTarget": false
                 }
@@ -3575,7 +3575,7 @@
                     "otherTargets": {
                         "$type": "IDODCGJLHAE",
                         "operation": "XOR",
-                        "HDJELDCCOCG": "Greater"
+                        "compareType": "Greater"
                     },
                     "targetPredicates": [
                         {
@@ -3589,7 +3589,7 @@
                             "target": "Target",
                             "key": "_MONSTER_OCEANID_02_PLATFORMDAMAGEPOS",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -3598,13 +3598,13 @@
                             "target": "Target",
                             "key": "_MONSTER_OCEANID_02_PLATFORMDAMAGEDIR",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByTarget",
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 60.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 60.0,
+                                        "z": 0.0
                                     }
                                 }
                             },
@@ -3613,9 +3613,9 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_MONSTER_OCEANID_02_PLATFORMDAMAGEPOS",
-                                "GPPNNKAOHCG": "_MONSTER_OCEANID_02_PLATFORMDAMAGEDIR"
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_MONSTER_OCEANID_02_PLATFORMDAMAGEPOS",
+                                "directionKey": "_MONSTER_OCEANID_02_PLATFORMDAMAGEDIR"
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42005019,
@@ -3679,21 +3679,21 @@
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -0.20000000298023224,
+                                            "z": 0.0
                                         },
                                         "attachPointName": "RootNode"
                                     },
                                     "height": 2.5,
-                                    "BMCPFKAEOJB": 7.5
+                                    "radius": 7.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.13300000131130219,
+                                        "damagePercentage": 0.13300000131130219,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 100.0,
@@ -3838,7 +3838,7 @@
                             "$type": "ServerLuaCall",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SERVERLUACALL_TIMES",
                                     "ratio": 0.0
                                 }
@@ -4002,7 +4002,7 @@
                             "$type": "ServerLuaCall",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SERVERLUACALL_SUMMON_TIMES",
                                     "ratio": 0.0
                                 }

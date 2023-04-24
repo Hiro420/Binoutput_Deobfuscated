@@ -18,16 +18,16 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 0,
                                             "parameter": "ComboCount"
                                         },
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 5,
                                             "parameter": "ComboCount"
@@ -161,16 +161,16 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 0,
                                             "parameter": "ComboCount"
                                         },
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 5,
                                             "parameter": "ComboCount"
@@ -329,16 +329,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -361,11 +361,11 @@
                             "RotationDampTime": true,
                             "configID": 2019,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 1.0
                                 }
                             },
                             "value": 1.0,
@@ -380,11 +380,11 @@
                                     "RotationDampTime": true,
                                     "configID": 2019,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
                                     "value": 1.0,
@@ -404,16 +404,16 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
                                     "$type": "LCCMCDGDKGI",
@@ -489,23 +489,23 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": -0.30000001192092896
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": -0.30000001192092896
                                 }
                             },
                             "height": 2.0,
                             "BAPAHIOBNCL": 130.0,
-                            "BMCPFKAEOJB": 6.5
+                            "radius": 6.5
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementArt_Damage",
+                                "damagePercentage": "ElementArt_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Grass",
                                 "bonusCriticalHurt": 25.0,
@@ -728,14 +728,14 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 1.5
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 1.5
                         },
-                        "DAPKLNIFPID": true,
-                        "HKNFOKFIKAG": 3.0
+                        "onGround": true,
+                        "onGroundRaycastUpDist": 3.0
                     },
                     "gadgetID": 41011001,
                     "campID": 1001,
@@ -758,10 +758,10 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK_Cache",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -914,11 +914,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.20000000298023224,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.20000000298023224,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -943,23 +943,23 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_OWN_GADGET_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -968,11 +968,11 @@
                                     "target": "Target",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_FIXPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.20000000298023224,
+                                            "z": 0.0
                                         }
                                     },
                                     "setTarget": false
@@ -1004,11 +1004,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Attack",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "HKNFOKFIKAG": 3.0,
-                                "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "onGroundRaycastUpDist": 3.0,
+                                "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1027,11 +1027,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.20000000298023224,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.20000000298023224,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -1056,23 +1056,23 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_OWN_GADGET_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1081,11 +1081,11 @@
                                     "target": "Target",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_FIXPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.20000000298023224,
+                                            "z": 0.0
                                         }
                                     },
                                     "setTarget": false
@@ -1117,11 +1117,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Attack",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "HKNFOKFIKAG": 3.0,
-                                "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "onGroundRaycastUpDist": 3.0,
+                                "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1153,11 +1153,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Fire_Explosion",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -1169,22 +1169,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -1.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -1.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 3.0,
-                                    "BMCPFKAEOJB": 6.5
+                                    "radius": 6.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Burst",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Grass_Seed_Fire_Boom_Ratio",
+                                        "damagePercentage": "Grass_Seed_Fire_Boom_Ratio",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 50.0,
@@ -1215,11 +1215,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.20000000298023224,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.20000000298023224,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -1244,23 +1244,23 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_OWN_GADGET_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1269,11 +1269,11 @@
                                     "target": "Target",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_FIXPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.20000000298023224,
+                                            "z": 0.0
                                         }
                                     },
                                     "setTarget": false
@@ -1303,11 +1303,11 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Attack_Electric",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "DAPKLNIFPID": true,
-                                        "HKNFOKFIKAG": 3.0,
-                                        "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "onGround": true,
+                                        "onGroundRaycastUpDist": 3.0,
+                                        "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                        "directionKey": ""
                                     },
                                     "FGMDINMEPHL": -1.0
                                 },
@@ -1323,11 +1323,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.20000000298023224,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.20000000298023224,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -1352,23 +1352,23 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_OWN_GADGET_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1377,11 +1377,11 @@
                                     "target": "Target",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_FIXPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.20000000298023224,
+                                            "z": 0.0
                                         }
                                     },
                                     "setTarget": false
@@ -1413,11 +1413,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Attack_Electric",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "HKNFOKFIKAG": 3.0,
-                                "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "onGroundRaycastUpDist": 3.0,
+                                "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1444,11 +1444,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.20000000298023224,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.20000000298023224,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -1473,23 +1473,23 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_OWN_GADGET_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1498,11 +1498,11 @@
                                     "target": "Target",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_FIXPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.20000000298023224,
+                                            "z": 0.0
                                         }
                                     },
                                     "setTarget": false
@@ -1534,11 +1534,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Attack_Big",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "HKNFOKFIKAG": 3.0,
-                                "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "onGroundRaycastUpDist": 3.0,
+                                "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1552,11 +1552,11 @@
                             "$type": "SetGlobalPos",
                             "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.20000000298023224,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.20000000298023224,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -1581,23 +1581,23 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_OWN_GADGET_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1606,11 +1606,11 @@
                                     "target": "Target",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_FIXPOS",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.20000000298023224,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.20000000298023224,
+                                            "z": 0.0
                                         }
                                     },
                                     "setTarget": false
@@ -1642,11 +1642,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Player_Grass_ElementalBurst_Seed_Attack_Big",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "HKNFOKFIKAG": 3.0,
-                                "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "onGroundRaycastUpDist": 3.0,
+                                "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1674,26 +1674,26 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -1.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -1.0,
+                                            "z": 0.0
                                         },
-                                        "DAPKLNIFPID": true,
-                                        "HKNFOKFIKAG": 3.0,
-                                        "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "onGround": true,
+                                        "onGroundRaycastUpDist": 3.0,
+                                        "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                        "directionKey": ""
                                     },
                                     "height": 3.799999952316284,
-                                    "BMCPFKAEOJB": 2.0
+                                    "radius": 2.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Burst",
                                     "attenuationTag": "default",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Grass_Seed_Damage_Ratio",
+                                        "damagePercentage": "Grass_Seed_Damage_Ratio",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
@@ -1725,26 +1725,26 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -1.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -1.0,
+                                            "z": 0.0
                                         },
-                                        "DAPKLNIFPID": true,
-                                        "HKNFOKFIKAG": 3.0,
-                                        "FNMFBPGNEKD": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "onGround": true,
+                                        "onGroundRaycastUpDist": 3.0,
+                                        "positionKey": "_ABILITY_PLAYER_GRASS_SEED_ATTACKER_POS",
+                                        "directionKey": ""
                                     },
                                     "height": 3.799999952316284,
-                                    "BMCPFKAEOJB": 4.0
+                                    "radius": 4.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Burst",
                                     "attenuationTag": "default",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Grass_Seed_Damage_Ratio",
+                                        "damagePercentage": "Grass_Seed_Damage_Ratio",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
@@ -1962,7 +1962,7 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     },
                     "GKJDJDACPMC": true,
                     "gadgetID": 41011002,
@@ -2168,7 +2168,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK",
                                     "ratio": 3.0
                                 }
@@ -2184,7 +2184,7 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -2204,7 +2204,7 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -2220,7 +2220,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK",
                                     "ratio": 3.0
                                 }
@@ -2236,7 +2236,7 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -2256,7 +2256,7 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -2288,11 +2288,11 @@
                                     "GFIOLOJIDMG": "Player_Grass_Seed_Aura_Extra_Talent_6"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "Player_Grass_Seed_Aura_Element_Damage_Up_Origin"
@@ -2305,11 +2305,11 @@
                                     "GFIOLOJIDMG": "Player_Grass_Seed_Aura_Extra_Talent_6"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK",
                                     "ratio": 2.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "Player_Grass_Seed_Aura_Element_Damage_Up_Fire"
@@ -2322,11 +2322,11 @@
                                     "GFIOLOJIDMG": "Player_Grass_Seed_Aura_Extra_Talent_6"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK",
                                     "ratio": 1.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "Player_Grass_Seed_Aura_Element_Damage_Up_Electric"
@@ -2339,11 +2339,11 @@
                                     "GFIOLOJIDMG": "Player_Grass_Seed_Aura_Extra_Talent_6"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_PLAYER_GRASS_SEED_STATE_MARK",
                                     "ratio": 3.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "Player_Grass_Seed_Aura_Element_Damage_Up_Water"
@@ -2432,7 +2432,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ABILITY_Player_Grass_Aura_Count_Cache",
                                             "ratio": "Grass_Seed_Element_Mastery_Count"
                                         }
@@ -2451,7 +2451,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ABILITY_Player_Grass_Seed_State_Cache",
                                             "ratio": "Grass_Seed_type_Cache"
                                         }
@@ -2584,11 +2584,11 @@
                             ],
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Player_Element_Mastery_Lower_Limit",
                                     "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ]
                         },
@@ -2604,11 +2604,11 @@
                             ],
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Player_Element_Mastery_Lower_Limit",
                                     "ratio": "FIGHT_PROP_ELEMENT_MASTERY",
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ]
                         }
@@ -2629,7 +2629,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ABILITY_Player_Element_MasterY_Cache",
                                             "ratio": "FIGHT_PROP_ELEMENT_MASTERY"
                                         }

@@ -381,7 +381,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 1.0,
+                            "damagePercentage": 1.0,
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Grass",
                             "bonusCriticalHurt": 10.0,
@@ -519,7 +519,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -613,8 +613,8 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "AKLDHBPHNLK",
                                     "JPOJHLOIKLG": 10.0,
                                     "MPNLAACKHNA": 10.0
@@ -684,8 +684,8 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "AKLDHBPHNLK",
                                     "JPOJHLOIKLG": 180.0,
                                     "MPNLAACKHNA": 70.0
@@ -755,8 +755,8 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "AKLDHBPHNLK",
                                     "JPOJHLOIKLG": 180.0,
                                     "MPNLAACKHNA": 70.0
@@ -831,7 +831,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_WIND_HIT_COUNT",
                                     "ratio": 1.0
                                 }
@@ -885,7 +885,7 @@
                             "$type": "KillSelf",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_WIND_HIT_COUNT",
                                     "ratio": 2.0
                                 }
@@ -1985,10 +1985,10 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "HitCount",
                                     "ratio": 1.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "successActions": [
@@ -2012,22 +2012,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 6.0,
-                                    "BMCPFKAEOJB": 3.0
+                                    "radius": 3.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.0,
+                                        "damagePercentage": 1.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Wind",
                                         "bonusCriticalHurt": 20.0,
@@ -2040,7 +2040,7 @@
                                         "hitImpulseType": "LV4",
                                         "overrideHitImpulse": {
                                             "hitLevel": "Heavy",
-                                            "IPHCEFBMJAJ": 1000.0,
+                                            "hitImpulseX": 1000.0,
                                             "hitImpulseY": 0.0
                                         },
                                         "retreatType": "ByHitDirection",

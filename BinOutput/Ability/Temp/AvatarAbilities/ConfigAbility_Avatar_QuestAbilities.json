@@ -250,11 +250,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 70300036,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.7999999523162842,
-                            "INAIAJMIKEK": 0.10000000149011612
+                            "x": 0.0,
+                            "y": 1.7999999523162842,
+                            "z": 0.10000000149011612
                         }
                     }
                 }
@@ -582,11 +582,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 41029006,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 2.0,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": 2.0,
+                                    "z": 1.0
                                 }
                             }
                         }
@@ -641,13 +641,13 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "gadgetID": 70710025
                 },
@@ -724,13 +724,13 @@
                             "$type": "TriggerBullet",
                             "bulletID": 40000179,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.5,
-                                    "EAOEAJIDBGD": 0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.5,
+                                    "y": 0.5,
+                                    "z": 1.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "HFKFLHCBMLB",
                                     "LLOEMEPIBII": "Horizontal",
                                     "maxAngle": 360.0
@@ -743,11 +743,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 40000179,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.5,
-                                    "INAIAJMIKEK": 0.10000000149011612
+                                    "x": 0.0,
+                                    "y": 0.5,
+                                    "z": 0.10000000149011612
                                 }
                             }
                         }
@@ -807,19 +807,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 8.0,
+                                "damagePercentage": 8.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 300.0,
@@ -851,7 +851,7 @@
                     },
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Monster"
                             ]
@@ -874,10 +874,10 @@
                     "target": "Team",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "AVATAR_GLIDING_ENERGY",
                             "ratio": 50.0,
-                            "HDJELDCCOCG": "MoreThanAndEqual"
+                            "compareType": "MoreThanAndEqual"
                         }
                     ],
                     "successActions": [
@@ -901,7 +901,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "gadgetID": 44000002,
                             "campID": 1001,
@@ -934,7 +934,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "gadgetID": 44000003,
                             "campID": 1001,
@@ -1304,10 +1304,10 @@
                             "target": "Team",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "Avatar_Activity_FlyBall_FlyTimer",
                                     "ratio": 4.5,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "successActions": [
@@ -1316,10 +1316,10 @@
                                     "RotationDampTime": true,
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "has_end_game",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         }
                                     ],
                                     "luaCallType": "CurGalleryControlGroup",
@@ -1834,11 +1834,11 @@
                             "$type": "TriggerBullet",
                             "bulletID": 70300124,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.7999999523162842,
-                                    "INAIAJMIKEK": 0.10000000149011612
+                                    "x": 0.0,
+                                    "y": 1.7999999523162842,
+                                    "z": 0.10000000149011612
                                 }
                             }
                         }
@@ -1895,24 +1895,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.5
+                                    "radius": 1.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "Quest_Bean_Hit",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "enBreak": 0.0
@@ -1925,24 +1925,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 4.5
+                                    "radius": 4.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "Quest_Bean_Threat",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "enBreak": 0.0

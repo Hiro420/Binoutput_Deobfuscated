@@ -432,11 +432,11 @@
                                     "$type": "ApplyModifier",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "_MONSTER_EREMITE_HP_PERCENT_",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_Eremite_Dancer_Force_ImproveState"
@@ -484,11 +484,11 @@
                             "canBeHandledOnRecover": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_EREMITE_IMPROVED_COUNT_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "boolID": "ForceImprove",
@@ -676,7 +676,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_EREMITE_RETURNTOBORN_",
                                     "ratio": 0.0
@@ -761,7 +761,7 @@
                             "$type": "Summon",
                             "monsterID": 25110401,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "IABNJPGBAOH": true
                             },
                             "summonTag": 25110401,
@@ -863,7 +863,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_EREMITE_WEAK_TIMES_",
                                     "ratio": 1.0
@@ -949,7 +949,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.0,
+                                    "damagePercentage": 0.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Grass",
                                     "bonusCriticalHurt": 100.0,
@@ -1184,11 +1184,11 @@
                             "born": {
                                 "$type": "MGDGOLHGFAP",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "GKAPKIFBACA": -2.0,
                                 "DCKBDJJECJH": 0.0,
                                 "JPJIEDIHGFF": 25.0
@@ -1209,13 +1209,13 @@
                                 {
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 1.0,
                                             "CPOKKADJBFH": 2.0
                                         },
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
                                     "hitSceneType": "BlinkHitSceneTestByThreeSegments",
                                     "limitY": 2.5,
@@ -1250,16 +1250,16 @@
                             "born": {
                                 "$type": "MGDGOLHGFAP",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": -3.0,
                                     "CPOKKADJBFH": 0.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "GKAPKIFBACA": -10.0,
                                 "DCKBDJJECJH": 0.0,
                                 "JPJIEDIHGFF": 50.0
@@ -1280,13 +1280,13 @@
                                 {
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 10.0,
                                             "CPOKKADJBFH": 12.0
                                         },
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
                                     "hitSceneType": "BlinkHitSceneTestByThreeSegments",
                                     "limitY": 2.5,
@@ -1537,7 +1537,7 @@
                     "$type": "TurnDirectionToPos",
                     "target": "SelfAttackTarget",
                     "toPos": {
-                        "$type": "GJGFFJAGIDF"
+                        "$type": "ConfigBornByTarget"
                     }
                 }
             ]
@@ -1819,18 +1819,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42560001,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.6019999980926514,
-                            "EAOEAJIDBGD": 1.430999994277954,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.6019999980926514,
+                            "y": 1.430999994277954,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "IABNJPGBAOH": true
@@ -1900,24 +1900,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerAlways",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "Eremite_Dancer_BoomerangBullet",
                             "attenuationGroup": "Eremite_Dancer_BoomerangBullet",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.800000011920929,
+                                "damagePercentage": 0.800000011920929,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Grass",
                                 "bonusCriticalHurt": 25.0,
@@ -1974,18 +1974,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42560002,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 2.5,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 2.5,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IHINHODOMIN",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 90.0,
+                                        "z": 0.0
                                     }
                                 }
                             },
@@ -1996,18 +1996,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42560002,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": -2.5,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": -2.5,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IHINHODOMIN",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 90.0,
+                                        "z": 0.0
                                     }
                                 }
                             },
@@ -2106,24 +2106,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerAlways",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "Skirmisher_Fat_SprayGun_Ice",
                             "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.3499999940395355,
+                                "damagePercentage": 0.3499999940395355,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Grass",
                                 "bonusCriticalHurt": 25.0,
@@ -2291,10 +2291,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Eremite_Female_Standard_Dancer_Grass_ComboAttack01_Wheel_Alert",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_EREMITE_DANCER_TRAP_POS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "positionKey": "_EREMITE_DANCER_TRAP_POS_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -2312,10 +2312,10 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_EREMITE_DANCER_TRAP_POS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "positionKey": "_EREMITE_DANCER_TRAP_POS_",
+                                "directionKey": ""
                             },
                             "GKJDJDACPMC": true,
                             "gadgetID": 42560003,
@@ -2380,10 +2380,10 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Eremite_Female_Standard_Dancer_Grass_ComboAttack01_Wheel",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_EREMITE_DANCER_TRAP_POS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "onGround": true,
+                                "positionKey": "_EREMITE_DANCER_TRAP_POS_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },

@@ -241,21 +241,21 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.10000000149011612
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.10000000149011612
                                         }
                                     },
-                                    "BMCPFKAEOJB": "Water_Bloom_Radius"
+                                    "radius": "Water_Bloom_Radius"
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "Mona_LiquidStrike",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -294,7 +294,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -385,7 +385,7 @@
                             "$type": "SetAnimatorTrigger",
                             "predicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "logic": "Equal",
                                     "ratio": 0,
                                     "parameter": "ComboCount"
@@ -397,7 +397,7 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "logic": "Equal",
                                     "ratio": 0,
                                     "parameter": "ComboCount"
@@ -568,13 +568,13 @@
                             ],
                             "key": "_ABILITY_MONA_EXTRAATTACK_POS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 5.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 5.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "setTarget": false
                         },
@@ -593,15 +593,15 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_ExtraAttack_Pre",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_ABILITY_MONA_EXTRAATTACK_POS",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_ABILITY_MONA_EXTRAATTACK_POS",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -623,15 +623,15 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_ExtraAttack",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
+                        "$type": "ConfigBornByGlobalValue",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true,
-                        "FNMFBPGNEKD": "_ABILITY_MONA_EXTRAATTACK_POS",
-                        "GPPNNKAOHCG": ""
+                        "onGround": true,
+                        "positionKey": "_ABILITY_MONA_EXTRAATTACK_POS",
+                        "directionKey": ""
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -656,21 +656,21 @@
                     "target": "Caster",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_ABILITY_MONA_EXTRAATTACK_POS",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_ABILITY_MONA_EXTRAATTACK_POS",
+                                "directionKey": ""
                             },
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "ExtraAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "AS_Mona_ExtraAttack_Damge",
+                                "damagePercentage": "AS_Mona_ExtraAttack_Damge",
                                 "MKLAMNDEDGB": "AS_Mona_Talent_LiquidStrike_ExtraAttackDamageUp",
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 25.0,
@@ -722,21 +722,21 @@
                             "target": "Caster",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "attachPointName": "RootNode",
                                         "ABIMPICHJNC": "Self"
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "NormalAttack_01",
                                     "attenuationTag": "Mona_Water_Damage",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "AS_Mona_NormalAttack_01",
+                                        "damagePercentage": "AS_Mona_NormalAttack_01",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -775,11 +775,11 @@
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_NormalAttack_01_Hit",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 5.0
                         }
                     },
                     "FGMDINMEPHL": -1.0
@@ -805,21 +805,21 @@
                             "target": "Caster",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "attachPointName": "RootNode",
                                         "ABIMPICHJNC": "Self"
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "NormalAttack_02",
                                     "attenuationTag": "Mona_Water_Damage",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "AS_Mona_NormalAttack_02",
+                                        "damagePercentage": "AS_Mona_NormalAttack_02",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -858,11 +858,11 @@
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_NormalAttack_02_Hit",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 5.0
                         }
                     },
                     "FGMDINMEPHL": -1.0
@@ -1011,21 +1011,21 @@
                             "target": "Caster",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "attachPointName": "RootNode",
                                         "ABIMPICHJNC": "Self"
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "NormalAttack_03",
                                     "attenuationTag": "Mona_Water_Damage",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "AS_Mona_NormalAttack_03",
+                                        "damagePercentage": "AS_Mona_NormalAttack_03",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -1063,11 +1063,11 @@
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_NormalAttack_03_Hit",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 5.0
                         }
                     },
                     "FGMDINMEPHL": -1.0
@@ -1091,9 +1091,9 @@
                     "born": {
                         "$type": "MBADLELNPBE",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.0
                         }
                     },
                     "gadgetID": 41041004,
@@ -1113,13 +1113,13 @@
                         }
                     ],
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.2000000476837158,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 1.2000000476837158,
+                            "z": 5.0
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "gadgetID": 41041004,
                     "campID": 1001,
@@ -1148,24 +1148,24 @@
                             "RotationDampTime": true,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": "Radius"
+                                    "radius": "Radius"
                                 },
                                 "attackInfo": {
                                     "attackTag": "NormalAttack_04",
                                     "attenuationTag": "Mona_Water_Damage",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "AS_Mona_NormalAttack_04",
+                                        "damagePercentage": "AS_Mona_NormalAttack_04",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -1279,18 +1279,18 @@
                         }
                     ],
                     "born": {
-                        "$type": "FNJGDOEMIIB",
+                        "$type": "ConfigBornByGlobalValue",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": -0.800000011920929
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": -0.800000011920929
                         },
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
-                        "FNMFBPGNEKD": "_ABILITY_MONA_PHANTOM_POS",
-                        "GPPNNKAOHCG": ""
+                        "positionKey": "_ABILITY_MONA_PHANTOM_POS",
+                        "directionKey": ""
                     },
                     "gadgetID": 41041005,
                     "campID": 1001,
@@ -1309,14 +1309,14 @@
                         }
                     ],
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 5.0
                         },
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         }
                     },
@@ -1366,18 +1366,18 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
-                                "FNMFBPGNEKD": "_ABILITY_MONA_PHANTOM_POS",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_ABILITY_MONA_PHANTOM_POS",
+                                "directionKey": ""
                             },
                             "gadgetID": 41041005,
                             "campID": 1001,
@@ -1403,13 +1403,13 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_Phantom_Rush_Hide",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         }
                     },
@@ -1419,13 +1419,13 @@
                     "$type": "SetGlobalPos",
                     "key": "_ABILITY_MONA_PHANTOM_POS",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         }
                     },
@@ -1590,11 +1590,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_Phantom_SkillObj_BeHit",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.399999976158142,
-                                    "INAIAJMIKEK": 0.44999998807907104
+                                    "x": 0.0,
+                                    "y": 1.399999976158142,
+                                    "z": 0.44999998807907104
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -1619,11 +1619,11 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONA_PHANTOM_THINK_TIMES",
                                     "ratio": 4.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "modifierName": "Phantom_Attack_Think"
@@ -1639,9 +1639,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_Phantom_ThinkAttack",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "GadgetPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "GadgetPos",
+                                "directionKey": ""
                             },
                             "scale": 0.699999988079071,
                             "FGMDINMEPHL": -1.0
@@ -1650,21 +1650,21 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "GadgetPos",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "GadgetPos",
+                                        "directionKey": ""
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Art",
                                     "attenuationTag": "Elemental_Art",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "AS_Mona_Phantom_ThinkDamageRate",
+                                        "damagePercentage": "AS_Mona_Phantom_ThinkDamageRate",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -1716,7 +1716,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1733,7 +1733,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1792,13 +1792,13 @@
                     "$type": "SetGlobalPos",
                     "key": "GadgetPos",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         }
                     }
@@ -1813,9 +1813,9 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_Phantom_Burst",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "GadgetPos",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "GadgetPos",
+                        "directionKey": ""
                     },
                     "scale": 0.75,
                     "FGMDINMEPHL": -1.0
@@ -1823,11 +1823,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "gadgetID": 41041007,
@@ -1860,16 +1860,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1891,11 +1891,11 @@
                             "$type": "GenerateElemBall",
                             "configID": 2018,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "value": 1.0,
@@ -1909,11 +1909,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2018,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1929,21 +1929,21 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "GadgetPos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "GadgetPos",
+                                "directionKey": ""
                             },
-                            "BMCPFKAEOJB": 5.0
+                            "radius": 5.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "AS_Mona_Phantom_LastDamageRate",
+                                "damagePercentage": "AS_Mona_Phantom_LastDamageRate",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 25.0,
@@ -2058,7 +2058,7 @@
                                     "LPPBALFPCII": 100.0
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ],
@@ -2078,15 +2078,15 @@
                                         "$type": "CHEAOJDOBEB",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.5,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.5,
+                                                "z": 0.0
                                             }
                                         },
                                         "height": 2.0,
-                                        "BMCPFKAEOJB": 1.0
+                                        "radius": 1.0
                                     },
                                     "PHFBEPGCKAA": true
                                 },
@@ -2096,32 +2096,32 @@
                                         "$type": "NAMPOMPBMHC",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": -5.730000019073486,
-                                                "EAOEAJIDBGD": 8.8100004196167,
-                                                "INAIAJMIKEK": -5.260000228881836
+                                                "x": -5.730000019073486,
+                                                "y": 8.8100004196167,
+                                                "z": -5.260000228881836
                                             },
-                                            "HOPPHMEKHLG": {
+                                            "direction": {
                                                 "$type": "IOPNFLFHGID",
                                                 "NHGDOBINMBK": {
-                                                    "JJJFPBPALGO": -50.0,
-                                                    "EAOEAJIDBGD": 20.299999237060547,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": -50.0,
+                                                    "y": 20.299999237060547,
+                                                    "z": 0.0
                                                 }
                                             }
                                         },
                                         "size": {
-                                            "JJJFPBPALGO": 5.0,
-                                            "EAOEAJIDBGD": 20.200000762939453,
-                                            "INAIAJMIKEK": 5.0
+                                            "x": 5.0,
+                                            "y": 20.200000762939453,
+                                            "z": 5.0
                                         }
                                     },
                                     "PHFBEPGCKAA": true
                                 },
                                 {
                                     "$type": "JAJHLALOAOP",
-                                    "HDJELDCCOCG": "LessAndEqual",
+                                    "compareType": "LessAndEqual",
                                     "CNIHOGLOABE": 0.5
                                 }
                             ],
@@ -2272,16 +2272,16 @@
                                 "$type": "CHEAOJDOBEB",
                                 "triggerType": "TriggerNoRepeat",
                                 "born": {
-                                    "$type": "ODKAAGHNCIP",
+                                    "$type": "ConfigBornBySelf",
                                     "offset": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 1.2000000476837158,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 1.2000000476837158,
+                                        "z": 0.0
                                     }
                                 },
                                 "height": 0.20000000298023224,
                                 "BAPAHIOBNCL": 30.0,
-                                "BMCPFKAEOJB": 0.800000011920929
+                                "radius": 0.800000011920929
                             }
                         }
                     ],
@@ -2346,19 +2346,19 @@
                             "RotationDampTime": true,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 10.0
+                                    "radius": 10.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "Elemental_Burst",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -2381,19 +2381,19 @@
                             "RotationDampTime": true,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 10.0
+                                    "radius": 10.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Burst_Trigger",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "strikeType": "Default",
@@ -2424,17 +2424,17 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar",
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -2514,9 +2514,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.30000001192092896,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "Fx_ChestNode"
                             },
@@ -2525,7 +2525,7 @@
                                 "attenuationTag": "Elemental_Burst",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "AS_Mona_StarChart_Bubble_RemovedDamage",
+                                    "damagePercentage": "AS_Mona_StarChart_Bubble_RemovedDamage",
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Water",
                                     "bonusCriticalHurt": 50.0,
@@ -2669,7 +2669,7 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "Is_Mona_StarChart_HurtUp",
                                     "ratio": 1.0
                                 }
@@ -2820,17 +2820,17 @@
                             ],
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Gadget",
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -2852,14 +2852,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "IOPNFLFHGID"
                                 }
                             },
@@ -2913,19 +2913,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "Elemental_Art_Extra",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": [
+                                        "damagePercentage": [
                                             "AS_Mona_Phantom_LastDamageRate",
                                             "AS_Mona_Talent_LiquidStrike_LiquidPhantom_DamageRate",
                                             "MUL"
@@ -2955,11 +2955,11 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_Phantom_SkillObj_BeHit",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.399999976158142,
-                                    "INAIAJMIKEK": 0.44999998807907104
+                                    "x": 0.0,
+                                    "y": 1.399999976158142,
+                                    "z": 0.44999998807907104
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -2981,7 +2981,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -2998,7 +2998,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -3078,7 +3078,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "Mona_Talent_ChargeEfficiencyToWaterAddHurt_Efficiency",
                                             "ratio": "FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY"
                                         }
@@ -3118,7 +3118,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "Mona_Talent_ChargeEfficiencyToWaterAddHurt_Efficiency",
                                             "ratio": "FIGHT_PROP_NONEXTRA_CHARGE_EFFICIENCY"
                                         }
@@ -3283,16 +3283,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -3339,13 +3339,13 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_ExtraAttack_Pre",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -3355,13 +3355,13 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Catalyst_Mona_ExtraAttack",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -3399,19 +3399,19 @@
                             "RotationDampTime": true,
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 3.0
+                                    "radius": 3.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "ExtraAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": [
+                                        "damagePercentage": [
                                             "AS_Mona_ExtraAttack_Damge",
                                             "AS_Mona_Talent_AutoExtraAttack_DamageRate",
                                             "MUL"
@@ -3671,24 +3671,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.5
+                                    "radius": 1.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 0.0,
@@ -4021,11 +4021,11 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "attackEvent": {
@@ -4033,22 +4033,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 0.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_1_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 25.0,
@@ -4083,7 +4083,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -4094,22 +4094,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 0.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.5
+                            "radius": 3.5
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_2_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 25.0,
@@ -4145,11 +4145,11 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Catalyst_FallAnthem_Strike_01_Water",
@@ -4159,7 +4159,7 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true

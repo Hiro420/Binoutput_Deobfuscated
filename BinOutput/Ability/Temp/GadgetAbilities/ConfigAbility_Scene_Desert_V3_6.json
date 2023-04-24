@@ -944,15 +944,15 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "IS_IN_FIELD",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Transformer_Moving",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -1196,7 +1196,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Had_Power",
                                     "ratio": 1.0
@@ -1325,7 +1325,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Had_Power",
                                     "ratio": 1.0
@@ -1534,7 +1534,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Had_Power",
                                     "ratio": 1.0
@@ -1663,7 +1663,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Had_Power",
                                     "ratio": 1.0
@@ -1928,11 +1928,11 @@
                                     "$type": "ApplyModifier",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "_Enemy_Nums",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "modifierName": "UNIQUE_Tower_Active_Progress"
@@ -1941,7 +1941,7 @@
                                     "$type": "RemoveModifier",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "_Enemy_Nums",
                                             "ratio": 0.0
@@ -1997,7 +1997,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -2022,7 +2022,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -2186,7 +2186,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -2202,7 +2202,7 @@
                                     "target": "Target",
                                     "bulletID": 70350473,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "BJCIHELGKLP": true
                                     },
                                     "lifeByOwnerIsAlive": true,
@@ -2301,9 +2301,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "BulletPoint"
@@ -2321,8 +2321,8 @@
                             "target": "Applier",
                             "key": "_LASER_TRACK_BORN_POS",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "DAPKLNIFPID": true
+                                "$type": "ConfigBornByTarget",
+                                "onGround": true
                             },
                             "setTarget": false
                         }
@@ -2375,12 +2375,12 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
@@ -2404,7 +2404,7 @@
                                 "hitImpulseType": "LV1",
                                 "overrideHitImpulse": {
                                     "hitLevel": "Light",
-                                    "IPHCEFBMJAJ": 0.0,
+                                    "hitImpulseX": 0.0,
                                     "hitImpulseY": 0.0
                                 },
                                 "hitHaltTimeScale": 0.05000000074505806
@@ -2432,11 +2432,11 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "SGV_DrumAxis",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "modifierName": "DrumBeatStart"
@@ -2451,11 +2451,11 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "SGV_Drum_HitRight",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -2480,11 +2480,11 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "SGV_Drum_HitWrong",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -2644,7 +2644,7 @@
                             "$type": "Predicated",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_in_beat_phase",
                                     "ratio": 1.0
@@ -2655,11 +2655,11 @@
                                     "$type": "ServerLuaCall",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "SGV_DrumAxis",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "luaCallType": "FromGroup",
@@ -2675,11 +2675,11 @@
                                     "$type": "ServerLuaCall",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "SGV_DrumAxis",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "luaCallType": "FromGroup",
@@ -2703,7 +2703,7 @@
                             "$type": "Predicated",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_in_beat_phase",
                                     "ratio": 1.0
@@ -2714,11 +2714,11 @@
                                     "$type": "ServerLuaCall",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "SGV_DrumAxis",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "luaCallType": "FromGroup",
@@ -2734,11 +2734,11 @@
                                     "$type": "ServerLuaCall",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "SGV_DrumAxis",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "luaCallType": "FromGroup",
@@ -3692,7 +3692,7 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "CanBeInteracted",
                             "ratio": 1.0
@@ -3767,7 +3767,7 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "CanBeInteracted",
                             "ratio": 1.0
@@ -3842,7 +3842,7 @@
                     ],
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "CanBeInteracted",
                             "ratio": 1.0
@@ -4416,7 +4416,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -4542,7 +4542,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -5137,10 +5137,10 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_HAS_FIRE_SEED",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -5202,11 +5202,11 @@
                             "target": "Team",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Team",
                                     "key": "_HAS_FIRE_SEED",
                                     "ratio": 1.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "modifierName": "UNIQUE_FIRE_SEED"
@@ -5495,21 +5495,21 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_ActivityVehicleMark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_Hovering_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -5587,15 +5587,15 @@
                             "target": "Self"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_ActivityVehicleMark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -5619,15 +5619,15 @@
                             "gadgetState": 201
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_ActivityVehicleMark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -5697,15 +5697,15 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_ActivityVehicleMark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -5790,15 +5790,15 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_ActivityVehicleMark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         },
                         {
                             "$type": "MCODPFDFBAF",
@@ -5868,7 +5868,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -5925,7 +5925,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -5946,7 +5946,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -6148,9 +6148,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "RootNode"
@@ -6173,9 +6173,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "RootNode"
@@ -6262,7 +6262,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -6279,7 +6279,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -6314,7 +6314,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Vehicle",
                                         "Avatar"
@@ -6335,11 +6335,11 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Emitter_Target_Num",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -6388,7 +6388,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Vehicle",
                                         "Avatar"
@@ -6413,11 +6413,11 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_EmitterBullet_Target_Num",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -6451,7 +6451,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Vehicle",
                                         "Avatar"
@@ -6476,11 +6476,11 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_EmitterBullet_Target_Num",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -6532,12 +6532,12 @@
                             "bulletID": 70310494,
                             "born": {
                                 "$type": "LMEODGDBOCI",
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 120.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "IABNJPGBAOH": true,
@@ -6560,12 +6560,12 @@
                             "bulletID": 70310494,
                             "born": {
                                 "$type": "LMEODGDBOCI",
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 90.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "IABNJPGBAOH": true,
@@ -6588,12 +6588,12 @@
                             "bulletID": 70310494,
                             "born": {
                                 "$type": "LMEODGDBOCI",
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 60.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 60.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "IABNJPGBAOH": true,
@@ -6633,19 +6633,19 @@
                     "RotationDampTime": true,
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.75,
+                                "damagePercentage": 0.75,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
@@ -6656,7 +6656,7 @@
                                 "hitImpulseType": "LV1",
                                 "overrideHitImpulse": {
                                     "hitLevel": "Light",
-                                    "IPHCEFBMJAJ": 0.0,
+                                    "hitImpulseX": 0.0,
                                     "hitImpulseY": 0.0
                                 },
                                 "hitHaltTimeScale": 0.05000000074505806
@@ -6669,7 +6669,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_AbyssEmitter_01_BulletHit",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -6946,15 +6946,15 @@
                             "target": "Self"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_Hovering_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -6979,21 +6979,21 @@
                             "gadgetState": 202
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Ablilty_Sorush_Has_Firefly_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "MoreThan"
+                            "compareType": "MoreThan"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_Hovering_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [
@@ -7049,7 +7049,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         }
@@ -7221,7 +7221,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Vehicle",
                                         "Avatar"
@@ -7312,21 +7312,21 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Vehicle"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Ablilty_Sorush_Has_Firefly_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "KillApplier_Handler"
@@ -7408,7 +7408,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_FIREFLY_PATHPOINT_BLINK_",
                                     "ratio": 1.0
                                 }
@@ -7457,7 +7457,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -7615,7 +7615,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_BeCrystal",
                                     "ratio": 0.0
@@ -7631,7 +7631,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -7639,7 +7639,7 @@
                                             "gadgetState": 201
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "_BeCrystal",
                                             "ratio": 1.0
@@ -7692,7 +7692,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -7709,13 +7709,13 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_BeCrystal",
                                     "ratio": 0.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -7800,7 +7800,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -7817,7 +7817,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -7906,9 +7906,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "LineLink",
@@ -8057,7 +8057,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -8109,7 +8109,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -8126,7 +8126,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -8230,9 +8230,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "LineLink",
@@ -8551,7 +8551,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -8568,7 +8568,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 },
@@ -8673,7 +8673,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_IS_GRASS_SHIELD",
                                     "ratio": 1.0
                                 }
@@ -8702,7 +8702,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_IS_GRASS_SHIELD",
                                     "ratio": 1.0
                                 }
@@ -8843,7 +8843,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -8865,7 +8865,7 @@
                                     "gadgetState": 201
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -9164,7 +9164,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -9181,12 +9181,12 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Ability_Sorush_Crown_Mark",
                                     "ratio": 1.0
                                 }
@@ -9333,7 +9333,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -9357,7 +9357,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -9390,7 +9390,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -9417,7 +9417,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -9751,7 +9751,7 @@
                                             "target": "Self"
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "Is_Crystallized",
                                             "ratio": 0.0
@@ -9769,7 +9769,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -9782,7 +9782,7 @@
                                             "gadgetState": 203
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "Is_Crystallized",
                                             "ratio": 1.0
@@ -9847,7 +9847,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -9864,7 +9864,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -9879,7 +9879,7 @@
                                     "$type": "ExecuteGadgetLua",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "Is_Crystallized",
                                             "ratio": 0.0
                                         }
@@ -10036,7 +10036,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -10053,7 +10053,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -10494,7 +10494,7 @@
                             "$type": "SendEffectTrigger",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "MCODPFDFBAF",
@@ -10521,7 +10521,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -10538,7 +10538,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 },
@@ -11255,19 +11255,19 @@
                             "$type": "ServerLuaCall",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Mark_Hit_Top",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Mark_Hit_Left",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_Mark_Hit_Right",
                                     "ratio": 1.0
@@ -11659,10 +11659,10 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "SGV_Window_Open",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "modifierName": "Window_Open"
@@ -11671,7 +11671,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "SGV_Window_Open",
                                     "ratio": 0.0
                                 }
@@ -11858,7 +11858,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "TargetOwner",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
@@ -12683,7 +12683,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -12708,11 +12708,11 @@
                             "$type": "ChangeGadgetState",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_CHARGEBAR_VALUE",
                                     "ratio": "ChargeMax",
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "MNIDCPKMMNN": 201
@@ -12804,7 +12804,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -12829,11 +12829,11 @@
                             "$type": "ChangeGadgetState",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_CHARGEBAR_VALUE",
                                     "ratio": "ChargeMax",
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "MNIDCPKMMNN": 201
@@ -13310,7 +13310,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -13461,9 +13461,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.5,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.5,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "attachPointName": "RootNode"
@@ -13554,7 +13554,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -13571,7 +13571,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -13609,7 +13609,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -13626,7 +13626,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -13677,7 +13677,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -13694,7 +13694,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -13750,7 +13750,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -13767,7 +13767,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -13823,7 +13823,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -13840,7 +13840,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -14460,7 +14460,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -14477,7 +14477,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -14679,7 +14679,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -14741,17 +14741,17 @@
                                     "$type": "IOHEKLMKBLL",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Team",
                                             "key": "SGV_IsInHookRegion",
                                             "ratio": "TEMP_REGION_MARK"
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Team",
                                             "key": "SGV_IsInHookRegion",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ]
                                 }
@@ -14969,7 +14969,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -14999,7 +14999,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -15024,7 +15024,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -15074,7 +15074,7 @@
                                     "$type": "HPJOHDHEPCG",
                                     "target": "Applier",
                                     "logic": "LesserOrEqual",
-                                    "HDJELDCCOCG": "XYZ",
+                                    "compareType": "XYZ",
                                     "ratio": 6.0
                                 }
                             ],
@@ -15096,7 +15096,7 @@
                                             "$type": "HPJOHDHEPCG",
                                             "target": "Applier",
                                             "logic": "LesserOrEqual",
-                                            "HDJELDCCOCG": "XYZ",
+                                            "compareType": "XYZ",
                                             "ratio": 12.0
                                         }
                                     ],
@@ -15118,7 +15118,7 @@
                                                     "$type": "HPJOHDHEPCG",
                                                     "target": "Applier",
                                                     "logic": "LesserOrEqual",
-                                                    "HDJELDCCOCG": "XYZ",
+                                                    "compareType": "XYZ",
                                                     "ratio": 18.0
                                                 }
                                             ],
@@ -15140,7 +15140,7 @@
                                                             "$type": "HPJOHDHEPCG",
                                                             "target": "Applier",
                                                             "logic": "LesserOrEqual",
-                                                            "HDJELDCCOCG": "XYZ",
+                                                            "compareType": "XYZ",
                                                             "ratio": 24.0
                                                         }
                                                     ],
@@ -15217,7 +15217,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 1.0,
+                            "damagePercentage": 1.0,
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Fire",
                             "bonusCriticalHurt": 10.0,
@@ -15816,9 +15816,9 @@
                             "$type": "TriggerBullet",
                             "bulletID": 70350481,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "GV_ShootPos",
-                                "GPPNNKAOHCG": "GV_ShootDir"
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "GV_ShootPos",
+                                "directionKey": "GV_ShootDir"
                             }
                         },
                         {
@@ -15981,7 +15981,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_IS_ROBOT_CORE",
                             "ratio": 1.0
                         }
@@ -15991,7 +15991,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_LaserCannon_Explode",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
                             "scale": 1.5,
                             "FGMDINMEPHL": -1.0
@@ -16002,7 +16002,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_LaserCannon_Explode_01",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
                             "scale": 1.5,
                             "FGMDINMEPHL": -1.0
@@ -16013,19 +16013,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "LaserCannonBullet",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.0,
+                                "damagePercentage": 1.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 10.0,
                                 "ignoreAttackerProperty": true,
@@ -16040,7 +16040,7 @@
                                 "hitImpulseType": "LV4",
                                 "overrideHitImpulse": {
                                     "hitLevel": "Air",
-                                    "IPHCEFBMJAJ": 1500.0,
+                                    "hitImpulseX": 1500.0,
                                     "hitImpulseY": 1000.0
                                 },
                                 "hitHaltTimeScale": 0.009999999776482582
@@ -16149,7 +16149,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -16170,7 +16170,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -16360,7 +16360,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -16381,7 +16381,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -16565,7 +16565,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -16586,7 +16586,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -16687,7 +16687,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -16708,7 +16708,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -16946,7 +16946,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -17023,7 +17023,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "LCCMCDGDKGI",
@@ -17044,7 +17044,7 @@
                                     "target": "Self"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Sorush_isHost_Mark",
                                     "ratio": 1.0
                                 }
@@ -17143,7 +17143,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -17373,7 +17373,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         }
@@ -17449,7 +17449,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         }
@@ -17525,7 +17525,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         }
@@ -17601,7 +17601,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Sorush_isHost_Mark",
                             "ratio": 1.0
                         }
@@ -18005,7 +18005,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Is_HaloBooster_01",
                             "ratio": 1.0
                         }
@@ -18017,7 +18017,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Is_HaloDoor_01",
                             "ratio": 1.0
                         }
@@ -18029,7 +18029,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Is_HaloPatform_01",
                             "ratio": 1.0
                         }
@@ -18670,7 +18670,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "LIGHT_STATE",
                             "ratio": 1.0
                         }
@@ -18680,7 +18680,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "IS_MOVING",
                                     "ratio": 0.0
                                 }
@@ -18690,7 +18690,7 @@
                                     "$type": "Predicated",
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "IS_IN_FIELD",
                                             "ratio": 1.0
                                         }
@@ -18701,9 +18701,9 @@
                                             "target": "CurLocalAvatar",
                                             "key": "_MovingStatue_To_Avatar_Dir",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "$type": "ConfigBornBySelf",
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "HDCKGANABOM"
                                                 },
                                                 "IABNJPGBAOH": true
@@ -18714,12 +18714,12 @@
                                             "$type": "Predicated",
                                             "targetPredicates": [
                                                 {
-                                                    "$type": "OLLFFMPEOKL",
+                                                    "$type": "ByTargetGlobalValue",
                                                     "target": "Self",
                                                     "key": "_MovingStatue_To_Avatar_Dir_0",
                                                     "ratio": -0.7071067690849304,
                                                     "maxValue": 0.7071067690849304,
-                                                    "HDJELDCCOCG": "Between"
+                                                    "compareType": "Between"
                                                 }
                                             ],
                                             "successActions": [
@@ -18727,10 +18727,10 @@
                                                     "$type": "Predicated",
                                                     "targetPredicates": [
                                                         {
-                                                            "$type": "OLLFFMPEOKL",
+                                                            "$type": "ByTargetGlobalValue",
                                                             "key": "_MovingStatue_To_Avatar_Dir_2",
                                                             "ratio": 0.0,
-                                                            "HDJELDCCOCG": "MoreThan"
+                                                            "compareType": "MoreThan"
                                                         }
                                                     ],
                                                     "successActions": [
@@ -18758,10 +18758,10 @@
                                                     "$type": "Predicated",
                                                     "targetPredicates": [
                                                         {
-                                                            "$type": "OLLFFMPEOKL",
+                                                            "$type": "ByTargetGlobalValue",
                                                             "key": "_MovingStatue_To_Avatar_Dir_0",
                                                             "ratio": 0.0,
-                                                            "HDJELDCCOCG": "MoreThan"
+                                                            "compareType": "MoreThan"
                                                         }
                                                     ],
                                                     "successActions": [
@@ -19291,7 +19291,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "LIGHT_STATE",
                             "ratio": 1.0
                         }
@@ -19301,7 +19301,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "IS_MOVING",
                                     "ratio": 0.0
                                 }
@@ -19311,7 +19311,7 @@
                                     "$type": "Predicated",
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "IS_IN_FIELD",
                                             "ratio": 1.0
                                         }
@@ -19322,9 +19322,9 @@
                                             "target": "CurLocalAvatar",
                                             "key": "_MovingStatue_To_Avatar_Dir",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP",
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "$type": "ConfigBornBySelf",
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "HDCKGANABOM"
                                                 },
                                                 "IABNJPGBAOH": true
@@ -19335,12 +19335,12 @@
                                             "$type": "Predicated",
                                             "targetPredicates": [
                                                 {
-                                                    "$type": "OLLFFMPEOKL",
+                                                    "$type": "ByTargetGlobalValue",
                                                     "target": "Self",
                                                     "key": "_MovingStatue_To_Avatar_Dir_0",
                                                     "ratio": -0.7071067690849304,
                                                     "maxValue": 0.7071067690849304,
-                                                    "HDJELDCCOCG": "Between"
+                                                    "compareType": "Between"
                                                 }
                                             ],
                                             "successActions": [
@@ -19348,10 +19348,10 @@
                                                     "$type": "Predicated",
                                                     "targetPredicates": [
                                                         {
-                                                            "$type": "OLLFFMPEOKL",
+                                                            "$type": "ByTargetGlobalValue",
                                                             "key": "_MovingStatue_To_Avatar_Dir_2",
                                                             "ratio": 0.0,
-                                                            "HDJELDCCOCG": "MoreThan"
+                                                            "compareType": "MoreThan"
                                                         }
                                                     ],
                                                     "successActions": [
@@ -19379,10 +19379,10 @@
                                                     "$type": "Predicated",
                                                     "targetPredicates": [
                                                         {
-                                                            "$type": "OLLFFMPEOKL",
+                                                            "$type": "ByTargetGlobalValue",
                                                             "key": "_MovingStatue_To_Avatar_Dir_0",
                                                             "ratio": 0.0,
-                                                            "HDJELDCCOCG": "MoreThan"
+                                                            "compareType": "MoreThan"
                                                         }
                                                     ],
                                                     "successActions": [
@@ -20426,7 +20426,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -20442,9 +20442,9 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_CloudMagicSealCore_01_LightningTsurumi",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "ThunderPos",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "ThunderPos",
+                                        "directionKey": ""
                                     },
                                     "FGMDINMEPHL": -1.0
                                 },
@@ -20453,9 +20453,9 @@
                                     "ownerIs": "Caster",
                                     "propOwnerIs": "Caster",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "ThunderPos",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "ThunderPos",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 70350499
                                 }
@@ -20478,7 +20478,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -20494,9 +20494,9 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_CloudMagicSealCore_01_LightningTsurumi",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "ThunderPos",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "ThunderPos",
+                                        "directionKey": ""
                                     },
                                     "FGMDINMEPHL": -1.0
                                 },
@@ -20505,9 +20505,9 @@
                                     "ownerIs": "Caster",
                                     "propOwnerIs": "Caster",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "ThunderPos",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "ThunderPos",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 70350499
                                 }
@@ -20530,7 +20530,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -20546,10 +20546,10 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_CloudMagicSealCore_01_LightningTsurumi",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "DAPKLNIFPID": true,
-                                        "FNMFBPGNEKD": "ThunderPos",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "onGround": true,
+                                        "positionKey": "ThunderPos",
+                                        "directionKey": ""
                                     },
                                     "FGMDINMEPHL": -1.0
                                 },
@@ -20558,14 +20558,14 @@
                                     "ownerIs": "Caster",
                                     "propOwnerIs": "Caster",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 10.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 10.0,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "ThunderPos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "ThunderPos",
+                                        "directionKey": ""
                                     },
                                     "gadgetID": 70350499
                                 }
@@ -20583,7 +20583,7 @@
                             "target": "Applier",
                             "key": "ThunderPos",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 0.0,
@@ -20644,7 +20644,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_CloudMagicSealCore_01_LightningHit",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -20652,24 +20652,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": "Thunder_ElementDurability",
@@ -20687,7 +20687,7 @@
                                 "hitImpulseType": "LV3",
                                 "overrideHitImpulse": {
                                     "hitLevel": "Heavy",
-                                    "IPHCEFBMJAJ": 50.0,
+                                    "hitImpulseX": 50.0,
                                     "hitImpulseY": 800.0
                                 },
                                 "hitHaltTimeScale": 0.05000000074505806
@@ -20723,11 +20723,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_RemnantsCrystal_01",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true
                             },
@@ -20792,11 +20792,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_RemnantsCrystal_02",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true
                             },
@@ -20861,11 +20861,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_SceneObj_RemnantsCrystal_03",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true
                             },
@@ -20925,7 +20925,7 @@
                     "campTargetType": "All",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -21155,7 +21155,7 @@
                     },
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]

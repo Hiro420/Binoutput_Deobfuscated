@@ -385,11 +385,11 @@
                             "$type": "SetAISkillCDAvailableNow",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_HASSHIELD_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "skillIDs": [
@@ -839,14 +839,14 @@
                     "$type": "SetGlobalPos",
                     "key": "_MONSTER_SHOUGUN_BORN_POS_",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true,
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -872,15 +872,15 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
+                        "$type": "ConfigBornByGlobalValue",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true,
-                        "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                        "GPPNNKAOHCG": ""
+                        "onGround": true,
+                        "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                        "directionKey": ""
                     },
                     "gadgetID": 42906124,
                     "campID": 4001
@@ -1009,7 +1009,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -1272,9 +1272,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -1.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -1853,14 +1853,14 @@
                             "$type": "ShowReminder",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_HASREVIVED_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_QUEST01_",
                                     "ratio": 1.0
@@ -1872,14 +1872,14 @@
                             "$type": "ShowReminder",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_HASREVIVED_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_QUEST02_",
                                     "ratio": 1.0
@@ -2173,7 +2173,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_WEEKLY_",
                                     "ratio": 1.0
@@ -2216,11 +2216,11 @@
                             "$type": "WindZoneMixin",
                             "shapeName": "CircleR7_5H2",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "PLJPAAFMNAD": -7.5,
@@ -2229,7 +2229,7 @@
                             "targetType": "Enemy",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -2243,19 +2243,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 7.0
+                                    "radius": 7.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
@@ -2392,7 +2392,7 @@
                             "$type": "SetAISkillCDAvailableNow",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_INITIALFORPOLE_",
                                     "ratio": 1.0
@@ -2406,7 +2406,7 @@
                             "$type": "SetAISkillCDAvailableNow",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_INITIALFORTACHI_",
                                     "ratio": 1.0
@@ -2527,8 +2527,8 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Mitakenarukami_Weak_Hit",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 },
                                 "BJCIHELGKLP": true
@@ -2745,7 +2745,7 @@
                     "$type": "SetAISkillCDAvailableNow",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_INITIALFORPOLE_",
                             "ratio": 1.0
@@ -2759,7 +2759,7 @@
                     "$type": "SetAISkillCDAvailableNow",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_INITIALFORTACHI_",
                             "ratio": 1.0
@@ -2802,7 +2802,7 @@
                             "$type": "DoWatcherSystemAction",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_WATCHER_82126_ElectricWave_Hit_Succeed_",
                                     "ratio": 1.0
@@ -2878,14 +2878,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 6.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 6.0
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906125,
                             "campID": 4001
@@ -2893,14 +2893,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 5.25,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -3.0
+                                    "x": 5.25,
+                                    "y": 0.0,
+                                    "z": -3.0
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906126,
                             "campID": 4001
@@ -2908,14 +2908,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": -5.25,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -3.0
+                                    "x": -5.25,
+                                    "y": 0.0,
+                                    "z": -3.0
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906127,
                             "campID": 4001
@@ -3104,11 +3104,11 @@
                             "$type": "WindZoneMixin",
                             "shapeName": "CircleR5H2",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "PLJPAAFMNAD": -5.0,
@@ -3117,7 +3117,7 @@
                             "targetType": "Enemy",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3266,22 +3266,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 3.0,
-                                    "BMCPFKAEOJB": 4.5
+                                    "radius": 4.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.25,
+                                        "damagePercentage": 0.25,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 50.0,
@@ -3374,7 +3374,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42906128,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         }
                     ]
@@ -3414,7 +3414,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42906129,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         }
                     ]
@@ -3448,7 +3448,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3479,7 +3479,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.5,
+                                    "damagePercentage": 0.5,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 50.0,
@@ -3531,7 +3531,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3562,7 +3562,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.5,
+                                    "damagePercentage": 0.5,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 50.0,
@@ -3629,11 +3629,11 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "gadgetID": 42906119,
@@ -3803,7 +3803,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ISINSAKURASHIELD_",
                                     "ratio": 1.0
@@ -3853,7 +3853,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ISINSAKURASHIELD_",
                                     "ratio": 1.0
@@ -3900,11 +3900,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 5.0
                         }
                     },
                     "gadgetID": 42906115,
@@ -4021,7 +4021,7 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ISINSAKURASHIELD_",
                                     "ratio": 1.0
                                 }
@@ -4054,10 +4054,10 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ISINSAKURASHIELD_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -4132,9 +4132,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -4164,9 +4164,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -4217,19 +4217,19 @@
                             "$type": "DamageByAttackValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_BURSTATK02_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -4238,7 +4238,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.6660000085830688,
+                                    "damagePercentage": 0.6660000085830688,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 50.0,
@@ -4255,7 +4255,7 @@
                             "$type": "DamageByAttackValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_BURSTATK02_TAG_",
                                     "ratio": 1.0
@@ -4266,7 +4266,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.0,
+                                    "damagePercentage": 0.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 100.0,
                                     "strikeType": "Blunt",
@@ -4283,7 +4283,7 @@
                             "$type": "LoseHP",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_BURSTATK02_TAG_",
                                     "ratio": 1.0
@@ -4298,9 +4298,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -4342,19 +4342,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
@@ -4429,13 +4429,13 @@
                 {
                     "$type": "TryFindBlinkPointByBorn",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": -37.25
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": -37.25
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "hitSceneTest": false,
                     "limitY": 2.5
@@ -4560,7 +4560,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
@@ -4638,7 +4638,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
@@ -4694,11 +4694,11 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 5.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 5.0
                                 }
                             },
                             "gadgetID": 42906123,
@@ -4727,7 +4727,7 @@
                     "$type": "ApplyModifier",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Owner",
                             "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_WEEKLY_",
                             "ratio": 1.0
@@ -4739,7 +4739,7 @@
                     "$type": "ApplyModifier",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Owner",
                             "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_QUEST02_",
                             "ratio": 1.0
@@ -4940,7 +4940,7 @@
                     "bulletID": 42906101,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "DOCDLGLJKND",
                             "JPOJHLOIKLG": 2.5,
                             "MPNLAACKHNA": 2.5,
@@ -4978,15 +4978,15 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Mitakenarukami_MultiAtkF_Atk03_VajraChargeBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "z": 1.0
                                     }
                                 },
-                                "FNMFBPGNEKD": "_VAJRAPOS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_VAJRAPOS_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -4996,15 +4996,15 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Mitakenarukami_MultiAtkF_Atk03_VajraChargeAS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "z": 1.0
                                     }
                                 },
-                                "FNMFBPGNEKD": "_VAJRAPOS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_VAJRAPOS_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -5015,19 +5015,19 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_VAJRAPOS_",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_VAJRAPOS_",
+                                        "directionKey": ""
                                     },
                                     "height": 2.0,
-                                    "BMCPFKAEOJB": 7.0
+                                    "radius": 7.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.3330000042915344,
+                                        "damagePercentage": 0.3330000042915344,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 100.0,
@@ -5069,13 +5069,13 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "HOPPHMEKHLG": {
-                            "$type": "BIMJJILMODA",
-                            "GPPNNKAOHCG": "_VAJRADIR_"
+                        "$type": "ConfigBornByGlobalValue",
+                        "direction": {
+                            "$type": "ConfigDirectionByGlobalValue",
+                            "directionKey": "_VAJRADIR_"
                         },
-                        "FNMFBPGNEKD": "_VAJRAPOS_",
-                        "GPPNNKAOHCG": ""
+                        "positionKey": "_VAJRAPOS_",
+                        "directionKey": ""
                     },
                     "gadgetID": 42906102,
                     "campID": 4001
@@ -5091,19 +5091,19 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_VAJRAPOS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_VAJRAPOS_",
+                                "directionKey": ""
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 4.5
+                            "radius": 4.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.16599999368190765,
+                                "damagePercentage": 0.16599999368190765,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -5134,15 +5134,15 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Mitakenarukami_MultiAtkF_Atk03_VajraBulletExplode",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "HOPPHMEKHLG": {
+                        "$type": "ConfigBornByGlobalValue",
+                        "direction": {
                             "$type": "AKNHOGLMAAH",
                             "eularAngles": {
                                 "z": 1.0
                             }
                         },
-                        "FNMFBPGNEKD": "_VAJRAPOS_",
-                        "GPPNNKAOHCG": ""
+                        "positionKey": "_VAJRAPOS_",
+                        "directionKey": ""
                     },
                     "FGMDINMEPHL": -1.0
                 }
@@ -5178,7 +5178,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Level"
                             ]
@@ -5190,13 +5190,13 @@
                             "target": "Owner",
                             "key": "_VAJRAPOS_",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             }
                         },
                         {
@@ -5204,11 +5204,11 @@
                             "target": "Owner",
                             "key": "_VAJRADIR_",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             }
                         },
@@ -5267,31 +5267,31 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "JADOBJDPOLJ",
                                             "NHGDOBINMBK": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 60.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 60.0,
+                                                "z": 0.0
                                             }
                                         }
                                     },
                                     "height": 4.0,
                                     "BAPAHIOBNCL": 240.0,
-                                    "BMCPFKAEOJB": 8.0
+                                    "radius": 8.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.6660000085830688,
+                                        "damagePercentage": 0.6660000085830688,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -5334,24 +5334,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.5,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 8.0
+                                            "x": 0.5,
+                                            "y": 0.0,
+                                            "z": 8.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.25
+                                    "radius": 1.25
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.08299999684095383,
+                                        "damagePercentage": 0.08299999684095383,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -5384,24 +5384,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.5,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 7.25
+                                            "x": 2.5,
+                                            "y": 0.0,
+                                            "z": 7.25
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.25
+                                    "radius": 1.25
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.08299999684095383,
+                                        "damagePercentage": 0.08299999684095383,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -5434,24 +5434,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 5.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 6.5
+                                            "x": 5.0,
+                                            "y": 0.0,
+                                            "z": 6.5
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.25
+                                    "radius": 1.25
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.08299999684095383,
+                                        "damagePercentage": 0.08299999684095383,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -5484,24 +5484,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 6.5,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 4.5
+                                            "x": 6.5,
+                                            "y": 0.0,
+                                            "z": 4.5
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.25
+                                    "radius": 1.25
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.08299999684095383,
+                                        "damagePercentage": 0.08299999684095383,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -5538,12 +5538,12 @@
                     "bulletID": 42906101,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "DOCDLGLJKND",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             },
                             "JPOJHLOIKLG": 2.5,
                             "MPNLAACKHNA": 2.5,
@@ -5576,18 +5576,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42906106,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 1.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 3.0
+                            "x": 1.0,
+                            "y": 0.0,
+                            "z": 3.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5596,18 +5596,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42906106,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 3.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 3.0
+                            "x": 3.0,
+                            "y": 0.0,
+                            "z": 3.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 30.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 30.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5616,18 +5616,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42906106,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": -1.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 3.0
+                            "x": -1.0,
+                            "y": 0.0,
+                            "z": 3.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": -30.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": -30.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5636,18 +5636,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42906106,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 2.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 3.0
+                            "x": 2.0,
+                            "y": 0.0,
+                            "z": 3.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 15.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 15.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5656,18 +5656,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42906106,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 3.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 3.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": -15.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": -15.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5679,17 +5679,17 @@
                             "$type": "NAMPOMPBMHC",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 4.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 4.0,
+                                    "z": 0.0
                                 }
                             },
                             "size": {
-                                "JJJFPBPALGO": 3.0,
-                                "EAOEAJIDBGD": 8.0,
-                                "INAIAJMIKEK": 6.0
+                                "x": 3.0,
+                                "y": 8.0,
+                                "z": 6.0
                             }
                         },
                         "attackInfo": {
@@ -5697,7 +5697,7 @@
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.25,
+                                "damagePercentage": 0.25,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -5735,18 +5735,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42906107,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.25,
-                            "INAIAJMIKEK": 5.0
+                            "x": 0.0,
+                            "y": 1.25,
+                            "z": 5.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5758,23 +5758,23 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 1.0
                                 }
                             },
                             "height": 3.0,
                             "BAPAHIOBNCL": 150.0,
-                            "BMCPFKAEOJB": 6.5
+                            "radius": 6.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.25,
+                                "damagePercentage": 0.25,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -5831,19 +5831,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.25,
+                                "damagePercentage": 0.25,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -5890,19 +5890,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -5965,24 +5965,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.08299999684095383,
+                                        "damagePercentage": 0.08299999684095383,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -6014,17 +6014,17 @@
                             "$type": "NAMPOMPBMHC",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 4.0,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": 4.0,
+                                    "z": 1.0
                                 }
                             },
                             "size": {
-                                "JJJFPBPALGO": 15.0,
-                                "EAOEAJIDBGD": 8.0,
-                                "INAIAJMIKEK": 26.5
+                                "x": 15.0,
+                                "y": 8.0,
+                                "z": 26.5
                             }
                         },
                         "attackInfo": {
@@ -6032,7 +6032,7 @@
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.1660000085830688,
+                                "damagePercentage": 1.1660000085830688,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -6106,11 +6106,11 @@
                             "target": "Team",
                             "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_GRABPALMPOS_",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "setTarget": false
@@ -6134,24 +6134,24 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_MONSTER_SHOUGUN_MITAKENARUKAMI_GRABPALMPOS_",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_MONSTER_SHOUGUN_MITAKENARUKAMI_GRABPALMPOS_",
+                                        "directionKey": ""
                                     },
                                     "height": 5.0,
-                                    "BMCPFKAEOJB": 4.25
+                                    "radius": 4.25
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.5,
+                                        "damagePercentage": 0.5,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 50.0,
@@ -6190,13 +6190,13 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42906103,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 4.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 4.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             }
                         }
                     ],
@@ -6227,19 +6227,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.08299999684095383,
+                                "damagePercentage": 0.08299999684095383,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 25.0,
@@ -6278,13 +6278,13 @@
                             "target": "Owner",
                             "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_GRABHANDPOS_",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             }
                         },
                         {
@@ -6302,14 +6302,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_MITAKENARUKAMI_GRABHANDPOS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_MITAKENARUKAMI_GRABHANDPOS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906104,
                             "campID": 4001
@@ -6344,19 +6344,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 4.5
+                                    "radius": 4.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.16599999368190765,
+                                        "damagePercentage": 0.16599999368190765,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -6368,7 +6368,7 @@
                                         "hitImpulseType": "",
                                         "overrideHitImpulse": {
                                             "hitLevel": "Air",
-                                            "IPHCEFBMJAJ": 0.0,
+                                            "hitImpulseX": 0.0,
                                             "hitImpulseY": 800.0
                                         },
                                         "hitHaltTimeScale": 0.05000000074505806
@@ -6392,19 +6392,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 6.25
+                                    "radius": 6.25
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.3330000042915344,
+                                        "damagePercentage": 0.3330000042915344,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -6512,7 +6512,7 @@
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_RUSHPOS_",
                                     "born": {
                                         "$type": "MGDGOLHGFAP",
-                                        "DAPKLNIFPID": true,
+                                        "onGround": true,
                                         "GKAPKIFBACA": -6.0,
                                         "DCKBDJJECJH": 7.5,
                                         "JPJIEDIHGFF": 27.5
@@ -6525,11 +6525,11 @@
                                     "$type": "SetGlobalPos",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_RUSHPOS_",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 7.5
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 7.5
                                         }
                                     }
                                 }
@@ -6538,17 +6538,17 @@
                         {
                             "$type": "TurnDirectionToPos",
                             "toPos": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_MITAKENARUKAMI_RUSHPOS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_MONSTER_SHOUGUN_MITAKENARUKAMI_RUSHPOS_",
+                                "directionKey": ""
                             }
                         },
                         {
                             "$type": "FixedMonsterRushMove",
                             "toPos": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_MITAKENARUKAMI_RUSHPOS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_MONSTER_SHOUGUN_MITAKENARUKAMI_RUSHPOS_",
+                                "directionKey": ""
                             },
                             "timeRange": 0.20000000298023224,
                             "animatorStateIDs": [
@@ -6786,20 +6786,20 @@
                 {
                     "$type": "TryFindBlinkPointByBorn",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
+                        "$type": "ConfigBornByGlobalValue",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IGAGDFFFGAO": {
                             "$type": "FHDJJGOONEI",
                             "OKDPGGJGGCJ": 0.0,
                             "CPOKKADJBFH": 1.0
                         },
-                        "DAPKLNIFPID": true,
-                        "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                        "GPPNNKAOHCG": ""
+                        "onGround": true,
+                        "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                        "directionKey": ""
                     },
                     "hitSceneTest": false,
                     "limitY": 2.5
@@ -6816,26 +6816,26 @@
                     "$type": "TurnDirectionToPos",
                     "target": "SelfAttackTarget",
                     "toPos": {
-                        "$type": "GJGFFJAGIDF"
+                        "$type": "ConfigBornByTarget"
                     }
                 },
                 {
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
@@ -6854,11 +6854,11 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Mitakenarukami_Blink_AS",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "FGMDINMEPHL": -1.0
@@ -6937,7 +6937,7 @@
                             "$type": "TurnDirectionToPos",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
@@ -7042,7 +7042,7 @@
                             "target": "SelfAttackTarget",
                             "born": {
                                 "$type": "PPIKALLAEKG",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "KGKDFLMGEOL": 0.6499999761581421
                             },
                             "gadgetID": 42906110,
@@ -7063,7 +7063,7 @@
                             "target": "SelfAttackTarget",
                             "born": {
                                 "$type": "PPIKALLAEKG",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "KGKDFLMGEOL": 0.6499999761581421
                             },
                             "gadgetID": 42906110,
@@ -7087,20 +7087,20 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 7.5,
                                     "CPOKKADJBFH": 22.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906110,
                             "campID": 4001
@@ -7115,20 +7115,20 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 7.5,
                                     "CPOKKADJBFH": 22.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906110,
                             "campID": 4001
@@ -7203,7 +7203,7 @@
                             "target": "SelfAttackTarget",
                             "born": {
                                 "$type": "PPIKALLAEKG",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "KGKDFLMGEOL": 0.6499999761581421
                             },
                             "gadgetID": 42906114,
@@ -7224,7 +7224,7 @@
                             "target": "SelfAttackTarget",
                             "born": {
                                 "$type": "PPIKALLAEKG",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "KGKDFLMGEOL": 0.6499999761581421
                             },
                             "gadgetID": 42906114,
@@ -7248,20 +7248,20 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 7.5,
                                     "CPOKKADJBFH": 22.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906114,
                             "campID": 4001
@@ -7276,20 +7276,20 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 7.5,
                                     "CPOKKADJBFH": 22.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906114,
                             "campID": 4001
@@ -7342,19 +7342,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 2.5
+                                    "radius": 2.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.16599999368190765,
+                                        "damagePercentage": 0.16599999368190765,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -7414,24 +7414,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 1.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 1.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0560000017285347,
+                                        "damagePercentage": 0.0560000017285347,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -7551,11 +7551,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.25,
-                            "INAIAJMIKEK": 7.5
+                            "x": 0.0,
+                            "y": 1.25,
+                            "z": 7.5
                         }
                     },
                     "gadgetID": 42906109,
@@ -7689,9 +7689,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -7700,7 +7700,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 1.1660000085830688,
+                                    "damagePercentage": 1.1660000085830688,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Electric",
                                     "bonusCriticalHurt": 50.0,
@@ -7761,13 +7761,13 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 1.75
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 1.75
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ"
                                 }
                             },
@@ -7778,18 +7778,18 @@
                             "$type": "SetGlobalPos",
                             "key": "_SHOUGUN_TACHI_ECHO_POS_01_",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 16.5
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 16.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "setTarget": false
                         },
@@ -7797,18 +7797,18 @@
                             "$type": "SetGlobalPos",
                             "key": "_SHOUGUN_TACHI_ECHO_POS_02_",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -16.5
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -16.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "setTarget": false
                         },
@@ -7816,18 +7816,18 @@
                             "$type": "SetGlobalPos",
                             "key": "_SHOUGUN_TACHI_ECHO_POS_03_",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 16.5,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 16.5,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "setTarget": false
                         },
@@ -7835,33 +7835,33 @@
                             "$type": "SetGlobalPos",
                             "key": "_SHOUGUN_TACHI_ECHO_POS_04_",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": -16.5,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": -16.5,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 },
-                                "FNMFBPGNEKD": "_MONSTER_SHOUGUN_BORN_POS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_MONSTER_SHOUGUN_BORN_POS_",
+                                "directionKey": ""
                             },
                             "setTarget": false
                         },
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906120,
                             "campID": 4001
@@ -7869,15 +7869,15 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906120,
                             "campID": 4001
@@ -7885,15 +7885,15 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906120,
                             "campID": 4001
@@ -7901,15 +7901,15 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                "directionKey": ""
                             },
                             "gadgetID": 42906120,
                             "campID": 4001
@@ -8004,19 +8004,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
                                         "$type": "IOHLPEPEKAP"
                                     },
-                                    "BMCPFKAEOJB": 1.5
+                                    "radius": 1.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
@@ -8035,7 +8035,7 @@
                             "$type": "TurnDirectionToPos",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
@@ -8044,9 +8044,9 @@
                             "born": {
                                 "$type": "IOHLPEPEKAP",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -8058,7 +8058,7 @@
                             "$type": "TurnDirectionToPos",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
@@ -8138,13 +8138,13 @@
                                     "target": "Target",
                                     "bulletID": 42906122,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "IHINHODOMIN"
                                         }
                                     },
@@ -8165,18 +8165,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8184,18 +8184,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8203,18 +8203,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8222,18 +8222,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906121,
                                             "campID": 4001
@@ -8241,15 +8241,15 @@
                                         {
                                             "$type": "TryFindBlinkPointByBorn",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                                "GPPNNKAOHCG": ""
+                                                "onGround": true,
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                                "directionKey": ""
                                             },
                                             "hitSceneTest": false,
                                             "limitY": 2.5
@@ -8259,18 +8259,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8278,18 +8278,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8297,18 +8297,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906121,
                                             "campID": 4001
@@ -8316,18 +8316,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8335,15 +8335,15 @@
                                         {
                                             "$type": "TryFindBlinkPointByBorn",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                                "GPPNNKAOHCG": ""
+                                                "onGround": true,
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                                "directionKey": ""
                                             },
                                             "hitSceneTest": false,
                                             "limitY": 2.5
@@ -8359,18 +8359,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8378,18 +8378,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906121,
                                             "campID": 4001
@@ -8397,18 +8397,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8416,18 +8416,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8435,15 +8435,15 @@
                                         {
                                             "$type": "TryFindBlinkPointByBorn",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                                "GPPNNKAOHCG": ""
+                                                "onGround": true,
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                                "directionKey": ""
                                             },
                                             "hitSceneTest": false,
                                             "limitY": 2.5
@@ -8453,18 +8453,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906121,
                                             "campID": 4001
@@ -8472,18 +8472,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8491,18 +8491,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8510,18 +8510,18 @@
                                         {
                                             "$type": "CreateGadget",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "HOPPHMEKHLG": {
+                                                "onGround": true,
+                                                "direction": {
                                                     "$type": "IHINHODOMIN"
                                                 },
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                                "GPPNNKAOHCG": ""
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                                "directionKey": ""
                                             },
                                             "gadgetID": 42906111,
                                             "campID": 4001
@@ -8529,15 +8529,15 @@
                                         {
                                             "$type": "TryFindBlinkPointByBorn",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                                "GPPNNKAOHCG": ""
+                                                "onGround": true,
+                                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                                "directionKey": ""
                                             },
                                             "hitSceneTest": false,
                                             "limitY": 2.5
@@ -8557,9 +8557,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Tachi_EchoMist_EchoBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_01_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_01_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -8567,9 +8567,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Tachi_EchoMist_EchoBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_02_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_02_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -8577,9 +8577,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Tachi_EchoMist_EchoBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_03_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_03_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -8587,9 +8587,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Tachi_EchoMist_EchoBS",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_POS_04_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_POS_04_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -8665,12 +8665,12 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Tachi_EchoMist_EchoExplode",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornByGlobalValue",
+                                "direction": {
                                     "$type": "JADOBJDPOLJ"
                                 },
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_EXPLODEPOS_",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_EXPLODEPOS_",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -8681,22 +8681,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "HOPPHMEKHLG": {
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "direction": {
                                             "$type": "JADOBJDPOLJ"
                                         },
-                                        "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_EXPLODEPOS_",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_SHOUGUN_TACHI_ECHO_EXPLODEPOS_",
+                                        "directionKey": ""
                                     },
                                     "height": 3.0,
-                                    "BMCPFKAEOJB": 9.0
+                                    "radius": 9.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.3330000042915344,
+                                        "damagePercentage": 0.3330000042915344,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Electric",
                                         "bonusCriticalHurt": 25.0,
@@ -8807,13 +8807,13 @@
                             "target": "Owner",
                             "key": "_SHOUGUN_TACHI_ECHO_EXPLODEPOS_",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             }
                         }
                     ],
@@ -8835,7 +8835,7 @@
                             "target": "SelfAttackTarget",
                             "key": "_SHOUGUN_TACHI_ECHO_TURNPOS_",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         }
@@ -8873,9 +8873,9 @@
                         {
                             "$type": "TurnDirectionToPos",
                             "toPos": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_TURNPOS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_TURNPOS_",
+                                "directionKey": ""
                             }
                         },
                         {
@@ -8891,16 +8891,16 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "DOCDLGLJKND",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "attachPointName": "BladeWave01",
                                     "ABIMPICHJNC": "Self"
@@ -9047,17 +9047,17 @@
                             "$type": "DoWatcherSystemAction",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ACHIEVEMENT_82123_SUCCESS_",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ACHIEVEMENT_82123_FAILED_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "watcherId": 82123,
@@ -9105,7 +9105,7 @@
                             "target": "SelfAttackTarget",
                             "key": "_SHOUGUN_TACHI_ECHO_TURNPOS_",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         }
@@ -9143,9 +9143,9 @@
                         {
                             "$type": "TurnDirectionToPos",
                             "toPos": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_SHOUGUN_TACHI_ECHO_TURNPOS_",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_SHOUGUN_TACHI_ECHO_TURNPOS_",
+                                "directionKey": ""
                             }
                         },
                         {
@@ -9161,16 +9161,16 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "DOCDLGLJKND",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "attachPointName": "BladeWave02",
                                     "ABIMPICHJNC": "Self"
@@ -9221,19 +9221,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.08299999684095383,
+                                "damagePercentage": 0.08299999684095383,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 50.0,
@@ -9268,19 +9268,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.16599999368190765,
+                                "damagePercentage": 0.16599999368190765,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Electric",
                                 "bonusCriticalHurt": 50.0,
@@ -9482,10 +9482,10 @@
                                     "$type": "SetOverrideMapValue",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_SHOUGUN_DEFEND_COUNT_",
                                             "ratio": 4.0,
-                                            "HDJELDCCOCG": "LessAndEqual"
+                                            "compareType": "LessAndEqual"
                                         }
                                     ],
                                     "ratio": 0.0,
@@ -9495,10 +9495,10 @@
                                     "$type": "SetOverrideMapValue",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_SHOUGUN_DEFEND_COUNT_",
                                             "ratio": 4.0,
-                                            "HDJELDCCOCG": "MoreThan"
+                                            "compareType": "MoreThan"
                                         }
                                     ],
                                     "ratio": [
@@ -9528,7 +9528,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_MONSTER_SHOUGUN_DEFEND_",
                                     "ratio": 1.0
@@ -9589,8 +9589,8 @@
                             "target": "Target",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Pole_Defend_BeHit",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 }
                             },
@@ -9755,19 +9755,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt"
@@ -9870,7 +9870,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -9888,7 +9888,7 @@
                                     ],
                                     "key": "_MONSTER_SHOUGUN_RECOVERTURNPOS_",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "setTarget": false
                                 },
@@ -9901,9 +9901,9 @@
                                         }
                                     ],
                                     "toPos": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_MONSTER_SHOUGUN_RECOVERTURNPOS_",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_MONSTER_SHOUGUN_RECOVERTURNPOS_",
+                                        "directionKey": ""
                                     }
                                 }
                             ],
@@ -9919,7 +9919,7 @@
                                     ],
                                     "key": "_MONSTER_SHOUGUN_RECOVERTURNPOS_",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "setTarget": false
                                 },
@@ -9932,9 +9932,9 @@
                                         }
                                     ],
                                     "toPos": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_MONSTER_SHOUGUN_RECOVERTURNPOS_",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_MONSTER_SHOUGUN_RECOVERTURNPOS_",
+                                        "directionKey": ""
                                     }
                                 }
                             ]
@@ -9962,13 +9962,13 @@
                             "$type": "SetOverrideMapValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_HIT_COUNT_",
                                     "ratio": 8.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_WEEKLY_",
                                     "ratio": 1.0
                                 }
@@ -9980,16 +9980,16 @@
                             "$type": "SetOverrideMapValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_HIT_COUNT_",
                                     "ratio": 14.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_WEEKLY_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "ratio": 0.0,
@@ -9999,13 +9999,13 @@
                             "$type": "SetOverrideMapValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_HIT_COUNT_",
                                     "ratio": 8.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_WEEKLY_",
                                     "ratio": 1.0
                                 }
@@ -10021,16 +10021,16 @@
                             "$type": "SetOverrideMapValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_HIT_COUNT_",
                                     "ratio": 14.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHOUGUN_MITAKENARUKAMI_WEEKLY_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "ratio": [
@@ -10066,11 +10066,11 @@
                             "$type": "WindZoneMixin",
                             "shapeName": "CircleR5H2",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "PLJPAAFMNAD": -5.0,
@@ -10079,7 +10079,7 @@
                             "targetType": "Enemy",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -10145,7 +10145,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.08299999684095383,
+                            "damagePercentage": 0.08299999684095383,
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Electric",
                             "bonusCriticalHurt": 50.0,
@@ -10163,19 +10163,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
-                            "BMCPFKAEOJB": 5.0
+                            "radius": 5.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",
@@ -10333,8 +10333,8 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shougun_Mitakenarukami_Weak_Hit",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "IHINHODOMIN"
                                 },
                                 "BJCIHELGKLP": true

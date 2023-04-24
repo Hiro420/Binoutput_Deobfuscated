@@ -270,13 +270,13 @@
                             },
                             "key": "_MONSTER_Apep_BlinkAttack_Position",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -0.10000000149011612
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -0.10000000149011612
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "BJCIHELGKLP": true
                             },
                             "setTarget": false
@@ -284,9 +284,9 @@
                         {
                             "$type": "TryFindBlinkPointByBorn",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_MONSTER_Apep_BlinkAttack_Position",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_MONSTER_Apep_BlinkAttack_Position",
+                                "directionKey": ""
                             },
                             "hitSceneType": "BlinkHitSceneTestByThreeSegments",
                             "limitY": 2.5
@@ -302,7 +302,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "target": "Self",
                                     "logic": "Equal",
                                     "ratio": 301,
@@ -310,14 +310,14 @@
                                 }
                             ],
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
                             "$type": "TurnDirectionToPos",
                             "predicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "target": "Self",
                                     "logic": "GreaterOrEqual",
                                     "ratio": 302,
@@ -327,9 +327,9 @@
                             "toPos": {
                                 "$type": "MIAJPKDCOPA",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true,
                                 "actionPointType": "AureaePoint",
@@ -401,7 +401,7 @@
                                     "target": "Self",
                                     "logic": "GreaterOrEqual",
                                     "ratio": 24.0,
-                                    "FNMFBPGNEKD": "_MONSTER_Apep_Stage3_MidPos"
+                                    "positionKey": "_MONSTER_Apep_Stage3_MidPos"
                                 }
                             ],
                             "skillIDs": [
@@ -418,12 +418,12 @@
                     "born": {
                         "$type": "MIAJPKDCOPA",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true,
-                        "HKNFOKFIKAG": 5.0,
+                        "onGround": true,
+                        "onGroundRaycastUpDist": 5.0,
                         "actionPointType": "AureaePoint",
                         "GIAHMPPLHHF": {
                             "$type": "JIIIIFKFCAM",
@@ -444,7 +444,7 @@
                     "target": "SelfAttackTarget",
                     "predicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "Equal",
                             "ratio": 301,
@@ -453,13 +453,13 @@
                     ],
                     "lifeByOwnerIsAlive": true,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         }
                     },
@@ -471,14 +471,14 @@
                     "target": "SelfAttackTarget",
                     "predicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "GreaterOrEqual",
                             "ratio": 302,
                             "parameter": "SkillID"
                         },
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "Lesser",
                             "ratio": 305,
@@ -489,9 +489,9 @@
                     "born": {
                         "$type": "MIAJPKDCOPA",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IABNJPGBAOH": true,
                         "actionPointType": "AureaePoint",
@@ -508,7 +508,7 @@
                     "target": "SelfAttackTarget",
                     "predicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "Equal",
                             "ratio": 305,
@@ -517,11 +517,11 @@
                     ],
                     "lifeByOwnerIsAlive": true,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IGAGDFFFGAO": {
                             "$type": "FHDJJGOONEI",
@@ -537,7 +537,7 @@
                     "target": "SelfAttackTarget",
                     "predicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "Equal",
                             "ratio": 306,
@@ -548,9 +548,9 @@
                     "born": {
                         "$type": "MIAJPKDCOPA",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IABNJPGBAOH": true,
                         "actionPointType": "AureaePoint",
@@ -566,14 +566,14 @@
                     "$type": "SetPoseBool",
                     "predicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "GreaterOrEqual",
                             "ratio": 302,
                             "parameter": "SkillID"
                         },
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "Lesser",
                             "ratio": 305,
@@ -587,7 +587,7 @@
                     "$type": "SetAISkillCDAvailableNow",
                     "predicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "target": "Self",
                             "logic": "Equal",
                             "ratio": 305,
@@ -617,11 +617,11 @@
                             "$type": "WindZoneMixin",
                             "shapeName": "CircleR5",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IABNJPGBAOH": true
                             },
@@ -631,7 +631,7 @@
                             "targetType": "Enemy",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -656,10 +656,10 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_COMMON_GADGET_ISSUMMON",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "modifierName": "Kill_Summon_Gadget"
@@ -680,10 +680,10 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_COMMON_GADGET_ISSUMMON",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "modifierName": "Kill_Summon_Gadget"
@@ -699,7 +699,7 @@
                             "$type": "SetGlobalPos",
                             "key": "_MONSTER_Apep_Stage3_BlinkGadgatPos",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "IABNJPGBAOH": true
                             }
                         },
@@ -714,8 +714,8 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Apep_Stage3_BlinkAttack_AS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "DAPKLNIFPID": true,
+                                "$type": "ConfigBornBySelf",
+                                "onGround": true,
                                 "BJCIHELGKLP": true,
                                 "IABNJPGBAOH": true
                             },
@@ -733,7 +733,7 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Apep_Stage3_BlinkAttack_AS",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "IABNJPGBAOH": true
                             },
                             "FGMDINMEPHL": -1.0
@@ -797,11 +797,11 @@
                     "target": "SelfAttackTarget",
                     "bulletID": 42908302,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IABNJPGBAOH": true
                     }
@@ -818,24 +818,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "Apep_Bullet_Attenuation",
                             "attenuationGroup": "Apep_Bullet_Attenuation",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Grass",
                                 "bonusCriticalHurt": 25.0,
@@ -864,7 +864,7 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Apep_Stage3_RangeAttack2_Hit",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     }
                 }
             ]
@@ -920,19 +920,19 @@
                             ],
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 1.0,
                                     "CPOKKADJBFH": 2.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "x": 0.10000000149011612,
@@ -976,13 +976,13 @@
                     "target": "SelfAttackTarget",
                     "lifeByOwnerIsAlive": true,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true,
+                        "onGround": true,
                         "BJCIHELGKLP": true
                     },
                     "gadgetID": 42908304,
@@ -1016,14 +1016,14 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Apep_Stage3_RangeAttack3_FirstAttack",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "x": 0.10000000149011612,
@@ -1043,23 +1043,23 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "IABNJPGBAOH": true
                                     },
                                     "height": 20.0,
-                                    "BMCPFKAEOJB": 10.0
+                                    "radius": 10.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.0,
+                                        "damagePercentage": 1.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
@@ -1117,14 +1117,14 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Apep_Stage3_RangeAttack3_RepeatAttack",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "x": 0.10000000149011612,
@@ -1144,23 +1144,23 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "IABNJPGBAOH": true
                                     },
                                     "height": 20.0,
-                                    "BMCPFKAEOJB": 7.5
+                                    "radius": 7.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.699999988079071,
+                                        "damagePercentage": 0.699999988079071,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
@@ -1361,15 +1361,15 @@
                             "$type": "ServerMonsterLog",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_LOG_DotHit",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_LOG_FinalHit",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "paramList": [
@@ -1382,13 +1382,13 @@
                             "$type": "ServerMonsterLog",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_LOG_DotHit",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_LOG_FinalHit",
                                     "ratio": 1.0
                                 }
@@ -1403,12 +1403,12 @@
                             "$type": "ServerMonsterLog",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_LOG_DotHit",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_LOG_FinalHit",
                                     "ratio": 1.0
                                 }
@@ -1454,13 +1454,13 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_Apep_Stage3_UltAttack_Field_AvatarTag",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -1475,7 +1475,7 @@
                                         "attenuationTag": "",
                                         "attenuationGroup": "default",
                                         "attackProperty": {
-                                            "MFOOCADHKLC": 0.10000000149011612,
+                                            "damagePercentage": 0.10000000149011612,
                                             "MKLAMNDEDGB": 0.0,
                                             "elementType": "Grass",
                                             "bonusCriticalHurt": 25.0,
@@ -1516,13 +1516,13 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_Apep_Stage3_UltAttack_Field_AvatarTag",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -1537,7 +1537,7 @@
                                         "attenuationTag": "",
                                         "attenuationGroup": "default",
                                         "attackProperty": {
-                                            "MFOOCADHKLC": 0.10000000149011612,
+                                            "damagePercentage": 0.10000000149011612,
                                             "MKLAMNDEDGB": 0.0,
                                             "elementType": "Grass",
                                             "bonusCriticalHurt": 25.0,
@@ -1578,13 +1578,13 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_Apep_Stage3_UltAttack_Field_AvatarTag",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -1599,7 +1599,7 @@
                                         "attenuationTag": "",
                                         "attenuationGroup": "default",
                                         "attackProperty": {
-                                            "MFOOCADHKLC": 0.10000000149011612,
+                                            "damagePercentage": 0.10000000149011612,
                                             "MKLAMNDEDGB": 0.0,
                                             "elementType": "Grass",
                                             "bonusCriticalHurt": 25.0,
@@ -1714,7 +1714,7 @@
                     "watcherId": 82169,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Self",
                             "key": "_CHALLENGE_82169_STATE_",
                             "ratio": 1.0
@@ -1748,10 +1748,10 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_Apep_Stage3_UltAttack_Field_AvatarTag",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1763,7 +1763,7 @@
                                         "attenuationTag": "Apep_Stage3_UltAttack",
                                         "attenuationGroup": "Apep_Stage3_UltAttack",
                                         "attackProperty": {
-                                            "MFOOCADHKLC": 4.0,
+                                            "damagePercentage": 4.0,
                                             "MKLAMNDEDGB": 0.0,
                                             "elementType": "Grass",
                                             "bonusCriticalHurt": 25.0,
@@ -1783,7 +1783,7 @@
                                     "target": "Target",
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Avatar"
                                             ]
@@ -1833,10 +1833,10 @@
                     "$type": "SetGlobalValue",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_CHALLENGE_82169_STATE_",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "ratio": 1.0,
@@ -1873,11 +1873,11 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
                                 "IABNJPGBAOH": true,
@@ -1895,11 +1895,11 @@
                     "born": {
                         "$type": "MIAJPKDCOPA",
                         "offset": {
-                            "JJJFPBPALGO": 8.65999984741211,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": -5.0
+                            "x": 8.65999984741211,
+                            "y": 0.0,
+                            "z": -5.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         },
                         "IABNJPGBAOH": true,
@@ -1946,11 +1946,11 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
                                 "IABNJPGBAOH": true,
@@ -1968,11 +1968,11 @@
                     "born": {
                         "$type": "MIAJPKDCOPA",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 15.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 15.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         },
                         "IABNJPGBAOH": true,
@@ -2019,11 +2019,11 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
                                 "IABNJPGBAOH": true,
@@ -2041,11 +2041,11 @@
                     "born": {
                         "$type": "MIAJPKDCOPA",
                         "offset": {
-                            "JJJFPBPALGO": -4.329999923706055,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": -2.5
+                            "x": -4.329999923706055,
+                            "y": 0.0,
+                            "z": -2.5
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID"
                         },
                         "IABNJPGBAOH": true,
@@ -2122,18 +2122,18 @@
                                 {
                                     "$type": "IDHCAKGEMOF",
                                     "attackPattern": {
-                                        "$type": "MHDMMPENLGB",
+                                        "$type": "ConfigAttackSphere",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             },
                                             "IABNJPGBAOH": true
                                         },
-                                        "BMCPFKAEOJB": 0.800000011920929
+                                        "radius": 0.800000011920929
                                     },
                                     "PHFBEPGCKAA": true
                                 }
@@ -2205,18 +2205,18 @@
                                 {
                                     "$type": "IDHCAKGEMOF",
                                     "attackPattern": {
-                                        "$type": "MHDMMPENLGB",
+                                        "$type": "ConfigAttackSphere",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             },
                                             "IABNJPGBAOH": true
                                         },
-                                        "BMCPFKAEOJB": 0.800000011920929
+                                        "radius": 0.800000011920929
                                     },
                                     "PHFBEPGCKAA": true
                                 }
@@ -2288,18 +2288,18 @@
                                 {
                                     "$type": "IDHCAKGEMOF",
                                     "attackPattern": {
-                                        "$type": "MHDMMPENLGB",
+                                        "$type": "ConfigAttackSphere",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             },
                                             "IABNJPGBAOH": true
                                         },
-                                        "BMCPFKAEOJB": 0.800000011920929
+                                        "radius": 0.800000011920929
                                     },
                                     "PHFBEPGCKAA": true
                                 }
@@ -2414,7 +2414,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Team"
                             ]
@@ -2429,7 +2429,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Team"
                             ]

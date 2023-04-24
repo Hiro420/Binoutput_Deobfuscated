@@ -676,7 +676,7 @@
                             "$type": "SetAnimatorTrigger",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SLIME_GRASS_UNDERGROUND",
                                     "ratio": 1.0
                                 }
@@ -731,7 +731,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.0,
+                                    "damagePercentage": 0.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 100.0,
                                     "enBreak": 1000.0
@@ -816,7 +816,7 @@
                             "$type": "SetAnimatorTrigger",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_SLIME_GRASS_UNDERGROUND",
                                     "ratio": 1.0
                                 }
@@ -874,7 +874,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.0,
+                                    "damagePercentage": 0.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 100.0,
                                     "enBreak": 1000.0
@@ -1135,7 +1135,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1150,22 +1150,22 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 2.0,
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.10000000149011612,
+                                        "damagePercentage": 0.10000000149011612,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Grass",
                                         "bonusCriticalHurt": 25.0,
@@ -1237,7 +1237,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_SUMMON_LIFETIME",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -1245,9 +1245,9 @@
                     ],
                     "monsterID": 20010101,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "$type": "ConfigBornByTarget",
+                        "onGround": true,
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         }
                     },
@@ -1260,18 +1260,18 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_SUMMON_LIFETIME",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "monsterID": 20010101,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "$type": "ConfigBornByTarget",
+                        "onGround": true,
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         }
                     },
@@ -1321,8 +1321,8 @@
                     "ownerIs": "Other",
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "BJCIHELGKLP": true,
@@ -1338,8 +1338,8 @@
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Missile_AS",
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "BJCIHELGKLP": true,
@@ -1435,8 +1435,8 @@
                     "target": "Owner",
                     "key": "_ABILITY_SLIME_GRASS_SEED_POS",
                     "born": {
-                        "$type": "CLOEBFCHPGN",
-                        "DAPKLNIFPID": true
+                        "$type": "ConfigBornByCollisionPoint",
+                        "onGround": true
                     }
                 },
                 {
@@ -1444,18 +1444,18 @@
                     "target": "Owner",
                     "bulletID": 42001015,
                     "born": {
-                        "$type": "FNJGDOEMIIB",
+                        "$type": "ConfigBornByGlobalValue",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "JPOJHLOIKLG": 360.0
                         },
-                        "FNMFBPGNEKD": "_ABILITY_SLIME_GRASS_SEED_POS",
-                        "GPPNNKAOHCG": ""
+                        "positionKey": "_ABILITY_SLIME_GRASS_SEED_POS",
+                        "directionKey": ""
                     },
                     "ownerIs": "Other"
                 },
@@ -1463,8 +1463,8 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Grass_Seed_Poison_Missile_AS",
                     "born": {
-                        "$type": "CLOEBFCHPGN",
-                        "DAPKLNIFPID": true
+                        "$type": "ConfigBornByCollisionPoint",
+                        "onGround": true
                     },
                     "FGMDINMEPHL": -1.0
                 }
@@ -1514,19 +1514,19 @@
                             ],
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 2.0
+                                    "radius": 2.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.0,
+                                        "damagePercentage": 1.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
@@ -1602,7 +1602,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.10000000149011612,
+                                    "damagePercentage": 0.10000000149011612,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Grass",
                                     "bonusCriticalHurt": 25.0,
@@ -1624,7 +1624,7 @@
                                 "attenuationTag": "Group1",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.10000000149011612,
+                                    "damagePercentage": 0.10000000149011612,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Grass",
                                     "bonusCriticalHurt": 25.0,
@@ -1646,7 +1646,7 @@
                     "target": "Target",
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1759,22 +1759,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "height": 1.5,
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.0,
+                                "damagePercentage": 1.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Blunt",

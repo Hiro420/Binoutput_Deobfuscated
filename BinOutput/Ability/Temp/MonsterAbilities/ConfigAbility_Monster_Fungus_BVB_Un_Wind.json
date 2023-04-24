@@ -39,7 +39,7 @@
                     "bulletID": 42609014,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "attachPointName": "BulletSource",
@@ -98,19 +98,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "Wind_Bullet",
                             "attenuationGroup": "FungusFightV2_Seq1",
                             "attackProperty": {
-                                "MFOOCADHKLC": 3.0,
+                                "damagePercentage": 3.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Wind",
                                 "bonusCriticalHurt": 25.0,
@@ -215,7 +215,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Fungus_Un_Wind_WindImpact_Blast",
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -223,9 +223,9 @@
                     "$type": "CreateGadget",
                     "ownerIs": "Owner",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true,
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         }
                     },
@@ -249,19 +249,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 2.700000047683716
+                                    "radius": 2.700000047683716
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 2.0999999046325684,
+                                        "damagePercentage": 2.0999999046325684,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Wind",
                                         "bonusCriticalHurt": 25.0,
@@ -292,11 +292,11 @@
                             "$type": "WindZoneMixin",
                             "shapeName": "CircleR5H10",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 }
                             },
                             "PLJPAAFMNAD": 4.0,
@@ -305,7 +305,7 @@
                             "targetType": "Enemy",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Partner"
@@ -373,7 +373,7 @@
                                 "attenuationTag": "Fungus_WindZone",
                                 "attenuationGroup": "FungusFightV2_Seq1",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 3.75,
+                                    "damagePercentage": 3.75,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Wind",
                                     "bonusCriticalHurt": 25.0,
@@ -411,7 +411,7 @@
                                 "attenuationTag": "Fungus_WindZone",
                                 "attenuationGroup": "FungusFightV2_Seq1",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 3.75,
+                                    "damagePercentage": 3.75,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Wind",
                                     "bonusCriticalHurt": 25.0,
@@ -546,7 +546,7 @@
                                             "CIMNBKFMPGD": "Fire"
                                         },
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Avatar",
@@ -565,7 +565,7 @@
                                             "CIMNBKFMPGD": "Water"
                                         },
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Avatar",
@@ -584,7 +584,7 @@
                                             "CIMNBKFMPGD": "Electric"
                                         },
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Avatar",
@@ -603,7 +603,7 @@
                                             "CIMNBKFMPGD": "Ice"
                                         },
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Avatar",

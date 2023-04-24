@@ -220,7 +220,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -295,7 +295,7 @@
                             "target": "Target",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -318,7 +318,7 @@
                             "target": "TargetOriginOwner",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -595,11 +595,11 @@
                             "born": {
                                 "$type": "MGDGOLHGFAP",
                                 "offset": {
-                                    "JJJFPBPALGO": 3.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 3.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "GKAPKIFBACA": -4.0,
                                 "AACNGNKKCAI": false,
                                 "DCKBDJJECJH": 0.0,
@@ -621,13 +621,13 @@
                                 {
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 4.0,
                                             "CPOKKADJBFH": 6.0
                                         },
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
                                     "hitSceneType": "BlinkHitSceneTestByThreeSegments",
                                     "limitY": 2.5,
@@ -642,11 +642,11 @@
                             "born": {
                                 "$type": "MGDGOLHGFAP",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "GKAPKIFBACA": 5.0,
                                 "AACNGNKKCAI": false,
                                 "DCKBDJJECJH": 0.0,
@@ -668,13 +668,13 @@
                                 {
                                     "$type": "TryFindBlinkPointByBorn",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 4.0,
                                             "CPOKKADJBFH": 6.0
                                         },
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
                                     "hitSceneType": "BlinkHitSceneTestByThreeSegments",
                                     "limitY": 2.5,
@@ -699,7 +699,7 @@
                     "$type": "TurnDirectionToPos",
                     "target": "SelfAttackTarget",
                     "toPos": {
-                        "$type": "GJGFFJAGIDF"
+                        "$type": "ConfigBornByTarget"
                     }
                 }
             ]
@@ -728,10 +728,10 @@
                     "$type": "ApplyModifier",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "ForlornVessel_ElementShield",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "modifierName": "UNIQUE_Darkwraith_EndureDelta"
@@ -762,10 +762,10 @@
                     "$type": "ApplyModifier",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "ForlornVessel_ElementShield",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "modifierName": "UNIQUE_Darkwraith_EndureDelta_Funnel"
@@ -1042,19 +1042,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "Monster_Darkwraith_Wind_Attack",
                             "attenuationTag": "Monster_Darkwraith_Strong_Wind_ChainAtk02",
                             "attenuationGroup": "Monster_Darkwraith_Strong_Wind_ChainAtk02",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.4000000059604645,
+                                "damagePercentage": 0.4000000059604645,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Wind",
                                 "bonusCriticalHurt": 25.0,
@@ -1132,7 +1132,7 @@
                             "target": "SelfAttackTarget",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "HPJOHDHEPCG",
@@ -1443,7 +1443,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Darkwraith_Strong_Wind_FunnelAtk_Count_",
                             "ratio": 1.0
                         }
@@ -1463,7 +1463,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Darkwraith_Strong_Wind_FunnelAtk_Count_",
                             "ratio": 2.0
                         }
@@ -1483,7 +1483,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Darkwraith_Strong_Wind_FunnelAtk_Count_",
                             "ratio": 3.0
                         }
@@ -1503,7 +1503,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Darkwraith_Strong_Wind_FunnelAtk_Count_",
                             "ratio": 4.0
                         }
@@ -1523,7 +1523,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Darkwraith_Strong_Wind_FunnelAtk_Count_",
                             "ratio": 5.0
                         }
@@ -1543,7 +1543,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_Darkwraith_Strong_Wind_FunnelAtk_Count_",
                             "ratio": 6.0
                         }
@@ -1686,7 +1686,7 @@
                     },
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1708,7 +1708,7 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42208007,
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     }
                 },
                 {
@@ -1754,19 +1754,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "Monster_Darkwraith_Wind_Attack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.30000001192092896,
+                                "damagePercentage": 0.30000001192092896,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Wind",
                                 "bonusCriticalHurt": 50.0,
@@ -1884,7 +1884,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1934,7 +1934,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1946,7 +1946,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_FORLORNVESSEL_SALUTE_",
                                     "ratio": 1.0
                                 }
@@ -2001,7 +2001,7 @@
                             "$type": "SetGlobalPos",
                             "key": "_DARKWRAITH_SALUTE_POS_",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "setTarget": false
                         }

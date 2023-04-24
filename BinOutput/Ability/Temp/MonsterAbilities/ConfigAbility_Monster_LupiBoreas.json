@@ -260,7 +260,7 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                     "ratio": 0.0
                                 }
@@ -276,10 +276,10 @@
                             "canBeHandledOnRecover": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                     "ratio": 1.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "triggerID": "RunForceTrigger",
@@ -390,7 +390,7 @@
                     "$type": "SetCanDieImmediately",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR",
                             "ratio": 1.0
                         }
@@ -411,20 +411,20 @@
                     },
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Gadget"
                             ]
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_LUPIBOREAS_BORNACHOR",
                             "ratio": 1.0
                         }
                     ],
                     "key": "_MONSTER_LUPIBOREAS_DIEPOINT",
                     "born": {
-                        "$type": "GJGFFJAGIDF"
+                        "$type": "ConfigBornByTarget"
                     },
                     "setTarget": false
                 }
@@ -450,18 +450,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902042,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 10.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 10.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "HFKFLHCBMLB",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": -90.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": -90.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 45.0,
                                     "MPNLAACKHNA": 15.0
@@ -475,9 +475,9 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_DIEPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_DIEPOINT",
+                        "directionKey": ""
                     },
                     "gadgetID": 42902002,
                     "campID": 4001
@@ -514,7 +514,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_LUPIBOREAS_DIEACHOR",
                             "ratio": 1.0
                         }
@@ -664,7 +664,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_WOLFSOUL_FORCEREMOVE",
                                     "ratio": 1.0
                                 }
@@ -677,7 +677,7 @@
                                         {
                                             "$type": "HPJOHDHEPCG",
                                             "logic": "Lesser",
-                                            "HDJELDCCOCG": "XYZ",
+                                            "compareType": "XYZ",
                                             "ratio": 52.5
                                         }
                                     ],
@@ -690,7 +690,7 @@
                                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_SoulBS",
                                     "born": {
                                         "$type": "IOHLPEPEKAP",
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
                                     "FGMDINMEPHL": -1.0
                                 },
@@ -699,8 +699,8 @@
                                     "bulletID": 42902041,
                                     "born": {
                                         "$type": "IOHLPEPEKAP",
-                                        "DAPKLNIFPID": true,
-                                        "HOPPHMEKHLG": {
+                                        "onGround": true,
+                                        "direction": {
                                             "$type": "HFKFLHCBMLB",
                                             "LLOEMEPIBII": "Horizontal"
                                         },
@@ -792,8 +792,8 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_SoulAS",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true
                     },
                     "FGMDINMEPHL": -1.0
                 }
@@ -809,7 +809,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_Soul_Hit",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -821,7 +821,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.25,
+                            "damagePercentage": 0.25,
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Ice",
                             "bonusCriticalHurt": 100.0,
@@ -876,8 +876,8 @@
                     "$type": "CreateGadget",
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "AKNHOGLMAAH",
                             "eularAngles": {
                                 "y": 180.0
@@ -980,7 +980,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_LUPIBOREAS_DIEACHOR_HIT",
                             "ratio": 1.0
                         }
@@ -1181,7 +1181,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR",
                             "ratio": 1.0
                         }
@@ -1215,10 +1215,10 @@
                     ],
                     "enterPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_LUPIBOREAS_WALKCONTROL",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "enterActions": [
@@ -1413,7 +1413,7 @@
                             "lifeByOwnerIsAlive": true,
                             "born": {
                                 "$type": "MIAJPKDCOPA",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "actionPointType": "LupiColosseumPoint",
                                 "GIAHMPPLHHF": {
                                     "$type": "JIIIIFKFCAM",
@@ -1429,7 +1429,7 @@
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_RunArea",
                             "born": {
                                 "$type": "MIAJPKDCOPA",
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "actionPointType": "LupiColosseumPoint",
                                 "GIAHMPPLHHF": {
                                     "$type": "JIIIIFKFCAM",
@@ -1531,7 +1531,7 @@
                                     "ratio": 20.0
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -1564,7 +1564,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.16599999368190765,
+                                    "damagePercentage": 0.16599999368190765,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -1655,7 +1655,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902021,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "trackTarget": "Self",
                             "GKJDJDACPMC": true
@@ -1664,7 +1664,7 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902023,
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "trackTarget": "Self",
                             "GKJDJDACPMC": true
@@ -1673,7 +1673,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "logic": "Equal",
                                     "ratio": 201,
                                     "parameter": "SkillID"
@@ -1684,12 +1684,12 @@
                                     "$type": "AddGlobalValue",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                             "ratio": 1.0
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR",
                                             "ratio": 1.0
                                         }
@@ -1722,7 +1722,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "logic": "Equal",
                                     "ratio": 201,
                                     "parameter": "SkillID"
@@ -1733,17 +1733,17 @@
                                     "$type": "ApplyModifier",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                             "ratio": 1.0
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR_COUNTER",
                                             "ratio": 2.0
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR",
                                             "ratio": 1.0
                                         }
@@ -1847,7 +1847,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 1.0,
+                            "damagePercentage": 1.0,
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Ice",
                             "bonusCriticalHurt": 100.0,
@@ -1877,7 +1877,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Avatar"
                             ]
@@ -1888,19 +1888,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN"
+                                        "$type": "ConfigBornByCollisionPoint"
                                     },
-                                    "BMCPFKAEOJB": 2.0
+                                    "radius": 2.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "strikeType": "Blunt",
@@ -1933,7 +1933,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "logic": "Equal",
                             "ratio": 202,
                             "parameter": "SkillID"
@@ -1952,12 +1952,12 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                     "ratio": 2.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR",
                                     "ratio": 1.0
                                 }
@@ -1969,12 +1969,12 @@
                             "$type": "CallLuaTask",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                     "ratio": 2.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_LUPIBOREAS_RAZOR",
                                     "ratio": 1.0
                                 }
@@ -2019,15 +2019,15 @@
                             "$type": "GenerateElemBall",
                             "configID": 2006,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 5.0,
                                     "CPOKKADJBFH": 7.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                                "directionKey": ""
                             },
                             "value": 1.0,
                             "baseEnergy": 9.0
@@ -2040,7 +2040,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "logic": "Equal",
                             "ratio": 202,
                             "parameter": "SkillID"
@@ -2051,7 +2051,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_1ST_COUNTER",
                                     "ratio": 2.0
                                 }
@@ -2062,7 +2062,7 @@
                                     "key": "_MONSTER_LUPIBOREAS_JUMPPOINT",
                                     "born": {
                                         "$type": "MIAJPKDCOPA",
-                                        "DAPKLNIFPID": true,
+                                        "onGround": true,
                                         "actionPointType": "LupiColosseumPoint",
                                         "GIAHMPPLHHF": {
                                             "$type": "JIIIIFKFCAM",
@@ -2077,8 +2077,8 @@
                                     "target": "SelfAttackTarget",
                                     "key": "_MONSTER_LUPIBOREAS_JUMPPOINT",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
-                                        "DAPKLNIFPID": true
+                                        "$type": "ConfigBornByTarget",
+                                        "onGround": true
                                     },
                                     "setTarget": false
                                 },
@@ -2092,9 +2092,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_JumpAtk_Alert",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -2152,9 +2152,9 @@
                 {
                     "$type": "FixedMonsterRushMove",
                     "toPos": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                        "directionKey": ""
                     },
                     "timeRange": 0.8399999737739563,
                     "animatorStateIDs": [
@@ -2198,15 +2198,15 @@
                             "$type": "GenerateElemBall",
                             "configID": 2006,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 5.0,
                                     "CPOKKADJBFH": 7.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                                "directionKey": ""
                             },
                             "value": 1.0,
                             "baseEnergy": 9.0
@@ -2219,7 +2219,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "EDBHMCAENNJ",
+                            "$type": "ByAnimatorInt",
                             "logic": "Equal",
                             "ratio": 232,
                             "parameter": "SkillID"
@@ -2231,8 +2231,8 @@
                             "target": "SelfAttackTarget",
                             "key": "_MONSTER_LUPIBOREAS_JUMPPOINT",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "DAPKLNIFPID": true
+                                "$type": "ConfigBornByTarget",
+                                "onGround": true
                             },
                             "setTarget": false
                         },
@@ -2240,9 +2240,9 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_JumpAtk_Alert",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                                "directionKey": ""
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -2300,9 +2300,9 @@
                 {
                     "$type": "FixedMonsterRushMove",
                     "toPos": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                        "directionKey": ""
                     },
                     "timeRange": 0.8399999737739563,
                     "animatorStateIDs": [
@@ -2323,18 +2323,18 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_JumpAS",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                        "directionKey": ""
                     },
                     "FGMDINMEPHL": -1.0
                 },
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_JUMPPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_JUMPPOINT",
+                        "directionKey": ""
                     },
                     "gadgetID": 42902024,
                     "campID": 4001
@@ -2360,7 +2360,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.8330000042915344,
+                                    "damagePercentage": 0.8330000042915344,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 100.0,
@@ -2428,7 +2428,7 @@
                             "$type": "SetGlobalPos",
                             "key": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             }
                         }
                     ]
@@ -2444,15 +2444,15 @@
                             "$type": "GenerateElemBall",
                             "configID": 2006,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 5.0,
                                     "CPOKKADJBFH": 10.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
+                                "directionKey": ""
                             },
                             "value": 1.0,
                             "baseEnergy": 9.0
@@ -2465,8 +2465,8 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_DriftAtk_Alert",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -2491,15 +2491,15 @@
                             "$type": "GenerateElemBall",
                             "configID": 2006,
                             "born": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 5.0,
                                     "CPOKKADJBFH": 10.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
-                                "GPPNNKAOHCG": ""
+                                "onGround": true,
+                                "positionKey": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
+                                "directionKey": ""
                             },
                             "value": 1.0,
                             "baseEnergy": 9.0
@@ -2512,8 +2512,8 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_DriftAtk_Alert",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -2533,9 +2533,9 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_DriftL",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
+                        "directionKey": ""
                     },
                     "FGMDINMEPHL": -1.0
                 }
@@ -2551,9 +2551,9 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_DriftR",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
+                        "directionKey": ""
                     },
                     "FGMDINMEPHL": -1.0
                 }
@@ -2568,9 +2568,9 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_LUPIBOREAS_DRIFTPOINT",
+                        "directionKey": ""
                     },
                     "gadgetID": 42902022,
                     "campID": 4001
@@ -2596,7 +2596,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.8330000042915344,
+                                    "damagePercentage": 0.8330000042915344,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 100.0,
@@ -2704,7 +2704,7 @@
                             "$type": "WindZoneMixin",
                             "shapeName": "CircleR20",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "PLJPAAFMNAD": -15.0,
                             "LNPFPGALPJH": 3.0,
@@ -2778,7 +2778,7 @@
                     "lifeByOwnerIsAlive": true,
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
+                        "onGround": true,
                         "actionPointType": "LupiColosseumPoint",
                         "GIAHMPPLHHF": {
                             "$type": "JIIIIFKFCAM",
@@ -2795,13 +2795,13 @@
                     "lifeByOwnerIsAlive": true,
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 60.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 60.0,
+                                "z": 0.0
                             }
                         },
                         "actionPointType": "LupiColosseumPoint",
@@ -2820,13 +2820,13 @@
                     "lifeByOwnerIsAlive": true,
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 120.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 120.0,
+                                "z": 0.0
                             }
                         },
                         "actionPointType": "LupiColosseumPoint",
@@ -2845,13 +2845,13 @@
                     "lifeByOwnerIsAlive": true,
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             }
                         },
                         "actionPointType": "LupiColosseumPoint",
@@ -2870,13 +2870,13 @@
                     "lifeByOwnerIsAlive": true,
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": -120.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": -120.0,
+                                "z": 0.0
                             }
                         },
                         "actionPointType": "LupiColosseumPoint",
@@ -2895,13 +2895,13 @@
                     "lifeByOwnerIsAlive": true,
                     "born": {
                         "$type": "MIAJPKDCOPA",
-                        "DAPKLNIFPID": true,
-                        "HOPPHMEKHLG": {
+                        "onGround": true,
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": -60.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": -60.0,
+                                "z": 0.0
                             }
                         },
                         "actionPointType": "LupiColosseumPoint",
@@ -2939,7 +2939,7 @@
                                     "OKDPGGJGGCJ": 10.0,
                                     "CPOKKADJBFH": 40.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "actionPointType": "LupiColosseumPoint",
                                 "GIAHMPPLHHF": {
                                     "$type": "JIIIIFKFCAM",
@@ -2968,7 +2968,7 @@
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 1.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "KGKDFLMGEOL": 0.5
                             },
                             "gadgetID": 42902017,
@@ -3030,7 +3030,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.25,
+                                    "damagePercentage": 0.25,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 100.0,
@@ -3105,13 +3105,13 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 35.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 35.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42902018,
@@ -3136,7 +3136,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3195,7 +3195,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL",
                                     "ratio": 1.0
                                 }
@@ -3268,7 +3268,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.041600000113248825,
+                                    "damagePercentage": 0.041600000113248825,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -3302,7 +3302,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "bonusCriticalHurt": 100.0
                         }
@@ -3340,13 +3340,13 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 35.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 35.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42902018,
@@ -3371,7 +3371,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3430,7 +3430,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL",
                                     "ratio": 1.0
                                 }
@@ -3503,7 +3503,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.041600000113248825,
+                                    "damagePercentage": 0.041600000113248825,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -3537,7 +3537,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "bonusCriticalHurt": 100.0
                         }
@@ -3575,13 +3575,13 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 35.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 35.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42902018,
@@ -3606,7 +3606,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3665,7 +3665,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL",
                                     "ratio": 1.0
                                 }
@@ -3738,7 +3738,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.041600000113248825,
+                                    "damagePercentage": 0.041600000113248825,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -3772,7 +3772,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "bonusCriticalHurt": 100.0
                         }
@@ -3810,13 +3810,13 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 35.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 35.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42902018,
@@ -3841,7 +3841,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -3900,7 +3900,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL",
                                     "ratio": 1.0
                                 }
@@ -3973,7 +3973,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.041600000113248825,
+                                    "damagePercentage": 0.041600000113248825,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -4007,7 +4007,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "bonusCriticalHurt": 100.0
                         }
@@ -4045,13 +4045,13 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 35.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 35.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42902018,
@@ -4076,7 +4076,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -4135,7 +4135,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL",
                                     "ratio": 1.0
                                 }
@@ -4208,7 +4208,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.041600000113248825,
+                                    "damagePercentage": 0.041600000113248825,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -4242,7 +4242,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "bonusCriticalHurt": 100.0
                         }
@@ -4280,13 +4280,13 @@
                             "$type": "CreateGadget",
                             "lifeByOwnerIsAlive": true,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 35.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 35.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "sightGroupWithOwner": true,
                             "gadgetID": 42902018,
@@ -4311,7 +4311,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -4370,7 +4370,7 @@
                             "target": "Caster",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL",
                                     "ratio": 1.0
                                 }
@@ -4443,7 +4443,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.041600000113248825,
+                                    "damagePercentage": 0.041600000113248825,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 25.0,
@@ -4477,7 +4477,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "bonusCriticalHurt": 100.0
                         }
@@ -4505,7 +4505,7 @@
                             "canBeHandledOnRecover": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_ICEGADGETAREA",
                                     "ratio": 1.0
                                 }
@@ -4605,7 +4605,7 @@
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Wolf_LupiBoreas_IceGadget_Hit",
                             "born": {
                                 "$type": "FLIPADNBJJF",
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "NFGKOJBHMLL"
                                 },
                                 "BJCIHELGKLP": true
@@ -4641,13 +4641,13 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2006,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "IGAGDFFFGAO": {
                                             "$type": "FHDJJGOONEI",
                                             "OKDPGGJGGCJ": 0.0,
                                             "CPOKKADJBFH": 5.0
                                         },
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
                                     "value": 1.0,
                                     "baseEnergy": 9.0
@@ -4669,7 +4669,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -4680,7 +4680,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.6660000085830688,
+                                    "damagePercentage": 0.6660000085830688,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Ice",
                                     "bonusCriticalHurt": 100.0,
@@ -4907,46 +4907,46 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL_MUTEDAMAGE_01",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL_MUTEDAMAGE_02",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL_MUTEDAMAGE_03",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL_MUTEDAMAGE_04",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL_MUTEDAMAGE_05",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_LUPIBOREAS_HOWL_MUTEDAMAGE_06",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "UNIQUE_LupiBoreas_Howl_Damage"
@@ -4982,7 +4982,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": [
+                                    "damagePercentage": [
                                         "CorrectFactor",
                                         "TargetDistance",
                                         "MUL",
@@ -5098,18 +5098,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -3.5,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": -6.059999942779541
+                                    "x": -3.5,
+                                    "y": 1.0,
+                                    "z": -6.059999942779541
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -150.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -150.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5130,18 +5130,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -6.059999942779541,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": -3.5
+                                    "x": -6.059999942779541,
+                                    "y": 1.0,
+                                    "z": -3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -120.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5162,18 +5162,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -7.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": -7.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -90.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5194,18 +5194,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": -6.059999942779541,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 3.5
+                                    "x": -6.059999942779541,
+                                    "y": 1.0,
+                                    "z": 3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -60.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -60.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5227,18 +5227,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902034,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": -7.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": -7.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             },
                             "JPOJHLOIKLG": 5.0
                         }
@@ -5265,18 +5265,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 3.5,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": -6.059999942779541
+                                    "x": 3.5,
+                                    "y": 1.0,
+                                    "z": -6.059999942779541
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 150.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 150.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5297,18 +5297,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 6.059999942779541,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": -3.5
+                                    "x": 6.059999942779541,
+                                    "y": 1.0,
+                                    "z": -3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 120.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5329,18 +5329,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 7.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 7.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 90.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 90.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5361,18 +5361,18 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42902034,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 6.059999942779541,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 3.5
+                                    "x": 6.059999942779541,
+                                    "y": 1.0,
+                                    "z": 3.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "IOPNFLFHGID",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 60.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 60.0,
+                                        "z": 0.0
                                     },
                                     "JPOJHLOIKLG": 5.0
                                 }
@@ -5394,18 +5394,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902034,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": -7.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": -7.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 180.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 180.0,
+                                "z": 0.0
                             },
                             "JPOJHLOIKLG": 5.0
                         }
@@ -5499,7 +5499,7 @@
                     "ownerIs": "Other",
                     "lifeByOwnerIsAlive": true,
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     },
                     "gadgetID": 42902035,
                     "campID": 4001
@@ -5508,19 +5508,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.25,
+                                "damagePercentage": 0.25,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 100.0,
@@ -5584,8 +5584,8 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2006,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
-                                        "DAPKLNIFPID": true
+                                        "$type": "ConfigBornBySelf",
+                                        "onGround": true
                                     },
                                     "value": 1.0,
                                     "baseEnergy": 9.0
@@ -5599,19 +5599,19 @@
                                     "$type": "TriggerAttackEvent",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "MHDMMPENLGB",
+                                            "$type": "ConfigAttackSphere",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "ODKAAGHNCIP"
+                                                "$type": "ConfigBornBySelf"
                                             },
-                                            "BMCPFKAEOJB": 5.0
+                                            "radius": 5.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "",
                                             "attenuationTag": "",
                                             "attenuationGroup": "default",
                                             "attackProperty": {
-                                                "MFOOCADHKLC": 0.5830000042915344,
+                                                "damagePercentage": 0.5830000042915344,
                                                 "MKLAMNDEDGB": 0.0,
                                                 "elementType": "Ice",
                                                 "bonusCriticalHurt": 100.0,
@@ -5670,11 +5670,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902031,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 4.0
                         }
                     }
                 }
@@ -5710,7 +5710,7 @@
                         "attenuationTag": "",
                         "attenuationGroup": "default",
                         "attackProperty": {
-                            "MFOOCADHKLC": 0.0,
+                            "damagePercentage": 0.0,
                             "MKLAMNDEDGB": 0.0,
                             "elementType": "Ice",
                             "bonusCriticalHurt": 25.0
@@ -5760,11 +5760,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902032,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 4.0
                         }
                     }
                 }
@@ -5780,19 +5780,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.41600000858306885,
+                                "damagePercentage": 0.41600000858306885,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 100.0,
@@ -5871,11 +5871,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902033,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 4.0
                         }
                     }
                 },
@@ -5883,18 +5883,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902033,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 1.3680000305175781,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 3.757999897003174
+                            "x": 1.3680000305175781,
+                            "y": 1.0,
+                            "z": 3.757999897003174
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 20.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 20.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5903,18 +5903,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902033,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": -1.3680000305175781,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 3.757999897003174
+                            "x": -1.3680000305175781,
+                            "y": 1.0,
+                            "z": 3.757999897003174
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": -20.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": -20.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -5950,12 +5950,12 @@
                     "$type": "TriggerAttackTargetMapEvent",
                     "attackTargetMapEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfoMap": {
                             "Enemy": {
@@ -5963,7 +5963,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.41600000858306885,
+                                    "damagePercentage": 0.41600000858306885,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Wind",
                                     "bonusCriticalHurt": 100.0,
@@ -5984,7 +5984,7 @@
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.0,
+                                    "damagePercentage": 0.0,
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 100.0
                                 }
@@ -6017,11 +6017,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902032,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 4.0
                         }
                     }
                 }
@@ -6037,11 +6037,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902033,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 4.0
                         }
                     }
                 },
@@ -6049,18 +6049,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902033,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 1.3680000305175781,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 3.757999897003174
+                            "x": 1.3680000305175781,
+                            "y": 1.0,
+                            "z": 3.757999897003174
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 20.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 20.0,
+                                "z": 0.0
                             }
                         }
                     }
@@ -6069,18 +6069,18 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42902033,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": -1.3680000305175781,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 3.757999897003174
+                            "x": -1.3680000305175781,
+                            "y": 1.0,
+                            "z": 3.757999897003174
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": -20.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": -20.0,
+                                "z": 0.0
                             }
                         }
                     }

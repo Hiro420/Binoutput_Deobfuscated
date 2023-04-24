@@ -18,16 +18,16 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 0,
                                             "parameter": "ComboCount"
                                         },
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 4,
                                             "parameter": "ComboCount"
@@ -186,11 +186,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ExtraAttack_Sprint",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -205,11 +205,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ExtraAttack",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -278,7 +278,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "MonsterEquip"
                             ]
@@ -293,7 +293,7 @@
                                 "attenuationTag": "ExtraAttack",
                                 "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "ExtraAttack_Normal",
+                                    "damagePercentage": "ExtraAttack_Normal",
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 25.0,
                                     "overrideByWeapon": true,
@@ -325,24 +325,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 0.800000011920929
+                                    "radius": 0.800000011920929
                                 },
                                 "attackInfo": {
                                     "attackTag": "ExtraAttack",
                                     "attenuationTag": "ExtraAttack",
                                     "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "ExtraAttack_Normal",
+                                        "damagePercentage": "ExtraAttack_Normal",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 25.0,
                                         "overrideByWeapon": true,
@@ -741,29 +741,29 @@
                             "RotationDampTime": true,
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "DBGHBLHJOCO"
+                                    "$type": "ByHitCritical"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Avatar_Mika_P2_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Mika_P2_In_Burst_Buff",
                                     "ratio": 1.0
@@ -1140,11 +1140,11 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Avatar_Mika_Buff_Eff_Trigger_Mode_In_2",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "Avatar_Mika_Sub_Buff_Trigger_Eff"
@@ -1182,11 +1182,11 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Avatar_Mika_Buff_Eff_Trigger_Mode_In_1",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "modifierName": "Avatar_Mika_Sub_Buff_Trigger_Eff"
@@ -1212,17 +1212,17 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Buff_Trigger_01",
@@ -1232,17 +1232,17 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack",
                                     "ratio": 2.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Buff_Trigger_02",
@@ -1252,17 +1252,17 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack",
                                     "ratio": 3.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Buff_Trigger_03",
@@ -1272,17 +1272,17 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack",
                                     "ratio": 4.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Buff_Trigger_04",
@@ -1292,17 +1292,17 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack",
                                     "ratio": 5.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Buff_Trigger_05",
@@ -1314,7 +1314,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_Attack_Speed_Stack",
                                     "ratio": "MaxBuffStack"
@@ -1381,14 +1381,14 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "_ABILITY_Avatar_Mika_Buff_Eff_Trigger_Mode",
                             "ratio": 1.0
@@ -1402,14 +1402,14 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "_ABILITY_Mika_Attack_Speed_Stack_Eff_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "_ABILITY_Avatar_Mika_Buff_Eff_Trigger_Mode",
                             "ratio": 2.0
@@ -1458,22 +1458,22 @@
                                     "attackType": "Default"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_EArt_Short_Hit_Mark",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1508,23 +1508,23 @@
                                     "attackType": "Default"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Mika_EArt_Short_Hit_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1591,16 +1591,16 @@
                                     "attackType": "Default"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1622,11 +1622,11 @@
                             "$type": "GenerateElemBall",
                             "configID": 2022,
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 1.0
                                 }
                             },
                             "value": 1.0,
@@ -1691,18 +1691,18 @@
                             "triggerType": "TriggerNoRepeat",
                             "EDLHKEAJOOL": 0.5,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.7000000476837158,
-                                    "INAIAJMIKEK": -0.4000000059604645
+                                    "x": 0.0,
+                                    "y": 1.7000000476837158,
+                                    "z": -0.4000000059604645
                                 },
                                 "IABNJPGBAOH": true
                             },
                             "size": {
-                                "JJJFPBPALGO": 2.5,
-                                "EAOEAJIDBGD": 3.5,
-                                "INAIAJMIKEK": 10.0
+                                "x": 2.5,
+                                "y": 3.5,
+                                "z": 10.0
                             }
                         },
                         "attackInfo": {
@@ -1710,7 +1710,7 @@
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "Damage_Percentage",
+                                "damagePercentage": "Damage_Percentage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 25.0,
@@ -1753,27 +1753,27 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Mika_Main_Bullet_Rehit_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1794,13 +1794,13 @@
                                     "RotationDampTime": true,
                                     "bulletID": 41080002,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "HFKFLHCBMLB"
                                         },
                                         "IABNJPGBAOH": true
@@ -1908,17 +1908,17 @@
                                     "target": "Target",
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Gadget"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -1936,17 +1936,17 @@
                                     "target": "Target",
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Gadget"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -1965,17 +1965,17 @@
                                     "target": "Target",
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Gadget"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         }
                                     ],
                                     "modifierName": "Lock_Eff",
@@ -1988,17 +1988,17 @@
                                     "target": "Target",
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Gadget"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         }
                                     ],
                                     "modifierName": "Lock_Eff",
@@ -2009,17 +2009,17 @@
                                     "target": "Target",
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Gadget"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2032,7 +2032,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster",
                                                 "Gadget"
@@ -2045,17 +2045,17 @@
                                             "target": "Target",
                                             "predicates": [
                                                 {
-                                                    "$type": "EOIPHDBDAKP",
+                                                    "$type": "ByEntityTypes",
                                                     "entityTypes": [
                                                         "Monster",
                                                         "Gadget"
                                                     ]
                                                 },
                                                 {
-                                                    "$type": "OLLFFMPEOKL",
+                                                    "$type": "ByTargetGlobalValue",
                                                     "key": "_ANIMAL_ENTITY_TYPE",
                                                     "ratio": 0.0,
-                                                    "HDJELDCCOCG": "NoneOrEqual"
+                                                    "compareType": "NoneOrEqual"
                                                 }
                                             ]
                                         },
@@ -2270,7 +2270,7 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "_ABILITY_Avatar_Mika_EArt_Has_Target_Mark",
                             "ratio": 1.0
@@ -2280,16 +2280,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "DOCDLGLJKND",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             },
                             "attachPointName": "FocusAnchor",
                             "ABIMPICHJNC": "Self"
@@ -2305,27 +2305,27 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "target": "Caster",
                             "key": "_ABILITY_Avatar_Mika_EArt_Has_Target_Mark",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "bulletID": 41080004,
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.30000001192092896,
-                            "EAOEAJIDBGD": 0.30000001192092896,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.30000001192092896,
+                            "y": 0.30000001192092896,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "DOCDLGLJKND",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             },
                             "attachPointName": "FocusAnchor",
                             "ABIMPICHJNC": "Self"
@@ -2353,7 +2353,7 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget",
@@ -2361,17 +2361,17 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Mika_Main_Bullet_Already_Trigger",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -2391,16 +2391,16 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2414,7 +2414,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -2425,11 +2425,11 @@
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Catapult",
                                             "born": {
-                                                "$type": "CLOEBFCHPGN",
+                                                "$type": "ConfigBornByCollisionPoint",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
                                                 "IABNJPGBAOH": true
                                             },
@@ -2457,16 +2457,16 @@
                                     "RotationDampTime": true,
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2478,7 +2478,7 @@
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Caster",
                                             "key": "_ABILITY_Mika_Bullet_Main_Can_Trigger_Sub_Bullet",
                                             "ratio": 1.0
@@ -2486,7 +2486,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -2510,20 +2510,20 @@
                                             "RotationDampTime": true,
                                             "bulletID": 41080002,
                                             "born": {
-                                                "$type": "CLOEBFCHPGN",
+                                                "$type": "ConfigBornByCollisionPoint",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 3.5,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 3.5,
+                                                    "z": 0.0
                                                 },
-                                                "HOPPHMEKHLG": {
-                                                    "$type": "BIMJJILMODA",
+                                                "direction": {
+                                                    "$type": "ConfigDirectionByGlobalValue",
                                                     "NHGDOBINMBK": {
-                                                        "JJJFPBPALGO": -45.0,
-                                                        "EAOEAJIDBGD": 0.10000000149011612,
-                                                        "INAIAJMIKEK": 0.10000000149011612
+                                                        "x": -45.0,
+                                                        "y": 0.10000000149011612,
+                                                        "z": 0.10000000149011612
                                                     },
-                                                    "GPPNNKAOHCG": "_ABILITY_Mika_SubBullet_Aim_Pos"
+                                                    "directionKey": "_ABILITY_Mika_SubBullet_Aim_Pos"
                                                 },
                                                 "IABNJPGBAOH": true
                                             },
@@ -2567,25 +2567,25 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "MJLCPIAKNCP": "Both",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 0.15000000596046448
+                            "radius": 0.15000000596046448
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "Elemental_Art",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.0,
+                                "damagePercentage": 1.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 25.0,
@@ -2634,24 +2634,24 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Mika_Main_Bullet_Already_Trigger",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -2677,7 +2677,7 @@
                                             "GFIOLOJIDMG": "Mika_Talent_2"
                                         },
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "target": "SelfAttackTarget",
                                             "entityTypes": [
                                                 "Monster"
@@ -2698,16 +2698,16 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2721,7 +2721,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -2732,11 +2732,11 @@
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Catapult",
                                             "born": {
-                                                "$type": "CLOEBFCHPGN",
+                                                "$type": "ConfigBornByCollisionPoint",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
                                                 "IABNJPGBAOH": true
                                             },
@@ -2764,16 +2764,16 @@
                                     "RotationDampTime": true,
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2785,7 +2785,7 @@
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Caster",
                                             "key": "_ABILITY_Mika_Bullet_Main_Can_Trigger_Sub_Bullet",
                                             "ratio": 1.0
@@ -2793,7 +2793,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -2817,20 +2817,20 @@
                                             "RotationDampTime": true,
                                             "bulletID": 41080002,
                                             "born": {
-                                                "$type": "CLOEBFCHPGN",
+                                                "$type": "ConfigBornByCollisionPoint",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 3.5,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 3.5,
+                                                    "z": 0.0
                                                 },
-                                                "HOPPHMEKHLG": {
-                                                    "$type": "BIMJJILMODA",
+                                                "direction": {
+                                                    "$type": "ConfigDirectionByGlobalValue",
                                                     "NHGDOBINMBK": {
-                                                        "JJJFPBPALGO": -45.0,
-                                                        "EAOEAJIDBGD": 0.10000000149011612,
-                                                        "INAIAJMIKEK": 0.10000000149011612
+                                                        "x": -45.0,
+                                                        "y": 0.10000000149011612,
+                                                        "z": 0.10000000149011612
                                                     },
-                                                    "GPPNNKAOHCG": "_ABILITY_Mika_SubBullet_Aim_Pos"
+                                                    "directionKey": "_ABILITY_Mika_SubBullet_Aim_Pos"
                                                 },
                                                 "IABNJPGBAOH": true
                                             },
@@ -2853,17 +2853,17 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "MonsterEquip"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Mika_Main_Bullet_Already_Trigger",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -2903,16 +2903,16 @@
                                     },
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2926,7 +2926,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -2937,11 +2937,11 @@
                                             "$type": "FireEffect",
                                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Boy_Pole_Mika_ElementalArt_Catapult",
                                             "born": {
-                                                "$type": "CLOEBFCHPGN",
+                                                "$type": "ConfigBornByCollisionPoint",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 0.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 0.0,
+                                                    "z": 0.0
                                                 },
                                                 "IABNJPGBAOH": true
                                             },
@@ -2969,16 +2969,16 @@
                                     "RotationDampTime": true,
                                     "predicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ANIMAL_ENTITY_TYPE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         },
                                         {
                                             "$type": "DDBJEPBNOGF",
@@ -2990,7 +2990,7 @@
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Caster",
                                             "key": "_ABILITY_Mika_Bullet_Main_Can_Trigger_Sub_Bullet",
                                             "ratio": 1.0
@@ -2998,7 +2998,7 @@
                                     ],
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -3022,20 +3022,20 @@
                                             "RotationDampTime": true,
                                             "bulletID": 41080002,
                                             "born": {
-                                                "$type": "CLOEBFCHPGN",
+                                                "$type": "ConfigBornByCollisionPoint",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 3.5,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 3.5,
+                                                    "z": 0.0
                                                 },
-                                                "HOPPHMEKHLG": {
-                                                    "$type": "BIMJJILMODA",
+                                                "direction": {
+                                                    "$type": "ConfigDirectionByGlobalValue",
                                                     "NHGDOBINMBK": {
-                                                        "JJJFPBPALGO": -45.0,
-                                                        "EAOEAJIDBGD": 0.10000000149011612,
-                                                        "INAIAJMIKEK": 0.10000000149011612
+                                                        "x": -45.0,
+                                                        "y": 0.10000000149011612,
+                                                        "z": 0.10000000149011612
                                                     },
-                                                    "GPPNNKAOHCG": "_ABILITY_Mika_SubBullet_Aim_Pos"
+                                                    "directionKey": "_ABILITY_Mika_SubBullet_Aim_Pos"
                                                 },
                                                 "IABNJPGBAOH": true
                                             },
@@ -3087,16 +3087,16 @@
                                     "attackType": "Range"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -3104,20 +3104,20 @@
                                     "$type": "GenerateElemBall",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Caster",
                                             "key": "_ABILITY_Mika_Main_Bullet_ElemBall_Mark",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         }
                                     ],
                                     "configID": 2022,
                                     "born": {
-                                        "$type": "HJHMHBHDDAH",
+                                        "$type": "ConfigBornBySelfOwner",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "IABNJPGBAOH": true
                                     },
@@ -3129,11 +3129,11 @@
                                     "target": "Caster",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Caster",
                                             "key": "_ABILITY_Mika_Main_Bullet_ElemBall_Mark",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         }
                                     ],
                                     "ratio": 1.0,
@@ -3165,18 +3165,18 @@
                             "triggerType": "TriggerNoRepeat",
                             "MJLCPIAKNCP": "Both",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -0.4000000059604645
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -0.4000000059604645
                                 },
                                 "IABNJPGBAOH": true
                             },
                             "size": {
-                                "JJJFPBPALGO": 0.30000001192092896,
-                                "EAOEAJIDBGD": 0.30000001192092896,
-                                "INAIAJMIKEK": 1.2999999523162842
+                                "x": 0.30000001192092896,
+                                "y": 0.30000001192092896,
+                                "z": 1.2999999523162842
                             }
                         },
                         "attackInfo": {
@@ -3184,7 +3184,7 @@
                             "attenuationTag": "Elemental_Art",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "Damage_Percentage",
+                                "damagePercentage": "Damage_Percentage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 25.0,
@@ -3244,23 +3244,23 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Mika_Sub_Bullet_Rehit_Mark",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -3348,18 +3348,18 @@
                                     "triggerType": "TriggerNoRepeat",
                                     "MJLCPIAKNCP": "Both",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "IABNJPGBAOH": true
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 0.20000000298023224,
-                                        "EAOEAJIDBGD": 0.20000000298023224,
-                                        "INAIAJMIKEK": 1.2000000476837158
+                                        "x": 0.20000000298023224,
+                                        "y": 0.20000000298023224,
+                                        "z": 1.2000000476837158
                                     }
                                 },
                                 "attackInfo": {
@@ -3367,7 +3367,7 @@
                                     "attenuationTag": "Elemental_Art",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Damage_Percentage",
+                                        "damagePercentage": "Damage_Percentage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
@@ -3658,11 +3658,11 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Team",
                                     "key": "_ABILITY_Avatar_Mika_ElementalArt_Buff_Team_Ratio",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "globalValueKey": "_ABILITY_Avatar_Mika_ElementalArt_Buff_Team_Ratio",
@@ -3673,11 +3673,11 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Team",
                                     "key": "_ABILITY_Avatar_Mika_ElementalArt_Buff_Team_Ratio",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "ratio": 0.0,
@@ -3785,16 +3785,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -3802,7 +3802,7 @@
                                     "$type": "Predicated",
                                     "targetPredicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Self",
                                             "key": "_ABILITY_Avatar_Mika_ElementalArt_Buff_Mark",
                                             "ratio": 1.0
@@ -3844,7 +3844,7 @@
                                     "GFIOLOJIDMG": "Mika_Talent_4"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Avatar_Mika_C4_Stack",
                                     "ratio": [
@@ -3852,7 +3852,7 @@
                                         1.0,
                                         "SUB"
                                     ],
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "modifierName": "Avatar_Mika_Burst_Energy_Revive"
@@ -3870,7 +3870,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Caster",
                                     "key": "_ABILITY_Avatar_Mika_C4_Stack",
                                     "ratio": [
@@ -3878,7 +3878,7 @@
                                         1.0,
                                         "SUB"
                                     ],
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "ratio": "C4_Revive_Energy"
@@ -4101,25 +4101,25 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         },
                                         "IABNJPGBAOH": true
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "overrideByWeapon": true,
@@ -4142,25 +4142,25 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         },
                                         "IABNJPGBAOH": true
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "overrideByWeapon": true,
@@ -4500,11 +4500,11 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "attackEvent": {
@@ -4512,22 +4512,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_1_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 25.0,
                                 "overrideByWeapon": true,
@@ -4563,7 +4563,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -4574,22 +4574,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 5.0
+                            "radius": 5.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_2_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 25.0,
                                 "overrideByWeapon": true,
@@ -4626,11 +4626,11 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Pole_FallingAnthem_Strike_01_Normal",
@@ -4640,7 +4640,7 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -4662,7 +4662,7 @@
                     "animEventNames": [
                         "ATK01"
                     ],
-                    "MFOOCADHKLC": "Attack_01_Normal",
+                    "damagePercentage": "Attack_01_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4670,7 +4670,7 @@
                     "animEventNames": [
                         "ATK02"
                     ],
-                    "MFOOCADHKLC": "Attack_02_Normal",
+                    "damagePercentage": "Attack_02_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4678,7 +4678,7 @@
                     "animEventNames": [
                         "ATK03"
                     ],
-                    "MFOOCADHKLC": "Attack_03_Normal",
+                    "damagePercentage": "Attack_03_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4686,7 +4686,7 @@
                     "animEventNames": [
                         "ATK04A"
                     ],
-                    "MFOOCADHKLC": "Attack_04A_Normal",
+                    "damagePercentage": "Attack_04A_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4694,7 +4694,7 @@
                     "animEventNames": [
                         "ATK04B"
                     ],
-                    "MFOOCADHKLC": "Attack_04B_Normal",
+                    "damagePercentage": "Attack_04B_Normal",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -4702,7 +4702,7 @@
                     "animEventNames": [
                         "ATK05"
                     ],
-                    "MFOOCADHKLC": "Attack_05_Normal",
+                    "damagePercentage": "Attack_05_Normal",
                     "MKLAMNDEDGB": 0.0
                 }
             ],

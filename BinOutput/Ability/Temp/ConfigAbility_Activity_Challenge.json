@@ -26,11 +26,11 @@
                             "target": "Team",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Team",
                                     "key": "_Is_ActivityAbility_Challenge_SprintAreaAttack_Count",
                                     "ratio": 2.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "successActions": [
@@ -43,7 +43,7 @@
                                     "$type": "CreateGadget",
                                     "target": "CurLocalAvatar",
                                     "born": {
-                                        "$type": "GJGFFJAGIDF"
+                                        "$type": "ConfigBornByTarget"
                                     },
                                     "gadgetID": 44000007,
                                     "campID": 1001,
@@ -117,7 +117,7 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Stages_GainWave_Stay",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -127,7 +127,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Stages_GainWave_01",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -136,12 +136,12 @@
                             "target": "OriginOwner",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 4.0
+                                    "radius": 4.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
@@ -234,7 +234,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "IS_ARENASHAKE",
                                     "ratio": 1.0
                                 }
@@ -446,7 +446,7 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -463,15 +463,15 @@
                                     "$type": "FireEffect",
                                     "healLimitedByCasterMaxHPRatio": "Eff_Stages_GainWave_01",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 1.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 1.0,
+                                            "z": 0.0
                                         },
-                                        "DAPKLNIFPID": true,
-                                        "FNMFBPGNEKD": "_ActivityAbility_Challenge_AreaAttackOnEnemyKilled_POS",
-                                        "GPPNNKAOHCG": ""
+                                        "onGround": true,
+                                        "positionKey": "_ActivityAbility_Challenge_AreaAttackOnEnemyKilled_POS",
+                                        "directionKey": ""
                                     },
                                     "FGMDINMEPHL": -1.0
                                 },
@@ -480,20 +480,20 @@
                                     "target": "Caster",
                                     "attackEvent": {
                                         "attackPattern": {
-                                            "$type": "MHDMMPENLGB",
+                                            "$type": "ConfigAttackSphere",
                                             "triggerType": "TriggerNoRepeat",
                                             "born": {
-                                                "$type": "FNJGDOEMIIB",
+                                                "$type": "ConfigBornByGlobalValue",
                                                 "offset": {
-                                                    "JJJFPBPALGO": 0.0,
-                                                    "EAOEAJIDBGD": 1.0,
-                                                    "INAIAJMIKEK": 0.0
+                                                    "x": 0.0,
+                                                    "y": 1.0,
+                                                    "z": 0.0
                                                 },
-                                                "DAPKLNIFPID": true,
-                                                "FNMFBPGNEKD": "_ActivityAbility_Challenge_AreaAttackOnEnemyKilled_POS",
-                                                "GPPNNKAOHCG": ""
+                                                "onGround": true,
+                                                "positionKey": "_ActivityAbility_Challenge_AreaAttackOnEnemyKilled_POS",
+                                                "directionKey": ""
                                             },
-                                            "BMCPFKAEOJB": 4.0
+                                            "radius": 4.0
                                         },
                                         "attackInfo": {
                                             "attackTag": "",
@@ -868,16 +868,16 @@
                             "target": "Other",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Team",
                                     "key": "_ActivityAbility_Challenge_Frozen_CD",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -927,11 +927,11 @@
                             "target": "Other",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ActivityAbility_Challenge_Frozen_DoAttack",
                                     "ratio": 0.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "modifierName": "ActivityAbility_Challenge_Frozen_AreaAttack"
@@ -942,11 +942,11 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ActivityAbility_Challenge_Frozen_DoAttack",
                                     "ratio": 0.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "key": "_ActivityAbility_Challenge_Frozen_DoAttack"
@@ -971,9 +971,9 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 4.0
+                                    "radius": 4.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
@@ -1240,16 +1240,16 @@
                             "target": "Other",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Team",
                                     "key": "ActivityAbility_Challenge_LowHp_AreaAttack_CD",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1283,11 +1283,11 @@
                             "target": "Other",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "ActivityAbility_Challenge_LowHp_AreaAttack_DoAttack",
                                     "ratio": 0.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "modifierName": "ActivityAbility_Challenge_LowHp_AreaAttack"
@@ -1297,11 +1297,11 @@
                             "target": "CurTeamAvatars",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "ActivityAbility_Challenge_LowHp_AreaAttack_DoAttack",
                                     "ratio": 0.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "key": "ActivityAbility_Challenge_LowHp_AreaAttack_DoAttack"
@@ -1339,13 +1339,13 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Stages_GainWave_01",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "DAPKLNIFPID": true
+                                "onGround": true
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1354,18 +1354,18 @@
                             "target": "Applier",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "DAPKLNIFPID": true
+                                        "onGround": true
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
@@ -1490,7 +1490,7 @@
                                     "target": "Other",
                                     "targetPredicates": [
                                         {
-                                            "$type": "EOIPHDBDAKP",
+                                            "$type": "ByEntityTypes",
                                             "entityTypes": [
                                                 "Monster"
                                             ]
@@ -1502,11 +1502,11 @@
                                             "target": "Other",
                                             "targetPredicates": [
                                                 {
-                                                    "$type": "OLLFFMPEOKL",
+                                                    "$type": "ByTargetGlobalValue",
                                                     "target": "Team",
                                                     "key": "_ActivityAbility_Challenge_ExtraAttackOnEnemyKilled_Count",
                                                     "ratio": "Value_MaxBuffCount",
-                                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                                    "compareType": "MoreThanAndEqual"
                                                 }
                                             ],
                                             "successActions": [
@@ -1522,15 +1522,15 @@
                                                     "RotationDampTime": true,
                                                     "healLimitedByCasterMaxHPRatio": "Eff_Stages_GainWave_01",
                                                     "born": {
-                                                        "$type": "FNJGDOEMIIB",
+                                                        "$type": "ConfigBornByGlobalValue",
                                                         "offset": {
-                                                            "JJJFPBPALGO": 0.0,
-                                                            "EAOEAJIDBGD": 1.0,
-                                                            "INAIAJMIKEK": 0.0
+                                                            "x": 0.0,
+                                                            "y": 1.0,
+                                                            "z": 0.0
                                                         },
-                                                        "DAPKLNIFPID": true,
-                                                        "FNMFBPGNEKD": "_ActivityAbility_Challenge_ExtraAttackOnEnemyKilled_POS",
-                                                        "GPPNNKAOHCG": ""
+                                                        "onGround": true,
+                                                        "positionKey": "_ActivityAbility_Challenge_ExtraAttackOnEnemyKilled_POS",
+                                                        "directionKey": ""
                                                     },
                                                     "FGMDINMEPHL": -1.0
                                                 },
@@ -1540,20 +1540,20 @@
                                                     "RotationDampTime": true,
                                                     "attackEvent": {
                                                         "attackPattern": {
-                                                            "$type": "MHDMMPENLGB",
+                                                            "$type": "ConfigAttackSphere",
                                                             "triggerType": "TriggerNoRepeat",
                                                             "born": {
-                                                                "$type": "FNJGDOEMIIB",
+                                                                "$type": "ConfigBornByGlobalValue",
                                                                 "offset": {
-                                                                    "JJJFPBPALGO": 0.0,
-                                                                    "EAOEAJIDBGD": 1.0,
-                                                                    "INAIAJMIKEK": 0.0
+                                                                    "x": 0.0,
+                                                                    "y": 1.0,
+                                                                    "z": 0.0
                                                                 },
-                                                                "DAPKLNIFPID": true,
-                                                                "FNMFBPGNEKD": "_ActivityAbility_Challenge_ExtraAttackOnEnemyKilled_POS",
-                                                                "GPPNNKAOHCG": ""
+                                                                "onGround": true,
+                                                                "positionKey": "_ActivityAbility_Challenge_ExtraAttackOnEnemyKilled_POS",
+                                                                "directionKey": ""
                                                             },
-                                                            "BMCPFKAEOJB": 5.0
+                                                            "radius": 5.0
                                                         },
                                                         "attackInfo": {
                                                             "attackTag": "",
@@ -1711,7 +1711,7 @@
                             ],
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]

@@ -32,8 +32,8 @@
                             "$type": "CreateGadget",
                             "target": "SelfAttackTarget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "DAPKLNIFPID": true,
+                                "$type": "ConfigBornByTarget",
+                                "onGround": true,
                                 "BJCIHELGKLP": true
                             },
                             "gadgetID": 42103003,
@@ -91,7 +91,7 @@
                             "target": "Owner",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_TEST_GRASSADHERING",
                                     "ratio": 1.0
                                 }
@@ -107,11 +107,11 @@
                                     "$type": "AttachModifier",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Owner",
                                             "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                             "ratio": 0.0,
-                                            "HDJELDCCOCG": "NoneOrEqual"
+                                            "compareType": "NoneOrEqual"
                                         }
                                     ],
                                     "modifierName": "GrassStack_Modifier"
@@ -120,7 +120,7 @@
                                     "$type": "AddGlobalValue",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Owner",
                                             "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                             "ratio": 1.0
@@ -136,7 +136,7 @@
                                     "$type": "AttachModifier",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "target": "Owner",
                                             "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                             "ratio": 1.0
@@ -195,7 +195,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Avatar",
@@ -215,7 +215,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Avatar",
@@ -248,14 +248,14 @@
                         {
                             "$type": "DamageByAttackValue",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "attackInfo": {
                                 "attackTag": "",
                                 "attenuationTag": "",
                                 "attenuationGroup": "default",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": 0.125,
+                                    "damagePercentage": 0.125,
                                     "MKLAMNDEDGB": 0.0,
                                     "elementType": "Grass",
                                     "bonusCriticalHurt": 0.0,
@@ -336,7 +336,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Owner",
                                     "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                     "ratio": 1.0
@@ -364,7 +364,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Avatar",
@@ -372,10 +372,10 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHAMAN_GRASS_SUPPORTATK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -406,7 +406,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Owner",
                                     "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                     "ratio": 1.0
@@ -414,7 +414,7 @@
                             ],
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -434,10 +434,10 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_GRASSSTACK_AVATARCOUNT",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "ratio": 1.0,
@@ -450,10 +450,10 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_GRASSSTACK_AVATARCOUNT",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "ratio": -1.0,
@@ -472,13 +472,13 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 5.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 5.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "BJCIHELGKLP": true
                             },
                             "gadgetID": 42103004,
@@ -488,19 +488,19 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 4.400000095367432,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -2.5
+                                    "x": 4.400000095367432,
+                                    "y": 0.0,
+                                    "z": -2.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 120.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "BJCIHELGKLP": true
@@ -512,19 +512,19 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": -4.400000095367432,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -2.5
+                                    "x": -4.400000095367432,
+                                    "y": 0.0,
+                                    "z": -2.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -120.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "BJCIHELGKLP": true
@@ -549,7 +549,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Owner",
                                     "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                     "ratio": 1.0
@@ -569,7 +569,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Avatar",
@@ -577,10 +577,10 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTER_SHAMAN_GRASS_SUPPORTATK",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -611,7 +611,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Avatar"
                                     ]
@@ -631,10 +631,10 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_GRASSSTACK_AVATARCOUNT",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "ratio": 1.0,
@@ -647,10 +647,10 @@
                             "$type": "AddGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_GRASSSTACK_AVATARCOUNT",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "ratio": -1.0,
@@ -669,13 +669,13 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 10.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 10.0
                                 },
-                                "DAPKLNIFPID": true,
+                                "onGround": true,
                                 "BJCIHELGKLP": true
                             },
                             "gadgetID": 42103004,
@@ -685,19 +685,19 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 8.699999809265137,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -5.0
+                                    "x": 8.699999809265137,
+                                    "y": 0.0,
+                                    "z": -5.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 120.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "BJCIHELGKLP": true
@@ -709,19 +709,19 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": -8.699999809265137,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -5.0
+                                    "x": -8.699999809265137,
+                                    "y": 0.0,
+                                    "z": -5.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": -120.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": -120.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "BJCIHELGKLP": true
@@ -881,22 +881,22 @@
                                     "$type": "NAMPOMPBMHC",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 1.0,
-                                            "INAIAJMIKEK": 3.0
+                                            "x": 0.0,
+                                            "y": 1.0,
+                                            "z": 3.0
                                         },
-                                        "DAPKLNIFPID": true,
-                                        "HOPPHMEKHLG": {
+                                        "onGround": true,
+                                        "direction": {
                                             "$type": "HFKFLHCBMLB"
                                         },
                                         "BJCIHELGKLP": true
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 5.0,
-                                        "EAOEAJIDBGD": 1.5,
-                                        "INAIAJMIKEK": 1.0
+                                        "x": 5.0,
+                                        "y": 1.5,
+                                        "z": 1.0
                                     }
                                 },
                                 "attackInfo": {
@@ -904,7 +904,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "enBreak": 200.0
@@ -922,14 +922,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 3.5
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 3.5
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
                                 "BJCIHELGKLP": true
@@ -957,22 +957,22 @@
                                     "$type": "NAMPOMPBMHC",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 3.75,
-                                            "EAOEAJIDBGD": 1.0,
-                                            "INAIAJMIKEK": 7.5
+                                            "x": 3.75,
+                                            "y": 1.0,
+                                            "z": 7.5
                                         },
-                                        "DAPKLNIFPID": true,
-                                        "HOPPHMEKHLG": {
+                                        "onGround": true,
+                                        "direction": {
                                             "$type": "HFKFLHCBMLB"
                                         },
                                         "BJCIHELGKLP": true
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 5.0,
-                                        "EAOEAJIDBGD": 1.5,
-                                        "INAIAJMIKEK": 1.0
+                                        "x": 5.0,
+                                        "y": 1.5,
+                                        "z": 1.0
                                     }
                                 },
                                 "attackInfo": {
@@ -980,7 +980,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "enBreak": 200.0
@@ -998,14 +998,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 3.75,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 8.0
+                                    "x": 3.75,
+                                    "y": 0.0,
+                                    "z": 8.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
                                 "BJCIHELGKLP": true
@@ -1027,22 +1027,22 @@
                                     "$type": "NAMPOMPBMHC",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": -3.75,
-                                            "EAOEAJIDBGD": 1.0,
-                                            "INAIAJMIKEK": 7.5
+                                            "x": -3.75,
+                                            "y": 1.0,
+                                            "z": 7.5
                                         },
-                                        "DAPKLNIFPID": true,
-                                        "HOPPHMEKHLG": {
+                                        "onGround": true,
+                                        "direction": {
                                             "$type": "HFKFLHCBMLB"
                                         },
                                         "BJCIHELGKLP": true
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 5.0,
-                                        "EAOEAJIDBGD": 1.5,
-                                        "INAIAJMIKEK": 1.0
+                                        "x": 5.0,
+                                        "y": 1.5,
+                                        "z": 1.0
                                     }
                                 },
                                 "attackInfo": {
@@ -1050,7 +1050,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 100.0,
                                         "enBreak": 200.0
@@ -1068,14 +1068,14 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": -3.75,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 8.0
+                                    "x": -3.75,
+                                    "y": 0.0,
+                                    "z": 8.0
                                 },
-                                "DAPKLNIFPID": true,
-                                "HOPPHMEKHLG": {
+                                "onGround": true,
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 },
                                 "BJCIHELGKLP": true
@@ -1141,9 +1141,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -1178,12 +1178,12 @@
                             "triggerType": "TriggerNoRepeat",
                             "MJLCPIAKNCP": "Both",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
                             "size": {
-                                "JJJFPBPALGO": 0.30000001192092896,
-                                "EAOEAJIDBGD": 0.30000001192092896,
-                                "INAIAJMIKEK": 0.30000001192092896
+                                "x": 0.30000001192092896,
+                                "y": 0.30000001192092896,
+                                "z": 0.30000001192092896
                             }
                         },
                         "attackInfo": {
@@ -1191,7 +1191,7 @@
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "strikeType": "Pierce",
@@ -1226,17 +1226,17 @@
                                     "$type": "NAMPOMPBMHC",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -1.0,
-                                            "INAIAJMIKEK": -0.75
+                                            "x": 0.0,
+                                            "y": -1.0,
+                                            "z": -0.75
                                         }
                                     },
                                     "size": {
-                                        "JJJFPBPALGO": 5.0,
-                                        "EAOEAJIDBGD": 2.0,
-                                        "INAIAJMIKEK": 1.5
+                                        "x": 5.0,
+                                        "y": 2.0,
+                                        "z": 1.5
                                     }
                                 },
                                 "attackInfo": {
@@ -1244,7 +1244,7 @@
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.0,
+                                        "damagePercentage": 0.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "enBreak": 0.0
@@ -1268,10 +1268,10 @@
                                     "isTarget": false
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_COMMON_GRASSWALL_ISSUMMON",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "MoreThan"
+                                    "compareType": "MoreThan"
                                 }
                             ],
                             "successActions": [
@@ -1329,9 +1329,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -1353,9 +1353,9 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "attachPointName": "RootNode"
                     },
@@ -1436,11 +1436,11 @@
                                     "ratio": 11.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1467,11 +1467,11 @@
                                     "ratio": 3.5
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ELITEAFFIX_SUPPORT_ENHANCE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1648,8 +1648,8 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Shaman_Grass_SupportAttack_Gather",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "DAPKLNIFPID": true,
+                                "$type": "ConfigBornByTarget",
+                                "onGround": true,
                                 "BJCIHELGKLP": true
                             },
                             "FGMDINMEPHL": -1.0

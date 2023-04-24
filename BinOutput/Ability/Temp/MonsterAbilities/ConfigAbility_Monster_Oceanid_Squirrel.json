@@ -21,25 +21,25 @@
                             "$type": "SetGlobalPos",
                             "key": "_OCEANID_SQUIRREL_ESCAPEPOINT",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": -7.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": -7.0
                                 }
                             }
                         },
                         {
                             "$type": "TurnDirectionToPos",
                             "toPos": {
-                                "$type": "FNJGDOEMIIB",
+                                "$type": "ConfigBornByGlobalValue",
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
                                     "OKDPGGJGGCJ": 0.0,
                                     "CPOKKADJBFH": 5.0
                                 },
-                                "FNMFBPGNEKD": "_OCEANID_SQUIRREL_ESCAPEPOINT",
-                                "GPPNNKAOHCG": ""
+                                "positionKey": "_OCEANID_SQUIRREL_ESCAPEPOINT",
+                                "directionKey": ""
                             }
                         }
                     ]
@@ -56,11 +56,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42005022,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.5,
-                            "INAIAJMIKEK": 1.5
+                            "x": 0.0,
+                            "y": 1.5,
+                            "z": 1.5
                         }
                     }
                 }
@@ -83,19 +83,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Water",
                                 "bonusCriticalHurt": 50.0,
@@ -139,19 +139,19 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
-                                        "FNMFBPGNEKD": "_MONSTER_OCEANID_SQUIRREL_JUMPATTACKPOINT",
-                                        "GPPNNKAOHCG": ""
+                                        "$type": "ConfigBornByGlobalValue",
+                                        "positionKey": "_MONSTER_OCEANID_SQUIRREL_JUMPATTACKPOINT",
+                                        "directionKey": ""
                                     },
                                     "height": 3.0,
-                                    "BMCPFKAEOJB": 2.5
+                                    "radius": 2.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "Squirrel_JumpAttack",
                                     "attenuationGroup": "Skirmisher_Fat_SprayGun_Ice",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.800000011920929,
+                                        "damagePercentage": 0.800000011920929,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Water",
                                         "bonusCriticalHurt": 25.0,
@@ -185,7 +185,7 @@
                     "$type": "SetGlobalPos",
                     "key": "_MONSTER_OCEANID_SQUIRREL_JUMPATTACKPOINT",
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     }
                 },
                 {
@@ -308,7 +308,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "SGV_MONSTERAFFIX_OCEANID_02_ANIMALHEAL_UP",
                                     "ratio": 1.0
                                 }
@@ -318,14 +318,14 @@
                                     "$type": "ApplyModifier",
                                     "predicates": [
                                         {
-                                            "$type": "NPILMJKANHO",
+                                            "$type": "ByAny",
                                             "predicates": [
                                                 {
                                                     "$type": "OIEGBANNLOG",
                                                     "CIMNBKFMPGD": "Fire"
                                                 },
                                                 {
-                                                    "$type": "OLLFFMPEOKL",
+                                                    "$type": "ByTargetGlobalValue",
                                                     "key": "_OCEANID_ANIMAL_SP",
                                                     "ratio": 1.0
                                                 }
@@ -340,14 +340,14 @@
                                     "$type": "ApplyModifier",
                                     "predicates": [
                                         {
-                                            "$type": "NPILMJKANHO",
+                                            "$type": "ByAny",
                                             "predicates": [
                                                 {
                                                     "$type": "OIEGBANNLOG",
                                                     "CIMNBKFMPGD": "Fire"
                                                 },
                                                 {
-                                                    "$type": "OLLFFMPEOKL",
+                                                    "$type": "ByTargetGlobalValue",
                                                     "key": "_OCEANID_ANIMAL_SP",
                                                     "ratio": 1.0
                                                 }
@@ -364,7 +364,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "SGV_MONSTERAFFIX_OCEANID_02_ANIMALHEAL_UP",
                                     "ratio": 1.0
                                 }
@@ -494,7 +494,7 @@
                             "$type": "DDBJEPBNOGF",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_ANIMAL_SPMASK",
                                     "ratio": 1.0
                                 }
@@ -504,7 +504,7 @@
                             "$type": "DDBJEPBNOGF",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_OCEANID_ANIMAL_FOOTEFFECT_OFF",
                                     "ratio": 1.0
                                 }

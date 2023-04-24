@@ -232,7 +232,7 @@
                             "$type": "AddElementDurability",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_MONSTERAFFIX_ELEMENTRECOVERY_ICE",
                                     "ratio": 1.0,
                                     "FHNBDHANFCJ": true
@@ -497,10 +497,10 @@
                             "$type": "UseSkillEliteSet",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "GV_TD_MONSTER_SLIME_SHIELDREBORN",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "skillEliteSetID": 1
@@ -509,7 +509,7 @@
                             "$type": "UseSkillEliteSet",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "GV_TD_MONSTER_SLIME_SHIELDREBORN",
                                     "ratio": 1.0
                                 }
@@ -524,10 +524,10 @@
                     "$type": "ApplyModifier",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ELITEAFFIX_TAG",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "modifierName": "UNIQUE_MonsterEliteAffix_DefaultState"
@@ -541,22 +541,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "height": 1.5,
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.0,
+                                "damagePercentage": 1.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
@@ -648,8 +648,8 @@
                             "$type": "CreateGadget",
                             "target": "SelfAttackTarget",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
-                                "DAPKLNIFPID": true
+                                "$type": "ConfigBornByTarget",
+                                "onGround": true
                             },
                             "gadgetID": 42001001,
                             "campID": 4001,
@@ -768,7 +768,7 @@
                     "bulletID": 42001004,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "attachPointName": "IceCone_01"
@@ -779,7 +779,7 @@
                     "bulletID": 42001004,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "attachPointName": "IceCone_02"
@@ -790,7 +790,7 @@
                     "bulletID": 42001004,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "attachPointName": "IceCone_03"
@@ -840,7 +840,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Slime_Ice_Cone_AS",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -852,24 +852,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.25,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.25,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.3330000042915344,
+                                "damagePercentage": 0.3330000042915344,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
@@ -901,13 +901,13 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 4.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 4.0
                         },
-                        "DAPKLNIFPID": true,
+                        "onGround": true,
                         "BJCIHELGKLP": true
                     },
                     "gadgetID": 42001005,
@@ -955,21 +955,21 @@
                                     "$type": "CHEAOJDOBEB",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 3.0
+                                    "radius": 3.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "Group1",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 0.10000000149011612,
+                                        "damagePercentage": 0.10000000149011612,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,

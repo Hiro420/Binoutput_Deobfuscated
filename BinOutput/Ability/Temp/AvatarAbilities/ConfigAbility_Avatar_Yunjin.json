@@ -9,7 +9,7 @@
                     "animEventNames": [
                         "ATK01"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_01_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_01_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -17,7 +17,7 @@
                     "animEventNames": [
                         "ATK02"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_02_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_02_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -25,7 +25,7 @@
                     "animEventNames": [
                         "ATK03A"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_03A_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_03A_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -33,7 +33,7 @@
                     "animEventNames": [
                         "ATK03B"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_03B_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_03B_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -41,7 +41,7 @@
                     "animEventNames": [
                         "ATK04A"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_04A_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_04A_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -49,7 +49,7 @@
                     "animEventNames": [
                         "ATK04B"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_04B_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_04B_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 },
                 {
@@ -57,7 +57,7 @@
                     "animEventNames": [
                         "ATK05"
                     ],
-                    "MFOOCADHKLC": "Yunjin_NormalAttack_05_Damage_AtkRatio",
+                    "damagePercentage": "Yunjin_NormalAttack_05_Damage_AtkRatio",
                     "MKLAMNDEDGB": 0.0
                 }
             ],
@@ -112,16 +112,16 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 0,
                                             "parameter": "ComboCount"
                                         },
                                         {
-                                            "$type": "EDBHMCAENNJ",
+                                            "$type": "ByAnimatorInt",
                                             "logic": "Equal",
                                             "ratio": 5,
                                             "parameter": "ComboCount"
@@ -240,11 +240,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Pole_Yunjin_ExtraAttack_Sprint",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -259,11 +259,11 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Pole_Yunjin_ExtraAttack_BS",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.30000001192092896,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.30000001192092896,
+                                    "z": 0.0
                                 }
                             },
                             "FGMDINMEPHL": -1.0
@@ -333,7 +333,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "MonsterEquip"
                             ]
@@ -348,7 +348,7 @@
                                 "attenuationTag": "ExtraAttack",
                                 "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                 "attackProperty": {
-                                    "MFOOCADHKLC": "Yunjin_ExtraAttack_Damage_AtkRatio",
+                                    "damagePercentage": "Yunjin_ExtraAttack_Damage_AtkRatio",
                                     "MKLAMNDEDGB": 0.0,
                                     "bonusCriticalHurt": 25.0,
                                     "overrideByWeapon": true,
@@ -380,24 +380,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "CLOEBFCHPGN",
+                                        "$type": "ConfigBornByCollisionPoint",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 0.800000011920929
+                                    "radius": 0.800000011920929
                                 },
                                 "attackInfo": {
                                     "attackTag": "ExtraAttack",
                                     "attenuationTag": "ExtraAttack",
                                     "attenuationGroup": "Avatar_Pole_ExtraAttack",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "Yunjin_ExtraAttack_Damage_AtkRatio",
+                                        "damagePercentage": "Yunjin_ExtraAttack_Damage_AtkRatio",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 25.0,
                                         "overrideByWeapon": true,
@@ -582,24 +582,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "overrideByWeapon": true,
@@ -622,24 +622,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.0
+                                    "radius": 1.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "bonusCriticalHurt": 0.0,
                                         "overrideByWeapon": true,
@@ -979,11 +979,11 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "attackEvent": {
@@ -991,22 +991,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_1_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 25.0,
                                 "overrideByWeapon": true,
@@ -1042,7 +1042,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -1053,22 +1053,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 1.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 1.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 5.0
+                            "radius": 5.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_2_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 25.0,
                                 "overrideByWeapon": true,
@@ -1105,11 +1105,11 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Pole_FallingAnthem_Strike_01_Normal",
@@ -1119,7 +1119,7 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -1545,11 +1545,11 @@
                             "$type": "ActCameraShake",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 3.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 },
                                 {
                                     "$type": "NBKDFLDAGEH",
@@ -1675,7 +1675,7 @@
                                     "ABCEMJKANKB": 0.0
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Yunjin_JustGuard_Flag",
                                     "ratio": 1.0
@@ -1701,16 +1701,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1736,11 +1736,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2023,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1752,7 +1752,7 @@
                             "$type": "Randomed",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 2.0
                                 }
@@ -1763,11 +1763,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2023,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1779,10 +1779,10 @@
                             "$type": "Randomed",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 3.0,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 }
                             ],
                             "chance": 1.0,
@@ -1791,11 +1791,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2023,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 1.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 1.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1961,7 +1961,7 @@
                                     "$type": "DDBJEPBNOGF",
                                     "predicates": [
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ABILITY_Yunjin_ElementalArt_Flag",
                                             "ratio": 1.0,
                                             "FHNBDHANFCJ": true
@@ -2008,10 +2008,10 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 1.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Girl_Pole_Yunjin_ElementalArt_Cast_1",
@@ -2021,7 +2021,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 2.0
                                 }
@@ -2033,7 +2033,7 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 3.0
                                 }
@@ -2045,7 +2045,7 @@
                             "$type": "ApplyModifier",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                                     "ratio": 3.0
                                 }
@@ -2081,7 +2081,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                             "ratio": 1.0
                         }
@@ -2091,15 +2091,15 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "height": 1.5,
-                            "BMCPFKAEOJB": 4.0,
+                            "radius": 4.0,
                             "MKOMGAACIPB": "Clockwise"
                         },
                         "attackInfo": {
@@ -2144,7 +2144,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                             "ratio": 2.0
                         }
@@ -2154,15 +2154,15 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "height": 1.5,
-                            "BMCPFKAEOJB": 6.0,
+                            "radius": 6.0,
                             "MKOMGAACIPB": "Clockwise"
                         },
                         "attackInfo": {
@@ -2207,7 +2207,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_Yunjin_ElementalArt_Stage",
                             "ratio": 3.0
                         }
@@ -2217,15 +2217,15 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "height": 1.5,
-                            "BMCPFKAEOJB": 8.0,
+                            "radius": 8.0,
                             "MKOMGAACIPB": "Clockwise"
                         },
                         "attackInfo": {
@@ -2427,22 +2427,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "height": 4.0,
-                            "BMCPFKAEOJB": 6.0
+                            "radius": 6.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Burst",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "Yunjin_ElementalBurst_Damage_AtkRatio",
+                                "damagePercentage": "Yunjin_ElementalBurst_Damage_AtkRatio",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Rock",
                                 "elementRank": 1.5,
@@ -2601,16 +2601,16 @@
                             ],
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "MEIGPFPPPJH": 30.0,
@@ -2795,7 +2795,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_PermanentSkill_2_ElementNum",
                                     "ratio": 1.0
                                 }
@@ -2808,7 +2808,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_PermanentSkill_2_ElementNum",
                                     "ratio": 2.0
                                 }
@@ -2821,7 +2821,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_PermanentSkill_2_ElementNum",
                                     "ratio": 3.0
                                 }
@@ -2834,7 +2834,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Yunjin_PermanentSkill_2_ElementNum",
                                     "ratio": 4.0
                                 }
@@ -2894,7 +2894,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_ABILITY_Yunjin_ElementalBurst_Buff_Mark",
                                     "ratio": 0.0
@@ -2916,7 +2916,7 @@
                                 {
                                     "$type": "HPJOHDHEPCG",
                                     "logic": "LesserOrEqual",
-                                    "HDJELDCCOCG": "XYZ",
+                                    "compareType": "XYZ",
                                     "ratio": 40.0
                                 }
                             ],
@@ -2934,7 +2934,7 @@
                                 {
                                     "$type": "HPJOHDHEPCG",
                                     "logic": "LesserOrEqual",
-                                    "HDJELDCCOCG": "XYZ",
+                                    "compareType": "XYZ",
                                     "ratio": 40.0
                                 }
                             ],
@@ -2956,7 +2956,7 @@
                         {
                             "$type": "HPJOHDHEPCG",
                             "logic": "LesserOrEqual",
-                            "HDJELDCCOCG": "XYZ",
+                            "compareType": "XYZ",
                             "ratio": 40.0
                         }
                     ],
@@ -2974,7 +2974,7 @@
                         {
                             "$type": "HPJOHDHEPCG",
                             "logic": "LesserOrEqual",
-                            "HDJELDCCOCG": "XYZ",
+                            "compareType": "XYZ",
                             "ratio": 40.0
                         }
                     ],

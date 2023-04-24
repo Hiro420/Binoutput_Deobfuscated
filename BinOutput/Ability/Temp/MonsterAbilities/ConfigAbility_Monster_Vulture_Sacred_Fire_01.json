@@ -378,11 +378,11 @@
                             "$type": "FixedMonsterRushMove",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "IGAGDFFFGAO": {
                                     "$type": "FHDJJGOONEI",
@@ -476,11 +476,11 @@
                     "$type": "TryFindBlinkPointByBorn",
                     "target": "SelfAttackTarget",
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IGAGDFFFGAO": {
                             "$type": "FHDJJGOONEI",
@@ -497,7 +497,7 @@
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Vulture_Sacred_SacredAttack02_Warning",
                     "born": {
                         "$type": "IOHLPEPEKAP",
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     },
                     "FGMDINMEPHL": -1.0
                 }
@@ -533,10 +533,10 @@
                     },
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_COMMON_GADGET_ISSUMMON",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "MoreThan"
+                            "compareType": "MoreThan"
                         }
                     ],
                     "successActions": [
@@ -637,24 +637,24 @@
                             "$type": "TriggerBullet",
                             "bulletID": 42610017,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": [
+                                    "x": [
                                         0.0,
                                         2.5,
                                         "WingFactor",
                                         "MUL",
                                         "SUB"
                                     ],
-                                    "EAOEAJIDBGD": 3.5999999046325684,
-                                    "INAIAJMIKEK": 1.5
+                                    "y": 3.5999999046325684,
+                                    "z": 1.5
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "JADOBJDPOLJ",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 90.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 90.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     }
                                 },
                                 "IABNJPGBAOH": true
@@ -722,7 +722,7 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Vulture_Sacred_SacredAttack04_BulletExplode",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -730,19 +730,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.800000011920929,
+                                "damagePercentage": 0.800000011920929,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 30.0,
@@ -773,9 +773,9 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "IABNJPGBAOH": true,
                         "attachPointName": "Root"
@@ -793,19 +793,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "Vulture_Sacred_Attack05",
                             "attenuationGroup": "Vulture_Sacred_Attack05",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.5,
+                                "damagePercentage": 0.5,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 50.0,
@@ -826,7 +826,7 @@
                     "$type": "FireSubEmitterEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Monster_Vulture_Sacred_SacredAttack05_BulletExplode",
                     "born": {
-                        "$type": "CLOEBFCHPGN"
+                        "$type": "ConfigBornByCollisionPoint"
                     }
                 }
             ]
@@ -847,11 +847,11 @@
                     "$type": "SetGlobalPos",
                     "key": "_Sacred_SacredEnergy_Pos",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 3.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 3.0
                         },
                         "IABNJPGBAOH": true
                     }
@@ -860,11 +860,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42610021,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 2.0
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 2.0
                         },
                         "IABNJPGBAOH": true
                     },
@@ -909,9 +909,9 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_Sacred_SacredEnergy_Pos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_Sacred_SacredEnergy_Pos",
+                                "directionKey": ""
                             },
                             "sightGroupWithOwner": true,
                             "GKJDJDACPMC": true,
@@ -927,8 +927,8 @@
                     "$type": "SetGlobalPos",
                     "key": "_Sacred_SacredEnergy_Pos",
                     "born": {
-                        "$type": "CLOEBFCHPGN",
-                        "DAPKLNIFPID": true,
+                        "$type": "ConfigBornByCollisionPoint",
+                        "onGround": true,
                         "BJCIHELGKLP": true
                     }
                 },
@@ -979,9 +979,9 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "FNJGDOEMIIB",
-                                "FNMFBPGNEKD": "_Sacred_SacredEnergy_Pos",
-                                "GPPNNKAOHCG": ""
+                                "$type": "ConfigBornByGlobalValue",
+                                "positionKey": "_Sacred_SacredEnergy_Pos",
+                                "directionKey": ""
                             },
                             "sightGroupWithOwner": true,
                             "GKJDJDACPMC": true,
@@ -997,8 +997,8 @@
                     "$type": "SetGlobalPos",
                     "key": "_Sacred_SacredEnergy_Pos",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true,
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true,
                         "BJCIHELGKLP": true,
                         "IABNJPGBAOH": true
                     }
@@ -1047,7 +1047,7 @@
                             "target": "SelfAttackTarget",
                             "bulletID": 42610022,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "IABNJPGBAOH": true
                             },
                             "GKJDJDACPMC": true
@@ -1141,11 +1141,11 @@
                             "$type": "FireEffect",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_CHARGEBAR_VALUE",
                                     "ratio": 9.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Vulture_Sacred_SacredEnergyDisappear",
@@ -1156,27 +1156,27 @@
                             "target": "OriginOwner",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_CHARGEBAR_VALUE",
                                     "ratio": 9.0,
-                                    "HDJELDCCOCG": "LessAndEqual"
+                                    "compareType": "LessAndEqual"
                                 }
                             ],
                             "bulletID": 42610023,
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "DOCDLGLJKND",
                                     "NHGDOBINMBK": {
-                                        "JJJFPBPALGO": 0.0,
-                                        "EAOEAJIDBGD": 0.0,
-                                        "INAIAJMIKEK": 0.0
+                                        "x": 0.0,
+                                        "y": 0.0,
+                                        "z": 0.0
                                     },
                                     "attachPointName": "RootNode",
                                     "ABIMPICHJNC": "Self"
@@ -1222,7 +1222,7 @@
                             "$type": "AddChargeBarValue",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
@@ -1239,7 +1239,7 @@
                             "$type": "AddChargeBarValue",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "OIEGBANNLOG",
@@ -1346,16 +1346,16 @@
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
-                                        "HOPPHMEKHLG": {
+                                        "direction": {
                                             "$type": "DOCDLGLJKND",
                                             "NHGDOBINMBK": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 0.0,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 0.0,
+                                                "z": 0.0
                                             },
                                             "attachPointName": "RootNode",
                                             "ABIMPICHJNC": "Self"
@@ -1556,12 +1556,12 @@
                             "target": "Other",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "Monster_Vulture_Sacred",
                                     "ratio": 1.0
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1584,7 +1584,7 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "SacredEnergy_Vulture",
                                     "ratio": 1.0
@@ -1665,7 +1665,7 @@
                     },
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "SacredEnergy_Target_Vulture",
                             "ratio": 1.0
                         }
@@ -1722,7 +1722,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "SacredEnergy_Target_Vulture",
                             "ratio": 1.0
                         }
@@ -1743,7 +1743,7 @@
                             ],
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Vulture_Sacred_SacredEnergyHitPlayer",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "IABNJPGBAOH": true
                             },
                             "FGMDINMEPHL": -1.0
@@ -1774,7 +1774,7 @@
                             "$type": "SetGlobalValue",
                             "predicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "PIJPHCGABIO",
@@ -1824,12 +1824,12 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "Monster_Vulture_Sacred",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_SACRED_ENTITY_ALERTNESS_TAG_",
                             "ratio": 1.0
                         }
@@ -1856,15 +1856,15 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "Monster_Vulture_Sacred",
                             "ratio": 1.0
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_SACRED_ENTITY_ALERTNESS_TAG_",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "successActions": [

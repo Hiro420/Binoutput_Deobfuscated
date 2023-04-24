@@ -311,10 +311,10 @@
                             "$type": "EnableHitBoxByName",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "hitBoxNames": [
@@ -326,7 +326,7 @@
                             "$type": "EnableHitBoxByName",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -413,10 +413,10 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "boolID": "DeathTag",
@@ -426,7 +426,7 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -444,10 +444,10 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "boolID": "DeathTag"
@@ -456,7 +456,7 @@
                             "$type": "SetAnimatorBool",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -583,7 +583,7 @@
                             "$type": "SetAnimatorTrigger",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_SYLPH_POSE_TAG_",
                                     "ratio": 1.0
                                 }
@@ -635,7 +635,7 @@
                     "bulletID": 42006601,
                     "born": {
                         "$type": "LMEODGDBOCI",
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         },
                         "attachPointName": "BulletAttachPoint1",
@@ -661,19 +661,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.6000000238418579
+                            "radius": 0.6000000238418579
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.800000011920929,
+                                "damagePercentage": 0.800000011920929,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 30.0,
@@ -742,9 +742,9 @@
                             "born": {
                                 "$type": "MGDGOLHGFAP",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -1.2999999523162842,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -1.2999999523162842,
+                                    "z": 0.0
                                 },
                                 "GKAPKIFBACA": 1.0,
                                 "DCKBDJJECJH": 0.0,
@@ -794,7 +794,7 @@
                             "$type": "TurnDirectionToPos",
                             "target": "SelfAttackTarget",
                             "toPos": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             }
                         },
                         {
@@ -838,23 +838,23 @@
                             "triggerType": "TriggerNoRepeat",
                             "EDLHKEAJOOL": 0.25,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
+                                "$type": "ConfigBornBySelf",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.800000011920929,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.800000011920929,
+                                    "z": 0.0
                                 }
                             },
                             "height": 3.0,
                             "BAPAHIOBNCL": 60.0,
-                            "BMCPFKAEOJB": 3.799999952316284
+                            "radius": 3.799999952316284
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.0,
+                                "damagePercentage": 1.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 50.0,
@@ -901,9 +901,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -957,26 +957,26 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "EDLHKEAJOOL": 0.25,
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "attachPointName": "RootNode"
                                     },
-                                    "BMCPFKAEOJB": 2.5
+                                    "radius": 2.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.0,
+                                        "damagePercentage": 1.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 30.0,
@@ -1090,23 +1090,23 @@
                                     "triggerType": "TriggerNoRepeat",
                                     "EDLHKEAJOOL": 0.25,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": -0.800000011920929,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": -0.800000011920929,
+                                            "z": 0.0
                                         }
                                     },
                                     "height": 3.0,
                                     "BAPAHIOBNCL": 60.0,
-                                    "BMCPFKAEOJB": 3.799999952316284
+                                    "radius": 3.799999952316284
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.0,
+                                        "damagePercentage": 1.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 50.0,
@@ -1247,11 +1247,11 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "x": 0.10000000149011612,
@@ -1295,11 +1295,11 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 },
-                                "HOPPHMEKHLG": {
+                                "direction": {
                                     "$type": "AKNHOGLMAAH",
                                     "eularAngles": {
                                         "x": 0.10000000149011612,
@@ -1328,26 +1328,26 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "EDLHKEAJOOL": 0.25,
                                     "born": {
                                         "$type": "LMEODGDBOCI",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         },
                                         "attachPointName": "RootNode"
                                     },
-                                    "BMCPFKAEOJB": 5.0
+                                    "radius": 5.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.2000000476837158,
+                                        "damagePercentage": 1.2000000476837158,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 25.0,
@@ -1366,7 +1366,7 @@
                         {
                             "$type": "CreateGadget",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "gadgetID": 42006602,
                             "campID": 4001,
@@ -1411,7 +1411,7 @@
                             "$type": "AttachEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Fire_Activated_Deathrattle_Seed",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "FGMDINMEPHL": -1.0
                         }
@@ -1421,7 +1421,7 @@
                             "$type": "FireEffect",
                             "healLimitedByCasterMaxHPRatio": "Eff_Monster_Sylph_Fire_Activated_Deathrattle_SeedExplode",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "FGMDINMEPHL": -1.0
                         },
@@ -1429,25 +1429,25 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "EDLHKEAJOOL": 0.25,
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 3.5
+                                    "radius": 3.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 2.4000000953674316,
+                                        "damagePercentage": 2.4000000953674316,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 50.0,

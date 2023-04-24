@@ -14,7 +14,7 @@
                             "$type": "SetAnimatorTrigger",
                             "predicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "logic": "Equal",
                                     "ratio": 0,
                                     "parameter": "ComboCount"
@@ -26,7 +26,7 @@
                             "$type": "SetAnimatorInt",
                             "predicates": [
                                 {
-                                    "$type": "EDBHMCAENNJ",
+                                    "$type": "ByAnimatorInt",
                                     "logic": "Equal",
                                     "ratio": 0,
                                     "parameter": "ComboCount"
@@ -82,7 +82,7 @@
                             "$type": "Predicated",
                             "targetPredicates": [
                                 {
-                                    "$type": "NPILMJKANHO",
+                                    "$type": "ByAny",
                                     "predicates": [
                                         {
                                             "$type": "OCNPEDLMADP",
@@ -94,7 +94,7 @@
                                             ]
                                         },
                                         {
-                                            "$type": "OLLFFMPEOKL",
+                                            "$type": "ByTargetGlobalValue",
                                             "key": "_ABILITY_Klee_Extra_Attack",
                                             "ratio": 1.0
                                         }
@@ -161,11 +161,11 @@
                             "$type": "AvatarSkillStart",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Klee_Extra_Attack",
                                     "ratio": 0.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "skillID": 10003,
@@ -176,7 +176,7 @@
                             "$type": "AvatarSkillStart",
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Klee_Extra_Attack",
                                     "ratio": 1.0,
                                     "FHNBDHANFCJ": true
@@ -210,11 +210,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "gadgetID": 41029016,
@@ -292,9 +292,9 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "attachPointName": "Gun"
                     }
@@ -333,24 +333,24 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN",
+                                "$type": "ConfigBornByCollisionPoint",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "ExtraAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ExtraAttack_Damage",
+                                "damagePercentage": "ExtraAttack_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -380,13 +380,13 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Klee_ExtraAttack_Explode",
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true,
+                        "onGround": true,
                         "BJCIHELGKLP": true
                     },
                     "FGMDINMEPHL": -1.0
@@ -406,19 +406,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "NormalAttack_01",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "NormalAttack_01_Damage",
+                                "damagePercentage": "NormalAttack_01_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -473,19 +473,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.0
+                            "radius": 1.0
                         },
                         "attackInfo": {
                             "attackTag": "NormalAttack_02",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "NormalAttack_02_Damage",
+                                "damagePercentage": "NormalAttack_02_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -540,19 +540,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "NormalAttack_03",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "NormalAttack_03_Damage",
+                                "damagePercentage": "NormalAttack_03_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -665,11 +665,11 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB",
                             "LLOEMEPIBII": "Horizontal",
                             "maxAngle": 15.0
@@ -683,16 +683,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "LHand"
@@ -713,11 +713,11 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB",
                             "LLOEMEPIBII": "Horizontal",
                             "maxAngle": 15.0
@@ -731,16 +731,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "RHand"
@@ -759,13 +759,13 @@
                     "$type": "TriggerBullet",
                     "bulletID": 41029014,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 0.30000001192092896
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.30000001192092896
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB",
                             "LLOEMEPIBII": "Horizontal",
                             "maxAngle": 15.0
@@ -776,18 +776,18 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Klee_NormalAttack_02",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 0.30000001192092896
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.30000001192092896
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -997,11 +997,11 @@
                     "target": "Target",
                     "bulletID": 41029001,
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.2000000476837158,
-                            "INAIAJMIKEK": 0.20000000298023224
+                            "x": 0.0,
+                            "y": 1.2000000476837158,
+                            "z": 0.20000000298023224
                         }
                     }
                 },
@@ -1024,18 +1024,18 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Klee_ElementalArt",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 1.0,
-                            "INAIAJMIKEK": 0.20000000298023224
+                            "x": 0.0,
+                            "y": 1.0,
+                            "z": 0.20000000298023224
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "IOPNFLFHGID",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         }
                     },
@@ -1067,23 +1067,23 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "OriginOwner",
                                     "key": "_Ability_Klee_GenerateEnergy_Recently",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1091,11 +1091,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2017,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1132,20 +1132,20 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "EDLHKEAJOOL": 0.20000000298023224,
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 4.0
+                            "radius": 4.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalArt_Damage_01",
+                                "damagePercentage": "ElementalArt_Damage_01",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -1183,16 +1183,16 @@
                     },
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Monster"
                             ]
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "Klee_Rencently_Hurt",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ]
                 },
@@ -1200,13 +1200,13 @@
                     "$type": "TriggerBullet",
                     "bulletID": 41029002,
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     }
                 },
                 {
@@ -1238,23 +1238,23 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "OriginOwner",
                                     "key": "_Ability_Klee_GenerateEnergy_Recently",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1262,11 +1262,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2017,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1303,20 +1303,20 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "EDLHKEAJOOL": 0.20000000298023224,
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 4.0
+                            "radius": 4.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalArt_Damage_02",
+                                "damagePercentage": "ElementalArt_Damage_02",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -1354,16 +1354,16 @@
                     },
                     "predicates": [
                         {
-                            "$type": "EOIPHDBDAKP",
+                            "$type": "ByEntityTypes",
                             "entityTypes": [
                                 "Monster"
                             ]
                         },
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "Klee_Rencently_Hurt",
                             "ratio": 0.0,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ]
                 },
@@ -1371,13 +1371,13 @@
                     "$type": "TriggerBullet",
                     "bulletID": 41029003,
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "DAPKLNIFPID": true
+                        "onGround": true
                     }
                 },
                 {
@@ -1409,23 +1409,23 @@
                                     ]
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "OriginOwner",
                                     "key": "_Ability_Klee_GenerateEnergy_Recently",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -1433,11 +1433,11 @@
                                     "$type": "GenerateElemBall",
                                     "configID": 2017,
                                     "born": {
-                                        "$type": "GJGFFJAGIDF",
+                                        "$type": "ConfigBornByTarget",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
                                     "value": 1.0,
@@ -1483,20 +1483,20 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "EDLHKEAJOOL": 0.20000000298023224,
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 4.0
+                            "radius": 4.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalArt_Damage_03",
+                                "damagePercentage": "ElementalArt_Damage_03",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 50.0,
@@ -1522,8 +1522,8 @@
                     "$type": "FireEffect",
                     "healLimitedByCasterMaxHPRatio": "Eff_Klee_ElementalArt_Bomb_Explode_02",
                     "born": {
-                        "$type": "ODKAAGHNCIP",
-                        "DAPKLNIFPID": true
+                        "$type": "ConfigBornBySelf",
+                        "onGround": true
                     },
                     "FGMDINMEPHL": -1.0
                 },
@@ -1533,16 +1533,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point1"
@@ -1554,16 +1554,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.5,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.5,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point2"
@@ -1575,16 +1575,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point3"
@@ -1596,16 +1596,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point4"
@@ -1617,16 +1617,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point5"
@@ -1638,16 +1638,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point6"
@@ -1659,16 +1659,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point7"
@@ -1680,16 +1680,16 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 0.0
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "JADOBJDPOLJ",
                             "NHGDOBINMBK": {
-                                "JJJFPBPALGO": 0.0,
-                                "EAOEAJIDBGD": 0.0,
-                                "INAIAJMIKEK": 0.0
+                                "x": 0.0,
+                                "y": 0.0,
+                                "z": 0.0
                             }
                         },
                         "attachPointName": "Point8"
@@ -1764,11 +1764,11 @@
                 {
                     "$type": "CreateGadget",
                     "born": {
-                        "$type": "CLOEBFCHPGN",
+                        "$type": "ConfigBornByCollisionPoint",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "gadgetID": 41029007,
@@ -1829,7 +1829,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -1881,19 +1881,19 @@
                     "$type": "TriggerAttackEvent",
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
-                            "BMCPFKAEOJB": 2.0
+                            "radius": 2.0
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Art",
                             "attenuationTag": "Klee_Fire_Damage",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalArt_Mine_Damage",
+                                "damagePercentage": "ElementalArt_Mine_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "elementRank": 1.5,
@@ -2099,20 +2099,20 @@
                                         "$type": "CHEAOJDOBEB",
                                         "triggerType": "TriggerNoRepeat",
                                         "born": {
-                                            "$type": "ODKAAGHNCIP",
+                                            "$type": "ConfigBornBySelf",
                                             "offset": {
-                                                "JJJFPBPALGO": 0.0,
-                                                "EAOEAJIDBGD": 1.5,
-                                                "INAIAJMIKEK": 0.0
+                                                "x": 0.0,
+                                                "y": 1.5,
+                                                "z": 0.0
                                             }
                                         },
                                         "height": 0.20000000298023224,
-                                        "BMCPFKAEOJB": 1.399999976158142
+                                        "radius": 1.399999976158142
                                     }
                                 },
                                 {
                                     "$type": "JAJHLALOAOP",
-                                    "HDJELDCCOCG": "LessAndEqual",
+                                    "compareType": "LessAndEqual",
                                     "CNIHOGLOABE": 0.5
                                 }
                             ],
@@ -2156,9 +2156,9 @@
                     "born": {
                         "$type": "LMEODGDBOCI",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         },
                         "attachPointName": "RootNode"
                     }
@@ -2218,10 +2218,10 @@
                             "target": "CurLocalAvatar",
                             "targetPredicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_Is_Klee",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -2359,7 +2359,7 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gear",
@@ -2367,10 +2367,10 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ]
                         },
@@ -2426,31 +2426,31 @@
                                                 "$type": "GKNHKKPDGMP"
                                             },
                                             {
-                                                "$type": "OLLFFMPEOKL",
+                                                "$type": "ByTargetGlobalValue",
                                                 "target": "OriginOwner",
                                                 "key": "_KLEE_ELEMENTAL_BURST_MONSTER",
                                                 "ratio": 1.0,
-                                                "HDJELDCCOCG": "MoreThanAndEqual"
+                                                "compareType": "MoreThanAndEqual"
                                             }
                                         ],
                                         "bulletID": 41029010,
                                         "born": {
-                                            "$type": "FNJGDOEMIIB",
+                                            "$type": "ConfigBornByGlobalValue",
                                             "offset": {
-                                                "JJJFPBPALGO": 2.5,
-                                                "EAOEAJIDBGD": 2.0,
-                                                "INAIAJMIKEK": 2.0
+                                                "x": 2.5,
+                                                "y": 2.0,
+                                                "z": 2.0
                                             },
                                             "IGAGDFFFGAO": {
                                                 "$type": "FHDJJGOONEI",
                                                 "OKDPGGJGGCJ": 0.0,
                                                 "CPOKKADJBFH": 0.5
                                             },
-                                            "HOPPHMEKHLG": {
+                                            "direction": {
                                                 "$type": "IOPNFLFHGID"
                                             },
-                                            "FNMFBPGNEKD": "_ABILITY_Klee_Funnel_Pos",
-                                            "GPPNNKAOHCG": ""
+                                            "positionKey": "_ABILITY_Klee_Funnel_Pos",
+                                            "directionKey": ""
                                         }
                                     }
                                 ],
@@ -2466,30 +2466,30 @@
                                                         "$type": "GKNHKKPDGMP"
                                                     },
                                                     {
-                                                        "$type": "OLLFFMPEOKL",
+                                                        "$type": "ByTargetGlobalValue",
                                                         "target": "OriginOwner",
                                                         "key": "_KLEE_ELEMENTAL_BURST_MONSTER",
                                                         "ratio": 1.0,
-                                                        "HDJELDCCOCG": "MoreThanAndEqual"
+                                                        "compareType": "MoreThanAndEqual"
                                                     }
                                                 ],
                                                 "bulletID": 41029010,
                                                 "born": {
-                                                    "$type": "FNJGDOEMIIB",
+                                                    "$type": "ConfigBornByGlobalValue",
                                                     "offset": {
-                                                        "EAOEAJIDBGD": 2.0,
-                                                        "INAIAJMIKEK": -1.7000000476837158
+                                                        "y": 2.0,
+                                                        "z": -1.7000000476837158
                                                     },
                                                     "IGAGDFFFGAO": {
                                                         "$type": "FHDJJGOONEI",
                                                         "OKDPGGJGGCJ": 0.0,
                                                         "CPOKKADJBFH": 0.5
                                                     },
-                                                    "HOPPHMEKHLG": {
+                                                    "direction": {
                                                         "$type": "IOPNFLFHGID"
                                                     },
-                                                    "FNMFBPGNEKD": "_ABILITY_Klee_Funnel_Pos",
-                                                    "GPPNNKAOHCG": ""
+                                                    "positionKey": "_ABILITY_Klee_Funnel_Pos",
+                                                    "directionKey": ""
                                                 }
                                             }
                                         ]
@@ -2505,31 +2505,31 @@
                                                         "$type": "GKNHKKPDGMP"
                                                     },
                                                     {
-                                                        "$type": "OLLFFMPEOKL",
+                                                        "$type": "ByTargetGlobalValue",
                                                         "target": "OriginOwner",
                                                         "key": "_KLEE_ELEMENTAL_BURST_MONSTER",
                                                         "ratio": 1.0,
-                                                        "HDJELDCCOCG": "MoreThanAndEqual"
+                                                        "compareType": "MoreThanAndEqual"
                                                     }
                                                 ],
                                                 "bulletID": 41029010,
                                                 "born": {
-                                                    "$type": "FNJGDOEMIIB",
+                                                    "$type": "ConfigBornByGlobalValue",
                                                     "offset": {
-                                                        "JJJFPBPALGO": 2.0,
-                                                        "EAOEAJIDBGD": 3.0,
-                                                        "INAIAJMIKEK": 2.0
+                                                        "x": 2.0,
+                                                        "y": 3.0,
+                                                        "z": 2.0
                                                     },
                                                     "IGAGDFFFGAO": {
                                                         "$type": "FHDJJGOONEI",
                                                         "OKDPGGJGGCJ": 0.0,
                                                         "CPOKKADJBFH": 0.5
                                                     },
-                                                    "HOPPHMEKHLG": {
+                                                    "direction": {
                                                         "$type": "IOPNFLFHGID"
                                                     },
-                                                    "FNMFBPGNEKD": "_ABILITY_Klee_Funnel_Pos",
-                                                    "GPPNNKAOHCG": ""
+                                                    "positionKey": "_ABILITY_Klee_Funnel_Pos",
+                                                    "directionKey": ""
                                                 }
                                             }
                                         ]
@@ -2547,31 +2547,31 @@
                                                         "$type": "GKNHKKPDGMP"
                                                     },
                                                     {
-                                                        "$type": "OLLFFMPEOKL",
+                                                        "$type": "ByTargetGlobalValue",
                                                         "target": "OriginOwner",
                                                         "key": "_KLEE_ELEMENTAL_BURST_MONSTER",
                                                         "ratio": 1.0,
-                                                        "HDJELDCCOCG": "MoreThanAndEqual"
+                                                        "compareType": "MoreThanAndEqual"
                                                     }
                                                 ],
                                                 "bulletID": 41029010,
                                                 "born": {
-                                                    "$type": "FNJGDOEMIIB",
+                                                    "$type": "ConfigBornByGlobalValue",
                                                     "offset": {
-                                                        "JJJFPBPALGO": -3.0,
-                                                        "EAOEAJIDBGD": 2.5,
-                                                        "INAIAJMIKEK": 3.0
+                                                        "x": -3.0,
+                                                        "y": 2.5,
+                                                        "z": 3.0
                                                     },
                                                     "IGAGDFFFGAO": {
                                                         "$type": "FHDJJGOONEI",
                                                         "OKDPGGJGGCJ": 0.0,
                                                         "CPOKKADJBFH": 0.5
                                                     },
-                                                    "HOPPHMEKHLG": {
+                                                    "direction": {
                                                         "$type": "IOPNFLFHGID"
                                                     },
-                                                    "FNMFBPGNEKD": "_ABILITY_Klee_Funnel_Pos",
-                                                    "GPPNNKAOHCG": ""
+                                                    "positionKey": "_ABILITY_Klee_Funnel_Pos",
+                                                    "directionKey": ""
                                                 }
                                             }
                                         ]
@@ -2587,31 +2587,31 @@
                                                         "$type": "GKNHKKPDGMP"
                                                     },
                                                     {
-                                                        "$type": "OLLFFMPEOKL",
+                                                        "$type": "ByTargetGlobalValue",
                                                         "target": "OriginOwner",
                                                         "key": "_KLEE_ELEMENTAL_BURST_MONSTER",
                                                         "ratio": 1.0,
-                                                        "HDJELDCCOCG": "MoreThanAndEqual"
+                                                        "compareType": "MoreThanAndEqual"
                                                     }
                                                 ],
                                                 "bulletID": 41029010,
                                                 "born": {
-                                                    "$type": "FNJGDOEMIIB",
+                                                    "$type": "ConfigBornByGlobalValue",
                                                     "offset": {
-                                                        "JJJFPBPALGO": 0.0,
-                                                        "EAOEAJIDBGD": 3.5,
-                                                        "INAIAJMIKEK": 0.0
+                                                        "x": 0.0,
+                                                        "y": 3.5,
+                                                        "z": 0.0
                                                     },
                                                     "IGAGDFFFGAO": {
                                                         "$type": "FHDJJGOONEI",
                                                         "OKDPGGJGGCJ": 0.0,
                                                         "CPOKKADJBFH": 0.5
                                                     },
-                                                    "HOPPHMEKHLG": {
+                                                    "direction": {
                                                         "$type": "IOPNFLFHGID"
                                                     },
-                                                    "FNMFBPGNEKD": "_ABILITY_Klee_Funnel_Pos",
-                                                    "GPPNNKAOHCG": ""
+                                                    "positionKey": "_ABILITY_Klee_Funnel_Pos",
+                                                    "directionKey": ""
                                                 }
                                             }
                                         ]
@@ -2632,14 +2632,14 @@
                             },
                             "predicatesForeach": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_KLEE_ATTACK_COUNT",
                                     "ratio": 1.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "MoreThanAndEqual"
+                                    "compareType": "MoreThanAndEqual"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gear",
@@ -2647,16 +2647,16 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_IS_MARKED_BY_FUNNEL",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ]
                         },
@@ -2668,9 +2668,9 @@
                             "born": {
                                 "$type": "MBADLELNPBE",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "setTarget": false
@@ -2801,7 +2801,7 @@
                             },
                             "targetPredicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster",
                                         "Gadget",
@@ -2890,9 +2890,9 @@
                             "born": {
                                 "$type": "LMEODGDBOCI",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 1.7000000476837158,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 1.7000000476837158,
+                                    "z": 0.0
                                 },
                                 "attachPointName": "RootNode"
                             },
@@ -2915,19 +2915,19 @@
                     "RotationDampTime": true,
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "CreateFunnel",
                             "attenuationTag": "Elemental_Burst",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 0.0,
+                                "damagePercentage": 0.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "bonusCriticalHurt": 100.0,
                                 "enBreak": 0.0
@@ -2979,16 +2979,16 @@
                             },
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "turnToTargetImmediately": true
@@ -2997,8 +2997,8 @@
                             "$type": "TriggerBullet",
                             "bulletID": 41029009,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 }
                             }
@@ -3063,8 +3063,8 @@
                             "$type": "TriggerBullet",
                             "bulletID": 41029018,
                             "born": {
-                                "$type": "ODKAAGHNCIP",
-                                "HOPPHMEKHLG": {
+                                "$type": "ConfigBornBySelf",
+                                "direction": {
                                     "$type": "HFKFLHCBMLB"
                                 }
                             }
@@ -3137,19 +3137,19 @@
                     "RotationDampTime": true,
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Burst",
                             "attenuationTag": "Elemental_Burst",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "ElementalBurst_Damage",
+                                "damagePercentage": "ElementalBurst_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "elementRank": 1.5,
@@ -3197,19 +3197,19 @@
                     "RotationDampTime": true,
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 1.5
+                            "radius": 1.5
                         },
                         "attackInfo": {
                             "attackTag": "Elemental_Burst",
                             "attenuationTag": "Elemental_Burst",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "Constellation_Explode_Damage",
+                                "damagePercentage": "Constellation_Explode_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "elementRank": 1.5,
@@ -3254,7 +3254,7 @@
                             "target": "Target",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -3267,7 +3267,7 @@
                             "target": "Target",
                             "predicates": [
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
@@ -3493,7 +3493,7 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_KLEE_IS_IN_ELEMENTAL_BURST",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -3501,19 +3501,19 @@
                     ],
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
-                            "BMCPFKAEOJB": 5.0
+                            "radius": 5.0
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "Klee_Constellation_4_Damage",
+                                "damagePercentage": "Klee_Constellation_4_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "elementRank": 1.5,
@@ -3535,7 +3535,7 @@
                     "RotationDampTime": true,
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_KLEE_IS_IN_ELEMENTAL_BURST",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -3662,9 +3662,9 @@
                             "born": {
                                 "$type": "MBADLELNPBE",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": 0.0,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": 0.0,
+                                    "z": 0.0
                                 }
                             },
                             "setTarget": false
@@ -3675,7 +3675,7 @@
                             "RotationDampTime": true,
                             "key": "_ABILITY_Klee_Constellation_1_Dir",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "setTarget": false
                         }
@@ -3687,7 +3687,7 @@
                             "RotationDampTime": true,
                             "key": "_ABILITY_Klee_Constellation_1_Pos",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -3697,7 +3697,7 @@
                             "RotationDampTime": true,
                             "key": "_ABILITY_Klee_Constellation_1_Dir",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "setTarget": false
                         }
@@ -3709,7 +3709,7 @@
                             "RotationDampTime": true,
                             "key": "_ABILITY_Klee_Constellation_1_Pos",
                             "born": {
-                                "$type": "GJGFFJAGIDF"
+                                "$type": "ConfigBornByTarget"
                             },
                             "setTarget": false
                         },
@@ -3719,7 +3719,7 @@
                             "RotationDampTime": true,
                             "key": "_ABILITY_Klee_Constellation_1_Dir",
                             "born": {
-                                "$type": "ODKAAGHNCIP"
+                                "$type": "ConfigBornBySelf"
                             },
                             "setTarget": false
                         }
@@ -3801,14 +3801,14 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41029019,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.0,
-                                            "EAOEAJIDBGD": 2.299999952316284,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 2.0,
+                                            "y": 2.299999952316284,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_ABILITY_Klee_Constellation_1_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_ABILITY_Klee_Constellation_1_Pos",
+                                        "directionKey": ""
                                     }
                                 },
                                 {
@@ -3855,14 +3855,14 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41029019,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.0,
-                                            "EAOEAJIDBGD": 2.299999952316284,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 2.0,
+                                            "y": 2.299999952316284,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_ABILITY_Klee_Constellation_1_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_ABILITY_Klee_Constellation_1_Pos",
+                                        "directionKey": ""
                                     }
                                 },
                                 {
@@ -3909,14 +3909,14 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41029019,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.0,
-                                            "EAOEAJIDBGD": 2.299999952316284,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 2.0,
+                                            "y": 2.299999952316284,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_ABILITY_Klee_Constellation_1_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_ABILITY_Klee_Constellation_1_Pos",
+                                        "directionKey": ""
                                     }
                                 },
                                 {
@@ -3963,14 +3963,14 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41029019,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.0,
-                                            "EAOEAJIDBGD": 2.299999952316284,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 2.0,
+                                            "y": 2.299999952316284,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_ABILITY_Klee_Constellation_1_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_ABILITY_Klee_Constellation_1_Pos",
+                                        "directionKey": ""
                                     }
                                 },
                                 {
@@ -4017,14 +4017,14 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41029019,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.0,
-                                            "EAOEAJIDBGD": 2.299999952316284,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 2.0,
+                                            "y": 2.299999952316284,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_ABILITY_Klee_Constellation_1_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_ABILITY_Klee_Constellation_1_Pos",
+                                        "directionKey": ""
                                     }
                                 },
                                 {
@@ -4071,14 +4071,14 @@
                                     "$type": "TriggerBullet",
                                     "bulletID": 41029019,
                                     "born": {
-                                        "$type": "FNJGDOEMIIB",
+                                        "$type": "ConfigBornByGlobalValue",
                                         "offset": {
-                                            "JJJFPBPALGO": 2.0,
-                                            "EAOEAJIDBGD": 2.299999952316284,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 2.0,
+                                            "y": 2.299999952316284,
+                                            "z": 0.0
                                         },
-                                        "FNMFBPGNEKD": "_ABILITY_Klee_Constellation_1_Pos",
-                                        "GPPNNKAOHCG": ""
+                                        "positionKey": "_ABILITY_Klee_Constellation_1_Pos",
+                                        "directionKey": ""
                                     }
                                 },
                                 {
@@ -4138,11 +4138,11 @@
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ABILITY_Avatar_Klee_PermanentSkill_Free_ExtraAttack_CD",
                                     "ratio": 0.0,
                                     "FHNBDHANFCJ": true,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "chance": 0.5,
@@ -4266,7 +4266,7 @@
                             "RotationDampTime": true,
                             "predicates": [
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "target": "Self",
                                     "key": "_IS_KLEE_EXTRAATTACK_BULLET",
                                     "ratio": 1.0
@@ -4307,19 +4307,19 @@
                                     ]
                                 },
                                 {
-                                    "$type": "DBGHBLHJOCO"
+                                    "$type": "ByHitCritical"
                                 },
                                 {
-                                    "$type": "EOIPHDBDAKP",
+                                    "$type": "ByEntityTypes",
                                     "entityTypes": [
                                         "Monster"
                                     ]
                                 },
                                 {
-                                    "$type": "OLLFFMPEOKL",
+                                    "$type": "ByTargetGlobalValue",
                                     "key": "_ANIMAL_ENTITY_TYPE",
                                     "ratio": 0.0,
-                                    "HDJELDCCOCG": "NoneOrEqual"
+                                    "compareType": "NoneOrEqual"
                                 }
                             ],
                             "successActions": [
@@ -4584,24 +4584,24 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP",
+                                        "$type": "ConfigBornBySelf",
                                         "offset": {
-                                            "JJJFPBPALGO": 0.0,
-                                            "EAOEAJIDBGD": 0.0,
-                                            "INAIAJMIKEK": 0.0
+                                            "x": 0.0,
+                                            "y": 0.0,
+                                            "z": 0.0
                                         }
                                     },
-                                    "BMCPFKAEOJB": 1.5
+                                    "radius": 1.5
                                 },
                                 "attackInfo": {
                                     "attackTag": "FallingAttack",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": "FallingAnthem_Normal_Loop_Damage",
+                                        "damagePercentage": "FallingAnthem_Normal_Loop_Damage",
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Fire",
                                         "bonusCriticalHurt": 0.0,
@@ -4934,11 +4934,11 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "attackEvent": {
@@ -4946,22 +4946,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 0.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.0
+                            "radius": 3.0
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_1_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_1_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -4996,7 +4996,7 @@
                     "$type": "TriggerAttackEvent",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true
@@ -5007,22 +5007,22 @@
                             "$type": "CHEAOJDOBEB",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "GJGFFJAGIDF",
+                                "$type": "ConfigBornByTarget",
                                 "offset": {
-                                    "JJJFPBPALGO": 0.0,
-                                    "EAOEAJIDBGD": -0.5,
-                                    "INAIAJMIKEK": 0.0
+                                    "x": 0.0,
+                                    "y": -0.5,
+                                    "z": 0.0
                                 }
                             },
                             "height": 2.0,
-                            "BMCPFKAEOJB": 3.5
+                            "radius": 3.5
                         },
                         "attackInfo": {
                             "attackTag": "FallingAttack",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": "FallingAnthem_Normal_Rank_2_Damage",
+                                "damagePercentage": "FallingAnthem_Normal_Rank_2_Damage",
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Fire",
                                 "bonusCriticalHurt": 25.0,
@@ -5058,11 +5058,11 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 0.0,
                             "FHNBDHANFCJ": true,
-                            "HDJELDCCOCG": "NoneOrEqual"
+                            "compareType": "NoneOrEqual"
                         }
                     ],
                     "healLimitedByCasterMaxHPRatio": "Eff_Avatar_Catalyst_FallAnthem_Strike_01_Fire",
@@ -5072,7 +5072,7 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ABILITY_FallingAnthem_UseCamera",
                             "ratio": 1.0,
                             "FHNBDHANFCJ": true

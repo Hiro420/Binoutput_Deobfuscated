@@ -21,13 +21,13 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42606005,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.20000000298023224,
-                            "INAIAJMIKEK": 1.2000000476837158
+                            "x": 0.0,
+                            "y": 0.20000000298023224,
+                            "z": 1.2000000476837158
                         },
-                        "HOPPHMEKHLG": {
+                        "direction": {
                             "$type": "HFKFLHCBMLB"
                         }
                     }
@@ -73,19 +73,19 @@
                     "RotationDampTime": true,
                     "attackEvent": {
                         "attackPattern": {
-                            "$type": "MHDMMPENLGB",
+                            "$type": "ConfigAttackSphere",
                             "triggerType": "TriggerNoRepeat",
                             "born": {
-                                "$type": "CLOEBFCHPGN"
+                                "$type": "ConfigBornByCollisionPoint"
                             },
-                            "BMCPFKAEOJB": 0.5
+                            "radius": 0.5
                         },
                         "attackInfo": {
                             "attackTag": "",
                             "attenuationTag": "",
                             "attenuationGroup": "default",
                             "attackProperty": {
-                                "MFOOCADHKLC": 1.0,
+                                "damagePercentage": 1.0,
                                 "MKLAMNDEDGB": 0.0,
                                 "elementType": "Ice",
                                 "bonusCriticalHurt": 50.0,
@@ -209,7 +209,7 @@
                     "$type": "SetGlobalPos",
                     "key": "_MONSTER_CICIN_RUSHATTCK_POS",
                     "born": {
-                        "$type": "ODKAAGHNCIP"
+                        "$type": "ConfigBornBySelf"
                     }
                 }
             ],
@@ -218,7 +218,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 1.0
                         }
@@ -244,7 +244,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 2.0
                         }
@@ -277,7 +277,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 3.0
                         }
@@ -309,9 +309,9 @@
                 {
                     "$type": "FixedMonsterRushMove",
                     "toPos": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_CICIN_RUSHATTCK_POS",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_CICIN_RUSHATTCK_POS",
+                        "directionKey": ""
                     },
                     "timeRange": 0.30000001192092896,
                     "animatorStateIDs": [
@@ -367,19 +367,19 @@
                             "$type": "TriggerAttackEvent",
                             "attackEvent": {
                                 "attackPattern": {
-                                    "$type": "MHDMMPENLGB",
+                                    "$type": "ConfigAttackSphere",
                                     "triggerType": "TriggerNoRepeat",
                                     "born": {
-                                        "$type": "ODKAAGHNCIP"
+                                        "$type": "ConfigBornBySelf"
                                     },
-                                    "BMCPFKAEOJB": 2.0
+                                    "radius": 2.0
                                 },
                                 "attackInfo": {
                                     "attackTag": "",
                                     "attenuationTag": "",
                                     "attenuationGroup": "default",
                                     "attackProperty": {
-                                        "MFOOCADHKLC": 1.0,
+                                        "damagePercentage": 1.0,
                                         "MKLAMNDEDGB": 0.0,
                                         "elementType": "Ice",
                                         "bonusCriticalHurt": 25.0,
@@ -405,16 +405,16 @@
                     "target": "SelfAttackTarget",
                     "key": "_MONSTER_CICIN_RUSHATTCK_POS",
                     "born": {
-                        "$type": "GJGFFJAGIDF"
+                        "$type": "ConfigBornByTarget"
                     },
                     "setTarget": false
                 },
                 {
                     "$type": "FixedMonsterRushMove",
                     "toPos": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_CICIN_RUSHATTCK_POS",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_CICIN_RUSHATTCK_POS",
+                        "directionKey": ""
                     },
                     "timeRange": 0.5,
                     "animatorStateIDs": [
@@ -506,7 +506,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 1.0
                         }
@@ -532,7 +532,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 2.0
                         }
@@ -565,7 +565,7 @@
                     "$type": "Predicated",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 3.0
                         }
@@ -597,9 +597,9 @@
                 {
                     "$type": "TryFindBlinkPointByBorn",
                     "born": {
-                        "$type": "FNJGDOEMIIB",
-                        "FNMFBPGNEKD": "_MONSTER_FATUUS_MAGE_ICE_SENDPOSTOCICIN",
-                        "GPPNNKAOHCG": ""
+                        "$type": "ConfigBornByGlobalValue",
+                        "positionKey": "_MONSTER_FATUUS_MAGE_ICE_SENDPOSTOCICIN",
+                        "directionKey": ""
                     },
                     "hitSceneType": "BlinkHitSceneTestByThreeSegments",
                     "limitY": 1.0
@@ -711,17 +711,17 @@
                     "target": "Owner",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 1.0
                         }
                     ],
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": -2.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 2.0
+                            "x": -2.0,
+                            "y": 0.5,
+                            "z": 2.0
                         }
                     },
                     "hitSceneTest": false,
@@ -732,17 +732,17 @@
                     "target": "Owner",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 2.0
                         }
                     ],
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 2.0
+                            "x": 0.0,
+                            "y": 0.5,
+                            "z": 2.0
                         }
                     },
                     "hitSceneTest": false,
@@ -753,17 +753,17 @@
                     "target": "Owner",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_FATUUS_MAGE_ICE_SUMMONNO",
                             "ratio": 3.0
                         }
                     ],
                     "born": {
-                        "$type": "GJGFFJAGIDF",
+                        "$type": "ConfigBornByTarget",
                         "offset": {
-                            "JJJFPBPALGO": 2.0,
-                            "EAOEAJIDBGD": 0.5,
-                            "INAIAJMIKEK": 2.0
+                            "x": 2.0,
+                            "y": 0.5,
+                            "z": 2.0
                         }
                     },
                     "hitSceneTest": false,
@@ -833,7 +833,7 @@
                     "target": "Target",
                     "targetPredicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_ISOWNER",
                             "ratio": 1.0
                         }
@@ -921,7 +921,7 @@
                     "$type": "FireEffect",
                     "predicates": [
                         {
-                            "$type": "OLLFFMPEOKL",
+                            "$type": "ByTargetGlobalValue",
                             "key": "_MONSTER_CICIN_DIETYPE",
                             "ratio": 0.0
                         }
@@ -952,11 +952,11 @@
                     "$type": "TriggerBullet",
                     "bulletID": 42606006,
                     "born": {
-                        "$type": "ODKAAGHNCIP",
+                        "$type": "ConfigBornBySelf",
                         "offset": {
-                            "JJJFPBPALGO": 0.0,
-                            "EAOEAJIDBGD": 0.0,
-                            "INAIAJMIKEK": 0.0
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
                         }
                     },
                     "trackTarget": "Owner"
