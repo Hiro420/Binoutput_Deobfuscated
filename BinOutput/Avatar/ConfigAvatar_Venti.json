@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 10.0,
         "height": 1.659999966621399,
@@ -11,9 +11,9 @@
         "checkInSurface": true
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM",
+        "$type": "ConfigHeadControl",
         "useHeadControl": true,
-        "FCDMCPDGFCL": [
+        "animStates": [
             "NormalStandby",
             "NormalMove/WalkToRun",
             "NormalMove/Walk",
@@ -331,18 +331,18 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "NormalStandby": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Standby": [
                             "Avatar_ResetFreeStyle"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -356,7 +356,7 @@
                 },
                 "NormalMove": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ShowUp": [
                             "Audio_Boy_Showup"
                         ],
@@ -418,8 +418,8 @@
                             "Audio_Boy_Bow_Venti_FallToGroundSprint"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 1.0,
+                    "canDoSkill": true,
+                    "massRatio": 1.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -433,7 +433,7 @@
                 },
                 "Sprint": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Sprint": [
                             "Ani_WalkSprint01",
                             "Audio_Boy_Sprint",
@@ -441,8 +441,8 @@
                             "Audio_Boy_Bow_Venti_Sprint"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 1.0,
+                    "canDoSkill": true,
+                    "massRatio": 1.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -456,7 +456,7 @@
                 },
                 "SprintBS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "SprintBS": [
                             "Audio_Boy_RunToSprint",
                             "SprintBS_Invincible",
@@ -464,8 +464,8 @@
                             "Audio_Boy_Bow_Venti_SprintBS"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill",
                         "AimEnd"
                     ],
@@ -485,7 +485,7 @@
                 },
                 "Crouch": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "CrouchIdle": [],
                         "CrouchMove": [
                             "Audio_Boy_CrouchMove"
@@ -495,8 +495,8 @@
                             "Audio_Boy_Bow_Venti_CrouchRoll"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 1.0,
+                    "canDoSkill": true,
+                    "massRatio": 1.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -511,13 +511,13 @@
                 },
                 "CrouchToStandby": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "CrouchToStandby": [
                             "Audio_Boy_CrouchToStandby",
                             "Audio_Boy_Bow_Venti_CrouchToStandby"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "HPDHJBCMFPB": "",
@@ -525,11 +525,11 @@
                 },
                 "SkiffNormal": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "SkiffNormal": []
                     },
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -539,7 +539,7 @@
                 },
                 "Climb": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ClimbMove0": [
                             "ClimbStep",
                             "Audio_Boy_Climb",
@@ -563,7 +563,7 @@
                             "Audio_Boy_Standby2ClimbB"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "MBCNNLAJOHK": "Climb",
@@ -572,14 +572,14 @@
                 },
                 "ClimbTransient": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "JumpWallReady": [],
                         "Standby2ClimbA": [
                             "Audio_Boy_Standby2ClimbA",
                             "Audio_Boy_Bow_Venti_Standby2ClimbA"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "HPDHJBCMFPB": "",
@@ -587,13 +587,13 @@
                 },
                 "Upstairs": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Upstairs": [
                             "Audio_Boy_Upstairs",
                             "Audio_Boy_Bow_Venti_Upstairs"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "CIFLOMFPGND": [
@@ -606,7 +606,7 @@
                 },
                 "Slip": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "SlipFaceWall": [
                             "Audio_Boy_Bow_Venti_SlipFaceWall"
                         ],
@@ -614,7 +614,7 @@
                             "Audio_Boy_Bow_Venti_SlipBackWall"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "HPDHJBCMFPB": "",
@@ -622,7 +622,7 @@
                 },
                 "Swim": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "SwimIdle": [
                             "Audio_Boy_SwimIdle"
                         ],
@@ -638,7 +638,7 @@
                             "Audio_Boy_SwimJumpToWater"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "MBCNNLAJOHK": "Swim",
@@ -647,7 +647,7 @@
                 },
                 "Fly": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Fly": [
                             "Audio_Boy_Bow_Venti_Fly"
                         ],
@@ -657,8 +657,8 @@
                             "Audio_Boy_Bow_Venti_FlyStart"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "CIFLOMFPGND": [
@@ -672,7 +672,7 @@
                 },
                 "Jump": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Jump": [
                             "Audio_Boy_Jump",
                             "Audio_Boy_Bow_Venti_Jump"
@@ -690,8 +690,8 @@
                             "Audio_Boy_Bow_Venti_JumpForSprint"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill",
                         "AimEnd"
                     ],
@@ -706,7 +706,7 @@
                 },
                 "Fall": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "JumpOffWall": [
                             "Audio_Boy_Jump",
                             "Audio_Boy_Bow_Venti_JumpOffWall"
@@ -723,8 +723,8 @@
                         "DropDownLit": [],
                         "WalkDropDownLit": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "CIFLOMFPGND": [
@@ -737,11 +737,11 @@
                 },
                 "NormalStandbyWeapon": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "StandbyWeapon": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -755,7 +755,7 @@
                 },
                 "NormalMoveWeapon": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WalkToRunWeapon": [
                             "Audio_Boy_WalkToRun",
                             "Audio_Boy_Bow_Venti_WalkToRun"
@@ -800,8 +800,8 @@
                             "Audio_Boy_Bow_Venti_FallToGroundRunHard"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 2.0,
+                    "canDoSkill": true,
+                    "massRatio": 2.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -815,7 +815,7 @@
                 },
                 "NormalMoveWeaponPutaway": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "StandbyPutaway": [
                             "Boy_Bow_Putaway_Standby",
                             "Audio_Boy_Crossbow_StandbyPutAway",
@@ -836,8 +836,8 @@
                             "Audio_Boy_Sword_RunToSprintWeapon"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 2.0,
+                    "canDoSkill": true,
+                    "massRatio": 2.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -851,7 +851,7 @@
                 },
                 "JumpWeapon": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "JumpWeapon": [
                             "Audio_Boy_Jump",
                             "Audio_Boy_Bow_Venti_Jump"
@@ -865,8 +865,8 @@
                             "Audio_Boy_Bow_Venti_JumpForWalk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "CIFLOMFPGND": [
@@ -883,15 +883,15 @@
                 },
                 "FallWeapon": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "DropDownWeapon": [
                             "Audio_Boy_Bow_Venti_DropDown"
                         ],
                         "DropDownLitWeapon": [],
                         "WalkDropDownLitWeapon": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
                     "CIFLOMFPGND": [
@@ -904,7 +904,7 @@
                 },
                 "BeHit": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Hit_L": [
                             "Audio_Boy_Hit_L",
                             "Audio_Boy_Bow_Venti_Hit_L"
@@ -915,11 +915,11 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
                     "CAOJDOAEDAK": "combatBeHit",
@@ -929,18 +929,18 @@
                 },
                 "HitThrow": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Hit_Throw_Ground": [
                             "BeHitAir_Weapon",
                             "Audio_Boy_Bow_Venti_Hit_Throw_Ground"
                         ]
                     },
                     "moveType": "combatMove",
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
                     "CAOJDOAEDAK": "combatBeHit",
@@ -950,7 +950,7 @@
                 },
                 "BeHitAir": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Hit_Throw": [
                             "Audio_Boy_Hit_Throw",
                             "BeHitAir_Weapon",
@@ -965,10 +965,10 @@
                         ]
                     },
                     "moveType": "combatAir",
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
                     "CAOJDOAEDAK": "combatBeHit",
@@ -979,7 +979,7 @@
                 },
                 "Die": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FallDie": [
                             "Audio_Boy_Death"
                         ],
@@ -1000,7 +1000,7 @@
                 },
                 "Die_RagDoll": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "NormalDie_AS": [],
                         "FallDie_AS": []
                     },
@@ -1009,7 +1009,7 @@
                 },
                 "ShootBS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ShootStandbyBS": [
                             "Emo_Avatar_Venti_Fight_AimBS",
                             "Audio_Boy_Bow_Venti_ShootStandbyBS"
@@ -1020,8 +1020,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump",
@@ -1035,7 +1035,7 @@
                 },
                 "Shoot": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Attack01": [
                             "Venti_Attack01",
                             "Audio_Boy_Bow_Venti_Attack01",
@@ -1080,8 +1080,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1104,15 +1104,15 @@
                 "Aim": {
                     "$type": "KIEKFPIFIKI",
                     "priority": -2,
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "AimLoop": [
                             "Audio_Girl_Crossbow_Aim_Loop",
                             "Emo_Avatar_Venti_Fight_Aim"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1125,15 +1125,15 @@
                 "FastAim": {
                     "$type": "KIEKFPIFIKI",
                     "priority": -2,
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FastAimLoop": [
                             "Audio_Girl_Crossbow_Aim_Loop",
                             "Emo_Avatar_Venti_Fight_Aim"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1145,7 +1145,7 @@
                 },
                 "WindBlade_Rise_BS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade_Rise_BS": [
                             "WindBlade_Rise_BS",
                             "Audio_Boy_Bow_Venti_WindBlade_01",
@@ -1155,8 +1155,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "BFDKJHMDDML": 0.6000000238418579,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.6000000238418579,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1173,7 +1173,7 @@
                 },
                 "WindBlade_Rise_Charge": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade_Rise_Charge": [
                             "Audio_Boy_Bow_Venti_WindBlade_02",
                             "Emo_Boy_Bow_Venti_WindBlade_Rise_Charge",
@@ -1181,8 +1181,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1198,15 +1198,15 @@
                 },
                 "WindBlade_Rise_Charge_1": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade_Rise_Charge_1": [
                             "Emo_Boy_Bow_Venti_WindBlade_Rise_Charge_1",
                             "Audio_Boy_Bow_Venti_WindBlade_Rise_Charge_1"
                         ]
                     },
                     "moveType": "combatMove",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1222,7 +1222,7 @@
                 },
                 "WindBlade_RiseUp": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade_RiseUp": [
                             "CombatAir_Disable_Landavatar",
                             "Emo_Boy_Bow_Venti_WindBlade_RiseUp",
@@ -1231,9 +1231,9 @@
                         ]
                     },
                     "moveType": "combatAir",
-                    "CJCIFIEDHHM": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1255,15 +1255,15 @@
                 },
                 "WindBlade": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade": [
                             "Emo_Boy_Bow_Venti_WindBlade",
                             "Audio_Boy_Bow_WindBlade_Venti"
                         ]
                     },
                     "moveType": "combatAir",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1278,16 +1278,16 @@
                 },
                 "WindBlade_Land": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade_Land": [
                             "Emo_Boy_Bow_Venti_WindBlade_Rise_Land",
                             "Audio_Boy_Bow_WindBlade_Land_Venti"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1307,7 +1307,7 @@
                 },
                 "WindBlade_AS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "WindBlade_AS": [
                             "CombatAir_Disable_Landavatar",
                             "Emo_Boy_Bow_Venti_WindBlade_AS",
@@ -1315,9 +1315,9 @@
                         ]
                     },
                     "moveType": "combatAir",
-                    "CJCIFIEDHHM": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1336,7 +1336,7 @@
                 },
                 "Hurricane_BS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Hurricane_BS": [
                             "Hurricane_BS",
                             "Audio_Boy_Bow_Venti_Hurricane",
@@ -1345,8 +1345,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1358,14 +1358,14 @@
                 },
                 "Hurricane": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Hurricane": [
                             "Venti_Hurricane"
                         ]
                     },
                     "moveType": "combatMove",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1380,15 +1380,15 @@
                 },
                 "Hurricane_AS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Hurricane_AS": [
                             "Venti_Hurricane_AS",
                             "Audio_Boy_Bow_Hurricane_AS_Venti"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1406,7 +1406,7 @@
                 },
                 "FallingAnthem_BS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FallingAnthem_BS_1": [
                             "Audio_Girl_Bow_Ambor_FallingAnthem_BS_1",
                             "Emo_Boy_Bow_FallingAttack_BS_01"
@@ -1416,8 +1416,8 @@
                         ]
                     },
                     "moveType": "combatAir",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1436,13 +1436,13 @@
                 },
                 "FallingAnthem_Loop": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FallingAnthem_Loop": [],
                         "FallingAnthem_Loop_Low": []
                     },
                     "moveType": "combatAir",
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1459,7 +1459,7 @@
                 },
                 "FallingAnthem_AS_1": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FallingAnthem_AS_1": [
                             "Venti_FallingAnthem_Strike",
                             "Interaction_Bad",
@@ -1468,8 +1468,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1492,15 +1492,15 @@
                 },
                 "FallingAnthem_AS_2": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FallingAnthem_AS_2": [
                             "Audio_Girl_Bow_Ambor_FallingAnthem_AS_2",
                             "Emo_Boy_Bow_FallingAttack_AS_02"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1525,7 +1525,7 @@
                 },
                 "Sit": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "SitDown": [
                             "Audio_Girl_SitDown",
                             "Audio_Boy_Bow_Sit_Venti"
@@ -1537,14 +1537,14 @@
                         ]
                     },
                     "moveType": "performMove",
-                    "BDFLEJHPFBG": 100.0,
+                    "massRatio": 100.0,
                     "MBCNNLAJOHK": "Perform",
                     "HPDHJBCMFPB": "",
                     "AFLGOLACEJP": true
                 },
                 "SitB": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "SitBDown": [
                             "Audio_Girl_SitDown",
                             "Audio_Boy_Bow_Sit_Venti"
@@ -1556,14 +1556,14 @@
                         ]
                     },
                     "moveType": "performMove",
-                    "BDFLEJHPFBG": 100.0,
+                    "massRatio": 100.0,
                     "MBCNNLAJOHK": "Perform",
                     "HPDHJBCMFPB": "",
                     "AFLGOLACEJP": true
                 },
                 "StandbyShow": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "StandbyVoice": [
                             "Audio_Boy_StandbyVoice"
                         ],
@@ -1578,8 +1578,8 @@
                         ]
                     },
                     "moveType": "performMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
                     "CIFLOMFPGND": [
                         {
                             "name": "&CanUseSkill"
@@ -1593,7 +1593,7 @@
                 },
                 "TakePhotos": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "Think01BS": [],
                         "Akimbo02BS": [],
                         "Think01Loop": [],
@@ -1605,15 +1605,15 @@
                 },
                 "Channel_BS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ChannelBS": [
                             "Emo_Avatar_Common_Manekin_Default"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1631,13 +1631,13 @@
                 },
                 "Channel_Loop": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ChannelLoop": []
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1655,13 +1655,13 @@
                 },
                 "Channel_AS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ChannelAS": []
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1679,15 +1679,15 @@
                 },
                 "PlayMusic_Lyre": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "PlayMusic_Lyre_BS": [
                             "PlayMusic_Lyre_Boy"
                         ],
                         "PlayMusic_Lyre_Loop": []
                     },
                     "moveType": "combatMove",
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1697,15 +1697,15 @@
                 },
                 "PlayMusic_Lyre_AS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "PlayMusic_Lyre_AS": [
                             "PlayMusic_Lyre_Boy_AS"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1723,15 +1723,15 @@
                 },
                 "PlayMusic_Qin": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "PlayMusic_Qin_BS": [
                             "PlayMusic_Qin_Boy"
                         ],
                         "PlayMusic_Qin_Loop": []
                     },
                     "moveType": "combatMove",
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1741,15 +1741,15 @@
                 },
                 "PlayMusic_Qin_AS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "PlayMusic_Qin_AS": [
                             "PlayMusic_Qin_Boy_AS"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1767,15 +1767,15 @@
                 },
                 "PlayMusic_Drum": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "PlayMusic_Drum_BS": [
                             "PlayMusic_Drum_Boy"
                         ],
                         "PlayMusic_Drum_Loop": []
                     },
                     "moveType": "combatMove",
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1785,15 +1785,15 @@
                 },
                 "PlayMusic_Drum_AS": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "PlayMusic_Drum_AS": [
                             "PlayMusic_Drum_Boy_AS"
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1811,15 +1811,15 @@
                 },
                 "ActivitySkill_ElectricCoreFly": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ActivitySkill_ElectricCoreFly": []
                     },
                     "moveType": "combatAir",
-                    "BDFLEJHPFBG": 100.0,
-                    "EOPFMICKIKG": [
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "ElectricCoreFly_End"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump",
@@ -1830,15 +1830,15 @@
                 },
                 "ActivitySkill_GrapplingHook": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ActivitySkill_GrapplingHook": []
                     },
                     "moveType": "combatAir",
-                    "BDFLEJHPFBG": 100.0,
-                    "EOPFMICKIKG": [
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "GrapplingHook_Drop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump",
@@ -1849,17 +1849,17 @@
                 },
                 "ActivitySkill_CustomSkill01": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ActivitySkill_CustomSkill01": []
                     },
                     "moveType": "combatAir",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "CustomSkill_End_Fly",
                         "CustomSkill_End_Drop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump",
@@ -1871,17 +1871,17 @@
                 },
                 "ActivitySkill_CustomSkill02": {
                     "$type": "KIEKFPIFIKI",
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "ActivitySkill_CustomSkill02": []
                     },
                     "moveType": "combatAir",
-                    "CJCIFIEDHHM": true,
-                    "BDFLEJHPFBG": 100.0,
-                    "EOPFMICKIKG": [
+                    "canDoSkill": true,
+                    "massRatio": 100.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "CustomSkill_End_Fly",
                         "CustomSkill_End_Drop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump",
@@ -1894,14 +1894,14 @@
             }
         },
         "aimShootLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "DJBFLOJAOCN": 6,
             "FNPGDAEJAPJ": "AimShootLayer",
             "stateIDs": {
                 "AimShoot": {
                     "$type": "KIEKFPIFIKI",
                     "priority": -1,
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "AimShoot": [
                             "Venti_AimShoot",
                             "Audio_Boy_Bow_Venti_Shoot",
@@ -1909,8 +1909,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"
@@ -1923,7 +1923,7 @@
                 "FastAimShoot": {
                     "$type": "KIEKFPIFIKI",
                     "priority": -1,
-                    "ELJMIBJPBCH": {
+                    "animatorStates": {
                         "FastAimShoot": [
                             "Venti_AimShoot",
                             "Audio_Boy_Bow_Venti_Fast_Aim_Shoot",
@@ -1931,8 +1931,8 @@
                         ]
                     },
                     "moveType": "combatMove",
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "Jump"

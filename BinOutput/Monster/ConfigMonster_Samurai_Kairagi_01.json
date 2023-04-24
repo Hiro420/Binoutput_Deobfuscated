@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 10000.0,
         "height": 2.0,
@@ -18,11 +18,11 @@
         "clearAIOnSetLightDeactive": true
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM",
+        "$type": "ConfigHeadControl",
         "useHeadControl": true,
-        "KBBNEKBLPFA": 20.0,
-        "FJOGFHEFPHN": 5.0,
-        "FCDMCPDGFCL": [
+        "maxYawDegree": 20.0,
+        "maxPitchDegree": 5.0,
+        "animStates": [
             "NormalIdle/Standby",
             "NormalMove/WalkForward",
             "NormalMove/WalkBack",
@@ -57,16 +57,16 @@
             "dieForceDisappearTime": 3.200000047683716,
             "dieDisappearEffect": "Eff_Death_Avatar_Common",
             "dieShaderData": "AvatarDie",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "MeleeAtk": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -104,7 +104,7 @@
             },
             "MeleeAtkThunder": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -143,7 +143,7 @@
             },
             "RushAtk": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -182,7 +182,7 @@
             },
             "RushAtkThunder": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -222,7 +222,7 @@
             },
             "JumpAtk": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -269,7 +269,7 @@
             },
             "JumpAtkThunder": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -390,7 +390,7 @@
             },
             "AddElementAtkThunder": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -524,35 +524,35 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": [
                             "Audio_Samurai_Kairagi_Born"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "WalkForward": [
                             "Audio_Samurai_Kairagi_Walk"
                         ],
@@ -569,16 +569,16 @@
                             "Audio_Samurai_Kairagi_Walk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Turn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnLeft": [
                             "Audio_Samurai_Kairagi_Walk"
                         ],
@@ -586,16 +586,16 @@
                             "Audio_Samurai_Kairagi_Walk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_L": [
                             "Audio_Samurai_Kairagi_Hit_L_VO"
                         ],
@@ -603,74 +603,74 @@
                             "Audio_Samurai_Kairagi_Hit_H_VO"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Run": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Run": [
                             "Audio_Samurai_Kairagi_Run"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RunFree": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RunFree": [
                             "Audio_Samurai_Kairagi_Run"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHitThrow": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HitThrow": [],
                         "HitThrowDrop": [],
                         "HitThrowToGround": [
                             "Audio_Samurai_Kairagi_HitThrowToGround"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Struggle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Struggle": []
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Audio_Samurai_Kairagi_Die"
                         ],
@@ -682,28 +682,28 @@
                     }
                 },
                 "Die_RagDoll": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "AirDie": []
                     },
                     "HCCMMNBMCMA": true
                 },
                 "Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": [
                             "Audio_Samurai_Kairagi_Alert"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAtk1": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttack1": [
                             "Monster_Samurai_Kairagi_MeleeAttack1",
                             "Audio_Samurai_Kairagi_MeleeAtk1"
@@ -717,18 +717,18 @@
                             "Audio_Samurai_Kairagi_MeleeAtk1_Thunder"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAtk2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttack2": [
                             "Monster_Samurai_Kairagi_MeleeAttack2",
                             "Audio_Samurai_Kairagi_MeleeAtk2"
@@ -742,18 +742,18 @@
                             "Audio_Samurai_Kairagi_MeleeAtk2_Thunder"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAtk3": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttack3": [
                             "Monster_Samurai_Kairagi_MeleeAttack3",
                             "Audio_Samurai_Kairagi_MeleeAtk3"
@@ -767,18 +767,18 @@
                             "Audio_Samurai_Kairagi_MeleeAtk3_Thunder"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RushAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RushAtk": [
                             "Monster_Samurai_Kairagi_RushAtk",
                             "Audio_Samurai_Kairagi_RushAtk"
@@ -796,16 +796,16 @@
                             "Audio_Samurai_Kairagi_RushAtk_Thunder"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "JumpAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "JumpAttack": [
                             "Monster_Samurai_Kairagi_JumpAttack",
                             "Audio_Samurai_Kairagi_JumpAtk"
@@ -819,17 +819,17 @@
                             "Audio_Samurai_Kairagi_JumpAtk_Thunder"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ChargeAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChargeAttack": [
                             "Monster_Samurai_Kairagi_ChargeAttack",
                             "Audio_Samurai_Kairagi_DodgeChargeAtk"
@@ -847,47 +847,47 @@
                             "Audio_Samurai_Kairagi_DodgeChargeAtk_Thunder"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ElementAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ElementAttack": [
                             "Monster_Samurai_Kairagi_ElementAttack_Thunder",
                             "Audio_Samurai_Kairagi_ElementAtk_Thunder"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Angry": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Angry": [
                             "Monster_Samurai_Kairagi_Angry_Thunder",
                             "Audio_Samurai_Kairagi_Angry_01"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Dodge": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Dodge": [
                             "Monster_Samurai_Kairagi_Dodge",
                             "Audio_Samurai_Kairagi_Dodge"
@@ -897,29 +897,29 @@
                             "Audio_Samurai_Kairagi_Dodge"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Provoke": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Provoke": [
                             "Audio_Samurai_Kairagi_Provoke"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DefendBS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Defend_BS1": [
                             "Audio_Samurai_Kairagi_Defend_BS1"
                         ],
@@ -927,27 +927,27 @@
                             "Audio_Samurai_Kairagi_Defend_BS2"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DefendLoop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Defend_Loop1": [],
                         "Defend_Loop2": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DefendHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Defend_Hit1": [
                             "Audio_Samurai_Kairagi_Defend_Hit"
                         ],
@@ -955,15 +955,15 @@
                             "Audio_Samurai_Kairagi_Defend_Hit"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DefendAS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Defend_AS1": [
                             "Audio_Samurai_Kairagi_Defend_AS1"
                         ],
@@ -971,15 +971,15 @@
                             "Audio_Samurai_Kairagi_Defend_AS2"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DefendBreak": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Defend_Break1": [
                             "Audio_Samurai_Kairagi_Defend_Break1"
                         ],
@@ -987,42 +987,42 @@
                             "Audio_Samurai_Kairagi_Defend_Break2"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "OutOfBattle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "OutOfBattle": [
                             "Audio_Samurai_Kairagi_OutOfBattle"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Command": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Command": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Practice": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Practice": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
@@ -1033,8 +1033,8 @@
     "billboard": {
         "$type": "ConfigCombatBillboard",
         "EBBHBMFMOGD": "BillboardAttach",
-        "BFOMIIKCOGI": "Character",
-        "ANGKJBLILKJ": true,
+        "offsetType": "Character",
+        "showHPBar": true,
         "HLGCEAGHFGH": 50.0,
         "size": "Big"
     },
@@ -1820,9 +1820,9 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
-        "BCBPBHLKCPB": "FourDirection",
-        "NGNIGPNNLAI": "StoopType"
+        "$type": "ConfigAnimatorMove",
+        "facingMove": "FourDirection",
+        "monsterSizeType": "StoopType"
     },
     "audio": {
         "NCOGLLMIJGO": "",

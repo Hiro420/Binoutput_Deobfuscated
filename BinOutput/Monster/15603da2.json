@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh01"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh01"
         },
         "mass": 10000.0,
         "height": 2.0,
@@ -13,7 +13,7 @@
         "muteElementStickUI": true,
         "clearAnimatorOnSetLightDeactive": true,
         "KJCBJDCKPND": true,
-        "NCCLLKFLJGL": true,
+        "recoverByInitPose": true,
         "JDFHDFOFPOB": [
             {
                 "KIHPGIAEOLJ": "EffectMesh01_FollowPoint",
@@ -145,17 +145,17 @@
             "dieEndTime": 2.5,
             "dieForceDisappearTime": 3.0,
             "dieDisappearEffect": "",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "AlertShake": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -200,7 +200,7 @@
             },
             "Stage01ToStage02Shake": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "JGCLJPCGHMC": true,
                     "born": {
@@ -256,7 +256,7 @@
                         }
                     },
                     "height": 3.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 15.0
                 },
                 "attackInfo": {
@@ -382,7 +382,7 @@
                         }
                     },
                     "height": 3.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 16.0
                 },
                 "attackInfo": {
@@ -429,7 +429,7 @@
                         }
                     },
                     "height": 3.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 16.0
                 },
                 "attackInfo": {
@@ -844,73 +844,73 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "StandbyFree": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StandbyFree": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Stage01_Standby": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage01_Standby": [
                             "Monster_Sandworm_Stage01_Standby"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_Standby": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_Standby": [],
                         "Stage02_Standby_Blink": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Stage02_StandbyMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_StandbyMove": [
                             "Monster_Sandworm_Stage02_StandbyMove",
                             "Monster_Sandworm_Stage02_StandbyMove_Sync"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Faint": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Faint": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Monster_Sandworm_Die",
                             "Audio_Monster_Sandworm_Die"
@@ -928,52 +928,52 @@
                             "Audio_Monster_Sandworm_Die_Faint_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": []
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Warning": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": [
                             "Monster_Sandworm_Alert",
                             "Audio_Monster_Sandworm_Alert"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "StageChange": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage01ToStage02": [
                             "Monster_Sandworm_Stage01ToStage02",
                             "Audio_Monster_Sandworm_Stage01ToStage02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage01_MeleeAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage01_MeleeAttack_BS01": [
                             "Monster_Sandworm_Stage01_MeleeAttack_BS01",
                             "Audio_Monster_Sandworm_Stage01_MeleeAttack"
@@ -985,31 +985,31 @@
                             "Monster_Sandworm_Stage01_MeleeAttack"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage01_ShootAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage01_ShootAttack": [
                             "Monster_Sandworm_Stage01_ShootAttack",
                             "Audio_Monster_Sandworm_Stage01_ShootAttack"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_DigOutAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_DigOutAttack_SetPosition": [],
                         "Stage02_DigOutAttack_SetPosition_Blink": [],
                         "Stage02_DigOutAttack": [
@@ -1023,16 +1023,16 @@
                             "Monster_Sandworm_Stage02_DigOutAttack_AS02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_TailVerticalShootAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_TailVerticalShootAttack_SetPosition": [],
                         "Stage02_TailVerticalShootAttack_SetPosition_Blink": [],
                         "Stage02_TailVerticalShootAttack": [
@@ -1043,16 +1043,16 @@
                             "Monster_Sandworm_Stage02_TailVerticalShootAttack_AS02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_DrillRushAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_DrillRushAttack_SetPosition": [],
                         "Stage02_DrillRushAttack_SetPosition_Blink": [],
                         "Stage02_DrillRushAttack": [
@@ -1060,16 +1060,16 @@
                             "Audio_Monster_Sandworm_Stage02_DrillRushAttack"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_TailStormAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_TailStormAttack_SetPosition": [],
                         "Stage02_TailStormAttack_SetPosition_Blink": [],
                         "Stage02_TailStormAttack": [
@@ -1085,16 +1085,16 @@
                             "Monster_Sandworm_Stage02_TailStormAttack_AS02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_FlyingAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_FlyingAttack_SetPosition": [],
                         "Stage02_FlyingAttack_SetPosition_Blink": [],
                         "Stage02_FlyingAttack": [
@@ -1102,51 +1102,51 @@
                             "Monster_Sandworm_Stage02_FlyingAttack_Sync"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_FlyingAttack_Faint_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_FlyingAttack_Faint_BS": [
                             "Monster_Sandworm_Stage02_FlyingAttack_Faint_BS",
                             "Audio_Monster_Sandworm_Die_Faint_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Stage02_FlyingAttack_Faint_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Stage02_FlyingAttack_Faint_AS": [
                             "Monster_Sandworm_Stage02_FlyingAttack_Faint_AS",
                             "Audio_Monster_Sandworm_Die_Faint_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ReturnToBorn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ReturnToBorn": [
                             "Audio_Monster_Sandworm_ReturnToBorn"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 }
@@ -1173,7 +1173,7 @@
         },
         "OELDMANLPDM": 1.0,
         "KLIMPNOBGLK": true,
-        "ANGKJBLILKJ": true,
+        "showHPBar": true,
         "size": "Grand"
     },
     "initialPoses": {
@@ -1854,8 +1854,8 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
-        "BCBPBHLKCPB": "FourDirection",
+        "$type": "ConfigAnimatorMove",
+        "facingMove": "FourDirection",
         "LHHNPKNFGMD": true
     },
     "audio": {

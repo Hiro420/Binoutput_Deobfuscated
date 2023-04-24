@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 10000.0,
         "height": 2.299999952316284,
@@ -41,12 +41,12 @@
             "dieDisappearEffect": "Eff_Death_Abyss_Common",
             "dieShaderData": "MonsterDie",
             "useRagDoll": true,
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "NormalAtk": {
@@ -233,25 +233,25 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": [],
                         "StandbyFree": [],
                         "Standby": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "WalkForward": [
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_WalkForward"
                         ],
@@ -268,29 +268,29 @@
                             "Audio_Monster_ForlornVessel_Strong_Common_Run"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Turn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnLeft": [],
                         "TurnRight": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_L": [
                             "Audio_Monster_ForlornVessel_Strong_Common_Hit_L"
                         ],
@@ -298,46 +298,46 @@
                             "Audio_Monster_ForlornVessel_Strong_Common_Hit_H"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "BeHitThrow": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HitThrow": [],
                         "HitThrowDrop": [],
                         "HitThrowToGround": [
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_HitThrowToGround"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Struggle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Struggle": []
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_Die"
                         ],
@@ -348,8 +348,8 @@
                     }
                 },
                 "Die_Ragdoll": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die_Ragdoll": [],
                         "SwimDie_Ragdoll": [],
                         "AirDie_Ragdoll": []
@@ -357,34 +357,34 @@
                     "HCCMMNBMCMA": true
                 },
                 "Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Warning": [
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_Warning"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAtk": [
                             "Monster_ForlornVessel_Strong_Warbanner_NormalAtk",
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_NormalAtk"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "FireBullet": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "FireBullet_BS": [
                             "Monster_ForlornVessel_Strong_Warbanner_FireBullet_BS",
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_FireBullet"
@@ -393,30 +393,30 @@
                             "Monster_ForlornVessel_Strong_Warbanner_FireBullet_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Salute": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Salute": [
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_Salute"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RaiseFlag": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RaiseFlag_BS": [
                             "Monster_ForlornVessel_Strong_Warbanner_RaiseFlag_BS",
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_RaiseFlag_BS"
@@ -429,20 +429,20 @@
                             "Audio_Monster_ForlornVessel_Strong_Warbanner_Fire_RaiseFlag_AS"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DropFlag": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DropFlag": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
@@ -453,9 +453,9 @@
     "billboard": {
         "$type": "ConfigCombatBillboard",
         "EBBHBMFMOGD": "BillboardAttach",
-        "BFOMIIKCOGI": "Character",
+        "offsetType": "Character",
         "OELDMANLPDM": -0.20000000298023224,
-        "ANGKJBLILKJ": true,
+        "showHPBar": true,
         "size": "Big"
     },
     "initialPoses": {
@@ -773,10 +773,10 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
+        "$type": "ConfigAnimatorMove",
         "AEPIEGNIOGP": 1.0,
-        "BCBPBHLKCPB": "FourDirection",
-        "NGNIGPNNLAI": "StoopType",
+        "facingMove": "FourDirection",
+        "monsterSizeType": "StoopType",
         "AIPJBCHAEPE": "Walk"
     },
     "audio": {

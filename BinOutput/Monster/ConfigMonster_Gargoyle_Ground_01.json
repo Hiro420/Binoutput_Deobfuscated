@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 1000000.0,
         "height": 5.0,
@@ -12,7 +12,7 @@
         "useGrassDisplacement": true,
         "clearAnimatorOnSetLightDeactive": true,
         "clearAIOnSetLightDeactive": true,
-        "NCCLLKFLJGL": true,
+        "recoverByInitPose": true,
         "useFinalIK": true
     },
     "model": {
@@ -46,12 +46,12 @@
             "dieDisappearEffect": "Eff_Death_Common",
             "dieShaderData": "MonsterDie",
             "useRagDoll": true,
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "NormalAtk01": {
@@ -95,7 +95,7 @@
             },
             "NormalAtk02_First": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -140,7 +140,7 @@
             },
             "NormalAtk02_Second": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -304,46 +304,46 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StandbyFree": [],
                         "Standby": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle_PowerOff": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StandbyFree_PowerOff": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "WalkForward": [
                             "Monster_Gargoyle_Ground_WalkForward",
                             "Audio_Monster_Gargoyle_Ground_Walk"
@@ -353,31 +353,31 @@
                             "Audio_Monster_Gargoyle_Ground_Walk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Run": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Run": [
                             "Monster_Gargoyle_Ground_WalkForward",
                             "Audio_Monster_Gargoyle_Ground_Run"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Turn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnLeft": [
                             "Monster_Gargoyle_Ground_WalkLeft",
                             "Audio_Monster_Gargoyle_Ground_Walk"
@@ -387,15 +387,15 @@
                             "Audio_Monster_Gargoyle_Ground_Walk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_HeadGround": [
                             "Audio_Monster_Gargoyle_Ground_Hit"
                         ],
@@ -403,17 +403,17 @@
                             "Audio_Monster_Gargoyle_Ground_Hit"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "EOPFMICKIKG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Monster_Gargoyle_Ground_Die",
                             "Audio_Monster_Gargoyle_Ground_Die"
@@ -424,43 +424,43 @@
                     }
                 },
                 "Die_RagDoll": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die_Ragdoll": [],
                         "Die_Weak_Ragdoll": []
                     },
                     "HCCMMNBMCMA": true
                 },
                 "Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": []
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Alert_PowerOff": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert_PowerOff": [
                             "Monster_Gargoyle_Ground_Alert",
                             "Audio_Monster_Gargoyle_Ground_Alert_PowerOff"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Weak": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Weak_BS": [
                             "Monster_Gargoyle_Ground_Weak_BS",
                             "Audio_Monster_Gargoyle_Ground_Weak_BS"
@@ -470,143 +470,143 @@
                             "Audio_Monster_Gargoyle_Ground_Weak_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "ChargeAtk_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChargeAtk_BS": [
                             "Monster_Gargoyle_Ground_ChargeAtk_BS",
                             "Audio_Monster_Gargoyle_Ground_ChargeAtk_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ChargeAtk_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChargeAtk_Loop": [
                             "Monster_Gargoyle_Ground_ChargeAtk_Loop",
                             "Audio_Monster_Gargoyle_Ground_ChargeAtk_Run"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ChargeAtk_AS1": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChargeAtk_AS1": [
                             "Monster_Gargoyle_Ground_ChargeAtk_AS",
                             "Audio_Monster_Gargoyle_Ground_ChargeAtk_AS1"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ChargeAtk_AS2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChargeAtk_AS2": [
                             "Monster_Gargoyle_Ground_NormalAtk01",
                             "Audio_Monster_Gargoyle_Ground_ChargeAtk_AS2"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "NormalAtk01": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAtk01": [
                             "Monster_Gargoyle_Ground_NormalAtk01",
                             "Audio_Monster_Gargoyle_Ground_NormalAtk_01"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "NormalAtk02": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAtk02": [
                             "Monster_Gargoyle_Ground_NormalAtk02",
                             "Audio_Monster_Gargoyle_Ground_NormalAtk_02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ElementAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ElementAtk": [
                             "Monster_Gargoyle_Ground_ElementAtk",
                             "Audio_Monster_Gargoyle_Ground_ElementAtk"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "NormalIdle_Machinery": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StandbyFree_Machinery": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Machinery": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert_Machinery": [
                             "Monster_Gargoyle_Ground_Alert_Machinery",
                             "Audio_Monster_Gargoyle_Ground_Alert_Machinery"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 }
@@ -645,7 +645,7 @@
         "OELDMANLPDM": 1.0,
         "KLIMPNOBGLK": true,
         "showDistance": 48.0,
-        "ANGKJBLILKJ": true,
+        "showHPBar": true,
         "size": "Grand"
     },
     "initialPoses": {
@@ -1039,8 +1039,8 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
-        "BCBPBHLKCPB": "ForwardBackward",
+        "$type": "ConfigAnimatorMove",
+        "facingMove": "ForwardBackward",
         "AIPJBCHAEPE": "Walk",
         "OOFDCONLBHL": 1.0,
         "MGFACNKNOFC": true

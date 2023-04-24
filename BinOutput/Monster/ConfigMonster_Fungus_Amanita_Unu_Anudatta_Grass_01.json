@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 40.0,
         "height": 2.0,
@@ -14,7 +14,7 @@
         "useGrassDisplacement": true,
         "clearAnimatorOnSetLightDeactive": true,
         "clearAIOnSetLightDeactive": true,
-        "NCCLLKFLJGL": true
+        "recoverByInitPose": true
     },
     "model": {
         "bornEffect": "",
@@ -42,12 +42,12 @@
             "dieForceDisappearTime": 1.5,
             "dieDisappearEffect": "Eff_Death_Common",
             "dieShaderData": "MonsterDie",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "MeleeAttack01Normal": {
@@ -63,7 +63,7 @@
                         }
                     },
                     "height": 1.7999999523162842,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 4.0
                 },
                 "attackInfo": {
@@ -193,21 +193,21 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby_WingUp01": [],
                         "Standby_WingDown01": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_FlyStandBy_WingDown_01"
@@ -217,31 +217,31 @@
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_FlyStandBy_WingDown_02"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "BHEPAJIOBDN": true
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "triggerGCD": true
                 },
                 "GroundedIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby_Grounded": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalFly": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Fly_WingUp01": [],
                         "Fly_WingDown01": [],
                         "Fly_WingUp02": [],
                         "Fly_WingDown02": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
+                    "canDoSkill": true,
+                    "canSyncMove": true,
                     "setAnimatorFloat": [
                         {
                             "name": "FlyMotionHor",
@@ -252,12 +252,12 @@
                             "normalizeEnd": 0.0
                         }
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "EAPMAKKDOBD": "BlendMove3D"
                 },
                 "FlyRush": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "FlyRush_BS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_FlyRush_BS"
                         ],
@@ -278,60 +278,60 @@
                             "Audio_Monster_Fungus_Amanita_Unu_FlyRush"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "BHEPAJIOBDN": true
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_H": [
                             "Audio_Monster_Fungus_Amanita_Unu_Hit_H"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "EOPFMICKIKG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
                     "KHLKKBPCMBA": true
                 },
                 "BeHitThrow": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HitThrow": [],
                         "HitThrowDrop": [],
                         "HitThrowToGround": [
                             "Audio_Monster_Fungus_Amanita_Unu_hitThrowToGround_BS"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
                     "KCFDJAALIHK": true
                 },
                 "Struggle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Struggle": []
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die_BS": [],
                         "Die": [
                             "Monster_Fungus_Amanita_Unu_Die",
@@ -345,24 +345,24 @@
                     }
                 },
                 "Warning": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Warning": [
                             "Monster_Fungus_Amanita_Unu_Alert",
                             "Audio_Monster_Fungus_Amanita_Unu_Warning"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ClimbUp": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ClimbUp_BS": [
                             "Monster_Fungus_Amanita_Unu_ClimbUp_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_ClimbUp_BS"
@@ -372,55 +372,55 @@
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_ClimbUp_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAttackNormal_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttackNormal_BS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_MeleeAttac_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAttackOverdose_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttackOverdose_BS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_MeleeAttac_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAttackDecay_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttackDecay_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_MeleeAttackDecay_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_MeleeAttackDecay_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "MeleeAttack_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttackNormal_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_MeleeAttackNormal_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_MeleeAttackNormal_Attack"
@@ -437,57 +437,57 @@
                         ],
                         "MeleeAttackDecay_AS": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ShootNormal_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ShootNormal_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_ShootNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_shootNormal_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ShootOverdose_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ShootOverdose_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_ShootNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_shootNormal_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "ShootDecay_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ShootDecay_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_ShootDecay_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_shootNormal_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Shoot": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ShootNormal_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_ShootNormal_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_Shoot_Attack"
@@ -504,57 +504,57 @@
                         ],
                         "ShootDecay_AS": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootLNormal_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootLNormal_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShootLNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_shootNormal_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootLOverdose_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootLOverdose_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShootLNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_shootNormal_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootLDecay_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootLDecay_BS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_Shoot_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootL": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootLNormal_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShootLNormal_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_Attack"
@@ -577,56 +577,56 @@
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootRNormal_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootRNormal_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShootLNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootROverdose_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootROverdose_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShootLNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootRDecay_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootRDecay_BS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "RollingShootR": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RollingShootRNormal_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_ShootNormal_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_Attack"
@@ -649,246 +649,246 @@
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_RollingShoot_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingNormal_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingNormal_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingOverdose_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingOverdose_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingNormal_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingDecay_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingDecay_BS": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingDecay_BS",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingNormal_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingNormal_Loop": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingNormal_Loop",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_Dash"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingOverdose_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingOverdose_Loop": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingNormal_Loop",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_Dash"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingDecay_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingDecay_Loop": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingDecay_Loop"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingNormal_Attack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingNormal_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingNormal_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_Attack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingOverdose_Attack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingOverdose_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingNormal_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_Attack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingDecay_Attack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingDecay_Attack": [
                             "Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombingDecay_Attack",
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_Attack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingNormal_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingNormal_AS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingOverdose_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingOverdose_AS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "DiveBombingDecay_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DiveBombingDecay_AS": [
                             "Audio_Monster_Fungus_Amanita_Unu_Anudatta_Grass_DiveBombing_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Taunt": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Taunt01": [
                             "Audio_Monster_Fungus_Amanita_Unu_taunt01"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Grounded_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Grounded_AS": []
                     },
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Dance": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Dance": [
                             "Monster_Fungus_Amanita_Unu_Dance",
                             "Audio_Monster_Fungus_Amanita_Unu_Dance"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "KHLKKBPCMBA": true
                 },
                 "Tease": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Tease": [
                             "Audio_Monster_Fungus_Amanita_Unu_Tease"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "KHLKKBPCMBA": true
                 },
                 "Absorb": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Absorb": [
                             "Monster_Fungus_Amanita_Unu_Absorb",
                             "Audio_Monster_Fungus_Amanita_Unu_Absorb"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "KHLKKBPCMBA": true
                 }
             }
@@ -902,7 +902,7 @@
         },
         "OELDMANLPDM": 1.0,
         "KLIMPNOBGLK": true,
-        "ANGKJBLILKJ": true,
+        "showHPBar": true,
         "size": "Big"
     },
     "initialPoses": {
@@ -1847,7 +1847,7 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
+        "$type": "ConfigAnimatorMove",
         "DIJHPKAMMJO": [
             {
                 "FDAIJOFPDJK": 9.0,
@@ -1855,9 +1855,9 @@
                 "DOPIAKHBNGO": "RaycastBottom"
             }
         ],
-        "BCBPBHLKCPB": "ForwardBackward",
+        "facingMove": "ForwardBackward",
         "CNPDANKMFNL": "AirBlend3D",
-        "NGNIGPNNLAI": "SlimeType",
+        "monsterSizeType": "SlimeType",
         "NNLKBABJEBN": [
             "Launch_Loop"
         ],

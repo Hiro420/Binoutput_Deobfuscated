@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 30.0,
         "height": 1.0,
@@ -11,7 +11,7 @@
         "useGrassDisplacement": true
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM"
+        "$type": "ConfigHeadControl"
     },
     "model": {
         "bornEffect": "Eff_Monster_Common_Born",
@@ -36,12 +36,12 @@
             "dieDisappearEffect": "Eff_Death_Common",
             "dieShaderData": "MonsterDie",
             "useRagDoll": true,
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "Shaman_Water_MeleeAttack": {
@@ -56,7 +56,7 @@
                             "z": 0.0
                         }
                     },
-                    "BAPAHIOBNCL": 150.0,
+                    "fanAngle": 150.0,
                     "radius": 3.0
                 },
                 "attackInfo": {
@@ -146,25 +146,25 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby": [],
                         "WalkToStandby": [],
                         "Born": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Walk": [
                             "Audio_Shaman_Water_Walk",
                             "Audio_Shaman_Water_Walk_Vo"
@@ -178,16 +178,16 @@
                             "Audio_Shaman_Water_Escape_Vo"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Turn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Turn_Left": [
                             "Audio_Shaman_Water_Turn"
                         ],
@@ -195,16 +195,16 @@
                             "Audio_Shaman_Water_Turn"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_L": [
                             "Audio_Shaman_Water_Hit_L_Vo"
                         ],
@@ -213,16 +213,16 @@
                             "Audio_Shaman_Water_Hit_H_Vo"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "BeHitThrow": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HitThrow": [],
                         "HitThrowDrop": [],
                         "HitThrowToGround": [
@@ -230,30 +230,30 @@
                             "Audio_Shaman_Water_HitThrowToGround_Vo"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Struggle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Struggle": []
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SwimDie": [
                             "Monster_Shaman_Die"
                         ],
@@ -261,8 +261,8 @@
                     }
                 },
                 "Die_Ragdoll": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Monster_Shaman_Die"
                         ],
@@ -273,50 +273,50 @@
                     "HCCMMNBMCMA": true
                 },
                 "Life_Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": [
                             "Monster_Shaman_Alert",
                             "Audio_Shaman_Water_Alert",
                             "Audio_Shaman_Water_Alert_Vo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
-                    "BKLKHCBEHNL": true
+                    "triggerGCD": true,
+                    "canSteer": true
                 },
                 "Dance": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Dance": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "MeleeAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAttack": [
                             "Monster_Shaman_Water_MeleeAttack",
                             "Audio_Shaman_Water_MeleeAttack",
                             "Audio_Shaman_Water_MeleeAttack_Vo"
                         ]
                     },
-                    "BFDKJHMDDML": 0.4000000059604645,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.4000000059604645,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "SupportAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SupportAttack": [
                             "Audio_Shaman_Water_SupportAttack",
                             "Audio_Shaman_Water_SupportAttack_Vo"
@@ -326,17 +326,17 @@
                             "Audio_Shaman_Water_SupportAttack_AS_Vo"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "SupportAttackExit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "SupportAttack2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SupportAttack2": [
                             "Audio_Shaman_Water_SupportAttack",
                             "Audio_Shaman_Water_SupportAttack_Vo"
@@ -346,17 +346,17 @@
                             "Audio_Shaman_Water_SupportAttack_AS_Vo"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "SupportAttackExit2"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "SupportAttack_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SupportAttack_BS": [
                             "Audio_Shaman_Water_SupportAttack_BS",
                             "Audio_Shaman_Water_SupportAttack_BS_Vo"
@@ -366,94 +366,94 @@
                             "Audio_Shaman_Water_SupportAttack_BS_Vo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack1": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack_AS1": [
                             "Monster_Shaman_Water_NormalAttack",
                             "Audio_Shaman_Water_NormalAttack_AS_Vo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack_BS1": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack_BS1": [
                             "Audio_Shaman_Water_NormalAttack_BS",
                             "Audio_Shaman_Water_NormalAttack_BS_Vo",
                             "Monster_Shaman_Water_NormalAttack_Effect"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "NormalAttackWave2"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack_AS2": [
                             "Monster_Shaman_Water_NormalAttack",
                             "Audio_Shaman_Water_NormalAttack_AS_Vo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack_BS2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack_BS2": [
                             "Audio_Shaman_Water_NormalAttack_BS",
                             "Audio_Shaman_Water_NormalAttack_BS_Vo",
                             "Monster_Shaman_Water_NormalAttack_Effect"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "NormalAttackWave3"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack3": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack_AS3": [
                             "Monster_Shaman_Water_NormalAttack",
                             "Audio_Shaman_Water_NormalAttack_AS_Vo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack_BS3": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack_BS3": [
                             "Audio_Shaman_Water_NormalAttack_BS",
                             "Audio_Shaman_Water_NormalAttack_BS_Vo",
                             "Monster_Shaman_Water_NormalAttack_Effect"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
@@ -468,9 +468,9 @@
             "x": -0.10000000149011612,
             "y": -0.10000000149011612
         },
-        "BFOMIIKCOGI": "Character",
+        "offsetType": "Character",
         "OELDMANLPDM": 0.3199999928474426,
-        "ANGKJBLILKJ": true
+        "showHPBar": true
     },
     "initialPoses": {
         "Default": {},
@@ -841,8 +841,8 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
-        "NGNIGPNNLAI": "StoopType"
+        "$type": "ConfigAnimatorMove",
+        "monsterSizeType": "StoopType"
     },
     "audio": {
         "NCOGLLMIJGO": "",

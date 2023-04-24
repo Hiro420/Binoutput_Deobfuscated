@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 10000.0,
         "height": 2.700000047683716,
@@ -15,11 +15,11 @@
         "clearAIOnSetLightDeactive": true
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM",
+        "$type": "ConfigHeadControl",
         "useHeadControl": true,
-        "KBBNEKBLPFA": 10.0,
-        "FJOGFHEFPHN": 5.0,
-        "FCDMCPDGFCL": [
+        "maxYawDegree": 10.0,
+        "maxPitchDegree": 5.0,
+        "animStates": [
             "NormalIdle/standby",
             "NormalMove/Walk"
         ]
@@ -49,12 +49,12 @@
             "dieForceDisappearTime": 5.0,
             "dieDisappearEffect": "Eff_Death_Avatar_Common",
             "dieShaderData": "AvatarDie",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "TransformAtk": {
@@ -167,49 +167,49 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": [
                             "Audio_Monster_Invoker_Deacon_Fire_Born"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StandBy": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Walk": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_L": [
                             "Audio_Monster_Invoker_Deacon_Fire_Hit_L"
                         ],
@@ -217,28 +217,28 @@
                             "Audio_Monster_Invoker_Deacon_Fire_Hit_H"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "FireCoreExplodeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "FireCoreExplodeHit": [
                             "Audio_Monster_Invoker_Deacon_Fire_FireCoreExplodeHit"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Monster_Invoker_Deacon_Fire_Die",
                             "Audio_Monster_Invoker_Deacon_Fire_Die"
@@ -246,47 +246,47 @@
                     }
                 },
                 "Disappear": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Disappear": [
                             "Monster_Invoker_Deacon_Fire_Disappear"
                         ]
                     }
                 },
                 "Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": [
                             "Monster_Invoker_Deacon_Fire_Alert",
                             "Audio_Monster_Invoker_Deacon_Fire_Alert"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Tarnsfrom": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Transform": [
                             "Monster_Invoker_Deacon_Fire_Transform",
                             "Audio_Monster_Invoker_Deacon_Fire_Transform"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "EOPFMICKIKG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAtk": [
                             "Monster_Invoker_Deacon_Fire_NormalAtk",
                             "Audio_Monster_Invoker_Deacon_Fire_NormalAtk"
@@ -296,14 +296,14 @@
                             "Audio_Monster_Invoker_Deacon_Fire_NormalAtk"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "MeleeAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MeleeAtk": [
                             "Monster_Invoker_Deacon_Fire_MeleeAtk",
                             "Audio_Monster_Invoker_Deacon_Fire_MeleeAtk"
@@ -313,15 +313,15 @@
                             "Audio_Monster_Invoker_Deacon_Fire_MeleeAtk"
                         ]
                     },
-                    "BFDKJHMDDML": 0.800000011920929,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.800000011920929,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "BurnAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "BurnAtk": [
                             "Monster_Invoker_Deacon_Fire_BurnAtk",
                             "Audio_Monster_Invoker_Deacon_Fire_BurnAtk"
@@ -331,15 +331,15 @@
                             "Audio_Monster_Invoker_Deacon_Fire_BurnAtk"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "RangeAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RangeAtk": [
                             "Monster_Invoker_Deacon_Fire_RangeAtk",
                             "Audio_Monster_Invoker_Deacon_Fire_RangeAtk"
@@ -349,65 +349,65 @@
                             "Audio_Monster_Invoker_Deacon_Fire_RangeAtk"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "HellFire": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HellFire": [
                             "Monster_Invoker_Deacon_Fire_HellFire",
                             "Audio_Monster_Invoker_Deacon_Fire_HellFireAtk"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "HellFireAtkBS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HellFireAtkBS": [
                             "Monster_Invoker_Deacon_Fire_HellFireAtkBS",
                             "Audio_Monster_Invoker_Deacon_Fire_HellFireAtk_BS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "HellFireAtkLoop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HellFireAtkLoop": [
                             "Monster_Invoker_Deacon_Fire_HellFireAtkLoop"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "HellFireAtkAS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HellFireAtkAS": [
                             "Monster_Invoker_Deacon_Fire_HellFireAtkAS",
                             "Audio_Monster_Invoker_Deacon_Fire_HellFireAtk_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Blink": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Blink_BS": [
                             "Monster_Invoker_Deacon_Fire_BlinkBS",
                             "Audio_Monster_Invoker_Deacon_Fire_Blink_BS"
@@ -417,8 +417,8 @@
                             "Audio_Monster_Invoker_Deacon_Fire_Blink_AS"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
@@ -432,9 +432,9 @@
         "offset": {
             "x": -0.699999988079071
         },
-        "BFOMIIKCOGI": "Character",
+        "offsetType": "Character",
         "showDistance": 36.0,
-        "ANGKJBLILKJ": true,
+        "showHPBar": true,
         "size": "Big"
     },
     "initialPoses": {
@@ -729,14 +729,14 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
+        "$type": "ConfigAnimatorMove",
         "velocityForce": {
             "excludeForces": [
                 "RetreatAirType"
             ]
         },
         "KCNKFNLDDOD": true,
-        "NGNIGPNNLAI": "StoopType",
+        "monsterSizeType": "StoopType",
         "AIPJBCHAEPE": "Walk"
     },
     "audio": {

@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 10000.0,
         "height": 2.5,
@@ -13,7 +13,7 @@
         "useGrassDisplacement": true,
         "clearAIOnSetLightDeactive": true,
         "KJCBJDCKPND": true,
-        "NCCLLKFLJGL": true,
+        "recoverByInitPose": true,
         "JDFHDFOFPOB": [
             {
                 "KIHPGIAEOLJ": "EffectMesh01_FollowPoint",
@@ -30,12 +30,12 @@
         ]
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM",
+        "$type": "ConfigHeadControl",
         "useHeadControl": true,
-        "KBBNEKBLPFA": 60.0,
-        "FJOGFHEFPHN": 30.0,
+        "maxYawDegree": 60.0,
+        "maxPitchDegree": 30.0,
         "speed": 3.0,
-        "FCDMCPDGFCL": [
+        "animStates": [
             "NormalIdle/Standby",
             "NormalIdle/Born",
             "NormalMove/WalkForward",
@@ -85,12 +85,12 @@
             "dieForceDisappearTime": 1.7999999523162842,
             "dieDisappearEffect": "Eff_Death_Common",
             "dieShaderData": "MonsterDie",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "AtkNo": {
@@ -105,7 +105,7 @@
                             "z": -0.5
                         }
                     },
-                    "BAPAHIOBNCL": 60.0,
+                    "fanAngle": 60.0,
                     "radius": 1.5
                 },
                 "attackInfo": {
@@ -139,7 +139,7 @@
                         }
                     },
                     "height": 4.0,
-                    "BAPAHIOBNCL": 90.0,
+                    "fanAngle": 90.0,
                     "radius": 5.0
                 },
                 "attackInfo": {
@@ -244,7 +244,7 @@
             },
             "SacredAttack02_Hit1": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -293,7 +293,7 @@
                         }
                     },
                     "height": 4.0,
-                    "BAPAHIOBNCL": 240.0,
+                    "fanAngle": 240.0,
                     "radius": 4.0
                 },
                 "attackInfo": {
@@ -318,7 +318,7 @@
             },
             "SacredAttack04_Hit2": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -375,7 +375,7 @@
                         }
                     },
                     "height": 4.0,
-                    "BAPAHIOBNCL": 270.0,
+                    "fanAngle": 270.0,
                     "radius": 5.5
                 },
                 "attackInfo": {
@@ -419,7 +419,7 @@
                         }
                     },
                     "height": 4.0,
-                    "BAPAHIOBNCL": 90.0,
+                    "fanAngle": 90.0,
                     "radius": 11.0
                 },
                 "attackInfo": {
@@ -473,7 +473,7 @@
                         }
                     },
                     "height": 4.0,
-                    "BAPAHIOBNCL": 200.0,
+                    "fanAngle": 200.0,
                     "radius": 5.5
                 },
                 "attackInfo": {
@@ -498,7 +498,7 @@
             },
             "SacredAttack06_Hit2": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -665,25 +665,25 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby": [],
                         "Born": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
+                    "canDoSkill": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "WalkForward": [
                             "Audio_Monster_Gator_Sacred_Walk"
                         ],
@@ -694,410 +694,410 @@
                             "Audio_Monster_Gator_Sacred_Run"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
+                    "canDoSkill": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "NoTurn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NoTurn": []
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "TurnLeft": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnLeft": [
                             "Audio_Monster_Gator_Sacred_Walk"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "TurnRight": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnRight": [
                             "Audio_Monster_Gator_Sacred_Walk"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "TurnBack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnBack": [
                             "Audio_Monster_Gator_Sacred_Walk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
+                    "canDoSkill": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_L": [
                             "Audio_Monster_Gator_Sacred_Hit_L"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Weak_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Weak_BS": [
                             "Audio_Monster_Gator_Sacred_Weak_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.0,
-                    "EOPFMICKIKG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Weak_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Weak_Loop": []
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.0,
-                    "EOPFMICKIKG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Weak_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Weak_AS": [
                             "Audio_Monster_Gator_Sacred_Weak_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.0,
-                    "EOPFMICKIKG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
                     "LCIGFDMOEAA": true,
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": [
                             "Audio_Monster_Gator_Sacred_Die"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ]
                 },
                 "Weak_Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Weak_Die": [
                             "Audio_Monster_Gator_Sacred_Weak_Die"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DoSkill"
                     ]
                 },
                 "Attack_01_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Attack_01_BS": [
                             "Monster_Gator_Sacred_Attack01_BS",
                             "Audio_Monster_Gator_Sacred_Attack01_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Attack_01_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Attack_01_Loop": []
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Attack_01_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Attack_01_AS": [
                             "Monster_Gator_Sacred_Attack01",
                             "Audio_Monster_Gator_Sacred_Attack_01_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack01_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack01_BS": [
                             "Monster_Gator_Sacred_Water_SacredAttack01_BS",
                             "Audio_Monster_Gator_Sacred_Attack_01_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Sacred_Attack01_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack01_Loop": []
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Sacred_Attack01_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack01_AS": [
                             "Monster_Gator_Sacred_Water_SacredAttack01_AS",
                             "Audio_Monster_Gator_Sacred_Attack01_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack01_AS2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack01_AS2": [
                             "Audio_Monster_Gator_Sacred_SacredAttack01_AS2"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack02": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack02": [
                             "Monster_Gator_Sacred_Water_SacredAttack02",
                             "Audio_Monster_Gator_Sacred_Attack02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
+                    "canSyncMove": true,
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack03": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack03": [
                             "Monster_Gator_Sacred_Water_SacredAttack03",
                             "Audio_Monster_Gator_Sacred_Attack03"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack04": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack04": [
                             "Monster_Gator_Sacred_Water_SacredAttack04",
                             "Audio_Monster_Gator_Sacred_SacredAttack04"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack05": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack05": [
                             "Monster_Gator_Sacred_Water_SacredAttack05",
                             "Audio_Monster_Gator_Sacred_SacredAttack05"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Sacred_Attack06": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack06": [
                             "Monster_Gator_Sacred_Water_SacredAttack06_Hit1",
                             "Audio_Monster_Gator_Sacred_SacredAttack06"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Sacred_Attack06_AS2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Attack06_AS2": [
                             "Monster_Gator_Sacred_Water_SacredAttack06_Hit2",
                             "Audio_Monster_Gator_Sacred_SacredAttack06_AS2"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Sacred_Enhance": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Sacred_Enhance": [
                             "Monster_Gator_Sacred_Water_Enhance",
                             "Audio_Monster_Gator_Sacred_Enhance"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.009999999776482582,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.009999999776482582,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Personality2": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Personality2": [
                             "Audio_Monster_Gator_Sacred_Personality2"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
+                    "canDoSkill": true,
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
@@ -1112,7 +1112,7 @@
             "x": -0.8999999761581421,
             "y": 0.5
         },
-        "BFOMIIKCOGI": "Character",
+        "offsetType": "Character",
         "showDistance": 48.0,
         "size": "Grand"
     },
@@ -1611,13 +1611,13 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
+        "$type": "ConfigAnimatorMove",
         "velocityForce": {
             "excludeForces": [
                 "RetreatAirType"
             ]
         },
-        "BCBPBHLKCPB": "ForwardBackward",
+        "facingMove": "ForwardBackward",
         "OOFDCONLBHL": 0.30000001192092896,
         "MGFACNKNOFC": true,
         "HFHNEKMCEMF": true

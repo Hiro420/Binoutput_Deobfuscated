@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 100000000.0,
         "height": 1.8550000190734863,
@@ -14,9 +14,9 @@
         "clearAIOnSetLightDeactive": true
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM",
+        "$type": "ConfigHeadControl",
         "useHeadControl": true,
-        "FCDMCPDGFCL": [
+        "animStates": [
             "NormalIdle",
             "NormalIdle_Blade",
             "NormalMove/WalkL",
@@ -41,12 +41,12 @@
             "dieEndTime": 4.0,
             "dieForceDisappearTime": 6.0,
             "dieDisappearEffect": "",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "Tartaglia_EvilEye_NormalAttack01_01": {
@@ -70,7 +70,7 @@
                         }
                     },
                     "height": 1.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 2.299999952316284
                 },
                 "attackInfo": {
@@ -108,7 +108,7 @@
                         }
                     },
                     "height": 1.0,
-                    "BAPAHIOBNCL": 240.0,
+                    "fanAngle": 240.0,
                     "radius": 2.0999999046325684
                 },
                 "attackInfo": {
@@ -146,7 +146,7 @@
                         }
                     },
                     "height": 1.0,
-                    "BAPAHIOBNCL": 240.0,
+                    "fanAngle": 240.0,
                     "radius": 2.799999952316284
                 },
                 "attackInfo": {
@@ -170,7 +170,7 @@
             },
             "Tartaglia_EvilEye_NormalAttack03_01": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -276,7 +276,7 @@
                         "$type": "ConfigBornBySelf"
                     },
                     "height": 1.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 5.5
                 },
                 "attackInfo": {
@@ -306,7 +306,7 @@
                         "$type": "ConfigBornBySelf"
                     },
                     "height": 1.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 5.5
                 },
                 "attackInfo": {
@@ -336,7 +336,7 @@
                         "$type": "ConfigBornBySelf"
                     },
                     "height": 1.5,
-                    "BAPAHIOBNCL": 240.0,
+                    "fanAngle": 240.0,
                     "radius": 2.5
                 },
                 "attackInfo": {
@@ -375,7 +375,7 @@
                         "$type": "ConfigBornBySelf"
                     },
                     "height": 1.0,
-                    "BAPAHIOBNCL": 240.0,
+                    "fanAngle": 240.0,
                     "radius": 3.200000047683716
                 },
                 "attackInfo": {
@@ -414,7 +414,7 @@
                         "$type": "ConfigBornBySelf"
                     },
                     "height": 2.0,
-                    "BAPAHIOBNCL": 30.0,
+                    "fanAngle": 30.0,
                     "radius": 7.5
                 },
                 "attackInfo": {
@@ -530,54 +530,54 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": []
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Debut": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Debut": []
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle_Blade": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby_Blade": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "WalkL": [
                             "Audio_Tartaglia_EvilEye_WalkL"
                         ],
@@ -591,16 +591,16 @@
                             "Audio_Tartaglia_EvilEye_WalkLToR"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HitL": [
                             "Audio_Tartaglia_EvilEye_HitL"
                         ],
@@ -608,23 +608,23 @@
                             "Audio_Tartaglia_EvilEye_HitH"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "ShakeTrigger"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die": []
                     }
                 },
                 "NormalAttack_Blade": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack01": [
                             "Monster_Tartaglia_EvilEye_NormalAttack01",
                             "Audio_Tartaglia_EvilEye_NormalAtk01"
@@ -634,16 +634,16 @@
                             "Audio_Tartaglia_EvilEye_NormalAtk04"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack_DualBlade": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack02": [
                             "Monster_Tartaglia_EvilEye_NormalAttack02",
                             "Audio_Tartaglia_EvilEye_NormalAtk02"
@@ -653,44 +653,44 @@
                             "Audio_Tartaglia_EvilEye_NormalAtk03"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack02BS": [],
                         "NormalAttack03AS": [],
                         "NormalAttack04BS": []
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "NormalAttack_Flexible": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAttack01_Flexible": [],
                         "NormalAttack02_Flexible": [],
                         "NormalAttack03_Flexible": [],
                         "NormalAttack04_Flexible": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "RushMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RushMove_Normal": [
                             "Monster_Tartaglia_EvilEye_RushMove_Normal",
                             "Audio_Tartaglia_EvilEye_RushMove"
@@ -700,46 +700,46 @@
                             "Audio_Tartaglia_EvilEye_RushMove"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "ExtraAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ExtraAttack": [
                             "Monster_Tartaglia_EvilEye_ExtraAttack",
                             "Audio_Tartaglia_EvilEye_ExtraAtk"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "StrikeAttackBS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StrikeAttackBS": [
                             "Monster_Tartaglia_EvilEye_StrikeAttackBS",
                             "Audio_Tartaglia_EvilEye_StrikeAtk_BS"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "StrikeAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StrikeAttack": [
                             "Monster_Tartaglia_EvilEye_StrikeAttack",
                             "Audio_Tartaglia_EvilEye_StrikeAtk"
@@ -748,27 +748,27 @@
                             "Audio_Tartaglia_EvilEye_StrikeAtk_AS"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "StrikeAttack_Flexible": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "StrikeAttack_Flexible": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "SweepAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SweepAttackL": [
                             "Monster_Tartaglia_EvilEye_SweepAttackL",
                             "Audio_Tartaglia_EvilEye_SweepAtkL"
@@ -778,46 +778,46 @@
                             "Audio_Tartaglia_EvilEye_SweepAtkR"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "SweepAttack_Flexible": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SweepAttackL_Flexible": [],
                         "SweepAttackR_Flexible": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "HiraishinBS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HiraishinBS": [
                             "Monster_Tartaglia_EvilEye_HiraishinBS",
                             "Audio_Tartaglia_EvilEye_HiraisHin_BS"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "Hiraishin": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hiraishin": [
                             "Audio_Tartaglia_EvilEye_HiraisHin"
                         ],
@@ -826,44 +826,44 @@
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "HiraishinAS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HiraishinAS": [
                             "Monster_Tartaglia_EvilEye_Hiraishin",
                             "Audio_Tartaglia_EvilEye_HiraisHin_AS"
                         ]
                     },
                     "AAEKKGMOKFK": true,
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "Hiraishin_Flexible": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hiraishin_Flexible": []
                     },
                     "AAEKKGMOKFK": true,
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "ChangePosition": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChangePosition01": [
                             "Monster_Tartaglia_EvilEye_ChangePosition",
                             "Audio_Tartaglia_EvilEye_ChangePosition01"
@@ -877,30 +877,30 @@
                             "Audio_Tartaglia_EvilEye_ChangePosition03"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "ChangePosition_Flexible": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ChangePosition01_Flexible": [],
                         "ChangePosition02_Flexible": [],
                         "ChangePosition03_Flexible": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "Defend": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Defend01": [
                             "Audio_Tartaglia_EvilEye_Defend01"
                         ],
@@ -911,20 +911,20 @@
                             "Audio_Tartaglia_EvilEye_Defend03"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "DefendTrigger",
                         "DefendAttackTrigger",
                         "ForceDefendAttackTrigger"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "DefendAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "DefendAttack01": [
                             "Monster_Tartaglia_EvilEye_DefendAttack01",
                             "Audio_Tartaglia_EvilEye_DefendAtk01"
@@ -934,28 +934,28 @@
                             "Audio_Tartaglia_EvilEye_DefendAtk02"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "EOPFMICKIKG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnEnter": [
                         "DefendTrigger",
                         "DefendAttackTrigger",
                         "ForceDefendAttackTrigger"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill"
                     ]
                 },
                 "Recover": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Recover": [
                             "Monster_Tartaglia_EvilEye_Recover",
                             "Audio_Tartaglia_EvilEye_Recover"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "ShakeTrigger",
                         "DoSkill",
@@ -968,9 +968,9 @@
     "billboard": {
         "$type": "ConfigCombatBillboard",
         "EBBHBMFMOGD": "BillboardAttach",
-        "BFOMIIKCOGI": "Character",
+        "offsetType": "Character",
         "OELDMANLPDM": 0.3499999940395355,
-        "ANGKJBLILKJ": true
+        "showHPBar": true
     },
     "initialPoses": {
         "Default": {}
@@ -1419,7 +1419,7 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
+        "$type": "ConfigAnimatorMove",
         "velocityForce": {
             "excludeForces": [
                 "RetreatAirType",
@@ -1427,7 +1427,7 @@
                 "AirflowType"
             ]
         },
-        "BCBPBHLKCPB": "LeftRight",
+        "facingMove": "LeftRight",
         "AIPJBCHAEPE": "Walk",
         "LHHNPKNFGMD": true
     }

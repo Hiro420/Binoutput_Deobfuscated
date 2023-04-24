@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 1000000.0,
         "height": 8.0,
@@ -10,7 +10,7 @@
         "checkInSurface": true,
         "clearAIOnSetLightDeactive": true,
         "KJCBJDCKPND": true,
-        "NCCLLKFLJGL": true
+        "recoverByInitPose": true
     },
     "specialPoint": {
         "elementAbsorb": "RootNode",
@@ -93,17 +93,17 @@
             "dieForceDisappearTime": 4.0,
             "dieDisappearEffect": "Eff_Death_Common",
             "dieShaderData": "MonsterDie",
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "MeleeAtk_Wave": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornByTarget",
@@ -170,7 +170,7 @@
                         }
                     },
                     "height": 6.0,
-                    "BAPAHIOBNCL": 210.0,
+                    "fanAngle": 210.0,
                     "radius": 9.0
                 },
                 "attackInfo": {
@@ -224,7 +224,7 @@
                         }
                     },
                     "height": 6.0,
-                    "BAPAHIOBNCL": 210.0,
+                    "fanAngle": 210.0,
                     "radius": 9.0
                 },
                 "attackInfo": {
@@ -303,7 +303,7 @@
             },
             "RevengeAtk_Begin": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -410,7 +410,7 @@
             },
             "MeleeCmbo01_Begin": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -485,7 +485,7 @@
                         }
                     },
                     "height": 6.0,
-                    "BAPAHIOBNCL": 150.0,
+                    "fanAngle": 150.0,
                     "radius": 10.0
                 },
                 "attackInfo": {
@@ -520,7 +520,7 @@
             },
             "MeleeCmbo02_Begin": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornBySelf",
@@ -595,7 +595,7 @@
                         }
                     },
                     "height": 6.0,
-                    "BAPAHIOBNCL": 180.0,
+                    "fanAngle": 180.0,
                     "radius": 10.0
                 },
                 "attackInfo": {
@@ -630,7 +630,7 @@
             },
             "MeleeCmbo03": {
                 "attackPattern": {
-                    "$type": "NAMPOMPBMHC",
+                    "$type": "ConfigAttackBox",
                     "triggerType": "TriggerNoRepeat",
                     "born": {
                         "$type": "ConfigBornByTarget",
@@ -697,7 +697,7 @@
                         }
                     },
                     "height": 1.5,
-                    "BAPAHIOBNCL": 160.0,
+                    "fanAngle": 160.0,
                     "radius": 7.0,
                     "innerRadius": 0.0
                 },
@@ -742,7 +742,7 @@
                         }
                     },
                     "height": 1.5,
-                    "BAPAHIOBNCL": 160.0,
+                    "fanAngle": 160.0,
                     "radius": 7.0,
                     "innerRadius": 0.0
                 },
@@ -1002,34 +1002,34 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "Born": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Born": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die1": [
                             "Monster_Regisvine_Electric_Die",
                             "Monster_Regisvine_Electric_Core_End",
@@ -1049,8 +1049,8 @@
                     }
                 },
                 "Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": [
                             "Monster_Regisvine_Electric_Alert",
                             "Audio_Monster_Regisvine_Electric_Alert"
@@ -1060,66 +1060,66 @@
                             "Audio_Monster_Regisvine_Electric_Alert"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "ReturnToBorn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ReturnToBorn": [
                             "Audio_Monster_Regisvine_Electric_ReturnToBorn"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "resetAnimatorTriggerOnExit": [
                         "ReturnToBornTrigger"
                     ]
                 },
                 "Faint_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Faint_BS": [
                             "Monster_Regisvine_Electric_Faint_BS",
                             "Audio_Monster_Regisvine_Electric_Faint_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Faint_AS_Anode": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Faint_AS_Anode": [
                             "Monster_Regisvine_Electric_Faint_AS_Anode",
                             "Audio_Monster_Regisvine_Electric_Faint_Anode_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Faint_AS_Cathode": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Faint_AS_Cathode": [
                             "Monster_Regisvine_Electric_Faint_AS_Cathode",
                             "Audio_Monster_Regisvine_Electric_Faint_Cathode_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Anode_MeleeAttack_Wave": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_MeleeAttack_Wave_01": [
                             "Monster_Regisvine_Electric_Anode_MeleeAttack_Wave",
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeAttack_Wave"
@@ -1133,14 +1133,14 @@
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeAttack_Wave_Attack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Anode_MeleeAttack_Wave_LockOff": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_MeleeAttack_Wave_LockOff_01": [
                             "Monster_Regisvine_MeleeAttack_Wave_LockOff"
                         ],
@@ -1148,28 +1148,28 @@
                             "Monster_Regisvine_MeleeAttack_Wave_LockOff"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Anode_MeleeAttack_Wave_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_MeleeAttack_Wave_Wait": [],
                         "Anode_MeleeAttack_Wave_AS": [
                             "Monster_Regisvine_MeleeAttack_Wave_LockOff",
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeAttack_Wave_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Anode_MeleeAttackCombo": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_MeleeAttackCombo_BS": [
                             "Monster_Regisvine_Electric_Anode_MeleeAttackCombo",
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeCombo"
@@ -1182,84 +1182,84 @@
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeCombo_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "LaserAttack_03": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "LaserAttack_03": [
                             "Monster_Regisvine_Electric_LarseAttack_03",
                             "Audio_Monster_Regisvine_Electric_Anode_LaserAttack_03"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "LaserAttack_01_Near": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "LaserAttack_01_Near": [
                             "Monster_Regisvine_Electric_LarseAttack_01_Near",
                             "Audio_Monster_Regisvine_Electric_Anode_LaserAttack_01"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "LaserAttack_02_Near": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "LaserAttack_02_Near": [
                             "Monster_Regisvine_Electric_LarseAttack_02_Near",
                             "Audio_Monster_Regisvine_Electric_Anode_LaserAttack_02"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Anode_MeleeAttack_L": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_MeleeAttack_L": [
                             "Monster_Regisvine_Electric_Anode_MeleeAttack_L",
                             "Audio_Monster_Regisvine_Electric_Cathode_MeleeAttack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Anode_MeleeAttack_R": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_MeleeAttack_R": [
                             "Monster_Regisvine_Electric_Anode_MeleeAttack_R",
                             "Audio_Monster_Regisvine_Electric_Cathode_MeleeAttack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Cathonde_MeleeAttack02": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathonde_MeleeAttack02_BS": [
                             "Monster_Regisvine_Electric_MeleeAttack02_Cathode",
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeCombo"
@@ -1269,189 +1269,189 @@
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeCombo_AS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Cathode_MeleeAttack_Wave": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_MeleeAttack_Wave": [
                             "Monster_Regisvine_Electric_Cathode_MeleeAttack_Wave",
                             "Audio_Monster_Regisvine_Electric_Anode_MeleeAttack_Wave"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Cathonde_MeleeAttack_L": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathonde_MeleeAttack_L": [
                             "Monster_Regisvine_Electric_Cathode_MeleeAttack_L",
                             "Audio_Monster_Regisvine_Electric_Cathode_MeleeAttack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Cathonde_MeleeAttack_R": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathonde_MeleeAttack_R": [
                             "Monster_Regisvine_Electric_Cathode_MeleeAttack_R",
                             "Audio_Monster_Regisvine_Electric_Cathode_MeleeAttack"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Cathonde_MeleeAttack_Range": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathonde_MeleeAttack_Range": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Cathode_ThunderSeed_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_ThunderSeed_AS": [
                             "Audio_Monster_Regisvine_Electric_Cathode_ThunderSeed_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_ThunderSeed_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_ThunderSeed_Loop": [
                             "Monster_Regisvine_Electric_ThunaderAttack_Loop"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_ThunderSeed_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_ThunderSeed_BS": [
                             "Audio_Monster_Regisvine_Electric_Cathode_ThunderSeed_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_RangeAttack_BS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_RangeAttack_BS": [
                             "Audio_Monster_Regisvine_Electric_Cathode_RangeAttack_BS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_RangeAttack_Loop": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_RangeAttack_Loop": [
                             "Monster_Regisvine_Electric_Cathode_RangeAttack",
                             "Audio_Monster_Regisvine_Electric_Cathode_RangeAttack_Loop"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_RangeAttack_AS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_RangeAttack_AS": [
                             "Audio_Monster_Regisvine_Electric_Cathode_RangeAttack_AS"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_ThunderNet": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_ThunderNet": [
                             "Monster_Regisvine_Electric_Cathode_ThunderNet"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "RevengeAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "RevengeAttack": [
                             "Monster_Regisvine_Fire_RevengeAttack",
                             "Audio_Monster_Regisvine_Fire_RevengeAtk"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true,
+                    "triggerGCD": true,
                     "ECGKJECEAII": true
                 },
                 "Anode_Switch": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Anode_Switch": [
                             "Monster_Regisvine_Electric_Swtich_Anode",
                             "Audio_Monster_Regisvine_Electric_Switch_Cathode"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Cathode_Switch": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Cathode_Switch": [
                             "Monster_Regisvine_Electric_Swtich_Cathode",
                             "Audio_Monster_Regisvine_Electric_Switch_Anode"
                         ]
                     },
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 }
@@ -2037,7 +2037,7 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
+        "$type": "ConfigAnimatorMove",
         "velocityForce": {
             "muteAll": true
         },

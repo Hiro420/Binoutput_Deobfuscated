@@ -1,8 +1,8 @@
 {
     "common": {
         "effectAttachShape": {
-            "$type": "GJKHOELECFL",
-            "FFDBDMMNINI": "EffectMesh"
+            "$type": "ConfigEffectAttachSkinnedMesh",
+            "mesh": "EffectMesh"
         },
         "mass": 850.0,
         "height": 1.5,
@@ -14,11 +14,11 @@
         "clearAIOnSetLightDeactive": true
     },
     "headControl": {
-        "$type": "GAAIKCFIJMM",
+        "$type": "ConfigHeadControl",
         "useHeadControl": true,
-        "KBBNEKBLPFA": 75.0,
-        "FJOGFHEFPHN": 30.0,
-        "FCDMCPDGFCL": [
+        "maxYawDegree": 75.0,
+        "maxPitchDegree": 30.0,
+        "animStates": [
             "NormalIdle/Standby",
             "NormalMove/WalkForward",
             "NormalMove/WalkBack",
@@ -55,12 +55,12 @@
             "dieDisappearEffect": "",
             "useRagDoll": true,
             "ragDollDieEndTimeDelay": 15.0,
-            "OCGODEHJPME": true,
-            "MFJBKFECLNJ": true,
-            "IMEEBMBJPGJ": true,
-            "ICHFPLMNCLC": true,
-            "MBHMAGEPJFH": true,
-            "CFHPDHFKMEP": true
+            "muteHitBox": true,
+            "dieDenyLockOn": true,
+            "dieIsGhostToEnemy": true,
+            "dieIgnoreTriggerBullet": true,
+            "muteBillboard": true,
+            "mutePushCollider": true
         },
         "animEvents": {
             "NormalAtk": {
@@ -75,7 +75,7 @@
                             "z": 0.30000001192092896
                         }
                     },
-                    "BAPAHIOBNCL": 90.0,
+                    "fanAngle": 90.0,
                     "radius": 1.75
                 },
                 "attackInfo": {
@@ -109,7 +109,7 @@
                             "z": 0.0
                         }
                     },
-                    "BAPAHIOBNCL": 100.0,
+                    "fanAngle": 100.0,
                     "radius": 2.0
                 },
                 "attackInfo": {
@@ -142,7 +142,7 @@
                             "z": 0.5
                         }
                     },
-                    "BAPAHIOBNCL": 90.0,
+                    "fanAngle": 90.0,
                     "radius": 2.0
                 },
                 "attackInfo": {
@@ -175,7 +175,7 @@
                             "z": 0.5
                         }
                     },
-                    "BAPAHIOBNCL": 75.0,
+                    "fanAngle": 75.0,
                     "radius": 2.0
                 },
                 "attackInfo": {
@@ -216,7 +216,7 @@
                             "z": 0.5
                         }
                     },
-                    "BAPAHIOBNCL": 75.0,
+                    "fanAngle": 75.0,
                     "radius": 1.75
                 },
                 "attackInfo": {
@@ -249,7 +249,7 @@
                 "attackPattern": {
                     "$type": "ConfigAttackCircle",
                     "triggerType": "TriggerNoRepeat",
-                    "BAPAHIOBNCL": 100.0,
+                    "fanAngle": 100.0,
                     "radius": 1.600000023841858
                 },
                 "attackInfo": {
@@ -282,7 +282,7 @@
                             "z": -0.10000000149011612
                         }
                     },
-                    "BAPAHIOBNCL": 60.0,
+                    "fanAngle": 60.0,
                     "radius": 2.0
                 },
                 "attackInfo": {
@@ -315,7 +315,7 @@
                             "z": -0.10000000149011612
                         }
                     },
-                    "BAPAHIOBNCL": 50.0,
+                    "fanAngle": 50.0,
                     "radius": 2.0
                 },
                 "attackInfo": {
@@ -422,24 +422,24 @@
     ],
     "stateLayers": {
         "defaultLayer": {
-            "$type": "JOPKKFFECKJ",
+            "$type": "ConfigNormalStateLayer",
             "FNPGDAEJAPJ": "",
             "stateIDs": {
                 "NormalIdle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Standby": [],
                         "Born": []
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "NormalMove": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "WalkForward": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Walk"
                         ],
@@ -456,16 +456,16 @@
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Run"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Turn": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TurnLeft": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Walk"
                         ],
@@ -473,63 +473,63 @@
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Walk"
                         ]
                     },
-                    "CJCIFIEDHHM": true,
-                    "LFEBJMAGIAE": true,
-                    "LLAMHOPNFJG": [
+                    "canDoSkill": true,
+                    "canSyncMove": true,
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "BeHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Hit_L": [],
                         "Hit_H": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Hit_H_NoVo"
                         ],
                         "DHit": []
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill",
                         "DodgeTrigger"
                     ]
                 },
                 "BeHitThrow": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "HitThrow": [],
                         "HitThrowDrop": [],
                         "HitThrowToGround": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_HitThrowToGround_NoVo"
                         ]
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Struggle": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Struggle": []
                     },
-                    "EOPFMICKIKG": [
+                    "resetAnimatorTriggerOnEnter": [
                         "BeHit",
                         "HitAir2HitDrop"
                     ],
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "DoSkill"
                     ]
                 },
                 "Die": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Die1": [
                             "Monster_Thoarder_Female_Hatchet_Die",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Die_NoVo"
@@ -548,8 +548,8 @@
                     }
                 },
                 "Die_RagDoll": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "AirDie": [
                             "Monster_Thoarder_Common_AirDie"
                         ]
@@ -557,78 +557,78 @@
                     "HCCMMNBMCMA": true
                 },
                 "Life_Alert": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Alert": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Alert_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "Life_Warning": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Warning": [
                             "Monster_Undead01_Warning",
                             "Monster_Thoarder_DrawWeapon",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Alert_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "NormalAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "NormalAtk": [
                             "Monster_Thoarder_Female_Hatchet_Anego_NormalAtk",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_NormalAtk_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "TripleAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "TripleAttack": [
                             "Monster_Thoarder_Female_Hatchet_Anego_TripleAttack_V2",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_TripleAttack_NoVo"
                         ]
                     },
-                    "BFDKJHMDDML": 0.6000000238418579,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.6000000238418579,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "JumpAttack": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "JumpAttack": [
                             "Monster_Thoarder_Female_Hatchet_Anego_JumpAttack_V2",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_JumpAttack_NoVo"
                         ]
                     },
-                    "BFDKJHMDDML": 0.6000000238418579,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.6000000238418579,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "Throw": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Throw": [
                             "Monster_Thoarder_Female_Hatchet_Anego_Throw_V2",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_RangedAtk_Throw_NoVo"
@@ -638,65 +638,65 @@
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_RangedAtk_Pick"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "ThrowBS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ThrowBS": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_RangedAtk_Throw_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "ThrowAS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ThrowAS": [
                             "Monster_Thoarder_Female_Hatchet_Anego_Throw_V2"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "PickBS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "PickBS": [
                             "Audio_Monster_Thoarder_Hatchet_RangedAtk_Pick"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "PickAS": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "PickAS": []
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "ThrowPlus": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ThrowPlus": [
                             "Monster_Thoarder_Female_Hatchet_Anego_ThrowPlus",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_RangedAtk_Throw"
@@ -706,15 +706,15 @@
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_RangedAtk_Pick"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "MoveAtk": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "MoveAtkBS": [
                             "Monster_Thoarde_Female_Hatchet_Anego_MoveAtkBS"
                         ],
@@ -722,36 +722,36 @@
                             "Monster_Thoarde_Female_Hatchet_Anego_MoveAtkAS"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ]
                 },
                 "Order": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Order": [
                             "Monster_Thoarde_Female_Hatchet_Anego_Order",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Order_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Dodge": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Dodge": [
                             "Monster_Thoarde_Female_Hatchet_Anego_Dodge",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Retreat_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "DodgeTrigger",
@@ -759,33 +759,33 @@
                     ]
                 },
                 "ActivitySkill": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "ActivitySkill": [
                             "Monster_Thoarde_Female_Hatchet_Anego_ActivitySkill",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_ActivitySkill_NoVo"
                         ]
                     },
-                    "BFDKJHMDDML": 0.0,
-                    "LLAMHOPNFJG": [
+                    "addEndure": 0.0,
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill",
                         "FirecrackerHit"
                     ],
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "FirecrackerHit": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "FirecrackerHit": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_FirecrackerHit_NoVo"
                         ]
                     },
-                    "BHEPAJIOBDN": true
+                    "triggerGCD": true
                 },
                 "Taunt": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "Taunt_1": [
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Taunt1_NoVo"
                         ],
@@ -796,20 +796,20 @@
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_Taunt3_NoVo"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "BeHit",
                         "DoSkill"
                     ]
                 },
                 "SheathWeapon": {
-                    "$type": "CGCNEPDODHF",
-                    "ELJMIBJPBCH": {
+                    "$type": "ConfigMonsterStateIDInfo",
+                    "animatorStates": {
                         "SheathWeapon": [
                             "Monster_Thoarde_Female_Hatchet_Anego_SheathWeapon",
                             "Audio_Monster_Thoarder_BlackRacoon_Hatchet_02_SheathWeapon"
                         ]
                     },
-                    "LLAMHOPNFJG": [
+                    "resetAnimatorTriggerOnExit": [
                         "SheathWeaponTrigger"
                     ]
                 }
@@ -822,9 +822,9 @@
         "offset": {
             "x": -0.05000000074505806
         },
-        "BFOMIIKCOGI": "Character",
+        "offsetType": "Character",
         "OELDMANLPDM": 0.25,
-        "ANGKJBLILKJ": true
+        "showHPBar": true
     },
     "initialPoses": {
         "Default": {}
@@ -1141,9 +1141,9 @@
         }
     ],
     "move": {
-        "$type": "PLMNMICDOHN",
-        "BCBPBHLKCPB": "FourDirection",
-        "NGNIGPNNLAI": "StoopType"
+        "$type": "ConfigAnimatorMove",
+        "facingMove": "FourDirection",
+        "monsterSizeType": "StoopType"
     },
     "audio": {
         "NCOGLLMIJGO": "",
